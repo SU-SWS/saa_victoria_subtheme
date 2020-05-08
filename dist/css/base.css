@@ -1,1 +1,1 @@
-.stanford-starter:after{content:"Stanford Starter"}
+.stanford-starter:after{content:"Stanford Starter"}[type=checkbox]:checked+label:before,[type=checkbox]:checked:disabled+label:before{background:#b1040c}

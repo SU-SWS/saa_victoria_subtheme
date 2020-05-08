@@ -21,3 +21,10 @@
     content: 'Stanford Starter';
   }
 }
+
+// interface improvements
+
+[type=checkbox]:checked+label:before, [type=checkbox]:checked:disabled+label:before {
+  background: #b1040c;
+//url(../../assets/img/check.png);
+}

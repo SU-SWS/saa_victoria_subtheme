@@ -25,12 +25,13 @@ If you wish to develop on this theme you will most likely need to compile some n
 
 ```
 npm install
-grunt watch
-grunt sass
- or
-grunt devmode
 ```
-
+After you've made a change you want to see processed, you can run:
+```
+npm run publish
+```
+This will process scss, js, and asset files, preparing them from the src directory to the dist directory.
+It will also copy decanter twig templates from node_modules to the dist/templates/decanter directory to be used.
 Contribution / Collaboration
 ---
 
