@@ -1,2 +1,2 @@
 // Theme code.
-import './stanford_starter.behaviors.js';
+import './saa_victoria_subtheme.behaviors.js';

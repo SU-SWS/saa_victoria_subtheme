@@ -1,7 +1,7 @@
 {
-  "name": "stanford_starter",
+  "name": "saa_victoria_subtheme",
   "version": "1.0.0",
-  "repository": "https://github.com/SU-SWS/stanford_starter",
+  "repository": "https://github.com/SU-SWS/saa_victoria_subtheme",
   "scripts": {
     "build": "webpack --mode=development --display-error-details",
     "publish": "webpack --mode=production",

@@ -1,4 +1,4 @@
-# [Stanford Starter](https://github.com/SU-SWS/stanford_starter)
+# saa_victoria_subtheme (https://github.com/SU-SWS/saa_victoria_subtheme)
 ##### Version: 8.x-1.0-dev
 
 Changelog: [Changelog.txt](CHANGELOG.txt)
@@ -6,12 +6,12 @@ Changelog: [Changelog.txt](CHANGELOG.txt)
 Description
 ---
 
-Stanford Starter is a Stanford sub-theme that works with the Stanford Basic theme.
+SAA Victoria is a Stanford Alumni Association sub-theme that works with the Stanford Basic theme.
 
 Installation
 ---
 
-Copy this theme and change all files, folders, and names from stanford_starter to the name of your theme.
+Copy this theme and change all files, folders, and names from saa_victoria_subtheme to the name of your theme.
 
 Configuration
 ---

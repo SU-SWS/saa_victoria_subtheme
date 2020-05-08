@@ -1,8 +1,8 @@
 {
-  "name": "su-sws/stanford_starter",
+  "name": "su-sws/saa_victoria_subtheme",
   "description": "Stanford Starter Sub Theme.",
   "type": "drupal-custom-theme",
-  "homepage": "https://github.com/SU-SWS/stanford_starter",
+  "homepage": "https://github.com/SU-SWS/saa_victoria_subtheme",
   "authors": [],
   "license": "GPL-2.0+",
   "minimum-stability": "dev"

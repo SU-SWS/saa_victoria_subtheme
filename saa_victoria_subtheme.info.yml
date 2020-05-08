@@ -1,12 +1,12 @@
-name: Stanford Starter
+name: Victoria
 type: theme
-description: 'Stanford Starter Theme.'
+description: 'Stanford Alumni Association: Victoria Theme.'
 package: Stanford
 version: 8.x-1.0-dev
 core: 8.x
 base theme: stanford_basic
 libraries:
-  - stanford_starter/allpages
+  - saa_victoria_subtheme/allpages
 
 regions:
   page_top: 'Page top'
