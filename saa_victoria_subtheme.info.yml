@@ -7,6 +7,7 @@ core: 8.x
 base theme: stanford_basic
 libraries:
   - saa_victoria_subtheme/allpages
+  - saa_victoria_subtheme/fonts
 
 regions:
   page_top: 'Page top'
