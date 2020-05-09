@@ -50,7 +50,8 @@
   "author": "",
   "license": "MIT",
   "dependencies": {
-    "npm": "^5.8.0"
+    "npm": "^5.8.0",
+    "tailwindcss": "^1.4.6"
   },
   "keywords": [
     "css",
