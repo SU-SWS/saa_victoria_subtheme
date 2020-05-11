@@ -100,11 +100,13 @@ var webpackConfig = {
           {
             loader: 'postcss-loader',
             options: {
+              ident: 'postcss',
               sourceMap: true,
-              plugins: () => [
-                autoprefixer
-              ]
-            }
+              plugins: [
+                require('tailwindcss'),
+                require('autoprefixer'),  // before was just 'autoprefixer'
+              ],
+            },
           },
           // SASS Loader. Add compile paths to include bourbon.
           {
