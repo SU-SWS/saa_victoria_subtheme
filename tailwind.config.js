@@ -16,6 +16,12 @@ module.exports = {
       tablet: '768px',
       desktop: '1024px', // might need to change
     },
+    spacing: {  // change these spacing values to use our decanter modular spacing values so we can use it the same
+      sm: '8px',
+      md: '16px',
+      lg: '24px',
+      xl: '48px',
+    },
     colors: {
       primary: {
         100: '#ebf8ff',  // need to figure out how this is used and which color it should be, could one of these be grayscales?
@@ -31,11 +37,7 @@ module.exports = {
         700: '#b7791f',
         900: '#744210',
       },
-    },
-    extend: {
-      boxShadow: {
-        huge: '0 30px 60px -15px rgba(0, 0, 0, .25)'
-      }
     }
+
   }
 }
