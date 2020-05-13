@@ -5,12 +5,16 @@
 // Import full scss version of decanter to use variables etc
 @import 'decanter/core/src/scss/decanter';
 
-
+/* -- styleset class name standards -- */
+// all styleset classes should be formatted like:
+//   .sa-styleset--TYPE--SPECIFIC
+//   .sa-styleset--bg--cardinal-red
 
 // Then we override the variables, mixins, and functions.
 @import
 'tailwind',
-'../config/index',
-'classes/index',
-'mixins/index',
-'variables/index';
+'../config/index';
+@import 'button_classes';
+@import 'section_classes';
+
+

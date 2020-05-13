@@ -1,0 +1,145 @@
+// The purpose of this file is to override neutral tailwind padding & margin values with Decanter modular spacing values.
+
+// Modular spacing allows for various spacing units that adjust with our custom function to be responsive.
+
+// You can see the tailwind padding classes here: https://tailwindcss.com/docs/padding
+// Control the padding on one side of an element using the p{t|r|b|l}-{size} utilities.
+
+// Mixins to apply decanter padding
+@mixin apply-modular-spacing-top($space) {
+  @include modular-spacing('padding', $space null null null);
+}
+@mixin apply-modular-spacing-right($space) {
+  @include modular-spacing('padding', null $space null null);
+}
+@mixin apply-modular-spacing-bottom($space) {
+  @include modular-spacing('padding', null null $space null);
+}
+@mixin apply-modular-spacing-left($space) {
+  @include modular-spacing('padding', null null null $space);
+}
+
+@mixin apply-modular-spacing-all($space) {
+  @include modular-spacing('padding', $space $space $space $space);
+}
+
+
+// tailwind classes for padding - set them to use decanter padding amounts
+
+// and we'd have to do this for EACH
+
+// positive decanter multipliers
+@for $i from 1 through 9 {
+  .su-pt-#{$i} {  // top
+    //@include modular-spacing('padding', 1 null null null);
+    //@include apply-modular-spacing-top($i);
+    @include modular-spacing('padding', $space null null null);
+  }
+  .su-pr-#{$i} {  // right
+    @include modular-spacing('padding', null $space null null);
+
+  }
+  .su-pb-#{$i} {  // bottom
+    @include modular-spacing('padding', null null $i null);
+  }
+  .su-pl-#{$i} {  // left
+    @include modular-spacing('padding', null null null $i);
+  }
+
+  // horizontal padding
+  .su-px-#{$i} {
+    @include apply-modular-spacing-right($i);
+    @include apply-modular-spacing-left($i);
+  }
+
+  // vertical padding
+  .su-py-#{$i} {
+    @include apply-modular-spacing-top($i);
+    @include apply-modular-spacing-bottom($i);
+  }
+  // auto-generate for all sides padding
+  .su-p-#{$i} {
+    @include apply-modular-spacing-all($i);
+  }
+}
+
+// .su-p-0 will set padding to 0, as tailwind documentation says, so we don't confuse.
+
+// 0 neutral spacing decanter multiplier value - NOT setting padding to "0"
+
+.su-pt-neutral {  // top
+  //@include modular-spacing('padding', 1 null null null);
+  @include apply-modular-spacing-top(0);
+}
+.su-pr-neutral {  // right
+  //@include modular-spacing('padding', null 1 null null);
+  @include apply-modular-spacing-right(0);
+}
+.su-pb-neutral {  // bottom
+  //@include modular-spacing('padding', 1 null null null);
+  @include apply-modular-spacing-bottom(0);
+}
+.su-pl-neutral {  // left
+  //@include modular-spacing('padding', 1 null null null);
+  @include apply-modular-spacing-left(0);
+}
+
+// horizontal padding
+.su-px-neutral {
+  @include apply-modular-spacing-right(0);
+  @include apply-modular-spacing-left(0);
+}
+
+// vertical padding
+.su-py-neutral {
+  @include apply-modular-spacing-top(0);
+  @include apply-modular-spacing-bottom(0);
+}
+
+// all sides
+.su-p-neutral {
+  //@include modular-spacing('padding', 1 1 1 1);
+  @include apply-modular-spacing-all(0);
+}
+
+
+
+
+// exploring negative values for the multiplier for smaller ammounts (NOT negative padding or margin, just smaller multiplier)
+
+@for $i from 1 through 4 {
+  .su-pt-neg-#{$i} {  // top
+    @include modular-spacing('padding', -$i null null null);
+    //@include apply-modular-spacing-top(-$i);
+  }
+  .su-pr-neg-#{$i} {  // right
+    //@include modular-spacing('padding', null 1 null null);
+    @include apply-modular-spacing-right(-$i);
+  }
+  .su-pb-neg-#{$i} {  // bottom
+    //@include modular-spacing('padding', 1 null null null);
+    @include apply-modular-spacing-bottom(-$i);
+  }
+  .su-pl-neg-#{$i} {  // left
+    //@include modular-spacing('padding', 1 null null null);
+    @include apply-modular-spacing-left(-$i);
+  }
+
+  // horizontal padding
+  .su-px-neg-#{$i} {
+    @include apply-modular-spacing-right(-$i);
+    @include apply-modular-spacing-left(-$i);
+  }
+
+  // vertical padding
+  .su-py-neg-#{$i} {
+    @include apply-modular-spacing-top(-$i);
+    @include apply-modular-spacing-bottom(-$i);
+  }
+  // auto-generate for all sides padding
+  .su-p-neg-#{$i} {
+    @include apply-modular-spacing-all(-$i);
+  }
+}
+
+

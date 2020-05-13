@@ -1,0 +1,24 @@
+@import 'src/scss/utilities/classes/background_classes';
+@import 'src/scss/utilities/classes/text_classes';
+@import 'src/scss/utilities/classes/link_classes';
+
+/* -- styleset classes should reference and bundle existing utility classes -- */
+
+/* button backgrounds with hover options */
+.su-styleset--bg--electric-purple {
+  @extend .su-bg--electric-purple;
+  @extend .su-bg--hover--electric-purple-dark;
+}
+
+.su-styleset--bg--electric-purple-black {
+  @extend .su-bg--electric-purple;
+  @extend .su-bg--hover--black;
+}
+
+.su-styleset--bg--red-black {
+  @extend .su-bg--dark-red;
+  @extend .su-bg--hover--black;
+}
+
+
+/* other button styleset classes*/
