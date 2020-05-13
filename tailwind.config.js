@@ -14,13 +14,13 @@ module.exports = {
     },
     screens: {
       tablet: '768px',
-      desktop: '1024px', // might need to change
+      desktop: '1200px', // might need to change
     },
     spacing: {  // change these spacing values to use our decanter modular spacing values so we can use it the same
-      sm: '8px',
-      md: '16px',
-      lg: '24px',
-      xl: '48px',
+      sm: '10px',   // i think i'll have to rewrite these in scss to include screen sizes etc.
+      md: '20px',  // i extend the classes that tailwind provides and use scss to apply the padding/margin with the modular-spacing mixin
+      lg: '30px',
+      xl: '40px',
     },
     colors: {
       primary: {
