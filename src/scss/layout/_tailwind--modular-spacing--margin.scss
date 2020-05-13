@@ -1,179 +1,104 @@
-// The purpose of this file is to override default tailwind margin & margin values with Decanter modular spacing values.
-
+// The purpose of this file is to override neutral tailwind padding & margin values with Decanter modular spacing values.
 // Modular spacing allows for various spacing units that adjust with our custom function to be responsive.
 
 // You can see the tailwind margin classes here: https://tailwindcss.com/docs/margin
 // Control the margin on one side of an element using the p{t|r|b|l}-{size} utilities.
 
-// Mixins to apply decanter margin
-@mixin apply-modular-spacing-top($space) {
-  @include modular-spacing('margin', $space null null null);
-}
-@mixin apply-modular-spacing-right($space) {
-  @include modular-spacing('margin', null $space null null);
-}
-@mixin apply-modular-spacing-bottom($space) {
-  @include modular-spacing('margin', null null $space null);
-}
-@mixin apply-modular-spacing-left($space) {
-  @include modular-spacing('margin', null null null $space);
-}
-
-@mixin apply-modular-spacing-all($space) {
-  @include modular-spacing('margin', $space $space $space $space);
-}
-
-
 // tailwind classes for margin - set them to use decanter margin amounts
-
-.mt-1 {  // top
-  //@include modular-spacing('margin', 1 null null null);
-  @include apply-modular-spacing-top(1);
-}
-.mr-1 {  // right
-  //@include modular-spacing('margin', null 1 null null);
-  @include apply-modular-spacing-right(1);
-}
-.mb-1 {  // bottom
-  //@include modular-spacing('margin', 1 null null null);
-  @include apply-modular-spacing-bottom(1);
-}
-.ml-1 {  // left
-  //@include modular-spacing('margin', 1 null null null);
-  @include apply-modular-spacing-left(1);
-}
-
-// horizontal margin
-.mx-1 {
-  @include apply-modular-spacing-right(1);
-  @include apply-modular-spacing-left(1);
-}
-
-// vertical margin
-.my-1 {
-  @include apply-modular-spacing-top(1);
-  @include apply-modular-spacing-bottom(1);
-}
-
-// all sides
-.m-1 {
-  //@include modular-spacing('margin', 1 1 1 1);
-  @include apply-modular-spacing-all(1);
-}
-// and we'd have to do this for EACH
 
 // positive decanter multipliers
 @for $i from 1 through 9 {
-  .mt-#{$i} {  // top
-    //@include modular-spacing('margin', 1 null null null);
-    @include apply-modular-spacing-top($i);
+  .su-mt-#{$i} {  // top
+    @include modular-spacing('margin', $space null null null);
   }
-  .mr-#{$i} {  // right
-    //@include modular-spacing('margin', null 1 null null);
-    @include apply-modular-spacing-right($i);
+  .su-mr-#{$i} {  // right
+    @include modular-spacing('margin', null $space null null);
   }
-  .mb-#{$i} {  // bottom
-    //@include modular-spacing('margin', 1 null null null);
-    @include apply-modular-spacing-bottom($i);
+  .su-mb-#{$i} {  // bottom
+    @include modular-spacing('margin', null null $i null);
   }
-  .ml-#{$i} {  // left
-    //@include modular-spacing('margin', 1 null null null);
-    @include apply-modular-spacing-left($i);
+  .su-ml-#{$i} {  // left
+    @include modular-spacing('margin', null null null $i);
   }
 
   // horizontal margin
-  .mx-#{$i} {
-    @include apply-modular-spacing-right($i);
-    @include apply-modular-spacing-left($i);
+  .su-mx-#{$i} {
+    @include modular-spacing('margin', null $i null $i);
   }
-
   // vertical margin
-  .my-#{$i} {
-    @include apply-modular-spacing-top($i);
-    @include apply-modular-spacing-bottom($i);
+  .su-my-#{$i} {
+    @include modular-spacing('margin', $i null $i null);
   }
   // auto-generate for all sides margin
-  .m-#{$i} {
-    @include apply-modular-spacing-all($i);
+  .su-m-#{$i} {
+    @include modular-spacing('margin', $i $i $i $i);
   }
 }
 
-// .m-0 will set margin to 0, as tailwind documentation says, so we don't confuse.
+// .su-m-0 will set margin to 0, as tailwind documentation says, so we don't confuse.
+// 0 neutral spacing decanter multiplier value - NOT setting margin to "0"
 
-// 0 default spacing decanter multiplier value - NOT setting margin to "0"
+.su-mt-neutral {  // top
+  @include modular-spacing('margin', 0 null null null);
 
-.mt-default {  // top
-  //@include modular-spacing('margin', 1 null null null);
-  @include apply-modular-spacing-top(0);
 }
-.mr-default {  // right
-  //@include modular-spacing('margin', null 1 null null);
-  @include apply-modular-spacing-right(0);
+.su-mr-neutral {  // right
+  @include modular-spacing('margin', null 0 null null);
 }
-.mb-default {  // bottom
-  //@include modular-spacing('margin', 1 null null null);
-  @include apply-modular-spacing-bottom(0);
+.su-mb-neutral {  // bottom
+  @include modular-spacing('margin', null null 0 null);
+
 }
-.ml-default {  // left
-  //@include modular-spacing('margin', 1 null null null);
-  @include apply-modular-spacing-left(0);
+.su-ml-neutral {  // left
+  @include modular-spacing('margin', null null null 0);
 }
 
 // horizontal margin
-.mx-default {
-  @include apply-modular-spacing-right(0);
-  @include apply-modular-spacing-left(0);
+.su-mx-neutral {
+  @include modular-spacing('margin', null 0 null 0);
 }
 
 // vertical margin
-.my-default {
-  @include apply-modular-spacing-top(0);
-  @include apply-modular-spacing-bottom(0);
+.su-my-neutral {
+  @include modular-spacing('margin', 0 null 0 null);
 }
 
 // all sides
-.m-default {
-  //@include modular-spacing('margin', 1 1 1 1);
-  @include apply-modular-spacing-all(0);
+.su-m-neutral {
+  @include modular-spacing('margin', 0 0 0 0);
 }
-
-
-
 
 // exploring negative values for the multiplier for smaller ammounts (NOT negative margin or margin, just smaller multiplier)
 
 @for $i from 1 through 4 {
-  .mt-neg-#{$i} {  // top
-    //@include modular-spacing('margin', 1 null null null);
-    @include apply-modular-spacing-top(-$i);
+  .su-mt-neg-#{$i} {  // top
+    @include modular-spacing('margin', -$i null null null);
   }
-  .mr-neg-#{$i} {  // right
-    //@include modular-spacing('margin', null 1 null null);
-    @include apply-modular-spacing-right(-$i);
+  .su-mr-neg-#{$i} {  // right
+    @include modular-spacing('margin', null -$i null null);
+
   }
-  .mb-neg-#{$i} {  // bottom
-    //@include modular-spacing('margin', 1 null null null);
-    @include apply-modular-spacing-bottom(-$i);
+  .su-mb-neg-#{$i} {  // bottom
+    @include modular-spacing('margin', null null -$i null);
+
   }
-  .ml-neg-#{$i} {  // left
-    //@include modular-spacing('margin', 1 null null null);
-    @include apply-modular-spacing-left(-$i);
+  .su-ml-neg-#{$i} {  // left
+    @include modular-spacing('margin', null null null -$i);
   }
 
   // horizontal margin
-  .mx-neg-#{$i} {
-    @include apply-modular-spacing-right(-$i);
-    @include apply-modular-spacing-left(-$i);
+  .su-mx-neg-#{$i} {
+    @include modular-spacing('margin', null -$i null -$i);
+
   }
 
   // vertical margin
-  .my-neg-#{$i} {
-    @include apply-modular-spacing-top(-$i);
-    @include apply-modular-spacing-bottom(-$i);
+  .su-my-neg-#{$i} {
+    @include modular-spacing('margin', -$i null -$i null);
   }
   // auto-generate for all sides margin
-  .m-neg-#{$i} {
-    @include apply-modular-spacing-all(-$i);
+  .su-m-neg-#{$i} {
+    @include modular-spacing('margin', -$i -$i -$i -$i);
   }
 }
 
