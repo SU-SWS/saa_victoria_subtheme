@@ -1,7 +1,9 @@
 // Tailwind css framework
-@import "tailwindcss/base";
-@import "tailwindcss/components";
-@import "tailwindcss/utilities";
+//@import "tailwindcss/base";
+//@import "tailwindcss/components";
+//@import "tailwindcss/utilities";
+@import "~tailwindcss";
+
 
 // in it's own file because mentioned here how it helps avoid problems
 // https://tailwindcss.com/docs/using-with-preprocessors

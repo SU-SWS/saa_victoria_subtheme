@@ -15,6 +15,7 @@
 // Config and supporting scss.
 @import
   '../config/index';
+@import '../utilities/index';
 
 .stanford-starter {
   &::after {

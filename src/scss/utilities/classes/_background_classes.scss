@@ -1,6 +1,13 @@
+
 // Utility classes to quickly add background colors
 
 /* ----- Background colors -----  */
+
+// when we define our colors with tailwind, they can be used in the backgroundColor utilities etc
+// https://tailwindcss.com/docs/customizing-colors/
+
+// For example, tailwind provides classes to be used like this:
+// <input class="bg-gray-200 hover:bg-white hover:border-gray-300 focus:outline-none focus:bg-white focus:shadow-outline focus:border-gray-300 ...">
 
 // SU colors
 .su-bg--cardinal-red {
