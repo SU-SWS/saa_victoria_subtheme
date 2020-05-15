@@ -1,12 +1,12 @@
 // override decanter button styles here to use new colors and any other differences
-@import '../classes/stylesets/index';
 
 // default button style for this theme
 .su-button {
-  @extend .su-styleset--bg--electric-purple;
+  // do an extend on some basic classes? or really just add those classes to the button twig template is more ideal
+  // @extend .bg-electric-purple;
 }
 
 // red buttons are default when on purple background
-.su-bg--electric-purple > * > .su-button { // something like this, check structure
-  @extend .su-styleset--bg--electric-purple;
+.bg-electric-purple > * > .su-button { // something like this, check structure
+ // @extend .bg-bright-red;
 }

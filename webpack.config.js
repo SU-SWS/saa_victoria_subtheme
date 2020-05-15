@@ -103,7 +103,7 @@ var webpackConfig = {
               ident: 'postcss',
               sourceMap: true,
               plugins: [
-                require('tailwindcss'),
+                require('tailwindcss'),  // this should automatically look for a tailwind.config.js file https://tailwindcss.com/docs/configuration
                 require('autoprefixer'),  // before was just 'autoprefixer'
               ],
             },

@@ -9,38 +9,6 @@
 // For example, tailwind provides classes to be used like this:
 // <input class="bg-gray-200 hover:bg-white hover:border-gray-300 focus:outline-none focus:bg-white focus:shadow-outline focus:border-gray-300 ...">
 
-// SU colors
-.su-bg--cardinal-red {
-  background: $su-color-cardinal-red;
-}
-.su-bg--dark-red {
-  background: $su-color-dark-red;
-  color: $su-color-white;
-}
-.su-bg--bright-red {
-  background: $su-color-bright-red;
-  color: $su-color-white;
-}
-// SAA colors
-.su-bg--electric-purple {
-  background: $saa-color-electric_purple;
-}
-.su-bg--dandelion {
-  background: $saa-color-dandelion;
-}
-.su-bg--wintergreen {
-  background: $saa-color-wintergreen;
-}
-
-// hover background colors
-
-.su-bg--hover--electric-purple-dark:hover,
-.su-bg--hover--electric-purple-dark:focus {
-  background: $saa-color-electric_purple_dark;
-}
-
-.su-bg--hover--black:hover,
-.su-bg--hover--black:focus {
-  background: $su-color-black;
-}
+// Only add unique cases where we can't use tailwind classes here.
+// Normally colors should be added to tailwind.config.js and not to here.
 

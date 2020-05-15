@@ -1,4 +1,5 @@
 module.exports = {
+  prefix: 'su-',
   theme: {
     boxShadow: {
       'flat': 'none',
