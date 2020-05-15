@@ -75,8 +75,5 @@ module.exports = {
       dandelion: '#007ace',
       wintergreen: '#de3618',
     }
-    // extend: {  // this is where we add colors to tailwind
-    //
-    // }
   }
 }
