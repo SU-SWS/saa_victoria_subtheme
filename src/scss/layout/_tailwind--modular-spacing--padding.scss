@@ -9,10 +9,10 @@
 // positive decanter multipliers
 @for $i from 1 through 9 {
   .su-pt-#{$i} {  // top
-    @include modular-spacing('padding', $space null null null);
+    @include modular-spacing('padding', $i null null null);
   }
   .su-pr-#{$i} {  // right
-    @include modular-spacing('padding', null $space null null);
+    @include modular-spacing('padding', null $i null null);
   }
   .su-pb-#{$i} {  // bottom
     @include modular-spacing('padding', null null $i null);
@@ -69,37 +69,37 @@
 }
 
 // exploring negative values for the multiplier for smaller ammounts (NOT negative padding or margin, just smaller multiplier)
-
-@for $i from 1 through 4 {
-  .su-pt-neg-#{$i} {  // top
-    @include modular-spacing('padding', -$i null null null);
-  }
-  .su-pr-neg-#{$i} {  // right
-    @include modular-spacing('padding', null -$i null null);
-
-  }
-  .su-pb-neg-#{$i} {  // bottom
-    @include modular-spacing('padding', null null -$i null);
-
-  }
-  .su-pl-neg-#{$i} {  // left
-    @include modular-spacing('padding', null null null -$i);
-  }
-
-  // horizontal padding
-  .su-px-neg-#{$i} {
-    @include modular-spacing('padding', null -$i null -$i);
-
-  }
-
-  // vertical padding
-  .su-py-neg-#{$i} {
-    @include modular-spacing('padding', -$i null -$i null);
-  }
-  // auto-generate for all sides padding
-  .su-p-neg-#{$i} {
-    @include modular-spacing('padding', -$i -$i -$i -$i);
-  }
-}
-
+//
+//@for $i from 1 through 4 {
+//  .su-pt-neg-#{$i} {  // top
+//    @include modular-spacing('padding', -$i null null null);
+//  }
+//  .su-pr-neg-#{$i} {  // right
+//    @include modular-spacing('padding', null -$i null null);
+//
+//  }
+//  .su-pb-neg-#{$i} {  // bottom
+//    @include modular-spacing('padding', null null -$i null);
+//
+//  }
+//  .su-pl-neg-#{$i} {  // left
+//    @include modular-spacing('padding', null null null -$i);
+//  }
+//
+//  // horizontal padding
+//  .su-px-neg-#{$i} {
+//    @include modular-spacing('padding', null -$i null -$i);
+//
+//  }
+//
+//  // vertical padding
+//  .su-py-neg-#{$i} {
+//    @include modular-spacing('padding', -$i null -$i null);
+//  }
+//  // auto-generate for all sides padding
+//  .su-p-neg-#{$i} {
+//    @include modular-spacing('padding', -$i -$i -$i -$i);
+//  }
+//}
+//
 
