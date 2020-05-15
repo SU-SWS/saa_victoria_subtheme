@@ -7,10 +7,8 @@
 
 // use only for cases where inside a section you need to override links colors
 
-
 .su-links-text--white {
   @include link($su-color-white, $su-color-cool-grey);
-
   a {
     @include link($su-color-white, $su-color-cool-grey);
   }
