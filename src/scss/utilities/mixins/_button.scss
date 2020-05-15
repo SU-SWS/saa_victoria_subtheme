@@ -13,7 +13,7 @@
 
 // red buttons are default when on purple background
 .bg-electric-purple > * > .su-button { // something like this, check structure
-  @extend .bg-bright-red;
+  //@extend .bg-bright-red;
 }
 
 

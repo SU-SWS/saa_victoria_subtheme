@@ -68,7 +68,7 @@
   @include modular-spacing('padding', 0 0 0 0);
 }
 
-// exploring negative values for the multiplier for smaller ammounts (NOT negative padding or margin, just smaller multiplier)
+// exploring negative values for the multiplier for smaller amounts (NOT negative padding or margin, just smaller multiplier)
 //
 //@for $i from 1 through 4 {
 //  .su-pt-neg-#{$i} {  // top

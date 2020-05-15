@@ -115602,121 +115602,121 @@ input:focus,
 }
 
 @media only screen and (min-width: 0) {
-  .su-pt-neutral {
+  .su-pt-default {
     padding-top: 1.6rem;
   }
 }
 
 @media only screen and (min-width: 768px) {
-  .su-pt-neutral {
+  .su-pt-default {
     padding-top: 1.8rem;
   }
 }
 
 @media only screen and (min-width: 1500px) {
-  .su-pt-neutral {
+  .su-pt-default {
     padding-top: 1.9rem;
   }
 }
 
 @media only screen and (min-width: 0) {
-  .su-pr-neutral {
+  .su-pr-default {
     padding-right: 1.6rem;
   }
 }
 
 @media only screen and (min-width: 768px) {
-  .su-pr-neutral {
+  .su-pr-default {
     padding-right: 1.8rem;
   }
 }
 
 @media only screen and (min-width: 1500px) {
-  .su-pr-neutral {
+  .su-pr-default {
     padding-right: 1.9rem;
   }
 }
 
 @media only screen and (min-width: 0) {
-  .su-pb-neutral {
+  .su-pb-default {
     padding-bottom: 1.6rem;
   }
 }
 
 @media only screen and (min-width: 768px) {
-  .su-pb-neutral {
+  .su-pb-default {
     padding-bottom: 1.8rem;
   }
 }
 
 @media only screen and (min-width: 1500px) {
-  .su-pb-neutral {
+  .su-pb-default {
     padding-bottom: 1.9rem;
   }
 }
 
 @media only screen and (min-width: 0) {
-  .su-pl-neutral {
+  .su-pl-default {
     padding-left: 1.6rem;
   }
 }
 
 @media only screen and (min-width: 768px) {
-  .su-pl-neutral {
+  .su-pl-default {
     padding-left: 1.8rem;
   }
 }
 
 @media only screen and (min-width: 1500px) {
-  .su-pl-neutral {
+  .su-pl-default {
     padding-left: 1.9rem;
   }
 }
 
 @media only screen and (min-width: 0) {
-  .su-px-neutral {
+  .su-px-default {
     padding-right: 1.6rem;
     padding-left: 1.6rem;
   }
 }
 
 @media only screen and (min-width: 768px) {
-  .su-px-neutral {
+  .su-px-default {
     padding-right: 1.8rem;
     padding-left: 1.8rem;
   }
 }
 
 @media only screen and (min-width: 1500px) {
-  .su-px-neutral {
+  .su-px-default {
     padding-right: 1.9rem;
     padding-left: 1.9rem;
   }
 }
 
 @media only screen and (min-width: 0) {
-  .su-py-neutral {
+  .su-py-default {
     padding-top: 1.6rem;
     padding-bottom: 1.6rem;
   }
 }
 
 @media only screen and (min-width: 768px) {
-  .su-py-neutral {
+  .su-py-default {
     padding-top: 1.8rem;
     padding-bottom: 1.8rem;
   }
 }
 
 @media only screen and (min-width: 1500px) {
-  .su-py-neutral {
+  .su-py-default {
     padding-top: 1.9rem;
     padding-bottom: 1.9rem;
   }
 }
 
 @media only screen and (min-width: 0) {
-  .su-p-neutral {
+  .su-p-default {
     padding-top: 1.6rem;
     padding-right: 1.6rem;
     padding-bottom: 1.6rem;
@@ -115725,7 +115725,7 @@ input:focus,
 }
 
 @media only screen and (min-width: 768px) {
-  .su-p-neutral {
+  .su-p-default {
     padding-top: 1.8rem;
     padding-right: 1.8rem;
     padding-bottom: 1.8rem;
@@ -115734,7 +115734,7 @@ input:focus,
 }
 
 @media only screen and (min-width: 1500px) {
-  .su-p-neutral {
+  .su-p-default {
     padding-top: 1.9rem;
     padding-right: 1.9rem;
     padding-bottom: 1.9rem;
@@ -117012,121 +117012,121 @@ input:focus,
 }
 
 @media only screen and (min-width: 0) {
-  .su-mt-neutral {
+  .su-mt-default {
     margin-top: 1.6rem;
   }
 }
 
 @media only screen and (min-width: 768px) {
-  .su-mt-neutral {
+  .su-mt-default {
     margin-top: 1.8rem;
   }
 }
 
 @media only screen and (min-width: 1500px) {
-  .su-mt-neutral {
+  .su-mt-default {
     margin-top: 1.9rem;
   }
 }
 
 @media only screen and (min-width: 0) {
-  .su-mr-neutral {
+  .su-mr-default {
     margin-right: 1.6rem;
   }
 }
 
 @media only screen and (min-width: 768px) {
-  .su-mr-neutral {
+  .su-mr-default {
     margin-right: 1.8rem;
   }
 }
 
 @media only screen and (min-width: 1500px) {
-  .su-mr-neutral {
+  .su-mr-default {
     margin-right: 1.9rem;
   }
 }
 
 @media only screen and (min-width: 0) {
-  .su-mb-neutral {
+  .su-mb-default {
     margin-bottom: 1.6rem;
   }
 }
 
 @media only screen and (min-width: 768px) {
-  .su-mb-neutral {
+  .su-mb-default {
     margin-bottom: 1.8rem;
   }
 }
 
 @media only screen and (min-width: 1500px) {
-  .su-mb-neutral {
+  .su-mb-default {
     margin-bottom: 1.9rem;
   }
 }
 
 @media only screen and (min-width: 0) {
-  .su-ml-neutral {
+  .su-ml-default {
     margin-left: 1.6rem;
   }
 }
 
 @media only screen and (min-width: 768px) {
-  .su-ml-neutral {
+  .su-ml-default {
     margin-left: 1.8rem;
   }
 }
 
 @media only screen and (min-width: 1500px) {
-  .su-ml-neutral {
+  .su-ml-default {
     margin-left: 1.9rem;
   }
 }
 
 @media only screen and (min-width: 0) {
-  .su-mx-neutral {
+  .su-mx-default {
     margin-right: 1.6rem;
     margin-left: 1.6rem;
   }
 }
 
 @media only screen and (min-width: 768px) {
-  .su-mx-neutral {
+  .su-mx-default {
     margin-right: 1.8rem;
     margin-left: 1.8rem;
   }
 }
 
 @media only screen and (min-width: 1500px) {
-  .su-mx-neutral {
+  .su-mx-default {
     margin-right: 1.9rem;
     margin-left: 1.9rem;
   }
 }
 
 @media only screen and (min-width: 0) {
-  .su-my-neutral {
+  .su-my-default {
     margin-top: 1.6rem;
     margin-bottom: 1.6rem;
   }
 }
 
 @media only screen and (min-width: 768px) {
-  .su-my-neutral {
+  .su-my-default {
     margin-top: 1.8rem;
     margin-bottom: 1.8rem;
   }
 }
 
 @media only screen and (min-width: 1500px) {
-  .su-my-neutral {
+  .su-my-default {
     margin-top: 1.9rem;
     margin-bottom: 1.9rem;
   }
 }
 
 @media only screen and (min-width: 0) {
-  .su-m-neutral {
+  .su-m-default {
     margin-top: 1.6rem;
     margin-right: 1.6rem;
     margin-bottom: 1.6rem;
@@ -117135,7 +117135,7 @@ input:focus,
 }
 
 @media only screen and (min-width: 768px) {
-  .su-m-neutral {
+  .su-m-default {
     margin-top: 1.8rem;
     margin-right: 1.8rem;
     margin-bottom: 1.8rem;
@@ -117144,24 +117144,12 @@ input:focus,
 }
 
 @media only screen and (min-width: 1500px) {
-  .su-m-neutral {
+  .su-m-default {
     margin-top: 1.9rem;
     margin-right: 1.9rem;
     margin-bottom: 1.9rem;
     margin-left: 1.9rem;
   }
-}
-
-.su-button {
-  --bg-opacity: 1;
-  background-color: #f56565;
-  background-color: rgba(245, 101, 101, var(--bg-opacity));
-}
-
-.su-button {
-  --bg-opacity: 1;
-  background-color: #f56565;
-  background-color: rgba(245, 101, 101, var(--bg-opacity));
 }
 
 /* SAA Specific colors, Stanford/Decanter colors are not defined here */
