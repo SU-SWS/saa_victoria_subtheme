@@ -2,7 +2,12 @@
 //@import "tailwindcss/base";
 //@import "tailwindcss/components";
 //@import "tailwindcss/utilities";
+// should we have them all here in this file?
 @import "~tailwindcss";
+// would include all the parts:
+//@import "~tailwindcss/base.css";
+//@import "~tailwindcss/components.css";
+//@import "~tailwindcss/utilities.css";
 
 
 // in it's own file because mentioned here how it helps avoid problems

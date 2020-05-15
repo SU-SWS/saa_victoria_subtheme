@@ -8,8 +8,10 @@
 
 
 // Then we override the variables, mixins, and functions.
+//@import "~tailwindcss/utilities.css";
+@import "~tailwindcss";
+
 @import
-'tailwind',
 '../config/index',
 'classes/index',
 'mixins/index',
