@@ -22,22 +22,57 @@ module.exports = {
       lg: '30px',
       xl: '40px',
     },
-    colors: {
-      primary: {
-        100: '#ebf8ff',  // need to figure out how this is used and which color it should be, could one of these be grayscales?
-        300: '#90cdf4',
-        500: '#4299e1',
-        700: '#2b6cb0',
-        900: '#2a4365',
-      },
-      secondary: {
-        100: '#fffff0',
-        300: '#faf089',
-        500: '#ecc94b',
-        700: '#b7791f',
-        900: '#744210',
-      },
+    extend: {  // this is where we add colors to tailwind
+      colors: {
+        black: '#2e2d29',
+        white: '#fff',
+        gray: {
+          '100': '#edebe9', // coming soon - lightest driftwood
+          '200': '#dad8d4', // coming soon - medium light driftwood
+          '300': '#cac6bf', // coming soon - medium driftwood
+          '400': '#d2d3d4', // coming soon - lightest cool grey
+          '500': '#a6a7a9', // coming soon - medium light cool grey
+          '600': '#7a7b7e', // coming soon - medium cool grey
+          '700': '#4d4f53', // su-color-cool-grey
+          '800': '#373637', // coming soon dark gray
+          '900': '#2e2d29', // su-color-black
+        },
+        cardinal_red: '#8c1515', // su-color-cardinal-red
+        dark_red: '#820000',  // su-color-dark-red
+        bright_red: '#b1040e',  // su-color-bright-red
+        cloud: '#dad7cb',   // su-color-cloud
+        driftwood: '#b6b1a9',   // su-color-cloud
+        stone: '#544948', // su-color-stone
+        palo_alto: {
+          default: '#544948',
+          light: '#2d716f',
+          dark: '#014240'
+        },
+        purple: {
+          default: '#53284f',
+          light: '#613863',
+          dark: '#350d36'
+        },
+        lagunita: {
+          default: '#007c92',
+          light: '#009ab4',
+          dark: '#006b81'
+        },
+        poppy: {
+          default: '#e98300',
+          light: '#f9a44a',
+          dark: '#d48029'
+        },
+        blue: '#00548f',
+        bright_blue: '#006cb8',
+        vivid_red: '#ec0513',
+        electric_purple: {
+          default: '#505EEC',
+          dark: '#3C47B1',
+        },
+        dandelion: '#007ace',
+        wintergreen: '#de3618',
+      }
     }
-
   }
 }
