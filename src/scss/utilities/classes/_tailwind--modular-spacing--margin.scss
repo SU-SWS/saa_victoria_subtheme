@@ -1,4 +1,4 @@
-// The purpose of this file is to override neutral tailwind padding & margin values with Decanter modular spacing values.
+// The purpose of this file is to override default tailwind padding & margin values with Decanter modular spacing values.
 // Modular spacing allows for various spacing units that adjust with our custom function to be responsive.
 
 // You can see the tailwind margin classes here: https://tailwindcss.com/docs/margin
@@ -36,35 +36,35 @@
 }
 
 // .su-m-0 will set margin to 0, as tailwind documentation says, so we don't confuse.
-// 0 neutral spacing decanter multiplier value - NOT setting margin to "0"
+// 0 default spacing decanter multiplier value - NOT setting margin to "0"
 
-.su-mt-neutral {  // top
+.su-mt-default {  // top
   @include modular-spacing('margin', 0 null null null);
 
 }
-.su-mr-neutral {  // right
+.su-mr-default {  // right
   @include modular-spacing('margin', null 0 null null);
 }
-.su-mb-neutral {  // bottom
+.su-mb-default {  // bottom
   @include modular-spacing('margin', null null 0 null);
 
 }
-.su-ml-neutral {  // left
+.su-ml-default {  // left
   @include modular-spacing('margin', null null null 0);
 }
 
 // horizontal margin
-.su-mx-neutral {
+.su-mx-default {
   @include modular-spacing('margin', null 0 null 0);
 }
 
 // vertical margin
-.su-my-neutral {
+.su-my-default {
   @include modular-spacing('margin', 0 null 0 null);
 }
 
 // all sides
-.su-m-neutral {
+.su-m-default {
   @include modular-spacing('margin', 0 0 0 0);
 }
 

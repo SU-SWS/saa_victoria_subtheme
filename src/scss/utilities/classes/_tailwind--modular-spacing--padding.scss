@@ -38,68 +38,68 @@
 // .su-p-0 will set padding to 0, as tailwind documentation says, so we don't confuse.
 // 0 neutral spacing decanter multiplier value - NOT setting padding to "0"
 
-.su-pt-neutral {  // top
+.su-pt-default {  // top
   @include modular-spacing('padding', 0 null null null);
 
 }
-.su-pr-neutral {  // right
+.su-pr-default {  // right
   @include modular-spacing('padding', null 0 null null);
 }
-.su-pb-neutral {  // bottom
+.su-pb-default {  // bottom
   @include modular-spacing('padding', null null 0 null);
 
 }
-.su-pl-neutral {  // left
+.su-pl-default {  // left
   @include modular-spacing('padding', null null null 0);
 }
 
 // horizontal padding
-.su-px-neutral {
+.su-px-default {
   @include modular-spacing('padding', null 0 null 0);
 }
 
 // vertical padding
-.su-py-neutral {
+.su-py-default {
   @include modular-spacing('padding', 0 null 0 null);
 }
 
 // all sides
-.su-p-neutral {
+.su-p-default {
   @include modular-spacing('padding', 0 0 0 0);
 }
 
 // exploring negative values for the multiplier for smaller ammounts (NOT negative padding or margin, just smaller multiplier)
 //
-//@for $i from 1 through 4 {
-//  .su-pt-neg-#{$i} {  // top
-//    @include modular-spacing('padding', -$i null null null);
-//  }
-//  .su-pr-neg-#{$i} {  // right
-//    @include modular-spacing('padding', null -$i null null);
-//
-//  }
-//  .su-pb-neg-#{$i} {  // bottom
-//    @include modular-spacing('padding', null null -$i null);
-//
-//  }
-//  .su-pl-neg-#{$i} {  // left
-//    @include modular-spacing('padding', null null null -$i);
-//  }
-//
-//  // horizontal padding
-//  .su-px-neg-#{$i} {
-//    @include modular-spacing('padding', null -$i null -$i);
-//
-//  }
-//
-//  // vertical padding
-//  .su-py-neg-#{$i} {
-//    @include modular-spacing('padding', -$i null -$i null);
-//  }
-//  // auto-generate for all sides padding
-//  .su-p-neg-#{$i} {
-//    @include modular-spacing('padding', -$i -$i -$i -$i);
-//  }
-//}
-//
+@for $i from 1 through 4 {
+  .su-pt-neg-#{$i} {  // top
+    @include modular-spacing('padding', -$i null null null);
+  }
+  .su-pr-neg-#{$i} {  // right
+    @include modular-spacing('padding', null -$i null null);
+
+  }
+  .su-pb-neg-#{$i} {  // bottom
+    @include modular-spacing('padding', null null -$i null);
+
+  }
+  .su-pl-neg-#{$i} {  // left
+    @include modular-spacing('padding', null null null -$i);
+  }
+
+  // horizontal padding
+  .su-px-neg-#{$i} {
+    @include modular-spacing('padding', null -$i null -$i);
+
+  }
+
+  // vertical padding
+  .su-py-neg-#{$i} {
+    @include modular-spacing('padding', -$i null -$i null);
+  }
+  // auto-generate for all sides padding
+  .su-p-neg-#{$i} {
+    @include modular-spacing('padding', -$i -$i -$i -$i);
+  }
+}
+
 
