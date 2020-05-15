@@ -99,14 +99,6 @@ var webpackConfig = {
           // Post CSS. Run autoprefixer plugin.
           {
             loader: 'postcss-loader',
-            options: {
-              ident: 'postcss',
-              sourceMap: true,
-              plugins: [
-                require('tailwindcss'),  // this should automatically look for a tailwind.config.js file https://tailwindcss.com/docs/configuration
-                require('autoprefixer'),  // before was just 'autoprefixer'
-              ],
-            },
           },
           // SASS Loader. Add compile paths to include bourbon.
           {
