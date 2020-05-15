@@ -16,8 +16,7 @@
 @import
   '../config/index';
 @import '../utilities/index';
-//@import "~tailwindcss/base.css";
-
+@import "~tailwindcss";
 
 .stanford-starter {
   &::after {
