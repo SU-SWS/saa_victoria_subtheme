@@ -1,7 +1,7 @@
 // const { colors } = require('tailwindcss/defaultTheme');
 
 module.exports = {
-  prefix: 'su-',
+  // prefix: 'test-', // not working, but other settings like colors are working
   theme: {
     boxShadow: {
       'flat': 'none',
@@ -68,10 +68,8 @@ module.exports = {
       blue: '#00548f',
       bright_blue: '#006cb8',
       vivid_red: '#ec0513',
-      electric_purple: {
-        default: '#505EEC',
-        dark: '#3C47B1',
-      },
+      electric_purple: '#505EEC',
+      electric_purple_dark: '#3C47B1',
       dandelion: '#007ace',
       wintergreen: '#de3618',
     }
