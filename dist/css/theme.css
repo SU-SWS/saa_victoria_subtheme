@@ -1,3 +1,133 @@
+.su-button {
+  --bg-opacity: 1;
+  background-color: #505EEC;
+  background-color: rgba(80, 94, 236, var(--bg-opacity));
+  --text-opacity: 1;
+  color: #fff;
+  color: rgba(255, 255, 255, var(--text-opacity));
+}
+
+.su-button:hover, .su-button:focus {
+  --bg-opacity: 1;
+  background-color: #3C47B1;
+  background-color: rgba(60, 71, 177, var(--bg-opacity));
+  --text-opacity: 1;
+  color: #fff;
+  color: rgba(255, 255, 255, var(--text-opacity));
+}
+
+.bg-electric-purple > * > .su-button {
+  --bg-opacity: 1;
+  background-color: #b1040e;
+  background-color: rgba(177, 4, 14, var(--bg-opacity));
+  --text-opacity: 1;
+  color: #fff;
+  color: rgba(255, 255, 255, var(--text-opacity));
+}
+
+/* SAA Specific colors, Stanford/Decanter colors are not defined here */
+
+/* ----- link styles -----  */
+
+.su-links-text--white {
+  color: #ffffff;
+  text-decoration: underline;
+  font-weight: 600;
+}
+
+.su-links-text--white:hover, .su-links-text--white:focus, .su-links-text--white:active {
+  color: #4d4f53;
+}
+
+.su-links-text--white a {
+  color: #ffffff;
+  text-decoration: underline;
+  font-weight: 600;
+}
+
+.su-links-text--white a:hover, .su-links-text--white a:focus, .su-links-text--white a:active {
+  color: #4d4f53;
+}
+
+.su-links-text--white--no-hover {
+  color: #ffffff;
+  text-decoration: underline;
+  font-weight: 600;
+}
+
+.su-links-text--white--no-hover:hover, .su-links-text--white--no-hover:focus, .su-links-text--white--no-hover:active {
+  color: #ffffff;
+}
+
+.su-links-text--white--no-hover a {
+  color: #ffffff;
+  text-decoration: underline;
+  font-weight: 600;
+}
+
+.su-links-text--white--no-hover a:hover, .su-links-text--white--no-hover a:focus, .su-links-text--white--no-hover a:active {
+  color: #ffffff;
+}
+
+.su-links-text--light-gray {
+  color: #e5e5e5;
+  text-decoration: underline;
+  font-weight: 600;
+}
+
+.su-links-text--light-gray:hover, .su-links-text--light-gray:focus, .su-links-text--light-gray:active {
+  color: #4d4f53;
+}
+
+.su-links-text--light-gray a {
+  color: #e5e5e5;
+  text-decoration: underline;
+  font-weight: 600;
+}
+
+.su-links-text--light-gray a:hover, .su-links-text--light-gray a:focus, .su-links-text--light-gray a:active {
+  color: #4d4f53;
+}
+
+.su-links-text--red {
+  color: #8c1515;
+  text-decoration: underline;
+  font-weight: 600;
+}
+
+.su-links-text--red:hover, .su-links-text--red:focus, .su-links-text--red:active {
+  color: #b1040e;
+}
+
+.su-links-text--red a {
+  color: #8c1515;
+  text-decoration: underline;
+  font-weight: 600;
+}
+
+.su-links-text--red a:hover, .su-links-text--red a:focus, .su-links-text--red a:active {
+  color: #b1040e;
+}
+
+.su-links-text--electric-purple {
+  color: #505EEC;
+  text-decoration: underline;
+  font-weight: 600;
+}
+
+.su-links-text--electric-purple:hover, .su-links-text--electric-purple:focus, .su-links-text--electric-purple:active {
+  color: #3C47B1;
+}
+
+.su-links-text--electric-purple a {
+  color: #505EEC;
+  text-decoration: underline;
+  font-weight: 600;
+}
+
+.su-links-text--electric-purple a:hover, .su-links-text--electric-purple a:focus, .su-links-text--electric-purple a:active {
+  color: #3C47B1;
+}
 
 
 /*# sourceMappingURL=theme.css.map*/
