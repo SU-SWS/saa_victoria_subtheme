@@ -6,14 +6,23 @@
 // default button style for this theme
 .su-button {
   // do an extend on some basic classes? or really just add those classes to the button twig template is more ideal
-  // @extend .bg-electric-purple;
+  // @extend .bg-electric-purple;  // this might not be available because it doesn't exist previously in the scss because tw generates it
+  //@extend .text-white;
   // tailwind suggests we do something like:
-  //@apply bg-red-500;
+  @apply bg-electric_purple;
+  @apply text-white;
+  &:hover, &:focus {
+    @apply bg-electric_purple_dark;
+    @apply text-white;
+  }
 }
 
 // red buttons are default when on purple background
 .bg-electric-purple > * > .su-button { // something like this, check structure
   //@extend .bg-bright-red;
+  @apply bg-bright_red;
+  @apply text-white;
+
 }
 
 
