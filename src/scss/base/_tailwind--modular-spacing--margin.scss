@@ -1,0 +1,103 @@
+// The purpose of this file is to override default tailwind margin & margin values with Decanter modular spacing values.
+// Modular spacing allows for various spacing units that adjust with our custom function to be responsive.
+
+// You can see the tailwind margin classes here: https://tailwindcss.com/docs/margin
+// Control the margin on one side of an element using the p{t|r|b|l}-{size} utilities.
+
+// tailwind classes for margin - set them to use decanter margin amounts
+
+// positive decanter multipliers
+@for $i from 1 through 9 {
+  .su-mt-#{$i} {  // top
+    @include modular-spacing('margin', $i null null null);
+  }
+  .su-mr-#{$i} {  // right
+    @include modular-spacing('margin', null $i null null);
+  }
+  .su-mb-#{$i} {  // bottom
+    @include modular-spacing('margin', null null $i null);
+  }
+  .su-ml-#{$i} {  // left
+    @include modular-spacing('margin', null null null $i);
+  }
+
+  // horizontal margin
+  .su-mx-#{$i} {
+    @include modular-spacing('margin', null $i null $i);
+  }
+  // vertical margin
+  .su-my-#{$i} {
+    @include modular-spacing('margin', $i null $i null);
+  }
+  // auto-generate for all sides margin
+  .su-m-#{$i} {
+    @include modular-spacing('margin', $i $i $i $i);
+  }
+}
+
+// .su-m-0 will set margin to 0, as tailwind documentation says, so we don't confuse.
+// 0 default spacing decanter multiplier value - NOT setting margin to "0"
+
+.su-mt-default {  // top
+  @include modular-spacing('margin', 0 null null null);
+
+}
+.su-mr-default {  // right
+  @include modular-spacing('margin', null 0 null null);
+}
+.su-mb-default {  // bottom
+  @include modular-spacing('margin', null null 0 null);
+
+}
+.su-ml-default {  // left
+  @include modular-spacing('margin', null null null 0);
+}
+
+// horizontal margin
+.su-mx-default {
+  @include modular-spacing('margin', null 0 null 0);
+}
+
+// vertical margin
+.su-my-default {
+  @include modular-spacing('margin', 0 null 0 null);
+}
+
+// all sides
+.su-m-default {
+  @include modular-spacing('margin', 0 0 0 0);
+}
+
+// negative values for the modular spacing multiplier are for smaller amounts (NOT negative margin)
+
+@for $i from -4 through -1 {
+  .su-mt-small#{$i} {  // top
+    @include modular-spacing('margin', $i null null null);
+  }
+  .su-mr-small#{$i} {  // right
+    @include modular-spacing('margin', null $i null null);
+
+  }
+  .su-mb-small#{$i} {  // bottom
+    @include modular-spacing('margin', null null $i null);
+
+  }
+  .su-ml-small#{$i} {  // left
+    @include modular-spacing('margin', null null null $i);
+  }
+
+  // horizontal margin
+  .su-mx-small#{$i} {
+    @include modular-spacing('margin', null $i null $i);
+
+  }
+
+  // vertical margin
+  .su-my-small#{$i} {
+    @include modular-spacing('margin', $i null $i null);
+  }
+  // auto-generate for all sides margin
+  .su-m-small#{$i} {
+    @include modular-spacing('margin', $i $i $i $i);
+  }
+}

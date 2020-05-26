@@ -1,0 +1,105 @@
+// The purpose of this file is to override neutral tailwind padding & margin values with Decanter modular spacing values.
+// Modular spacing allows for various spacing units that adjust with our custom function to be responsive.
+
+// You can see the tailwind padding classes here: https://tailwindcss.com/docs/padding
+// Control the padding on one side of an element using the p{t|r|b|l}-{size} utilities.
+
+// tailwind classes for padding - set them to use decanter padding amounts
+
+// positive decanter multipliers
+@for $i from 1 through 9 {
+  .su-pt-#{$i} {  // top
+    @include modular-spacing('padding', $i null null null);
+  }
+  .su-pr-#{$i} {  // right
+    @include modular-spacing('padding', null $i null null);
+  }
+  .su-pb-#{$i} {  // bottom
+    @include modular-spacing('padding', null null $i null);
+  }
+  .su-pl-#{$i} {  // left
+    @include modular-spacing('padding', null null null $i);
+  }
+
+  // horizontal padding
+  .su-px-#{$i} {
+    @include modular-spacing('padding', null $i null $i);
+  }
+  // vertical padding
+  .su-py-#{$i} {
+    @include modular-spacing('padding', $i null $i null);
+  }
+  // auto-generate for all sides padding
+  .su-p-#{$i} {
+    @include modular-spacing('padding', $i $i $i $i);
+  }
+}
+
+// .su-p-0 will set padding to 0, as tailwind documentation says, so we don't confuse.
+// 0 neutral spacing decanter multiplier value - NOT setting padding to "0"
+
+.su-pt-default {  // top
+  @include modular-spacing('padding', 0 null null null);
+
+}
+.su-pr-default {  // right
+  @include modular-spacing('padding', null 0 null null);
+}
+.su-pb-default {  // bottom
+  @include modular-spacing('padding', null null 0 null);
+
+}
+.su-pl-default {  // left
+  @include modular-spacing('padding', null null null 0);
+}
+
+// horizontal padding
+.su-px-default {
+  @include modular-spacing('padding', null 0 null 0);
+}
+
+// vertical padding
+.su-py-default {
+  @include modular-spacing('padding', 0 null 0 null);
+}
+
+// all sides
+.su-p-default {
+  @include modular-spacing('padding', 0 0 0 0);
+}
+
+// negative values for the modular spacing multiplier are for smaller amounts (NOT negative padding)
+
+@for $i from -4 through -1 {
+  .su-pt-small#{$i} {  // top
+    @include modular-spacing('padding', $i null null null);
+  }
+  .su-pr-small#{$i} {  // right
+    @include modular-spacing('padding', null $i null null);
+
+  }
+  .su-pb-small#{$i} {  // bottom
+    @include modular-spacing('padding', null null $i null);
+
+  }
+  .su-pl-small#{$i} {  // left
+    @include modular-spacing('padding', null null null $i);
+  }
+
+  // horizontal padding
+  .su-px-small#{$i} {
+    @include modular-spacing('padding', null $i null $i);
+
+  }
+
+  // vertical padding
+  .su-py-small#{$i} {
+    @include modular-spacing('padding', $i null $i null);
+  }
+  // auto-generate for all sides padding
+  .su-p-small#{$i} {
+    @include modular-spacing('padding', $i $i $i $i);
+  }
+}
+
+

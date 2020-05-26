@@ -7,6 +7,6 @@
 /**
  * Prepares variables for the html.html.twig template.
  */
-function stanford_starter_preprocess_html(&$variables) {
+function saa_victoria_subtheme_preprocess_html(&$variables) {
   $variables['stanford_basic_path'] = drupal_get_path('theme', 'stanford_basic');
 }

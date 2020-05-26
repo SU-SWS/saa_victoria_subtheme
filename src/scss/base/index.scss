@@ -15,9 +15,21 @@
 // Config and supporting scss.
 @import
   '../config/index';
+@import '../utilities/index';
+@import "~tailwindcss";
+// decanter modular spacing, modeled after tailwind
+@import 'tailwind--modular-spacing--padding';
+@import 'tailwind--modular-spacing--margin';
 
 .stanford-starter {
   &::after {
     content: 'Stanford Starter';
   }
+}
+
+// interface improvements
+
+[type=checkbox]:checked+label:before, [type=checkbox]:checked:disabled+label:before {
+  background: #b1040c;
+//url(../../assets/img/check.png);
 }

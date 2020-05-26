@@ -43,7 +43,7 @@ const distAssets =  path.resolve(distDir, 'assets');
 // Start configuring webpack.
 var webpackConfig = {
   // What am i?
-  name: 'stanford_starter',
+  name: 'saa_victoria_subtheme',
   // Allows for map files.
   devtool: 'source-map',
   // What build?
@@ -99,12 +99,6 @@ var webpackConfig = {
           // Post CSS. Run autoprefixer plugin.
           {
             loader: 'postcss-loader',
-            options: {
-              sourceMap: true,
-              plugins: () => [
-                autoprefixer
-              ]
-            }
           },
           // SASS Loader. Add compile paths to include bourbon.
           {
