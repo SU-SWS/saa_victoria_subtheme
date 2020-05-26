@@ -1,1 +1,41 @@
 // Card styles will go here
+
+.su-card.su-card--icon {
+  // general styles here
+
+  // icon settings
+  img {
+
+  }
+
+
+  // spacing differences
+
+
+
+  // colored corner tag
+  &:before {
+    content: "";
+    height: 40px;
+    width: 20px;
+    // @apply .w-5;  // what is the benefit of doing this a lot?
+    // @apply .h-10;  // also using rems, the rems are different base at different screen sizes, so it would be 20px at small, but around 24px at a large size
+
+    display: block;
+    position: absolute;  // top left corner inside the card
+    @apply bg-electric_purple;  // default color
+
+    &.tag-color--electric-purple:before {
+      @apply bg-electric_purple;
+    }
+
+    &.tag-color--wintergreen:before {
+      @apply bg-wintergreen;
+    }
+
+    &.tag-color--dandelion:before {
+      @apply bg-dandelion;
+    }
+  }
+
+}

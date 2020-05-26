@@ -89,7 +89,6 @@
   // horizontal padding
   .su-px-small#{$i} {
     @include modular-spacing('padding', null $i null $i);
-
   }
 
   // vertical padding
