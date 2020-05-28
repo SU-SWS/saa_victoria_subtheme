@@ -9,9 +9,6 @@
   // @extend .bg-electric-purple;  // this might not be available because it doesn't exist previously in the scss because tw generates it
   //@extend .text-white;
   // tailwind suggests we do something like:
-  @include modular-spacing('margin', 3 null 2 null);
-
-
 
   @apply bg-electric_purple;
   @apply text-white;

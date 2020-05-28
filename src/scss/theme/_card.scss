@@ -2,10 +2,15 @@
 
 .su-card.su-card--icon {
   // general styles here
+  //@include modular-spacing('padding', 4 4 4 4);
 
   // icon settings
   img {
-
+    margin: 0;
+    @include modular-spacing('margin', null null 2 null);
+    @include modular-spacing('padding', 4 null null 4);
+    width: auto;
+    height: auto;
   }
 
 
@@ -16,7 +21,7 @@
   // colored corner tag
   &:before {
     content: "";
-    height: 40px;
+    height: 70px;
     width: 20px;
     // @apply .w-5;  // what is the benefit of doing this a lot?
     // @apply .h-10;  // also using rems, the rems are different base at different screen sizes, so it would be 20px at small, but around 24px at a large size
@@ -37,5 +42,12 @@
       @apply bg-dandelion;
     }
   }
-
+  .su-card__contents {
+    margin: 0;
+    padding: 0;
+    @include modular-spacing('padding', null 4 4 4);
+  }
+  .su-button {
+    @include modular-spacing('margin', 1 null null null);
+  }
 }
