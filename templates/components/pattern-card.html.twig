@@ -1,0 +1,85 @@
+{#
+/**
+ * @file
+ * Simple wrapper used when an external Twig template is specified using the 'use:' property.
+ *
+ * @see \Drupal\ui_patterns\Element\Pattern::processUse().
+ */
+#}
+{# until interface options are available, all cards will be icon cards on SAA sites #}
+{% set attributes = attributes.addClass('su-card--icon pt-0 text-left') %}
+{% set card_image_class = card_image_class.addClass('saa-icon-card--image') %}
+
+{% include use %}
+
+{% block block_card_media %}
+{#  {{ item.content, item.attributes.addClass('img-fluid') }}#}
+  {{ card_image.attributes.addClass('special-test-image') }}
+  {{ card_media_custom }}
+{% endblock %}
+
+{#  version without drupal image wrapping, to get more customized#}
+{# {% block block_card_media %}#}
+{#   #}{# We use the media component here except for the two variants with icons in the media field. #}
+
+{#   {% if 'su-card--video' in modifier_class %}#}
+{#     #}{# Support for cards with a self-hosted video in the media field #}
+{#     {% if card_media_video_src is not empty %}#}
+{#       {% include template_path_media with#}
+{#         {#}
+{#           "modifier_class": card_media_modifier_class ~ ' ' ~ 'su-media--video su-card__media',#}
+{#           "attributes": card_media_attributes,#}
+{#           "media_link": card_media_link,#}
+{#           "media_link_attributes": card_cta_attributes ~ ' ' ~ "tabindex='-1'",#}
+{#           "media_video_src": card_media_video_src,#}
+{#           "media_wrapper_modifier_class": card_media_wrapper_modifier_class,#}
+{#           "media_type": card_media_type,#}
+{#           "media_content_attributes": card_media_content_attributes#}
+{#         }#}
+{#         only#}
+{#       %}#}
+{#     {% endif %}#}
+{#   {% elseif 'su-card--embed' in modifier_class %}#}
+{#     #}{# Support for cards with an embedded media element, e.g., YouTube or Vimeo videos #}
+{#     {% if card_media_custom is not empty %}#}
+{#       {% include template_path_media with#}
+{#         {#}
+{#           "modifier_class": card_media_modifier_class ~ ' ' ~ 'su-card__media',#}
+{#           "attributes": card_media_attributes,#}
+{#           "media_wrapper_modifier_class": card_media_wrapper_modifier_class,#}
+{#           "media_custom": card_media_custom#}
+{#         }#}
+{#         only#}
+{#       %}#}
+{#     {% endif %}#}
+{#   {%- elseif 'su-card--icon-font' in modifier_class -%}#}
+{#     #}{# Support for icon font, e.g., FontAwesome #}
+{#     {% if card_icon_font_class is not empty %}#}
+{#       <span {{ card_media_attributes }} class="{{ card_icon_font_class }}" aria-hidden="true"></span>#}
+{#     {% endif %}#}
+{#   {%- elseif 'su-card--icon' in modifier_class -%}#}
+{#     #}{# Support for small images such as icons or avatars; use card_media_icon_image_src if provided, if not, use card_media_image_src. #}
+{#     {%- if card_media_icon_image_src is not empty %}#}
+{#       <img {{ card_media_attributes|default("aria-hidden='true'") }} src="{{ card_media_icon_image_src }}" class="{{ card_image_class }}">#}
+{#     {%- elseif card_media_image_src is not empty %}#}
+{#       <img {{ card_media_attributes|default("aria-hidden='true'") }} src="{{ card_media_image_src }}" class="{{ card_image_class }}">#}
+{#     {%- endif -%}#}
+{#   {% else %}#}
+{#     #}{# Default card with optional image in media field #}
+{#     {%- if card_media_image_src is not empty -%}#}
+{#       {% include template_path_media with#}
+{#         {#}
+{#           "modifier_class": card_media_modifier_class ~ ' ' ~ 'su-media--image su-card__media',#}
+{#           "attributes": card_media_attributes,#}
+{#           "media_wrapper_modifier_class": card_media_wrapper_modifier_class,#}
+{#           "media_link": card_media_link,#}
+{#           "media_link_attributes": card_cta_attributes ~ ' ' ~ "tabindex='-1'",#}
+{#           "media_image_src": card_media_image_src,#}
+{#           "media_image_srcset": card_media_image_srcset,#}
+{#           "media_content_attributes": card_media_content_attributes#}
+{#         }#}
+{#         only#}
+{#       %}#}
+{#     {%- endif -%}#}
+{#   {% endif %}#}
+{# {% endblock block_card_media -%}#}
