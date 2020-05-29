@@ -29,6 +29,8 @@
   margin: 0;
   width: auto;
   height: auto;
+  max-width: 25px;
+  max-height: 25px;
 }
 
 @media only screen and (min-width: 0) {
@@ -89,14 +91,14 @@
 
 .su-card.su-card--icon:before.tag-color--wintergreen:before {
   --bg-opacity: 1;
-  background-color: #de3618;
-  background-color: rgba(222, 54, 24, var(--bg-opacity));
+  background-color: #77C7A0;
+  background-color: rgba(119, 199, 160, var(--bg-opacity));
 }
 
 .su-card.su-card--icon:before.tag-color--dandelion:before {
   --bg-opacity: 1;
-  background-color: #007ace;
-  background-color: rgba(0, 122, 206, var(--bg-opacity));
+  background-color: #FBD115;
+  background-color: rgba(251, 209, 21, var(--bg-opacity));
 }
 
 .su-card.su-card--icon .su-card__contents {
@@ -144,6 +146,78 @@
   .su-card.su-card--icon .su-button {
     margin-top: 2.74rem;
   }
+}
+
+.container-3-items .paragraph-item:nth-of-type(1) .su-card.su-card--icon:before {
+  --bg-opacity: 1;
+  background-color: #505EEC;
+  background-color: rgba(80, 94, 236, var(--bg-opacity));
+}
+
+.container-3-items .paragraph-item:nth-of-type(2) .su-card.su-card--icon:before {
+  --bg-opacity: 1;
+  background-color: #77C7A0;
+  background-color: rgba(119, 199, 160, var(--bg-opacity));
+}
+
+.container-3-items .paragraph-item:nth-of-type(3) .su-card.su-card--icon:before {
+  --bg-opacity: 1;
+  background-color: #FBD115;
+  background-color: rgba(251, 209, 21, var(--bg-opacity));
+}
+
+.container-3-items:nth-of-type(2) .paragraph-item:nth-of-type(2) .su-card.su-card--icon:before {
+  --bg-opacity: 1;
+  background-color: #505EEC;
+  background-color: rgba(80, 94, 236, var(--bg-opacity));
+}
+
+.container-3-items:nth-of-type(2) .paragraph-item:nth-of-type(3) .su-card.su-card--icon:before {
+  --bg-opacity: 1;
+  background-color: #77C7A0;
+  background-color: rgba(119, 199, 160, var(--bg-opacity));
+}
+
+.container-3-items:nth-of-type(2) .paragraph-item:nth-of-type(1) .su-card.su-card--icon:before {
+  --bg-opacity: 1;
+  background-color: #FBD115;
+  background-color: rgba(251, 209, 21, var(--bg-opacity));
+}
+
+.container-2-items .paragraph-item:nth-of-type(2) .su-card.su-card--icon:before {
+  --bg-opacity: 1;
+  background-color: #77C7A0;
+  background-color: rgba(119, 199, 160, var(--bg-opacity));
+}
+
+.container-2-items .paragraph-item:nth-of-type(1) .su-card.su-card--icon:before {
+  --bg-opacity: 1;
+  background-color: #FBD115;
+  background-color: rgba(251, 209, 21, var(--bg-opacity));
+}
+
+.container-2-items:nth-of-type(2) .paragraph-item:nth-of-type(1) .su-card.su-card--icon:before {
+  --bg-opacity: 1;
+  background-color: #505EEC;
+  background-color: rgba(80, 94, 236, var(--bg-opacity));
+}
+
+.container-2-items:nth-of-type(2) .paragraph-item:nth-of-type(2) .su-card.su-card--icon:before {
+  --bg-opacity: 1;
+  background-color: #FBD115;
+  background-color: rgba(251, 209, 21, var(--bg-opacity));
+}
+
+.container-2-items:nth-of-type(3) .paragraph-item:nth-of-type(2) .su-card.su-card--icon:before {
+  --bg-opacity: 1;
+  background-color: #505EEC;
+  background-color: rgba(80, 94, 236, var(--bg-opacity));
+}
+
+.container-2-items:nth-of-type(3) .paragraph-item:nth-of-type(1) .su-card.su-card--icon:before {
+  --bg-opacity: 1;
+  background-color: #77C7A0;
+  background-color: rgba(119, 199, 160, var(--bg-opacity));
 }
 
 /* SAA Specific colors, Stanford/Decanter colors are not defined here */

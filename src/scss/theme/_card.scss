@@ -11,6 +11,8 @@
     @include modular-spacing('padding', 4 null null 4);
     width: auto;
     height: auto;
+    max-width: 25px;
+    max-height: 25px;
   }
 
 
@@ -49,5 +51,69 @@
   }
   .su-button {
     @include modular-spacing('margin', 1 null null null);
+  }
+}
+// add colored tags in order, for while we don't have interface customization yet:
+
+// 3 card row
+.container-3-items {
+  .paragraph-item:nth-of-type(1) {
+    .su-card.su-card--icon:before {
+      @apply bg-electric_purple;
+    }
+  }
+
+  .paragraph-item:nth-of-type(2) {
+    .su-card.su-card--icon:before {
+      @apply bg-wintergreen;
+    }
+  }
+
+  .paragraph-item:nth-of-type(3) {
+    .su-card.su-card--icon:before {
+      @apply bg-dandelion;
+    }
+  }
+}
+// row 2
+.container-3-items:nth-of-type(2) {
+  .paragraph-item:nth-of-type(2) .su-card.su-card--icon:before {
+      @apply bg-electric_purple;
+  }
+
+  .paragraph-item:nth-of-type(3) .su-card.su-card--icon:before {
+      @apply bg-wintergreen;
+  }
+
+  .paragraph-item:nth-of-type(1) .su-card.su-card--icon:before {
+      @apply bg-dandelion;
+  }
+}
+
+.container-2-items {
+  .paragraph-item:nth-of-type(1) .su-card.su-card--icon:before {
+    @apply bg-dandelion;
+  }
+  .paragraph-item:nth-of-type(2) .su-card.su-card--icon:before {
+      @apply bg-wintergreen;
+  }
+}
+// row 2
+.container-2-items:nth-of-type(2) {
+  .paragraph-item:nth-of-type(1) .su-card.su-card--icon:before {
+      @apply bg-electric_purple;
+  }
+
+  .paragraph-item:nth-of-type(2) .su-card.su-card--icon:before {
+      @apply bg-dandelion;
+  }
+}
+// row 3
+.container-2-items:nth-of-type(3) {
+  .paragraph-item:nth-of-type(1) .su-card.su-card--icon:before {
+    @apply bg-wintergreen;
+  }
+  .paragraph-item:nth-of-type(2) .su-card.su-card--icon:before {
+      @apply bg-electric_purple;
   }
 }
