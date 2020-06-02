@@ -1,5 +1,5 @@
 // @import '~tailwindcss/base.css';  // this will only pull in the original tailwind from node_modules, not our custom version
-
+@import '../utilities/variables/colors';
 
 // override decanter button styles here to use new colors and any other differences
 
@@ -11,9 +11,21 @@
   // tailwind suggests we do something like:
   @apply bg-electric_purple;
   @apply text-white;
+  padding: 10px 30px;
   &:hover, &:focus {
     @apply bg-electric_purple_dark;
     @apply text-white;
+  }
+  &.su-button--secondary {
+    @apply bg-white;
+    @apply text-electric_purple;
+    @apply shadow;
+    border: 1px solid $saa-color-electric_purple;
+    //@apply border-electric_purple;
+    box-shadow: none;
+  }
+  &.su-button--big {
+// font size should already be handled, and colors above
   }
 }
 

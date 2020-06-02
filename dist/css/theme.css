@@ -1,3 +1,5 @@
+/* SAA Specific colors, Stanford/Decanter colors are not defined here */
+
 .su-button {
   --bg-opacity: 1;
   background-color: #505EEC;
@@ -5,6 +7,7 @@
   --text-opacity: 1;
   color: #fff;
   color: rgba(255, 255, 255, var(--text-opacity));
+  padding: 10px 30px;
 }
 
 .su-button:hover, .su-button:focus {
@@ -16,6 +19,20 @@
   color: rgba(255, 255, 255, var(--text-opacity));
 }
 
+.su-button.su-button--secondary {
+  --bg-opacity: 1;
+  background-color: #fff;
+  background-color: rgba(255, 255, 255, var(--bg-opacity));
+  --text-opacity: 1;
+  color: #505EEC;
+  color: rgba(80, 94, 236, var(--text-opacity));
+  -webkit-box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.1);
+          box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.1);
+  border: 1px solid #505EEC;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
 .bg-electric-purple > * > .su-button {
   --bg-opacity: 1;
   background-color: #b1040e;
@@ -23,6 +40,14 @@
   --text-opacity: 1;
   color: #fff;
   color: rgba(255, 255, 255, var(--text-opacity));
+}
+
+.su-link, a {
+  color: #ec0513;
+}
+
+.su-link:hover, .su-link:focus, a:hover, a:focus {
+  color: #CE0D0D;
 }
 
 /* SAA Specific colors, Stanford/Decanter colors are not defined here */
