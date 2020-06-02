@@ -1,10 +1,7 @@
-// Card styles will go here
-
+// Icon Card styles will go here
+$tag_width: 70px;
+$tag_height: 20px;
 .su-card.su-card--icon {
-  // general styles here
-  //@include modular-spacing('padding', 4 4 4 4);
-
-
 
   // icon settings
   img {
@@ -17,19 +14,11 @@
     max-height: 25px;
   }
 
-
-  // spacing differences
-
-
-
   // colored corner tag
   &:before {
     content: "";
-    height: 70px;
-    width: 20px;
-    // @apply .w-5;  // what is the benefit of doing this a lot?
-    // @apply .h-10;  // also using rems, the rems are different base at different screen sizes, so it would be 20px at small, but around 24px at a large size
-
+    height: $tag_height;
+    width: $tag_width;
     display: block;
     position: absolute;  // top left corner inside the card
     @apply bg-electric_purple;  // default color
@@ -48,7 +37,6 @@
   }
   .su-card__contents {
     margin: 0;
-    //padding: 0;
     @include modular-spacing('padding', 4 4 4 4);
   }
   .contextual-region + .su-card__contents {
