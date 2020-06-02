@@ -74,8 +74,8 @@
 
 .su-card.su-card--icon:before {
   content: "";
-  height: 20px;
-  width: 70px;
+  height: 70px;
+  width: 20px;
   display: block;
   position: absolute;
   --bg-opacity: 1;
@@ -152,6 +152,14 @@
   .su-card.su-card--icon .su-button {
     margin-top: 2.74rem;
   }
+}
+
+.su-card.su-card--icon .su-link.su-card__link {
+  color: #ec0513;
+}
+
+.su-card.su-card--icon .su-link.su-card__link:focus, .su-card.su-card--icon .su-link.su-card__link:hover {
+  color: #ec0513;
 }
 
 .container-3-items:nth-of-type(3n-2) .paragraph-item:nth-of-type(1) .su-card.su-card--icon:before {
