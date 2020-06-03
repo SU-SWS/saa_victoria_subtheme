@@ -1,51 +1,55 @@
 @charset "UTF-8";
 
 // Icon Card styles will go here
-$tag_width: 20px;
-$tag_height: 70px;
+$tag-width: 20px;
+$tag-height: 70px;
 
-.su-card.su-card--icon {
+.su-card {
+  &.su-card--icon {
 
-  // icon settings
-  img {
-    margin: 0;
-    @include modular-spacing('margin', 4 null 2 4);
-    width: auto;
-    height: auto;
-    max-width: 25px;
-    max-height: 25px;
-  }
-
-  // colored corner tag
-  &:before {
-    content: "";
-    height: $tag_height;
-    width: $tag_width;
-    display: block;
-    position: absolute;  // top left corner inside the card
-    @apply bg-electric_purple;  // default color
-
-    &.tag-color--electric-purple:before {
-      @apply bg-electric_purple;
+    // icon settings
+    img {
+      margin: 0;
+      @include modular-spacing('margin', 4 null 2 4);
+      width: auto;
+      height: auto;
+      max-width: 25px;
+      max-height: 25px;
     }
 
-    &.tag-color--wintergreen:before {
-      @apply bg-wintergreen;
+    // colored corner tag
+    &::before {
+      content: "";
+      height: $tag-height;
+      width: $tag-width;
+      display: block;
+      position: absolute;  // top left corner inside the card
+      @apply bg-electric_purple;  // default color
+
+      &.tag-color--electric-purple:before {
+        @apply bg-electric_purple;
+      }
+
+      &.tag-color--wintergreen:before {
+        @apply bg-wintergreen;
+      }
+
+      &.tag-color--dandelion:before {
+        @apply bg-dandelion;
+      }
+    }
+    .su-card__contents {
+      margin: 0;
+      @include modular-spacing('padding', 4 4 4 4);
     }
 
-    &.tag-color--dandelion:before {
-      @apply bg-dandelion;
+    .contextual-region + .su-card__contents {
+      padding-top: 0px;
     }
-  }
-  .su-card__contents {
-    margin: 0;
-    @include modular-spacing('padding', 4 4 4 4);
-  }
-  .contextual-region + .su-card__contents {
-    padding-top: 0px;
-  }
-  .su-button {
-    @include modular-spacing('margin', 1 null null null);
+
+    .su-button {
+      @include modular-spacing('margin', 1 null null null);
+    }
   }
 }
 // add colored tags in order, for while we don't have interface customization yet:
@@ -53,43 +57,48 @@ $tag_height: 70px;
 // 3 card row, 1 in 3
 .container-3-items:nth-of-type(3n-2) {
   .paragraph-item:nth-of-type(1) {
-    .su-card.su-card--icon:before {
+    .su-card.su-card--icon::before {
       @apply bg-dandelion;
     }
   }
 
   .paragraph-item:nth-of-type(2) {
-    .su-card.su-card--icon:before {
+    .su-card.su-card--icon::before {
       @apply bg-wintergreen;
     }
   }
 
   .paragraph-item:nth-of-type(3) {
-    .su-card.su-card--icon:before {
+    .su-card.su-card--icon::before {
       @apply bg-electric_purple;
     }
   }
 }
+
 // 3 cards, row 2
 .container-3-items:nth-of-type(3n-1) {
-  .paragraph-item:nth-of-type(1) .su-card.su-card--icon:before {
+  .paragraph-item:nth-of-type(1) .su-card.su-card--icon::before {
     @apply bg-wintergreen;
   }
-  .paragraph-item:nth-of-type(2) .su-card.su-card--icon:before {
-      @apply bg-electric_purple;
+
+  .paragraph-item:nth-of-type(2) .su-card.su-card--icon::before {
+    @apply bg-electric_purple;
   }
-  .paragraph-item:nth-of-type(3) .su-card.su-card--icon:before {
+
+  .paragraph-item:nth-of-type(3) .su-card.su-card--icon::before {
     @apply bg-dandelion;
   }
 }
 // 3 cards, row 3
 .container-3-items:nth-of-type(3n) {
-  .paragraph-item:nth-of-type(1) .su-card.su-card--icon:before {
+  .paragraph-item:nth-of-type(1) .su-card.su-card--icon::before {
     @apply bg-electric_purple;
   }
-  .paragraph-item:nth-of-type(2) .su-card.su-card--icon:before {
+
+  .paragraph-item:nth-of-type(2) .su-card.su-card--icon::before {
     @apply bg-dandelion;
   }
+
   .paragraph-item:nth-of-type(3) .su-card.su-card--icon:before {
     @apply bg-wintergreen;
   }
@@ -97,49 +106,50 @@ $tag_height: 70px;
 
 // 2 items, row 1
 .container-2-items:nth-of-type(3n-2) {
-  .paragraph-item:nth-of-type(1) .su-card.su-card--icon:before {
+  .paragraph-item:nth-of-type(1) .su-card.su-card--icon::before {
     @apply bg-dandelion;
   }
-  .paragraph-item:nth-of-type(2) .su-card.su-card--icon:before {
-      @apply bg-wintergreen;
+
+  .paragraph-item:nth-of-type(2) .su-card.su-card--icon::before {
+    @apply bg-wintergreen;
   }
 }
 // 2 items, row 2
 .container-2-items:nth-of-type(3n-1) {
-  .paragraph-item:nth-of-type(1) .su-card.su-card--icon:before {
-      @apply bg-electric_purple;
+  .paragraph-item:nth-of-type(1) .su-card.su-card--icon::before {
+    @apply bg-electric_purple;
   }
 
-  .paragraph-item:nth-of-type(2) .su-card.su-card--icon:before {
-      @apply bg-dandelion;
+  .paragraph-item:nth-of-type(2) .su-card.su-card--icon::before {
+    @apply bg-dandelion;
   }
 }
 // 2 items, row 3
 .container-2-items:nth-of-type(3n) {
-  .paragraph-item:nth-of-type(1) .su-card.su-card--icon:before {
+  .paragraph-item:nth-of-type(1) .su-card.su-card--icon::before {
     @apply bg-wintergreen;
   }
-  .paragraph-item:nth-of-type(2) .su-card.su-card--icon:before {
-      @apply bg-electric_purple;
+  .paragraph-item:nth-of-type(2) .su-card.su-card--icon::before {
+    @apply bg-electric_purple;
   }
 }
 
-
 // 1 items, row 1
 .container-1-items:nth-of-type(3n-2) {
-  .paragraph-item:nth-of-type(1) .su-card.su-card--icon:before {
+  .paragraph-item:nth-of-type(1) .su-card--icon::before {
     @apply bg-dandelion;
   }
 }
 // 1 item, row 2
 .container-1-items:nth-of-type(3n-1) {
-  .paragraph-item:nth-of-type(1) .su-card.su-card--icon:before {
+  .paragraph-item:nth-of-type(1) .su-card--icon::before {
     @apply bg-wintergreen;
   }
 }
 // 1 item, row 3
 .container-1-items:nth-of-type(3n) {
-  .paragraph-item:nth-of-type(1) .su-card.su-card--icon:before {
+  .paragraph-item:nth-of-type(1) .su-card--icon::before {
     @apply bg-electric_purple;
   }
 }
+
