@@ -38,6 +38,7 @@ $tag-height: 70px;
         @apply bg-dandelion;
       }
     }
+
     .su-card__contents {
       margin: 0;
       @include modular-spacing('padding', 4 4 4 4);
@@ -151,6 +152,7 @@ $tag-height: 70px;
       @apply bg-wintergreen;
     }
   }
+
   .paragraph-item:nth-of-type(2) {
     .su-card.su-card--icon::before {
       @apply bg-electric_purple;
