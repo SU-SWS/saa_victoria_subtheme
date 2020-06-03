@@ -44,6 +44,7 @@
 
 .su-link, a {
   color: #ec0513;
+  text-decoration: none;
 }
 
 .su-link:hover, .su-link:focus, a:hover, a:focus {
@@ -54,16 +55,20 @@
   background-color: #ec0513;
 }
 
-.su-link::after:hover, .su-link::after:focus, a::after:hover, a::after:focus {
-  background-color: #CE0D0D;
-}
-
 .su-link::after:hover, a::after:hover {
   cursor: pointer;
 }
 
+.su-link:hover::after, .su-link:focus::after, a:hover::after, a:focus::after {
+  background-color: #CE0D0D;
+}
+
 .su-link.su-link--internal::after:hover, .su-link.su-link--internal::after:focus, a.su-link--internal::after:hover, a.su-link--internal::after:focus {
   background-color: #ec0513;
+}
+
+.su-link.su-link--video::after, a.su-link--video::after {
+  width: 14px;
 }
 
 .su-link.disabled, a.disabled {
