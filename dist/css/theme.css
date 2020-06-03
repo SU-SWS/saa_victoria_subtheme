@@ -50,6 +50,26 @@
   color: #CE0D0D;
 }
 
+.su-link::after, a::after {
+  background-color: #ec0513;
+}
+
+.su-link::after:hover, .su-link::after:focus, a::after:hover, a::after:focus {
+  background-color: #CE0D0D;
+}
+
+.su-link::after:hover, a::after:hover {
+  cursor: pointer;
+}
+
+.su-link.su-link--internal::after:hover, .su-link.su-link--internal::after:focus, a.su-link--internal::after:hover, a.su-link--internal::after:focus {
+  background-color: #ec0513;
+}
+
+.su-link.disabled, a.disabled {
+  color: #4d4f53;
+}
+
 /* SAA Specific colors, Stanford/Decanter colors are not defined here */
 
 /* ----- link styles -----  */

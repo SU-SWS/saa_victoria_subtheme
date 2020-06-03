@@ -3,4 +3,22 @@
   &:hover, &:focus {
     color: $su-color-vivid-red-dark; // should be #CE0D0D
   }
+  &::after {
+    background-color: $su-color-vivid-red;
+    &:hover, &:focus {
+      background-color: $su-color-vivid-red-dark; // should be #CE0D0D
+    }
+    &:hover {
+      cursor: pointer;
+    }
+  }
+  &.su-link--internal::after {
+    &:hover, &:focus {
+      background-color: $su-color-vivid-red;
+    }
+  }
+  &.disabled {
+    color: $su-color-cool-grey;
+  }
+
 }
