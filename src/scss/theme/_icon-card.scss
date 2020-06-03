@@ -11,8 +11,8 @@ $tag_height: 70px;
     @include modular-spacing('padding', 4 null null 4);
     width: auto;
     height: auto;
-    max-width: 25px;
-    max-height: 25px;
+    //max-width: 25px;
+    //max-height: 25px;
   }
 
   // colored corner tag
