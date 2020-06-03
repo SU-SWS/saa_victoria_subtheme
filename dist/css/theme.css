@@ -35,40 +35,25 @@
 
 @media only screen and (min-width: 0) {
   .su-card.su-card--icon img {
+    margin-top: 5.12rem;
     margin-bottom: 3.2rem;
+    margin-left: 5.12rem;
   }
 }
 
 @media only screen and (min-width: 768px) {
   .su-card.su-card--icon img {
+    margin-top: 5.76rem;
     margin-bottom: 3.6rem;
+    margin-left: 5.76rem;
   }
 }
 
 @media only screen and (min-width: 1500px) {
   .su-card.su-card--icon img {
+    margin-top: 6.08rem;
     margin-bottom: 3.8rem;
-  }
-}
-
-@media only screen and (min-width: 0) {
-  .su-card.su-card--icon img {
-    padding-top: 5.12rem;
-    padding-left: 5.12rem;
-  }
-}
-
-@media only screen and (min-width: 768px) {
-  .su-card.su-card--icon img {
-    padding-top: 5.76rem;
-    padding-left: 5.76rem;
-  }
-}
-
-@media only screen and (min-width: 1500px) {
-  .su-card.su-card--icon img {
-    padding-top: 6.08rem;
-    padding-left: 6.08rem;
+    margin-left: 6.08rem;
   }
 }
 

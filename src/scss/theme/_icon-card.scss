@@ -7,12 +7,11 @@ $tag_height: 70px;
   // icon settings
   img {
     margin: 0;
-    @include modular-spacing('margin', null null 2 null);
-    @include modular-spacing('padding', 4 null null 4);
+    @include modular-spacing('margin', 4 null 2 4);
     width: auto;
     height: auto;
-    //max-width: 25px;
-    //max-height: 25px;
+    max-width: 25px;
+    max-height: 25px;
   }
 
   // colored corner tag
