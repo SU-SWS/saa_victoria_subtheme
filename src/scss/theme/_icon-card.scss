@@ -108,6 +108,7 @@ $tag-height: 70px;
     }
   }
 }
+
 // 3 cards, row 3
 .container-3-items:nth-of-type(3n) {
   .paragraph-item:nth-of-type(1) {
@@ -153,6 +154,7 @@ $tag-height: 70px;
     }
   }
 }
+
 // 2 items, row 2
 .container-2-items:nth-of-type(3n-1) {
   .paragraph-item:nth-of-type(1) {
