@@ -11,21 +11,6 @@ function saa_victoria_subtheme_preprocess_html(&$variables) {
   $variables['stanford_basic_path'] = drupal_get_path('theme', 'stanford_basic');
 }
 
-//function saa_victoria_subtheme_preprocess_field__image(&$variables) {
-////function saa_victoria_subtheme_preprocess_field__su_card_media(&$variables) {
-////  dpm($variables);
-//
-//  foreach ($variables['items'] as &$item) {
-//    if ($item['content']['#responsive_image_style_id'] == 'card_2_1') {
-//      // this currently applies to all images with this responsive image style, not just images inside cards
-//      // need to find a way to limit this to just images inside cards, but that info isn't available at this image level
-//      // i am looking into adding a class / attribute to this image so that we can check at this level
-//      $item['content']['#theme'] = 'image_formatter';
-//      $item['content']['#image_style'] = 'thumbnail';
-//    }
-//  }
-//}
-
 /**
  * Implements hook_preprocess_HOOK().
  */
