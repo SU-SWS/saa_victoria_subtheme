@@ -1,3 +1,29 @@
+.su-button .su-button--big {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: "Source Sans Pro", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+  cursor: pointer;
+  display: inline-block;
+  border: 0;
+  font-size: 2rem;
+  font-weight: 400;
+  line-height: 1;
+  text-align: center;
+  text-decoration: none;
+  width: auto;
+  -webkit-transition: background-color 0.25s ease-in-out, color 0.25s ease-in-out;
+  transition: background-color 0.25s ease-in-out, color 0.25s ease-in-out;
+}
+
+.su-button .su-button--big a {
+  font-weight: 400;
+  text-decoration: none;
+}
+
+.su-button .su-button--big:active, .su-button .su-button--big:focus, .su-button .su-button--big:hover {
+  text-decoration: underline;
+}
+
 .su-button {
   --bg-opacity: 1;
   background-color: #505EEC;
@@ -14,6 +40,37 @@
   --text-opacity: 1;
   color: #fff;
   color: rgba(255, 255, 255, var(--text-opacity));
+}
+
+.su-button .su-button--big {
+  padding: 1rem 2rem 1.15rem;
+  background-color: #b1040e;
+  color: #ffffff;
+  padding: 1.3rem 2.8rem 1.5rem;
+  font-size: 2.5rem;
+}
+
+.su-button .su-button--big:hover, .su-button .su-button--big:focus {
+  background-color: #2e2d29;
+  color: #ffffff;
+}
+
+.su-button .su-button--big:focus {
+  -webkit-box-shadow: 0 0 3px #4d4f53, 0 0 7px #4d4f53;
+          box-shadow: 0 0 3px #4d4f53, 0 0 7px #4d4f53;
+}
+
+@media only screen and (min-width: 768px) {
+  .su-button .su-button--big {
+    padding: 1.5rem 3rem 1.8rem;
+    font-size: 2.8rem;
+  }
+}
+
+@media only screen and (min-width: 1500px) {
+  .su-button .su-button--big {
+    font-size: 3rem;
+  }
 }
 
 .bg-electric-purple > * > .su-button {

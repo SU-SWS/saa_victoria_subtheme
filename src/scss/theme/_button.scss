@@ -1,7 +1,5 @@
 @charset "UTF-8";
 
-// @import '~tailwindcss/base.css';  // this will only pull in the original tailwind from node_modules, not our custom version
-
 // override decanter button styles here to use new colors and any other differences
 
 // default button style for this theme
@@ -12,6 +10,10 @@
   &:hover, &:focus {
     @apply bg-electric_purple_dark;
     @apply text-white;
+  }
+  
+  .su-button--big {
+    @include button-big; // make sure
   }
 }
 
