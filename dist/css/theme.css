@@ -1,0 +1,195 @@
+/* SAA Specific colors, Stanford/Decanter colors are not defined here */
+
+.su-button {
+  --bg-opacity: 1;
+  background-color: #505EEC;
+  background-color: rgba(80, 94, 236, var(--bg-opacity));
+  --text-opacity: 1;
+  color: #fff;
+  color: rgba(255, 255, 255, var(--text-opacity));
+  padding: 10px 30px;
+}
+
+.su-button:hover, .su-button:focus {
+  --bg-opacity: 1;
+  background-color: #3c47b1;
+  background-color: rgba(60, 71, 177, var(--bg-opacity));
+  --text-opacity: 1;
+  color: #fff;
+  color: rgba(255, 255, 255, var(--text-opacity));
+}
+
+.su-button.su-button--secondary {
+  --bg-opacity: 1;
+  background-color: #fff;
+  background-color: rgba(255, 255, 255, var(--bg-opacity));
+  --text-opacity: 1;
+  color: #505EEC;
+  color: rgba(80, 94, 236, var(--text-opacity));
+  -webkit-box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.1);
+          box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.1);
+  border: 1px solid #505EEC;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+.bg-electric-purple > * > .su-button {
+  --bg-opacity: 1;
+  background-color: #b1040e;
+  background-color: rgba(177, 4, 14, var(--bg-opacity));
+  --text-opacity: 1;
+  color: #fff;
+  color: rgba(255, 255, 255, var(--text-opacity));
+}
+
+.su-link, a {
+  --text-opacity: 1;
+  color: #ec0513;
+  color: rgba(236, 5, 19, var(--text-opacity));
+  text-decoration: none;
+}
+
+.su-link:hover, .su-link:focus, a:hover, a:focus {
+  --text-opacity: 1;
+  color: #ce0d0d;
+  color: rgba(206, 13, 13, var(--text-opacity));
+}
+
+.su-link::after, a::after {
+  --bg-opacity: 1;
+  background-color: #ec0513;
+  background-color: rgba(236, 5, 19, var(--bg-opacity));
+}
+
+.su-link::after:hover, a::after:hover {
+  cursor: pointer;
+}
+
+.su-link:hover::after, .su-link:focus::after, a:hover::after, a:focus::after {
+  --bg-opacity: 1;
+  background-color: #ce0d0d;
+  background-color: rgba(206, 13, 13, var(--bg-opacity));
+}
+
+.su-link.su-link--internal::after:hover, .su-link.su-link--internal::after:focus, a.su-link--internal::after:hover, a.su-link--internal::after:focus {
+  --bg-opacity: 1;
+  background-color: #ec0513;
+  background-color: rgba(236, 5, 19, var(--bg-opacity));
+}
+
+.su-link.su-link--video::after, a.su-link--video::after {
+  width: 14px;
+}
+
+.su-link.disabled, a.disabled {
+  --text-opacity: 1;
+  color: #4d4f53;
+  color: rgba(77, 79, 83, var(--text-opacity));
+}
+
+/* SAA Specific colors, Stanford/Decanter colors are not defined here */
+
+/* ----- link styles -----  */
+
+.su-links-text--white {
+  color: #ffffff;
+  text-decoration: underline;
+  font-weight: 600;
+}
+
+.su-links-text--white:hover, .su-links-text--white:focus, .su-links-text--white:active {
+  color: #4d4f53;
+}
+
+.su-links-text--white a {
+  color: #ffffff;
+  text-decoration: underline;
+  font-weight: 600;
+}
+
+.su-links-text--white a:hover, .su-links-text--white a:focus, .su-links-text--white a:active {
+  color: #4d4f53;
+}
+
+.su-links-text--white--no-hover {
+  color: #ffffff;
+  text-decoration: underline;
+  font-weight: 600;
+}
+
+.su-links-text--white--no-hover:hover, .su-links-text--white--no-hover:focus, .su-links-text--white--no-hover:active {
+  color: #ffffff;
+}
+
+.su-links-text--white--no-hover a {
+  color: #ffffff;
+  text-decoration: underline;
+  font-weight: 600;
+}
+
+.su-links-text--white--no-hover a:hover, .su-links-text--white--no-hover a:focus, .su-links-text--white--no-hover a:active {
+  color: #ffffff;
+}
+
+.su-links-text--light-gray {
+  color: #e5e5e5;
+  text-decoration: underline;
+  font-weight: 600;
+}
+
+.su-links-text--light-gray:hover, .su-links-text--light-gray:focus, .su-links-text--light-gray:active {
+  color: #4d4f53;
+}
+
+.su-links-text--light-gray a {
+  color: #e5e5e5;
+  text-decoration: underline;
+  font-weight: 600;
+}
+
+.su-links-text--light-gray a:hover, .su-links-text--light-gray a:focus, .su-links-text--light-gray a:active {
+  color: #4d4f53;
+}
+
+.su-links-text--red {
+  color: #8c1515;
+  text-decoration: underline;
+  font-weight: 600;
+}
+
+.su-links-text--red:hover, .su-links-text--red:focus, .su-links-text--red:active {
+  color: #b1040e;
+}
+
+.su-links-text--red a {
+  color: #8c1515;
+  text-decoration: underline;
+  font-weight: 600;
+}
+
+.su-links-text--red a:hover, .su-links-text--red a:focus, .su-links-text--red a:active {
+  color: #b1040e;
+}
+
+.su-links-text--electric-purple {
+  color: #505EEC;
+  text-decoration: underline;
+  font-weight: 600;
+}
+
+.su-links-text--electric-purple:hover, .su-links-text--electric-purple:focus, .su-links-text--electric-purple:active {
+  color: #3C47B1;
+}
+
+.su-links-text--electric-purple a {
+  color: #505EEC;
+  text-decoration: underline;
+  font-weight: 600;
+}
+
+.su-links-text--electric-purple a:hover, .su-links-text--electric-purple a:focus, .su-links-text--electric-purple a:active {
+  color: #3C47B1;
+}
+
+
+/*# sourceMappingURL=theme.css.map*/
