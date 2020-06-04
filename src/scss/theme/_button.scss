@@ -12,7 +12,8 @@
   text-white;
   padding: 10px 30px;
 
-  &:hover, &:focus {
+  &:hover,
+  &:focus {
     @apply
     bg-electric_purple_dark
     text-white;
@@ -28,6 +29,7 @@
     border-electric_purple
     shadow-none;
   }
+
   &.su-button--big {
     @include button-big;
     @apply
