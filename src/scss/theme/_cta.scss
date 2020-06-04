@@ -2,7 +2,8 @@
   @apply text-vivid_red;
   @apply no-underline;
 
-  &:hover, &:focus {
+  &:hover,
+  &:focus {
     @apply text-vivid_red_dark;
   }
 
@@ -20,7 +21,8 @@
   }
 
   &.su-link--internal::after {
-    &:hover, &:focus {
+    &:hover,
+    &:focus {
       @apply bg-vivid_red;
     }
   }
