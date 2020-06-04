@@ -1,40 +1,36 @@
-// @import '~tailwindcss/base.css';  // this will only pull in the original tailwind from node_modules, not our custom version
+ @import '~tailwindcss';  // this will only pull in the original tailwind from node_modules, not our custom version
 @import '../utilities/variables/colors';
 
 // override decanter button styles here to use new colors and any other differences
-
 // default button style for this theme
+
 .su-button {
-  // do an extend on some basic classes? or really just add those classes to the button twig template is more ideal
-  // @extend .bg-electric-purple;  // this might not be available because it doesn't exist previously in the scss because tw generates it
-  //@extend .text-white;
-  // tailwind suggests we do something like:
-  @apply bg-electric_purple;
-  @apply text-white;
+  @apply
+  bg-electric_purple
+  text-white;
   padding: 10px 30px;
+
   &:hover, &:focus {
-    @apply bg-electric_purple_dark;
-    @apply text-white;
+    @apply
+    bg-electric_purple_dark
+    text-white;
   }
+
   &.su-button--secondary {
-    @apply bg-white;
-    @apply text-electric_purple;
-    @apply shadow;
-    border: 1px solid $saa-color-electric_purple;
-    //@apply border-electric_purple;
-    box-shadow: none;
-  }
-  &.su-button--big {
-// font size should already be handled, and colors above
+    @apply
+    bg-white
+    text-electric_purple
+    shadow
+    border
+    border-solid
+    border-electric_purple
+    shadow-none;
   }
 }
 
 // red buttons are default when on purple background
 .bg-electric-purple > * > .su-button { // something like this, check structure
-  //@extend .bg-bright-red;
-  @apply bg-bright_red;
-  @apply text-white;
-
+  @apply
+  bg-bright_red
+  text-white;
 }
-
-
