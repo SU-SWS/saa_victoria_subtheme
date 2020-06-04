@@ -1,6 +1,8 @@
 .su-link, a {
-  color: $su-color-vivid-red;
-  text-decoration: none;
+  //color: $su-color-vivid-red;
+  @apply text-vivid-red;
+  @apply no-underline;
+  //text-decoration: none;
   &:hover, &:focus {
     color: $su-color-vivid-red-dark; // should be #CE0D0D
   }

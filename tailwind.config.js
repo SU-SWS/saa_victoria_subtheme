@@ -28,17 +28,17 @@ module.exports = {
     colors: {  // adding colors at theme.colors level REPLACES all colors, rather than theme.extend.colors adds our colors to the existing tailwind colors
       black: '#2e2d29',
       white: '#fff',
-      gray: {
-        '100': '#edebe9', // coming soon - lightest driftwood
-        '200': '#dad8d4', // coming soon - medium light driftwood
-        '300': '#cac6bf', // coming soon - medium driftwood
-        '400': '#d2d3d4', // coming soon - lightest cool grey
-        '500': '#a6a7a9', // coming soon - medium light cool grey
-        '600': '#7a7b7e', // coming soon - medium cool grey
-        '700': '#4d4f53', // su-color-cool-grey
-        '800': '#373637', // coming soon dark gray
-        '900': '#2e2d29', // su-color-black
-      },
+      // gray: {
+      //   '100': '#edebe9', // coming soon - lightest driftwood
+      //   '200': '#dad8d4', // coming soon - medium light driftwood
+      //   '300': '#cac6bf', // coming soon - medium driftwood
+      //   '400': '#d2d3d4', // coming soon - lightest cool grey
+      //   '500': '#a6a7a9', // coming soon - medium light cool grey
+      //   '600': '#7a7b7e', // coming soon - medium cool grey
+      //   '700': '#4d4f53', // su-color-cool-grey
+      //   '800': '#373637', // coming soon dark gray
+      //   '900': '#2e2d29', // su-color-black
+      // },
       cardinal_red: '#8c1515', // su-color-cardinal-red
       dark_red: '#820000',  // su-color-dark-red
       bright_red: '#b1040e',  // su-color-bright-red
@@ -68,8 +68,9 @@ module.exports = {
       blue: '#00548f',
       bright_blue: '#006cb8',
       vivid_red: '#ec0513',
+      vivid_red_dark: '#ce0d0d',
       electric_purple: '#505EEC',
-      electric_purple_dark: '#3C47B1',
+      electric_purple_dark: '#3c47b1',
       dandelion: '#007ace',
       wintergreen: '#de3618',
     }
