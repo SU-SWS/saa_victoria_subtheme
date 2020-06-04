@@ -35,8 +35,8 @@
 }
 
 .su-links-text--electric-purple {
-  @include link($saa-color-electric_purple, $saa-color-electric_purple_dark);
+  @include link($saa-color-electric-purple, $saa-color-electric-purple_dark);
   a {
-    @include link($saa-color-electric_purple, $saa-color-electric_purple_dark);
+    @include link($saa-color-electric-purple, $saa-color-electric-purple_dark);
   }
 }

@@ -4,16 +4,13 @@
 
 // default button style for this theme
 .su-button {
-  @apply bg-electric_purple;
+  //background-color: $saa-color-electric_purple_dark;
   @apply text-white;
+  @apply bg-electric_purple;
 
   &:hover, &:focus {
     @apply bg-electric_purple_dark;
     @apply text-white;
-  }
-  
-  .su-button--big {
-    @include button-big; // make sure
   }
 }
 
