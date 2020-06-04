@@ -22,8 +22,8 @@ $tag-height: 70px;
       content: "";
       height: $tag-height;
       width: $tag-width;
-      display: block;
-      position: absolute;  // top left corner inside the card
+      @apply block;
+      @apply absolute;  // top left corner inside the card
       @apply bg-electric_purple;  // default color
 
       &.tag-color--electric-purple::before {
@@ -40,12 +40,12 @@ $tag-height: 70px;
     }
 
     .su-card__contents {
-      margin: 0;
+      @apply m-0;
       @include modular-spacing('padding', 4 4 4 4);
     }
 
     .contextual-region + .su-card__contents {
-      padding-top: 0;
+      @apply pt-0;
     }
 
     .su-button {
