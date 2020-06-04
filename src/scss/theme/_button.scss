@@ -1,4 +1,6 @@
- @import '~tailwindcss';  // this will only pull in the original tailwind from node_modules, not our custom version
+@charset "UTF-8";
+@import '~tailwindcss';
+// this will only pull in the original tailwind from node_modules, not our custom version
 @import '../utilities/variables/colors';
 
 // override decanter button styles here to use new colors and any other differences
@@ -25,6 +27,12 @@
     border-solid
     border-electric_purple
     shadow-none;
+  }
+  &.su-button--big {
+    @include button-big;
+    @apply
+    bg-electric_purple
+    text-white;
   }
 }
 
