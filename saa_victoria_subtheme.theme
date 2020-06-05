@@ -18,4 +18,19 @@ function saa_victoria_subtheme_preprocess_ds_entity_view(&$variables) {
   if (isset($variables['content']['#paragraph']) && $variables['content']['#paragraph']->bundle() == 'stanford_card') {
     $variables['content']['#fields']['card_image']['su_card_media'][0]['#stanford_media_image_style'] = 'full_responsive';
   }
+  // if banner has an image, add a class
+  if (isset($variables['content']['#paragraph']) && $variables['content']['#paragraph']->bundle() == 'stanford_banner') {
+//    dpm($variables['content']['#fields']['hero_image']['su_banner_image']);
+//    if(isset($variables['content']['#fields']['hero_image']['su_banner_image']) && $variables['content']['#fields']['hero_image']['su_banner_image'][0] !== null) {
+
+
+    // it's always giving an error, we need to fix:
+    // Notice: Undefined index: #object in saa_victoria_subtheme_preprocess_ds_entity_view() (line 26 of themes/custom/saa_victoria_subtheme/saa_victoria_subtheme.theme).
+    //but this code works:
+    if(isset($variables['content']['#fields']['hero_image']['su_banner_image']) && $variables['content']['#fields']['hero_image']['su_banner_image']['#object'] !== null) {
+        $variables['attributes']['class'] = array_merge($variables['attributes']['class'], ['saa-banner--has-image']);
+    } else {
+      $variables['attributes']['class'] = array_merge($variables['attributes']['class'], ['saa-banner--no-image']);
+    }
+  }
 }
