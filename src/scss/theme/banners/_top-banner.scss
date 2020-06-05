@@ -1,0 +1,46 @@
+@charset "UTF-8";
+
+// top banners only:
+.su-page-banner {
+  // if there is NO image and a card
+  .saa-banner--no-image {
+    .su-hero {
+      .su-hero__media {
+        display: none;
+      }
+
+      .su-hero__card {
+        background: $su-color-vivid-red;
+        color: $su-color-white;
+
+        .su-button {
+          background-color: $saa-color-electric_purple;
+        }
+      }
+    }
+  }
+
+  .saa-banner--has-image {
+
+    // if there is an image and a card
+    .su-hero {
+      .su-card.su-hero__card {
+        background: $saa-color-electric_purple;
+        color: $su-color-white;
+        /* width: 50%; */
+        /* height: 100%; */
+        margin: 0;
+        position: relative;
+        max-width: 50%;
+        height: 100%;
+        left: 0;
+        top: 0;
+        min-height: inherit;
+        padding: 60px 30px; // temp, will use modular-spacing
+        border: none;
+        box-shadow: none;
+      }
+    }
+  }
+}
+

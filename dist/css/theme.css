@@ -94225,16 +94225,20 @@ a {
   text-decoration: underline;
 }
 
-.su-page-banner .su-hero .su-card.su-hero__card {
+.su-page-banner .saa-banner--no-image .su-hero .su-hero__media {
+  display: none;
+}
+
+.su-page-banner .saa-banner--no-image .su-hero .su-hero__card {
   background: #ec0513;
   color: #ffffff;
 }
 
-.su-page-banner .su-hero .su-card.su-hero__card .su-button {
+.su-page-banner .saa-banner--no-image .su-hero .su-hero__card .su-button {
   background-color: #505EEC;
 }
 
-.su-page-banner .su-hero .su-hero__media ~ .su-card.su-hero__card {
+.su-page-banner .saa-banner--has-image .su-hero .su-card.su-hero__card {
   background: #505EEC;
   color: #ffffff;
   /* width: 50%; */
@@ -94244,17 +94248,29 @@ a {
   max-width: 50%;
   height: 100%;
   left: 0;
+  top: 0;
+  min-height: inherit;
+  padding: 60px 30px;
   border: none;
   -webkit-box-shadow: none;
           box-shadow: none;
 }
 
-.paragraph-item .su-hero .su-card.su-hero__card {
+.paragraph-item .saa-banner--no-image .su-hero {
+  min-height: unset;
+}
+
+.paragraph-item .saa-banner--no-image .su-hero .su-hero__media {
+  display: none;
+}
+
+.paragraph-item .saa-banner--no-image .su-hero .su-card.su-hero__card {
   margin: 0;
   position: relative;
-  max-width: 50%;
+  max-width: 100%;
   height: 100%;
   left: 0;
+  top: 0;
   border: none;
   -webkit-box-shadow: none;
           box-shadow: none;
@@ -94262,25 +94278,46 @@ a {
   color: #ffffff;
 }
 
-.paragraph-item .su-hero .su-card.su-hero__card .su-button {
+.paragraph-item .saa-banner--no-image .su-hero .su-card.su-hero__card .su-button {
   background: #b1040e;
   color: #ffffff;
   border: 1px solid #ffffff;
 }
 
-.paragraph-item .su-hero .su-hero__media ~ .su-card.su-hero__card {
-  background: #505EEC;
-  color: #ffffff;
+.paragraph-item .saa-banner--has-image .su-hero .su-hero__media {
+  background: #ffffff;
+}
+
+.paragraph-item .saa-banner--has-image .su-hero .su-hero__media img {
+  max-width: 200px;
+  max-height: 200px;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 50%;
+  padding: 20px;
+}
+
+.paragraph-item .saa-banner--has-image .su-hero .su-hero__card {
+  background: none;
+  color: #2e2d29;
   /* width: 50%; */
   /* height: 100%; */
   margin: 0;
   position: relative;
-  max-width: 50%;
+  max-width: 100%;
   height: 100%;
   left: 0;
+  top: 0;
+  padding-top: 40px;
   border: none;
   -webkit-box-shadow: none;
           box-shadow: none;
+  text-align: center;
+}
+
+.paragraph-item .saa-banner--has-image .su-hero .su-link,
+.paragraph-item .saa-banner--has-image .su-hero a {
+  padding-top: 20px;
 }
 
 
