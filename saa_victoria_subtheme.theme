@@ -10,3 +10,12 @@
 function saa_victoria_subtheme_preprocess_html(&$variables) {
   $variables['stanford_basic_path'] = drupal_get_path('theme', 'stanford_basic');
 }
+
+/**
+ * Implements hook_preprocess_HOOK().
+ */
+function saa_victoria_subtheme_preprocess_ds_entity_view(&$variables) {
+  if (isset($variables['content']['#paragraph']) && $variables['content']['#paragraph']->bundle() == 'stanford_card') {
+    $variables['content']['#fields']['card_image']['su_card_media'][0]['#stanford_media_image_style'] = 'full_responsive';
+  }
+}

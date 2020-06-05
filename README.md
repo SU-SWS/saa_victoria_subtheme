@@ -29,6 +29,10 @@ npm install
 ```
 After you've made a change you want to see processed, you can run:
 ```
+npm run build
+```
+or
+```
 npm run publish
 ```
 This will process scss, js, and asset files, preparing them from the src directory to the dist directory.
