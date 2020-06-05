@@ -68,10 +68,11 @@ module.exports = {
       blue: '#00548f',
       bright_blue: '#006cb8',
       vivid_red: '#ec0513',
+      vivid_red_dark: '#ce0d0d',
       electric_purple: '#505EEC',
-      electric_purple_dark: '#3C47B1',
-      dandelion: '#FBD115',
-      wintergreen: '#77C7A0',
+      electric_purple_dark: '#3c47b1',
+      dandelion: '#007ace',
+      wintergreen: '#de3618',
     }
   }
 }
