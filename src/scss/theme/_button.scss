@@ -5,6 +5,37 @@
 
 // override decanter button styles here to use new colors and any other differences
 // default button style for this theme
+@mixin saa-button-purple(){
+  @apply
+  bg-electric_purple
+  text-white;
+  padding: 10px 30px;
+
+  &:hover,
+  &:focus {
+    @apply
+    bg-electric_purple_dark
+    text-white;
+  }
+
+  &.su-button--secondary {
+    @apply
+    bg-white
+    text-electric_purple
+    shadow
+    border
+    border-solid
+    border-electric_purple
+    shadow-none;
+  }
+
+  &.su-button--big {
+    @include button-big;
+    @apply
+    bg-electric_purple
+    text-white;
+  }
+}
 
 .su-button {
   @apply
