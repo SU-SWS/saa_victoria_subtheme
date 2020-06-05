@@ -13,8 +13,7 @@
 // indents and relying on a component class for other applications.
 
 // Config and supporting scss.
-@import
-  '../config/index';
+@import '../config/index';
 @import '../utilities/index';
 @import "~tailwindcss";
 // decanter modular spacing, modeled after tailwind
@@ -31,5 +30,4 @@
 
 [type=checkbox]:checked+label:before, [type=checkbox]:checked:disabled+label:before {
   background: #b1040c;
-//url(../../assets/img/check.png);
 }

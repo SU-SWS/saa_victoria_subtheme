@@ -1,0 +1,12 @@
+{#
+/**
+ * @file
+ * Simple wrapper used when an external Twig template is specified using the 'use:' property.
+ *
+ * @see \Drupal\ui_patterns\Element\Pattern::processUse().
+ */
+#}
+{# until interface options are available, all cards will be icon cards on SAA sites #}
+{% set attributes = attributes.addClass('su-card--icon pt-0 text-left') %}
+
+{% include use %}

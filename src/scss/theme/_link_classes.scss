@@ -1,9 +1,10 @@
+@charset "UTF-8";
+
 @import '../utilities/variables/colors';
 
 /* ----- link styles -----  */
 // i think mostly we will not use these and will use tailwind classes,
-// // but i need to make sure that the color classes apply appropriately to text links first before removing this code.
-
+// // but i need to make sure that the color classes apply appropriately to text links first before removing this code.git
 
 // use only for cases where inside a section you need to override links colors
 
@@ -34,8 +35,8 @@
 }
 
 .su-links-text--electric-purple {
-  @include link($saa-color-electric_purple, $saa-color-electric_purple_dark);
+  @include link($saa-color-electric-purple, $saa-color-electric-purple-dark);
   a {
-    @include link($saa-color-electric_purple, $saa-color-electric_purple_dark);
+    @include link($saa-color-electric-purple, $saa-color-electric-purple-dark);
   }
 }
