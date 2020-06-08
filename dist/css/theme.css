@@ -94291,7 +94291,9 @@ a {
   margin-left: auto;
   margin-right: auto;
   border-radius: 50%;
-  padding: 20px;
+  padding: 0;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 .paragraph-item .saa-banner--has-image .su-hero .su-hero__card {
@@ -94299,13 +94301,13 @@ a {
   color: #2e2d29;
   /* width: 50%; */
   /* height: 100%; */
-  margin: 0;
+  margin: 0 auto;
   position: relative;
-  max-width: 100%;
+  max-width: 1024px;
   height: 100%;
   left: 0;
-  top: 0;
-  padding-top: 40px;
+  top: 60px;
+  padding-top: 20px;
   border: none;
   -webkit-box-shadow: none;
           box-shadow: none;
