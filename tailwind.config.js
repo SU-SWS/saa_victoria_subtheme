@@ -71,8 +71,8 @@ module.exports = {
       vivid_red_dark: '#ce0d0d',
       electric_purple: '#505EEC',
       electric_purple_dark: '#3c47b1',
-      dandelion: '#007ace',
-      wintergreen: '#de3618',
+      dandelion: '#fbd115',
+      wintergreen: '#77c7a0',
     }
   }
 }
