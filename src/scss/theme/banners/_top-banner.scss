@@ -6,12 +6,13 @@
   .saa-banner--no-image {
     .su-hero {
       .su-hero__media {
-        display: none;
+        //display: none;
       }
 
       .su-hero__card {
         background: $su-color-vivid-red;
         color: $su-color-white;
+        border: none;
 
         .su-button {
           background-color: $saa-color-electric_purple;

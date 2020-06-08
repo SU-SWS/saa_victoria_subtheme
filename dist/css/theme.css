@@ -94225,13 +94225,10 @@ a {
   text-decoration: underline;
 }
 
-.su-page-banner .saa-banner--no-image .su-hero .su-hero__media {
-  display: none;
-}
-
 .su-page-banner .saa-banner--no-image .su-hero .su-hero__card {
   background: #ec0513;
   color: #ffffff;
+  border: none;
 }
 
 .su-page-banner .saa-banner--no-image .su-hero .su-hero__card .su-button {
