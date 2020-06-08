@@ -5,7 +5,7 @@
 
 // override decanter button styles here to use new colors and any other differences
 // default button style for this theme
-@mixin saa-button-purple(){
+@mixin saa-button-purple {
   @apply
   bg-electric_purple
   text-white;

@@ -94225,17 +94225,21 @@ a {
   text-decoration: underline;
 }
 
+.su-page-banner .saa-banner--no-image .su-hero .su-hero__media {
+  background: #2e2d29;
+}
+
 .su-page-banner .saa-banner--no-image .su-hero .su-hero__card {
   background: #ec0513;
   color: #ffffff;
-  border: none;
+  border: 0;
 }
 
 .su-page-banner .saa-banner--no-image .su-hero .su-hero__card .su-button {
   background-color: #505EEC;
 }
 
-.su-page-banner .saa-banner--has-image .su-hero .su-card.su-hero__card {
+.su-page-banner .saa-banner--has-image .su-hero .su-card .su-hero__card {
   background: #505EEC;
   color: #ffffff;
   /* width: 50%; */
@@ -94248,7 +94252,7 @@ a {
   top: 0;
   min-height: inherit;
   padding: 60px 30px;
-  border: none;
+  border: 0;
   -webkit-box-shadow: none;
           box-shadow: none;
 }
@@ -94261,21 +94265,21 @@ a {
   display: none;
 }
 
-.paragraph-item .saa-banner--no-image .su-hero .su-card.su-hero__card {
+.paragraph-item .saa-banner--no-image .su-hero .su-card .su-hero__card {
   margin: 0;
   position: relative;
   max-width: 100%;
   height: 100%;
   left: 0;
   top: 0;
-  border: none;
+  border: 0;
   -webkit-box-shadow: none;
           box-shadow: none;
   background: #b1040e;
   color: #ffffff;
 }
 
-.paragraph-item .saa-banner--no-image .su-hero .su-card.su-hero__card .su-button {
+.paragraph-item .saa-banner--no-image .su-hero .su-card .su-hero__card .su-button {
   background: #b1040e;
   color: #ffffff;
   border: 1px solid #ffffff;
@@ -94296,7 +94300,7 @@ a {
   margin-bottom: 20px;
 }
 
-.paragraph-item .saa-banner--has-image .su-hero .su-hero__card {
+.paragraph-item .saa-banner--has-image .su-hero .su-card .su-hero__card {
   background: none;
   color: #2e2d29;
   /* width: 50%; */
@@ -94308,14 +94312,14 @@ a {
   left: 0;
   top: 60px;
   padding-top: 20px;
-  border: none;
+  border: 0;
   -webkit-box-shadow: none;
           box-shadow: none;
   text-align: center;
 }
 
-.paragraph-item .saa-banner--has-image .su-hero .su-link,
-.paragraph-item .saa-banner--has-image .su-hero a {
+.paragraph-item .saa-banner--has-image .su-hero .su-card .su-hero__card .su-link,
+  .paragraph-item .saa-banner--has-image .su-hero .su-card .su-hero__card a {
   padding-top: 20px;
 }
 

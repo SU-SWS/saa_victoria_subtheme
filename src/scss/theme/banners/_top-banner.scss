@@ -6,16 +6,17 @@
   .saa-banner--no-image {
     .su-hero {
       .su-hero__media {
-        //display: none;
+        background: $su-color-black; //  temporary
+        //display: none; // should we hide this?
       }
 
       .su-hero__card {
         background: $su-color-vivid-red;
         color: $su-color-white;
-        border: none;
+        border: 0;
 
         .su-button {
-          background-color: $saa-color-electric_purple;
+          background-color: $saa-color-electric-purple;
         }
       }
     }
@@ -25,21 +26,23 @@
 
     // if there is an image and a card
     .su-hero {
-      .su-card.su-hero__card {
-        background: $saa-color-electric_purple;
-        color: $su-color-white;
-        /* width: 50%; */
-        /* height: 100%; */
-        margin: 0;
-        position: relative;
-        max-width: 50%;
-        height: 100%;
-        left: 0;
-        top: 0;
-        min-height: inherit;
-        padding: 60px 30px; // temp, will use modular-spacing
-        border: none;
-        box-shadow: none;
+      .su-card {
+        .su-hero__card {
+          background: $saa-color-electric-purple;
+          color: $su-color-white;
+          /* width: 50%; */
+          /* height: 100%; */
+          margin: 0;
+          position: relative;
+          max-width: 50%;
+          height: 100%;
+          left: 0;
+          top: 0;
+          min-height: inherit;
+          padding: 60px 30px; // temp, will use modular-spacing
+          border: 0;
+          box-shadow: none;
+        }
       }
     }
   }
