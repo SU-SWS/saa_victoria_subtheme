@@ -15,6 +15,14 @@
   top-0;
   min-height: inherit;
   @include modular-spacing('padding', 5 null 5 null);
+
+  .su-card__contents > h2 {
+    @include modular-typography(3);
+    font-family: Calluna;
+    font-weight: 900;
+    line-height: 119.41%;
+    letter-spacing: .5px; // not in figma, but looks needed to match Figma - KAtria check back.
+  }
 }
 
 // top banners only:
@@ -31,10 +39,6 @@
 
       .su-hero__card {
         @include bright-red-banner--card-common;
-
-        .su-card__contents > h2 {
-          @include modular-typography(3);
-        }
 
         .su-button {
           @apply bg-bright_red;

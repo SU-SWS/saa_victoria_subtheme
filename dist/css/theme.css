@@ -94375,6 +94375,9 @@ a {
 
 .su-page-banner .saa-banner--no-image .su-hero .su-hero__card .su-card__contents > h2 {
   font-size: 1.953125em;
+  font-family: Calluna;
+  font-weight: 900;
+  line-height: 119.41%;
 }
 
 .su-page-banner .saa-banner--no-image .su-hero .su-hero__card .su-button {
@@ -94437,6 +94440,13 @@ a {
   }
 }
 
+.su-page-banner .saa-banner--has-image .su-hero .su-card.su-hero__card .su-card__contents > h2 {
+  font-size: 1.953125em;
+  font-family: Calluna;
+  font-weight: 900;
+  line-height: 119.41%;
+}
+
 .su-page-banner .saa-banner--has-image .su-hero .su-card .su-button {
   --bg-opacity: 1;
   background-color: #b1040e;
@@ -94491,6 +94501,13 @@ a {
     padding-top: 7.6rem;
     padding-bottom: 7.6rem;
   }
+}
+
+.purple-banner-class-goes-here-in-future .su-page-banner .saa-banner--has-image .su-hero .su-card.su-hero__card .su-card__contents > h2 {
+  font-size: 1.953125em;
+  font-family: Calluna;
+  font-weight: 900;
+  line-height: 119.41%;
 }
 
 .purple-banner-class-goes-here-in-future .su-page-banner .saa-banner--has-image .su-hero .su-card .su-button {
