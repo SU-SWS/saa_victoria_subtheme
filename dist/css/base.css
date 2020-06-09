@@ -118518,12 +118518,19 @@ h1,
 h2,
 h3,
 h4,
-h5 {
+h5,
+.sa-font--calluna-black {
   font-family: Calluna;
+  font-weight: 900;
+  line-height: 119.41%;
+  letter-spacing: .5px;
 }
 
 .su-drop-cap::first-letter {
   font-family: Calluna;
+  font-weight: 900;
+  line-height: 119.41%;
+  letter-spacing: .5px;
 }
 
 .stanford-starter::after {
