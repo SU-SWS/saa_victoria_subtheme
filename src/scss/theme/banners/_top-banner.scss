@@ -27,7 +27,7 @@
     // if there is an image and a card - PURPLE LAYOUT
     .su-hero {
       .su-card {
-        .su-hero__card {
+        &.su-hero__card {
           background: $saa-color-electric-purple;
           color: $su-color-white;
           /* width: 50%; */
@@ -49,7 +49,7 @@
     // if there is an image and a card - BRIGHT RED LAYOUT override
     .su-hero {
       .su-card {
-        .su-hero__card {
+        &.su-hero__card {
           background: $su-color-bright-red;
         }
         .su-button {
