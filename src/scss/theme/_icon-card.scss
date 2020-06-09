@@ -1,4 +1,5 @@
 @charset "UTF-8";
+@import "../utilities/index"; // katria come back to, if this is the right approach
 
 // Icon Card styles will go here
 $tag-width: 20px;
@@ -40,12 +41,18 @@ $tag-height: 70px;
     }
 
     .su-card__contents {
-      @apply m-0;
+      @apply
+      m-0
+      text-left;
       @include modular-spacing('padding', 4 4 4 4);
     }
 
     .contextual-region + .su-card__contents {
       @apply pt-0;
+    }
+
+    .su-card__contents> h2 {
+      @include saa-font--calluna-base;
     }
 
     .su-button {

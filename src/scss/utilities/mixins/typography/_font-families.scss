@@ -1,0 +1,15 @@
+@charset "UTF-8";
+
+$saa-font--calluna: Calluna;
+$saa-font--proxima-nova: Proxima Nova;
+
+@mixin saa-font--calluna-base {
+  font-family: $saa-font--calluna;
+  font-weight: 900;
+  line-height: 119.41%;
+  letter-spacing: 0.5px; // not in figma, but looks needed... Katria come back to this with Kerri
+}
+
+@mixin saa-font--proxima-nova-base {
+  font-family: $saa-font--proxima-nova;
+}
