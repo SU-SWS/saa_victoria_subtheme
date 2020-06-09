@@ -11,6 +11,20 @@
       }
 
       .su-hero__card {
+        //background: $saa-color-electric-purple;
+        color: $su-color-white;
+        /* width: 50%; */
+        /* height: 100%; */
+        margin: 0;
+        position: relative;
+        max-width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
+        min-height: inherit;
+        padding: 60px 30px; // temp, will use modular-spacing
+        border: 0;
+        box-shadow: none;
         background: $su-color-vivid-red;
         color: $su-color-white;
         border: 0;
@@ -24,10 +38,10 @@
 
   .saa-banner--has-image {
 
-    // if there is an image and a card
+    // if there is an image and a card - purple layout
     .su-hero {
       .su-card {
-        .su-hero__card {
+        &.su-hero__card {
           background: $saa-color-electric-purple;
           color: $su-color-white;
           /* width: 50%; */
@@ -42,6 +56,9 @@
           padding: 60px 30px; // temp, will use modular-spacing
           border: 0;
           box-shadow: none;
+        }
+        .su-button {
+          @include saa-button--vivid-red;
         }
       }
     }

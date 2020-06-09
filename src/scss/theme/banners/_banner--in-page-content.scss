@@ -15,7 +15,7 @@ $banner-circle--padding: 20px;
       }
 
       .su-card {
-        .su-hero__card {
+        &.su-hero__card {
           margin: 0;
           position: relative;
           max-width: 100%;
@@ -57,7 +57,7 @@ $banner-circle--padding: 20px;
       }
 
       .su-card {
-        .su-hero__card {
+        &.su-hero__card {
           background: none;
           color: $su-color-black;
           /* width: 50%; */
@@ -67,7 +67,7 @@ $banner-circle--padding: 20px;
           max-width: 1024px;
           height: 100%;
           left: 0;
-          top: 60px;
+          top: 100px;
           padding-top: 20px;
           border: 0;
           box-shadow: none;
