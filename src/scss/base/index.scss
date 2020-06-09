@@ -19,6 +19,7 @@
 // decanter modular spacing, modeled after tailwind
 @import 'tailwind--modular-spacing--padding';
 @import 'tailwind--modular-spacing--margin';
+@import 'fonts/index';
 
 .stanford-starter {
   &::after {

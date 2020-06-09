@@ -1,0 +1,23 @@
+@charset "UTF-8";
+
+@import '../../utilities/index.scss'; // katria come back to, is this the right approach?
+
+html {
+  font-family: $saa-font--proxima-nova;
+
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: $saa-font--caluna;
+}
+
+// check specifics
+.su-drop-cap::first-letter {
+  font-family: calluna;
+}
+
+// what about su-font-splash and other text styles?
