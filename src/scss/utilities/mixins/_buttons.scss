@@ -31,6 +31,7 @@
     bg-electric_purple
     text-white;
     font-size: 2.8rem !important; // this is not responsive, come back to this because decanter mixin isn't applying
+
     &:hover,
     &:focus {
       @apply

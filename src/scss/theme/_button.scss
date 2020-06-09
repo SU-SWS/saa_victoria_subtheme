@@ -19,7 +19,7 @@
 }
 
 // red buttons are default when on purple background
-  .bg-electric-purple > * > .su-button { // something like this, check structure
-    @include saa-button--vivid-red;
-  }
+.bg-electric-purple > * > .su-button { // something like this, check structure
+  @include saa-button--vivid-red;
+}
 
