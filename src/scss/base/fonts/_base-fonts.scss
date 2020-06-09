@@ -12,12 +12,14 @@ h2,
 h3,
 h4,
 h5 {
-  font-family: $saa-font--caluna;
+  font-family: $saa-font--calluna;
 }
 
 // check specifics
 .su-drop-cap::first-letter {
-  font-family: calluna;
+  font-family: $saa-font--calluna;
 }
 
 // what about su-font-splash and other text styles?
+//su-font-splash,
+//p.su-callout-text
