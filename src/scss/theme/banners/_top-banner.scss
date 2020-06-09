@@ -1,5 +1,22 @@
 @charset "UTF-8";
 
+@mixin bright-red-banner--card-common {
+  @apply
+  bg-bright_red
+  text-white
+  border-0
+  shadow-none
+  m-0
+  relative
+  max-w-full
+  max-h-full
+  text-white
+  left-0
+  top-0;
+  min-height: inherit;
+  @include modular-spacing('padding', 5 null 5 null);
+}
+
 // top banners only:
 .su-page-banner {
   // if there is NO image and a card
@@ -13,38 +30,17 @@
       }
 
       .su-hero__card {
-        //background: $saa-color-electric-purple;
-        //color: $su-color-white;
-        @apply
-        m-0
-        relative
-        max-w-full
-        max-h-full
-        text-white
-        left-0
-        top-0;
-        //left: 0;
-        //top: 0;
-        min-height: inherit;
-        padding: 60px 30px; // temp, will use modular-spacing
-        //border: 0;
-        @apply border-0;
-        //box-shadow: none;
-        @apply shadow-none;
-        background: $su-color-bright-red;
-        color: $su-color-white;
-        border: 0;
+        @include bright-red-banner--card-common;
 
         .su-button {
           @apply bg-bright_red;
-          //@apply border;
-          //@apply border-white;
           border: 1px solid white;
 
           &:hover,
           &:focus {
-            @apply bg-white;
-            @apply text-black;
+            @apply
+            bg-white
+            text-black;
           }
         }
       }
@@ -52,46 +48,42 @@
   }
 
   .saa-banner--has-image {
-
-    // if there is an image and a card - PURPLE LAYOUT
+    // if there is an image and a card - Bright_Red Layout
     .su-hero {
       .su-card {
         &.su-hero__card {
-          background: $saa-color-electric-purple;
-          color: $su-color-white;
-          /* width: 50%; */
-          /* height: 100%; */
-          margin: 0;
-          position: relative;
+          @include bright-red-banner--card-common;
           max-width: 50%;
-          height: 100%;
-          left: 0;
-          top: 0;
-          min-height: inherit;
-          padding: 60px 30px; // temp, will use modular-spacing
-          border: 0;
-          box-shadow: none;
         }
+
         .su-button {
           @include saa-button--vivid-red;
         }
       }
     }
-
-    // if there is an image and a card - BRIGHT RED LAYOUT override
-    .su-hero {
-      .su-card {
-        &.su-hero__card {
-          background: $su-color-bright-red;
-        }
-        .su-button {
-          @include saa-bright-red-buttons;
-        }
-      }
-    }
-
-
-
   }
 }
 
+// purple styles for top-banner with image, later option
+// top banners only:
+.purple-banner-class-goes-here-in-future {
+  .su-page-banner {
+    .saa-banner--has-image {
+
+      // if there is an image and a card - PURPLE LAYOUT
+      .su-hero {
+        .su-card {
+          &.su-hero__card {
+            @include bright-red-banner--card-common;
+            @apply bg-electric_purple;
+            max-width: 50%;
+          }
+          .su-button {
+            @include saa-button--vivid-red;
+          }
+        }
+      }
+
+    }
+  }
+}

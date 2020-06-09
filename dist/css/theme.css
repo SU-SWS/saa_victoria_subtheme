@@ -94331,6 +94331,15 @@ a {
 }
 
 .su-page-banner .saa-banner--no-image .su-hero .su-hero__card {
+  --bg-opacity: 1;
+  background-color: #b1040e;
+  background-color: rgba(177, 4, 14, var(--bg-opacity));
+  --text-opacity: 1;
+  color: #fff;
+  color: rgba(255, 255, 255, var(--text-opacity));
+  border-width: 0;
+  -webkit-box-shadow: none;
+          box-shadow: none;
   margin: 0;
   position: relative;
   max-width: 100%;
@@ -94341,13 +94350,27 @@ a {
   left: 0;
   top: 0;
   min-height: inherit;
-  padding: 60px 30px;
-  border-width: 0;
-  -webkit-box-shadow: none;
-          box-shadow: none;
-  background: #b1040e;
-  color: #ffffff;
-  border: 0;
+}
+
+@media only screen and (min-width: 0) {
+  .su-page-banner .saa-banner--no-image .su-hero .su-hero__card {
+    padding-top: 6.4rem;
+    padding-bottom: 6.4rem;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .su-page-banner .saa-banner--no-image .su-hero .su-hero__card {
+    padding-top: 7.2rem;
+    padding-bottom: 7.2rem;
+  }
+}
+
+@media only screen and (min-width: 1500px) {
+  .su-page-banner .saa-banner--no-image .su-hero .su-hero__card {
+    padding-top: 7.6rem;
+    padding-bottom: 7.6rem;
+  }
 }
 
 .su-page-banner .saa-banner--no-image .su-hero .su-hero__card .su-button {
@@ -94367,24 +94390,106 @@ a {
 }
 
 .su-page-banner .saa-banner--has-image .su-hero .su-card.su-hero__card {
-  background: #505EEC;
-  color: #ffffff;
-  /* width: 50%; */
-  /* height: 100%; */
+  --bg-opacity: 1;
+  background-color: #b1040e;
+  background-color: rgba(177, 4, 14, var(--bg-opacity));
+  --text-opacity: 1;
+  color: #fff;
+  color: rgba(255, 255, 255, var(--text-opacity));
+  border-width: 0;
+  -webkit-box-shadow: none;
+          box-shadow: none;
   margin: 0;
   position: relative;
-  max-width: 50%;
-  height: 100%;
+  max-width: 100%;
+  max-height: 100%;
+  --text-opacity: 1;
+  color: #fff;
+  color: rgba(255, 255, 255, var(--text-opacity));
   left: 0;
   top: 0;
   min-height: inherit;
-  padding: 60px 30px;
-  border: 0;
-  -webkit-box-shadow: none;
-          box-shadow: none;
+  max-width: 50%;
+}
+
+@media only screen and (min-width: 0) {
+  .su-page-banner .saa-banner--has-image .su-hero .su-card.su-hero__card {
+    padding-top: 6.4rem;
+    padding-bottom: 6.4rem;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .su-page-banner .saa-banner--has-image .su-hero .su-card.su-hero__card {
+    padding-top: 7.2rem;
+    padding-bottom: 7.2rem;
+  }
+}
+
+@media only screen and (min-width: 1500px) {
+  .su-page-banner .saa-banner--has-image .su-hero .su-card.su-hero__card {
+    padding-top: 7.6rem;
+    padding-bottom: 7.6rem;
+  }
 }
 
 .su-page-banner .saa-banner--has-image .su-hero .su-card .su-button {
+  --bg-opacity: 1;
+  background-color: #b1040e;
+  background-color: rgba(177, 4, 14, var(--bg-opacity));
+  --text-opacity: 1;
+  color: #fff;
+  color: rgba(255, 255, 255, var(--text-opacity));
+}
+
+.purple-banner-class-goes-here-in-future .su-page-banner .saa-banner--has-image .su-hero .su-card.su-hero__card {
+  --bg-opacity: 1;
+  background-color: #b1040e;
+  background-color: rgba(177, 4, 14, var(--bg-opacity));
+  --text-opacity: 1;
+  color: #fff;
+  color: rgba(255, 255, 255, var(--text-opacity));
+  border-width: 0;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  margin: 0;
+  position: relative;
+  max-width: 100%;
+  max-height: 100%;
+  --text-opacity: 1;
+  color: #fff;
+  color: rgba(255, 255, 255, var(--text-opacity));
+  left: 0;
+  top: 0;
+  min-height: inherit;
+  --bg-opacity: 1;
+  background-color: #505EEC;
+  background-color: rgba(80, 94, 236, var(--bg-opacity));
+  max-width: 50%;
+}
+
+@media only screen and (min-width: 0) {
+  .purple-banner-class-goes-here-in-future .su-page-banner .saa-banner--has-image .su-hero .su-card.su-hero__card {
+    padding-top: 6.4rem;
+    padding-bottom: 6.4rem;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .purple-banner-class-goes-here-in-future .su-page-banner .saa-banner--has-image .su-hero .su-card.su-hero__card {
+    padding-top: 7.2rem;
+    padding-bottom: 7.2rem;
+  }
+}
+
+@media only screen and (min-width: 1500px) {
+  .purple-banner-class-goes-here-in-future .su-page-banner .saa-banner--has-image .su-hero .su-card.su-hero__card {
+    padding-top: 7.6rem;
+    padding-bottom: 7.6rem;
+  }
+}
+
+.purple-banner-class-goes-here-in-future .su-page-banner .saa-banner--has-image .su-hero .su-card .su-button {
   --bg-opacity: 1;
   background-color: #b1040e;
   background-color: rgba(177, 4, 14, var(--bg-opacity));
