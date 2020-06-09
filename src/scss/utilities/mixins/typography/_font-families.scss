@@ -7,7 +7,7 @@ $saa-font--proxima-nova: Proxima Nova;
   font-family: $saa-font--calluna;
   font-weight: 900;
   line-height: 119.41%;
-  letter-spacing: .5px; // not in figma, but looks needed... Katria come back to this with Kerri
+  letter-spacing: 0.5px; // not in figma, but looks needed... Katria come back to this with Kerri
 }
 
 @mixin saa-font--proxima-nova-base {
