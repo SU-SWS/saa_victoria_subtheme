@@ -69,9 +69,23 @@
   }
 }
 
-// red buttons are default when on purple background
-.bg-electric-purple > * > .su-button { // something like this, check structure
+@mixin saa-bright-red-buttons {
   @apply
   bg-bright_red
+  border
+  border-white
+  text-white;
+
+}
+
+@mixin saa-vivid-red-buttons {
+  @apply
+  bg-vivid_red
   text-white;
 }
+// vivid red buttons are default when on purple background
+.bg-electric-purple > * > .su-button { // something like this, check structure
+@include saa-vivid-red-buttons;
+}
+
+

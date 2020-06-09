@@ -24,7 +24,7 @@
 
   .saa-banner--has-image {
 
-    // if there is an image and a card
+    // if there is an image and a card - PURPLE LAYOUT
     .su-hero {
       .su-card {
         .su-hero__card {
@@ -45,6 +45,21 @@
         }
       }
     }
+
+    // if there is an image and a card - BRIGHT RED LAYOUT override
+    .su-hero {
+      .su-card {
+        .su-hero__card {
+          background: $su-color-bright-red;
+        }
+        .su-button {
+          @include saa-bright-red-buttons;
+        }
+      }
+    }
+
+
+
   }
 }
 
