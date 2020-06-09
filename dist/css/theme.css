@@ -94373,6 +94373,10 @@ a {
   }
 }
 
+.su-page-banner .saa-banner--no-image .su-hero .su-hero__card .su-card__contents > h2 {
+  font-size: 1.953125em;
+}
+
 .su-page-banner .saa-banner--no-image .su-hero .su-hero__card .su-button {
   --bg-opacity: 1;
   background-color: #b1040e;

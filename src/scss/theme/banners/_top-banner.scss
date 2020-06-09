@@ -32,6 +32,10 @@
       .su-hero__card {
         @include bright-red-banner--card-common;
 
+        .su-card__contents > h2 {
+          @include modular-typography(3);
+        }
+
         .su-button {
           @apply bg-bright_red;
           border: 1px solid white;
