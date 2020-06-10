@@ -1,16 +1,5 @@
 @charset "UTF-8";
 
-// First import decanter as no markup.
-//@import 'decanter/core/src/scss/decanter-no-markup';
-// Import full scss version of decanter to use variables etc
-//@import '~decanter/core/src/scss/decanter';
-
-
-
-// Then we override the variables, mixins, and functions.
-//@import "~tailwindcss/utilities.css";
-
-
 @import
 '../config/index',
 'mixins/index',
