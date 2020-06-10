@@ -1,0 +1,44 @@
+@charset "UTF-8";
+
+@mixin cta-white-on-bright-red {
+  .su-link,
+  a {
+    @apply text-white;
+    @apply no-underline;
+
+    &:hover,
+    &:focus {
+      @apply underline;
+    }
+
+    &::after {
+      @apply bg-white;
+
+      &:hover {
+        @apply cursor-pointer;
+      }
+    }
+
+    &:hover::after,
+    &:focus::after {
+      @apply bg-white;
+    }
+
+    &.su-link--internal::after {
+      &:hover,
+      &:focus {
+        @apply bg-white;
+      }
+    }
+
+    &.su-link--video::after {
+      width: 14px; // video icon is too wide, 13px cuts it off, temp fix
+    }
+
+    &.disabled {
+      @apply text-gray-700;
+    }
+  }
+
+}
+

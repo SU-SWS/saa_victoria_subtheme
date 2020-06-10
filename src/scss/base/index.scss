@@ -14,8 +14,8 @@
 
 // Config and supporting scss.
 @import '../config/index';
-@import '../utilities/index';
 @import "~tailwindcss";
+@import '../utilities/index';
 // decanter modular spacing, modeled after tailwind
 @import 'tailwind--modular-spacing--padding';
 @import 'tailwind--modular-spacing--margin';
