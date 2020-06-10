@@ -1,7 +1,7 @@
 @charset "UTF-8";
 
 @mixin saa-button--focus {
-  box-shadow: -2px -2px 6px rgba($su-color-sky, 0.6), 2px 2px 6px rgba($su-color-sky, 0.5)!important;
+  box-shadow: -2px -2px 6px rgba($su-color-sky, 0.6), 2px 2px 6px rgba($su-color-sky, 0.5);
 }
 
 // purple buttons
@@ -17,6 +17,7 @@
     bg-electric_purple_dark
     text-white;
   }
+
   &:focus {
     @include saa-button--focus;
   }
