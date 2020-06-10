@@ -1,5 +1,9 @@
 @charset "UTF-8";
 
+@mixin saa-button--focus {
+  box-shadow: -2px -2px 6px rgba($su-color-sky, 0.6), 2px 2px 6px rgba($su-color-sky, 0.5)!important;
+}
+
 // purple buttons
 @mixin saa-button-purple {
   @apply
@@ -12,6 +16,9 @@
     @apply
     bg-electric_purple_dark
     text-white;
+  }
+  &:focus {
+    @include saa-button--focus;
   }
 
   &.su-button--secondary {
@@ -38,14 +45,45 @@
       bg-electric_purple_dark
       text-white;
     }
+
+    &:focus {
+      @include saa-button--focus;
+    }
   }
 }
 
 // vivid red button
 @mixin saa-button--vivid-red {
   @apply
-  bg-bright_red
+  bg-vivid_red
   text-white;
+
+  &:hover,
+  &:focus {
+    @apply
+    bg-vivid_red_dark;
+  }
+
+  &:focus {
+    @include saa-button--focus;
+  }
 }
 
 // bright red button coming
+// vivid red button
+@mixin saa-button--bright-red {
+  @apply
+  bg-bright_red
+  text-white;
+
+  &:hover,
+  &:focus {
+    @apply
+    bg-white
+    text-black;
+  }
+
+  &:focus {
+    @include saa-button--focus;
+  }
+}
