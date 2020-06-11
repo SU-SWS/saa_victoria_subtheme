@@ -51,6 +51,14 @@
       @include saa-button--focus;
     }
   }
+
+  &.su-button--vivid-red {
+    @include saa-button--vivid-red
+  }
+
+  &.su-button--bright-red {
+    @include saa-button--bright-red
+  }
 }
 
 // vivid red button
@@ -75,6 +83,7 @@
   @apply
   bg-bright_red
   text-white;
+  border: 1px solid $su-color-white;
 
   &:hover,
   &:focus {
