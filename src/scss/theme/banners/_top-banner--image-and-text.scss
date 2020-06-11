@@ -1,0 +1,35 @@
+@charset "UTF-8";
+
+// top banners only:
+.su-page-banner {
+
+  .saa-banner--has-image {
+
+    // if there is an image and a card - purple layout
+    .su-hero {
+      .su-card {
+        &.su-hero__card {
+          background: $saa-color-electric-purple;
+          color: $su-color-white;
+          /* width: 50%; */
+          /* height: 100%; */
+          margin: 0;
+          position: relative;
+          max-width: 50%;
+          height: 100%;
+          left: 0;
+          top: 0;
+          min-height: inherit;
+          padding: 60px 30px; // temp, will use modular-spacing
+          border: 0;
+          box-shadow: none;
+        }
+
+        .su-button {
+          @include saa-button--vivid-red;
+        }
+      }
+    }
+  }
+}
+
