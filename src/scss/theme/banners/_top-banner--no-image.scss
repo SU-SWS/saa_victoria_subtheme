@@ -6,31 +6,11 @@
   .saa-banner--no-image {
     .su-hero {
       .su-hero__media {
-        background: $su-color-black; //  temporary
-        //display: none; // should we hide this?
         @apply hidden;
       }
 
       .su-hero__card {
-        @apply
-        flex
-        items-end
-        relative
-        left-0
-        top-0
-        border-0
-        shadow-none;
-        color: $su-color-white;
-        margin: 0;
-        padding: 0;
-        max-width: 100%;
-        height: 100%;
-        min-height: inherit;
-        background: $su-color-bright-red;
-
-        .su-button {
-          @include saa-button--bright-red;
-        }
+        @include saa-banner--bright-red-card-common;
       }
     }
   }

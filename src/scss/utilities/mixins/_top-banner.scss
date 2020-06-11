@@ -1,0 +1,31 @@
+@mixin saa-banner--bright-red-card-common {
+  @apply flex
+  items-end
+  relative
+  left-0
+  top-0
+  border-0
+  shadow-none;
+  color: $su-color-white;
+  margin: 0;
+  padding: 0;
+  max-width: 100%;
+  height: 100%;
+  min-height: inherit;
+  background: $su-color-bright-red;
+
+  .su-link,
+  a {
+    color: $su-color-white;
+
+    &:hover,
+    &:focus {
+      text-decoration: underline !important;
+      box-shadow: none;
+    }
+  }
+
+  .su-button {
+    @include saa-button--bright-red;
+  }
+}
