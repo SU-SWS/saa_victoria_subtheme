@@ -1,5 +1,7 @@
 @charset "UTF-8";
 
 @import '../../config/index';
-@import 'top-banner';
+@import 'top-banner--image-and-text';
+@import 'top-banner--image-only';
+@import 'top-banner--no-image';
 @import 'banner--in-page-content';
