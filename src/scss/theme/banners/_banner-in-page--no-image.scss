@@ -1,7 +1,4 @@
 @charset "UTF-8";
-// Banner B Width Variables
-//$banner-b--lg: 864px;
-//$banner-b--xl: 1024px;
 
 .paragraph-item {
   // if there is NO image and a card  - all red full width
@@ -16,18 +13,47 @@
 
       .su-card {
         &.su-hero__card {
-          @apply bg-vivid_red text-white m-0 relative shadow-none max-w-full h-full border-0 left-0 top-0 text-center flex items-center justify-center;
+          @apply
+          relative
+          shadow-none
+          max-w-full
+          h-full
+          border-0
+          left-0
+          top-0
+          text-center
+          flex
+          items-center
+          justify-center;
           @include modular-spacing('padding', 3);
+
+          background: $su-color-vivid-red;
+          color: $su-color-white;
+          margin: 0;
 
           .su-card__contents {
             @apply p-0;
+
+            @include grid-media-min('lg') {
+              max-width: $banner-b--lg;
+              @apply inline;
+            }
+
+            @include grid-media-min('xl') {
+              max-width: $banner-b--xl;
+              @apply max-w-screen-lg;
+            }
           }
 
           .su-link--action {
-            @apply text-white;
+            // cta-white-on-bright-red currently does not include the action link styling (.su-link--action)
+            //@include cta-white-on-bright-red;
+            //@apply text-white;
+            color: $su-color-white;
 
             &::after {
-              @apply bg-white;
+              //@apply bg-white;
+              background: $su-color-white;
             }
 
             &:hover,
@@ -36,24 +62,11 @@
             }
           }
 
-          @include grid-media-min('lg') {
-            .su-card__contents {
-              max-width: $banner-b--lg;
-              @apply inline;
-            }
-          }
-
-          @include grid-media-min('xl') {
-            .su-card__contents {
-              max-width: $banner-b--xl;
-              @apply max-w-screen-lg;
-            }
-          }
 
           // Might not need this as the current default button styling is saa-button-purple
-          //.su-button {
-          //  @include saa-button-purple;
-          //}
+          .su-button {
+            @include saa-button-purple;
+          }
         }
       }
     }
