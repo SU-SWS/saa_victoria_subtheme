@@ -93732,6 +93732,32 @@ video {
   }
 }
 
+.su-button.su-button--big, .su-link.su-button.su-button--big {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: "Source Sans Pro", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+  cursor: pointer;
+  display: inline-block;
+  border: 0;
+  font-size: 2rem;
+  font-weight: 400;
+  line-height: 1;
+  text-align: center;
+  text-decoration: none;
+  width: auto;
+  -webkit-transition: background-color 0.25s ease-in-out, color 0.25s ease-in-out;
+  transition: background-color 0.25s ease-in-out, color 0.25s ease-in-out;
+}
+
+.su-button.su-button--big a, .su-link.su-button.su-button--big a {
+  font-weight: 400;
+  text-decoration: none;
+}
+
+.su-button.su-button--big:active, .su-button.su-button--big:focus, .su-button.su-button--big:hover {
+  text-decoration: underline;
+}
+
 /* SAA Specific colors, Stanford/Decanter colors are not defined here */
 
 .su-button {
@@ -93828,6 +93854,50 @@ video {
           box-shadow: -2px -2px 6px rgba(0, 152, 219, 0.6), 2px 2px 6px rgba(0, 152, 219, 0.5);
 }
 
+.su-button.su-button--vivid-red {
+  --bg-opacity: 1;
+  background-color: #ec0513;
+  background-color: rgba(236, 5, 19, var(--bg-opacity));
+  --text-opacity: 1;
+  color: #fff;
+  color: rgba(255, 255, 255, var(--text-opacity));
+}
+
+.su-button.su-button--vivid-red:hover, .su-button.su-button--vivid-red:focus {
+  --bg-opacity: 1;
+  background-color: #ce0d0d;
+  background-color: rgba(206, 13, 13, var(--bg-opacity));
+}
+
+.su-button.su-button--vivid-red:focus {
+  -webkit-box-shadow: -2px -2px 6px rgba(0, 152, 219, 0.6), 2px 2px 6px rgba(0, 152, 219, 0.5);
+          box-shadow: -2px -2px 6px rgba(0, 152, 219, 0.6), 2px 2px 6px rgba(0, 152, 219, 0.5);
+}
+
+.su-button.su-button--bright-red {
+  --bg-opacity: 1;
+  background-color: #b1040e;
+  background-color: rgba(177, 4, 14, var(--bg-opacity));
+  --text-opacity: 1;
+  color: #fff;
+  color: rgba(255, 255, 255, var(--text-opacity));
+  border: 1px solid #ffffff;
+}
+
+.su-button.su-button--bright-red:hover, .su-button.su-button--bright-red:focus {
+  --bg-opacity: 1;
+  background-color: #fff;
+  background-color: rgba(255, 255, 255, var(--bg-opacity));
+  --text-opacity: 1;
+  color: #000;
+  color: rgba(0, 0, 0, var(--text-opacity));
+}
+
+.su-button.su-button--bright-red:focus {
+  -webkit-box-shadow: -2px -2px 6px rgba(0, 152, 219, 0.6), 2px 2px 6px rgba(0, 152, 219, 0.5);
+          box-shadow: -2px -2px 6px rgba(0, 152, 219, 0.6), 2px 2px 6px rgba(0, 152, 219, 0.5);
+}
+
 .su-link.su-button {
   --bg-opacity: 1;
   background-color: #505EEC;
@@ -93918,6 +93988,50 @@ video {
 }
 
 .su-link.su-button.su-button--big:focus {
+  -webkit-box-shadow: -2px -2px 6px rgba(0, 152, 219, 0.6), 2px 2px 6px rgba(0, 152, 219, 0.5);
+          box-shadow: -2px -2px 6px rgba(0, 152, 219, 0.6), 2px 2px 6px rgba(0, 152, 219, 0.5);
+}
+
+.su-link.su-button.su-button--vivid-red {
+  --bg-opacity: 1;
+  background-color: #ec0513;
+  background-color: rgba(236, 5, 19, var(--bg-opacity));
+  --text-opacity: 1;
+  color: #fff;
+  color: rgba(255, 255, 255, var(--text-opacity));
+}
+
+.su-link.su-button.su-button--vivid-red:hover, .su-link.su-button.su-button--vivid-red:focus {
+  --bg-opacity: 1;
+  background-color: #ce0d0d;
+  background-color: rgba(206, 13, 13, var(--bg-opacity));
+}
+
+.su-link.su-button.su-button--vivid-red:focus {
+  -webkit-box-shadow: -2px -2px 6px rgba(0, 152, 219, 0.6), 2px 2px 6px rgba(0, 152, 219, 0.5);
+          box-shadow: -2px -2px 6px rgba(0, 152, 219, 0.6), 2px 2px 6px rgba(0, 152, 219, 0.5);
+}
+
+.su-link.su-button.su-button--bright-red {
+  --bg-opacity: 1;
+  background-color: #b1040e;
+  background-color: rgba(177, 4, 14, var(--bg-opacity));
+  --text-opacity: 1;
+  color: #fff;
+  color: rgba(255, 255, 255, var(--text-opacity));
+  border: 1px solid #ffffff;
+}
+
+.su-link.su-button.su-button--bright-red:hover, .su-link.su-button.su-button--bright-red:focus {
+  --bg-opacity: 1;
+  background-color: #fff;
+  background-color: rgba(255, 255, 255, var(--bg-opacity));
+  --text-opacity: 1;
+  color: #000;
+  color: rgba(0, 0, 0, var(--text-opacity));
+}
+
+.su-link.su-button.su-button--bright-red:focus {
   -webkit-box-shadow: -2px -2px 6px rgba(0, 152, 219, 0.6), 2px 2px 6px rgba(0, 152, 219, 0.5);
           box-shadow: -2px -2px 6px rgba(0, 152, 219, 0.6), 2px 2px 6px rgba(0, 152, 219, 0.5);
 }
@@ -94386,66 +94500,181 @@ a {
   text-decoration: underline;
 }
 
-.su-page-banner .saa-banner--no-image .su-hero .su-hero__media {
-  background: #2e2d29;
-}
-
-.su-page-banner .saa-banner--no-image .su-hero .su-hero__card {
-  color: #ffffff;
-  /* width: 50%; */
-  /* height: 100%; */
-  margin: 0;
-  position: relative;
-  max-width: 100%;
-  height: 100%;
-  left: 0;
-  top: 0;
-  min-height: inherit;
-  padding: 60px 30px;
+.su-button.su-button--big, .su-link.su-button.su-button--big {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: "Source Sans Pro", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+  cursor: pointer;
+  display: inline-block;
   border: 0;
-  -webkit-box-shadow: none;
-          box-shadow: none;
-  background: #ec0513;
+  font-size: 2rem;
+  font-weight: 400;
+  line-height: 1;
+  text-align: center;
+  text-decoration: none;
+  width: auto;
+  -webkit-transition: background-color 0.25s ease-in-out, color 0.25s ease-in-out;
+  transition: background-color 0.25s ease-in-out, color 0.25s ease-in-out;
 }
 
-.su-page-banner .saa-banner--no-image .su-hero .su-hero__card .su-button {
-  background-color: #505EEC;
+.su-button.su-button--big a, .su-link.su-button.su-button--big a {
+  font-weight: 400;
+  text-decoration: none;
 }
+
+.su-button.su-button--big:active, .su-button.su-button--big:focus, .su-button.su-button--big:hover {
+  text-decoration: underline;
+}
+
+/* SAA Specific colors, Stanford/Decanter colors are not defined here */
 
 .su-page-banner .saa-banner--has-image .su-hero .su-card.su-hero__card {
-  background: #505EEC;
-  color: #ffffff;
-  /* width: 50%; */
-  /* height: 100%; */
-  margin: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
   position: relative;
-  max-width: 50%;
-  height: 100%;
   left: 0;
   top: 0;
+  border-width: 0;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  color: #ffffff;
+  margin: 0;
+  padding: 0;
+  max-width: 100%;
+  height: 100%;
   min-height: inherit;
-  padding: 60px 30px;
-  border: 0;
+  background: #b1040e;
+  max-width: 50%;
+}
+
+.su-page-banner .saa-banner--has-image .su-hero .su-card.su-hero__card .su-link,
+  .su-page-banner .saa-banner--has-image .su-hero .su-card.su-hero__card a {
+  color: #ffffff;
+}
+
+.su-page-banner .saa-banner--has-image .su-hero .su-card.su-hero__card .su-link:hover, .su-page-banner .saa-banner--has-image .su-hero .su-card.su-hero__card .su-link:focus,
+    .su-page-banner .saa-banner--has-image .su-hero .su-card.su-hero__card a:hover,
+    .su-page-banner .saa-banner--has-image .su-hero .su-card.su-hero__card a:focus {
+  text-decoration: underline;
   -webkit-box-shadow: none;
           box-shadow: none;
 }
 
-.su-page-banner .saa-banner--has-image .su-hero .su-card .su-button {
+.su-page-banner .saa-banner--has-image .su-hero .su-card.su-hero__card .su-button {
   --bg-opacity: 1;
-  background-color: #ec0513;
-  background-color: rgba(236, 5, 19, var(--bg-opacity));
+  background-color: #b1040e;
+  background-color: rgba(177, 4, 14, var(--bg-opacity));
   --text-opacity: 1;
   color: #fff;
   color: rgba(255, 255, 255, var(--text-opacity));
+  border: 1px solid #ffffff;
 }
 
-.su-page-banner .saa-banner--has-image .su-hero .su-card .su-button:hover, .su-page-banner .saa-banner--has-image .su-hero .su-card .su-button:focus {
+.su-page-banner .saa-banner--has-image .su-hero .su-card.su-hero__card .su-button:hover, .su-page-banner .saa-banner--has-image .su-hero .su-card.su-hero__card .su-button:focus {
   --bg-opacity: 1;
-  background-color: #ce0d0d;
-  background-color: rgba(206, 13, 13, var(--bg-opacity));
+  background-color: #fff;
+  background-color: rgba(255, 255, 255, var(--bg-opacity));
+  --text-opacity: 1;
+  color: #000;
+  color: rgba(0, 0, 0, var(--text-opacity));
 }
 
-.su-page-banner .saa-banner--has-image .su-hero .su-card .su-button:focus {
+.su-page-banner .saa-banner--has-image .su-hero .su-card.su-hero__card .su-button:focus {
+  -webkit-box-shadow: -2px -2px 6px rgba(0, 152, 219, 0.6), 2px 2px 6px rgba(0, 152, 219, 0.5);
+          box-shadow: -2px -2px 6px rgba(0, 152, 219, 0.6), 2px 2px 6px rgba(0, 152, 219, 0.5);
+}
+
+.su-button.su-button--big, .su-link.su-button.su-button--big {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: "Source Sans Pro", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+  cursor: pointer;
+  display: inline-block;
+  border: 0;
+  font-size: 2rem;
+  font-weight: 400;
+  line-height: 1;
+  text-align: center;
+  text-decoration: none;
+  width: auto;
+  -webkit-transition: background-color 0.25s ease-in-out, color 0.25s ease-in-out;
+  transition: background-color 0.25s ease-in-out, color 0.25s ease-in-out;
+}
+
+.su-button.su-button--big a, .su-link.su-button.su-button--big a {
+  font-weight: 400;
+  text-decoration: none;
+}
+
+.su-button.su-button--big:active, .su-button.su-button--big:focus, .su-button.su-button--big:hover {
+  text-decoration: underline;
+}
+
+/* SAA Specific colors, Stanford/Decanter colors are not defined here */
+
+.su-page-banner .saa-banner--no-image .su-hero .su-hero__media {
+  display: none;
+}
+
+.su-page-banner .saa-banner--no-image .su-hero .su-hero__card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  position: relative;
+  left: 0;
+  top: 0;
+  border-width: 0;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  color: #ffffff;
+  margin: 0;
+  padding: 0;
+  max-width: 100%;
+  height: 100%;
+  min-height: inherit;
+  background: #b1040e;
+}
+
+.su-page-banner .saa-banner--no-image .su-hero .su-hero__card .su-link,
+  .su-page-banner .saa-banner--no-image .su-hero .su-hero__card a {
+  color: #ffffff;
+}
+
+.su-page-banner .saa-banner--no-image .su-hero .su-hero__card .su-link:hover, .su-page-banner .saa-banner--no-image .su-hero .su-hero__card .su-link:focus,
+    .su-page-banner .saa-banner--no-image .su-hero .su-hero__card a:hover,
+    .su-page-banner .saa-banner--no-image .su-hero .su-hero__card a:focus {
+  text-decoration: underline;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+.su-page-banner .saa-banner--no-image .su-hero .su-hero__card .su-button {
+  --bg-opacity: 1;
+  background-color: #b1040e;
+  background-color: rgba(177, 4, 14, var(--bg-opacity));
+  --text-opacity: 1;
+  color: #fff;
+  color: rgba(255, 255, 255, var(--text-opacity));
+  border: 1px solid #ffffff;
+}
+
+.su-page-banner .saa-banner--no-image .su-hero .su-hero__card .su-button:hover, .su-page-banner .saa-banner--no-image .su-hero .su-hero__card .su-button:focus {
+  --bg-opacity: 1;
+  background-color: #fff;
+  background-color: rgba(255, 255, 255, var(--bg-opacity));
+  --text-opacity: 1;
+  color: #000;
+  color: rgba(0, 0, 0, var(--text-opacity));
+}
+
+.su-page-banner .saa-banner--no-image .su-hero .su-hero__card .su-button:focus {
   -webkit-box-shadow: -2px -2px 6px rgba(0, 152, 219, 0.6), 2px 2px 6px rgba(0, 152, 219, 0.5);
           box-shadow: -2px -2px 6px rgba(0, 152, 219, 0.6), 2px 2px 6px rgba(0, 152, 219, 0.5);
 }
