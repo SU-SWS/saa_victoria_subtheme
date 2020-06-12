@@ -40,12 +40,12 @@ a {
 }
 
 .su-wysiwyg-text {
-  a {
+  a:not(.su-button) {
     color: $su-color-vivid-red;
     text-decoration: underline;
 
-    a:hover,
-    a:focus {
+    &:hover,
+    &:focus {
       color: $su-color-black;
       text-decoration: underline;
     }

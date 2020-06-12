@@ -8,6 +8,8 @@
 // override decanter button styles here to use new colors and any other differences
 // default button style for this theme
 
+//.su-wysiwyg-text .su-button,
+//.su-wysiwyg-text a.su-button,
 .su-button {
   @include saa-button-purple;
 }

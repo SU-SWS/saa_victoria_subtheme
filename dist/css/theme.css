@@ -93998,13 +93998,12 @@ a {
   color: rgba(74, 85, 104, var(--text-opacity));
 }
 
-.su-wysiwyg-text a {
+.su-wysiwyg-text a:not(.su-button) {
   color: #ec0513;
   text-decoration: underline;
 }
 
-.su-wysiwyg-text a a:hover,
-  .su-wysiwyg-text a a:focus {
+.su-wysiwyg-text a:not(.su-button):hover, .su-wysiwyg-text a:not(.su-button):focus {
   color: #2e2d29;
   text-decoration: underline;
 }
