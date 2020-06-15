@@ -6,16 +6,14 @@
 
 // purple buttons
 @mixin saa-button-purple {
-  @apply
-  bg-electric_purple
-  text-white;
+  background: $saa-color-electric-purple;
+  color: $su-color-white;
   padding: 10px 30px;
 
   &:hover,
   &:focus {
-    @apply
-    bg-electric_purple_dark
-    text-white;
+    background: $saa-color-electric-purple-dark;
+    color: $su-color-white;
   }
 
   &:focus {
@@ -24,27 +22,31 @@
 
   &.su-button--secondary {
     @apply
-    bg-white
-    text-electric_purple
     shadow
-    border
-    border-solid
-    border-electric_purple
+    //border
+    //border-solid
+    //border-electric_purple
     shadow-none;
+    background: $su-color-white;
+    color: $saa-color-electric-purple;
+    border: 1px solid $saa-color-electric-purple;
+
+    &:hover,
+    &:focus {
+      border: 1px solid $su-color-black;
+    }
   }
 
   &.su-button--big {
     @include button-big; // should set big font size but it doesn't. big size should be set out of decanter anyway.
-    @apply
-    bg-electric_purple
-    text-white;
+    background: $saa-color-electric-purple;
+    color: $su-color-white;
     font-size: 2.8rem !important; // this is not responsive, come back to this because decanter mixin isn't applying
 
     &:hover,
     &:focus {
-      @apply
-      bg-electric_purple_dark
-      text-white;
+      background: $saa-color-electric-purple-dark;
+      color: $su-color-white;
     }
 
     &:focus {
@@ -55,14 +57,12 @@
 
 // vivid red button
 @mixin saa-button--vivid-red {
-  @apply
-  bg-vivid_red
-  text-white;
+  background: $su-color-vivid-red;
+  color: $su-color-white;
 
   &:hover,
   &:focus {
-    @apply
-    bg-vivid_red_dark;
+    background: $su-color-vivid-red-dark;
   }
 
   &:focus {
@@ -73,15 +73,13 @@
 // bright red button coming
 // vivid red button
 @mixin saa-button--bright-red {
-  @apply
-  bg-bright_red
-  text-white;
+  background: $su-color-bright-red;
+  color: $su-color-white;
 
   &:hover,
   &:focus {
-    @apply
-    bg-white
-    text-black;
+    background: $su-color-white;
+    color: $su-color-black;
   }
 
   &:focus {

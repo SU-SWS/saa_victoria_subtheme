@@ -23,9 +23,11 @@ $tag-height: 70px;
       content: "";
       height: $tag-height;
       width: $tag-width;
-      @apply block;
-      @apply absolute;  // top left corner inside the card
-      @apply bg-electric_purple;  // default color
+      @apply
+      block
+      absolute  // top left corner inside the card
+      //@apply bg-electric_purple;  // default color
+      background-color: $saa-color-electric-purple;
 
       &.tag-color--electric-purple::before {
         @apply bg-electric_purple;
