@@ -78,6 +78,7 @@
 @mixin saa-button--bright-red {
   background: $su-color-bright-red;
   color: $su-color-white;
+  border: 1px solid $su-color-white;
 
   &:hover,
   &:focus {

@@ -1,11 +1,13 @@
+@charset "UTF-8";
+
 @mixin saa-banner--bright-red-card-common {
-  @apply flex
-  items-end
-  relative
-  left-0
-  top-0
-  border-0
-  shadow-none;
+  display: flex;
+  align-items: flex-end;
+  position: relative;
+  left: 0;
+  top: 0;
+  border: none;
+  box-shadow: $box-shadow--none;
   color: $su-color-white;
   margin: 0;
   padding: 0;
