@@ -107,5 +107,4 @@ fonts:
       '//fonts.googleapis.com/css?family=Abhaya+Libre:400,500,600,700,800&display=swap': { type: external, minified: true }
       # Clarendon, Proxima Nova & Calluna fonts package
       'https://use.typekit.net/udw3cbu.css' : { type: external, minified: true }
-      'https://use.typekit.net/gbp4qio.css' : { type: external, minified: true }
 #      font-family: clarendon-text-pro, serif;
