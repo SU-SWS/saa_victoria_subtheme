@@ -5,12 +5,11 @@ $banner-circle--padding: 20px;
 
 // only apply to banners inside the react paragraph page content section
 .paragraph-item {
-
   // if there is an image and a card  - testimonial banner
   .saa-banner--has-image {
     .su-hero {
       .su-hero__media {
-        background: $su-color-white;
+        background: $su-color-light-sandstone;
 
         img {
           max-width: $banner-circle--image-width;
@@ -26,20 +25,21 @@ $banner-circle--padding: 20px;
 
       .su-card {
         &.su-hero__card {
+          @apply relative max-w-screen-lg left-0 h-full text-center border-none shadow-none pt-8;
           background: none;
           color: $su-color-black;
+          margin: 0 auto;
+          top: 100px;
           /* width: 50%; */
           /* height: 100%; */
-          margin: 0 auto;
-          position: relative;
-          max-width: 1024px;
-          height: 100%;
-          left: 0;
-          top: 100px;
-          padding-top: 20px;
-          border: 0;
-          box-shadow: none;
-          text-align: center;
+          //position: relative;
+          //max-width: 1024px;
+          //height: 100%;
+          //left: 0;
+          //padding-top: 20px;
+          //border: 0;
+          //box-shadow: none;
+          //text-align: center;
 
           .su-link,
           a {
