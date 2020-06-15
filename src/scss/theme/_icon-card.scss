@@ -51,8 +51,12 @@ $tag-height: 70px;
       @apply pt-0;
     }
 
-    .su-card__contents> h2 {
-      @include saa-font--calluna-base;
+    .su-card__contents {
+      @include saa-font--proxima-nova-base;
+
+      & > h2 {
+        @include saa-font--calluna-base;
+      }
     }
 
     .su-button {
