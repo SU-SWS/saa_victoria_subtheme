@@ -1,7 +1,7 @@
 @charset "UTF-8";
 
 @mixin saa-button--focus {
-  box-shadow: -2px -2px 6px rgba($su-color-sky, 0.6), 2px 2px 6px rgba($su-color-sky, 0.5);
+  box-shadow: $box-shadow--focus;
 }
 
 // purple buttons
@@ -21,12 +21,7 @@
   }
 
   &.su-button--secondary {
-    @apply
-    shadow
-    //border
-    //border-solid
-    //border-electric_purple
-    shadow-none;
+    box-shadow: $box-shadow--none;
     background: $su-color-white;
     color: $saa-color-electric-purple;
     border: 1px solid $saa-color-electric-purple;
