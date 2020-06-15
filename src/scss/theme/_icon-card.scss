@@ -10,10 +10,10 @@ $tag-height: 70px;
 
     // icon settings
     img {
-      @apply mr-0;
+      margin-right: 0;
       @include modular-spacing('margin', 4 null 2 4);
-      @apply w-auto;
-      @apply h-auto;
+      width: auto;
+      height: auto;
       max-width: 25px;
       max-height: 25px;
     }
@@ -25,22 +25,18 @@ $tag-height: 70px;
       width: $tag-width;
       @apply
       block
-      absolute  // top left corner inside the card
-      //@apply bg-electric_purple;  // default color
+      absolute;  // top left corner inside the card
       background: $saa-color-electric-purple;
 
       &.tag-color--electric-purple::before {
-        //@apply bg-electric_purple;
         background: $saa-color-electric-purple;
       }
 
       &.tag-color--wintergreen::before {
-        //@apply bg-wintergreen;
         background: $saa-color-wintergreen;
       }
 
       &.tag-color--dandelion::before {
-        //@apply bg-dandelion;
         background: $saa-color-dandelion;
       }
     }
@@ -53,7 +49,7 @@ $tag-height: 70px;
     }
 
     .contextual-region + .su-card__contents {
-      @apply pt-0;
+      padding-top: 0;
     }
 
     .su-card__contents> h2 {
@@ -72,7 +68,6 @@ $tag-height: 70px;
   .paragraph-item:nth-of-type(1) {
     .su-card {
       &.su-card--icon::before {
-        //@apply bg-dandelion;
         background: $saa-color-dandelion;
       }
     }
@@ -81,7 +76,6 @@ $tag-height: 70px;
   .paragraph-item:nth-of-type(2) {
     .su-card {
       &.su-card--icon::before {
-        //@apply bg-wintergreen;
         background: $saa-color-wintergreen;
       }
     }
@@ -90,7 +84,6 @@ $tag-height: 70px;
   .paragraph-item:nth-of-type(3) {
     .su-card {
       &.su-card--icon::before {
-        //@apply bg-electric_purple;
         background: $saa-color-electric-purple;
       }
     }
@@ -102,7 +95,6 @@ $tag-height: 70px;
   .paragraph-item:nth-of-type(1)  {
     .su-card {
       &.su-card--icon::before {
-        //@apply bg-wintergreen;
         background: $saa-color-wintergreen;
       }
     }
@@ -111,7 +103,6 @@ $tag-height: 70px;
   .paragraph-item:nth-of-type(2) {
     .su-card {
       &.su-card--icon::before {
-        //@apply bg-electric_purple;
         background: $saa-color-electric-purple;
       }
     }
@@ -120,7 +111,6 @@ $tag-height: 70px;
   .paragraph-item:nth-of-type(3) {
     .su-card {
       &.su-card--icon::before {
-        //@apply bg-dandelion;
         background: $saa-color-dandelion;
       }
     }
@@ -132,7 +122,6 @@ $tag-height: 70px;
   .paragraph-item:nth-of-type(1) {
     .su-card {
       &.su-card--icon::before {
-        //@apply bg-electric_purple;
         background: $saa-color-electric-purple;
       }
     }
@@ -141,7 +130,6 @@ $tag-height: 70px;
   .paragraph-item:nth-of-type(2) {
     .su-card {
       &.su-card--icon::before {
-        //@apply bg-dandelion;
         background: $saa-color-dandelion;
       }
     }
@@ -150,7 +138,6 @@ $tag-height: 70px;
   .paragraph-item:nth-of-type(3) {
     .su-card {
       &.su-card--icon::before {
-        //@apply bg-wintergreen;
         background: $saa-color-wintergreen;
       }
     }
@@ -162,7 +149,6 @@ $tag-height: 70px;
   .paragraph-item:nth-of-type(1) {
     .su-card {
       &.su-card--icon::before {
-        //@apply bg-dandelion;
         background: $saa-color-dandelion;
       }
     }
@@ -171,7 +157,6 @@ $tag-height: 70px;
   .paragraph-item:nth-of-type(2) {
     .su-card {
       &.su-card--icon::before {
-        //@apply bg-wintergreen;
         background: $saa-color-wintergreen;
       }
     }
@@ -183,7 +168,6 @@ $tag-height: 70px;
   .paragraph-item:nth-of-type(1) {
     .su-card {
       &.su-card--icon::before {
-        //@apply bg-electric_purple;
         background: $saa-color-electric-purple;
       }
     }
@@ -192,7 +176,6 @@ $tag-height: 70px;
   .paragraph-item:nth-of-type(2) {
     .su-card {
       &.su-card--icon::before {
-        //@apply bg-dandelion;
         background: $saa-color-dandelion;
       }
     }
@@ -204,7 +187,6 @@ $tag-height: 70px;
   .paragraph-item:nth-of-type(1) {
     .su-card {
       &.su-card--icon::before {
-        //@apply bg-wintergreen;
         background: $saa-color-wintergreen;
       }
     }
@@ -213,7 +195,6 @@ $tag-height: 70px;
   .paragraph-item:nth-of-type(2) {
     .su-card {
       &.su-card--icon::before {
-        //@apply bg-electric_purple;
         background: $saa-color-electric-purple;
       }
     }
@@ -225,7 +206,6 @@ $tag-height: 70px;
   .paragraph-item:nth-of-type(1) {
     .su-card {
       &.su-card--icon::before {
-        //@apply bg-dandelion;
         background: $saa-color-dandelion;
       }
     }
@@ -237,7 +217,6 @@ $tag-height: 70px;
   .paragraph-item:nth-of-type(1) {
     .su-card {
       &.su-card--icon::before {
-        //@apply bg-wintergreen;
         background: $saa-color-wintergreen;
       }
     }
@@ -249,7 +228,6 @@ $tag-height: 70px;
   .paragraph-item:nth-of-type(1) {
     .su-card {
       &.su-card--icon::before {
-        //@apply bg-electric_purple;
         background: $saa-color-electric-purple;
       }
     }
