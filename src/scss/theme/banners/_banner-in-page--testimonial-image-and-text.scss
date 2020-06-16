@@ -8,38 +8,63 @@ $banner-circle--padding: 20px;
   // if there is an image and a card  - testimonial banner
   .saa-banner--has-image {
     .su-hero {
-      .su-hero__media {
-        background: $su-color-light-sandstone;
+      background: $su-color-light-sandstone;
+      height: auto;
+      min-height: unset;
+      position: unset;
+      padding-top: 72px;
+      padding-bottom: 108px;
 
-        img {
+      .su-hero__media {
+        background: transparent;
+        min-height: unset;
+        position: unset;
+
+        img { // Image display has been set to media image style - Medium (220)
           max-width: $banner-circle--image-width;
           max-height: $banner-circle--image-width;
           margin-left: auto;
           margin-right: auto;
           border-radius: 50%;
           padding: 0;
-          margin-top: $banner-circle--padding;
-          margin-bottom: $banner-circle--padding;
+          //margin-top: $banner-circle--padding;
+          //margin-bottom: $banner-circle--padding;
         }
       }
 
       .su-card {
         &.su-hero__card {
-          @apply relative max-w-screen-lg left-0 h-full text-center border-none shadow-none pt-8;
-          background: none;
+          @apply
+          relative
+          max-w-screen-lg
+          left-0
+          h-full
+          text-center
+          border-none
+          shadow-none
+          pt-8;
+          background: transparent;
+          position: unset;
           color: $su-color-black;
           margin: 0 auto;
           top: 100px;
-          /* width: 50%; */
-          /* height: 100%; */
-          //position: relative;
-          //max-width: 1024px;
-          //height: 100%;
-          //left: 0;
-          //padding-top: 20px;
-          //border: 0;
-          //box-shadow: none;
-          //text-align: center;
+
+          .su-card__contents {
+            @apply
+            max-w-screen-lg
+            p-0;
+
+            h2{
+              font-size: 3.5rem;
+
+              &::before {
+                content: open-quote;
+              }
+              &::after {
+                content: close-quote;
+              }
+            }
+          }
 
           .su-link,
           a {
