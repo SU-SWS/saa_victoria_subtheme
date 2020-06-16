@@ -13,36 +13,62 @@
 
       .su-card {
         &.su-hero__card {
-          @apply
-          relative
-          shadow-none
-          max-w-full
-          h-full
-          border-0
-          left-0
-          top-0
-          text-center
-          flex
-          items-center
-          justify-center;
+          //@apply
+          //relative
+          //shadow-none
+          //max-w-full
+          //h-full
+          //border-0
+          //left-0
+          //top-0
+          //text-center
+          //flex
+          //items-center
+          //justify-center;
           @include modular-spacing('padding', 3);
 
+          align-items: center;
           background: $su-color-vivid-red;
+          border: 0;
+          box-shadow: none;
           color: $su-color-white;
+          display: flex;
+          justify-content: center;
+          left: 0;
           margin: 0;
+          max-width: 100%;
+          position: relative;
+          text-align: center;
+          top: 0;
 
           .su-card__contents {
-            @apply p-0;
+            //@apply p-0;
+            padding: 0;
+
+            span,
+            h2 {
+              margin-bottom: 26px;
+            }
+
+            p {
+              margin-bottom: 18px;
+            }
 
             @include grid-media-min('lg') {
+              //@apply inline max-w-screen-lg;
               max-width: $banner-b--lg;
-              @apply inline;
+              display: inline;
             }
 
             @include grid-media-min('xl') {
+              //@apply max-w-screen-lg;
               max-width: $banner-b--xl;
-              @apply max-w-screen-lg;
             }
+          }
+
+          .su-link,
+          .su-link--action {
+            margin-top: 12px;
           }
 
           .su-link--action {
@@ -58,7 +84,8 @@
 
             &:hover,
             &:focus {
-              @apply underline;
+              //@apply underline;
+              text-decoration: underline;
             }
           }
 
