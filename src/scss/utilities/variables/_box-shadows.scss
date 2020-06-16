@@ -1,10 +1,10 @@
 @charset "UTF-8";
 
 $box-shadow--none: 'none';
-$box-shadow--sm: 0px 1px 2px ($su-color-black, 0.25);
+$box-shadow--sm: 0 1px 2px ($su-color-black, 0.25);
 $box-shadow--default: 5px 5px 20px ($su-color-black 0.1);
-$box-shadow--md: 0px 10px 20px ($su-color-black 0.15), 0px 6px 6px ($su-color-black 0.2);
-$box-shadow--lg: 0px 14px 28px ($su-color-black 0.2), 0px 5px 10px ($su-color-black 0.22);
-$box-shadow--xl: 0px 19px 38px ($su-color-black 0.25), 0px 5px 12px ($su-color-black 0.18);
+$box-shadow--md: 0 10px 20px ($su-color-black 0.15), 0 6px 6px ($su-color-black 0.2);
+$box-shadow--lg: 0 14px 28px ($su-color-black 0.2), 0 5px 10px ($su-color-black 0.22);
+$box-shadow--xl: 0 19px 38px ($su-color-black 0.25), 0 5px 12px ($su-color-black 0.18);
 $box-shadow--focus: -2px -2px 6px ($su-color-sky, 0.6), 2px 2px 6px ($su-color-sky, 0.5);
 
