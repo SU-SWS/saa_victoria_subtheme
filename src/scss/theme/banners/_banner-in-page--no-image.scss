@@ -44,7 +44,7 @@
 
         .su-card__contents {
           //@apply p-0;
-          padding: 0;
+          padding: 1px 0 0 0;
 
           @include grid-media-min('lg') {
             //@apply inline max-w-screen-lg;
@@ -66,9 +66,16 @@
             margin-bottom: 18px;
           }
 
+          a,
           .su-link,
           .su-link--action {
             margin-top: 12px;
+            color: $su-color-white;
+
+            &:hover,
+            &:focus {
+              text-decoration: underline;
+            }
           }
 
           .su-link--action {
