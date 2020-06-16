@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="22329295-f09a-44b3-aaa9-43a5251dceb3" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/scss/base/fonts/_header-links.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/scss/utilities/mixins/_top-banner.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/scss/utilities/variables/_box-shadows.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/css/base.css" beforeDir="false" afterPath="$PROJECT_DIR$/dist/css/base.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/css/theme.css" beforeDir="false" afterPath="$PROJECT_DIR$/dist/css/theme.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/saa_victoria_subtheme.libraries.yml" beforeDir="false" afterPath="$PROJECT_DIR$/saa_victoria_subtheme.libraries.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scss/base/fonts/_base-fonts.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/base/fonts/_base-fonts.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scss/theme/_button.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/theme/_button.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scss/theme/_cta.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/theme/_cta.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scss/theme/_icon-card.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/theme/_icon-card.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scss/theme/banners/_top-banner--image-and-text.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/theme/banners/_top-banner--image-and-text.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scss/theme/banners/_top-banner--no-image.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/theme/banners/_top-banner--no-image.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scss/theme/index.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/theme/index.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scss/utilities/mixins/_buttons.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/utilities/mixins/_buttons.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scss/utilities/mixins/index.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/utilities/mixins/index.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scss/utilities/mixins/typography/_font-families.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/utilities/mixins/typography/_font-families.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scss/utilities/variables/index.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/utilities/variables/index.scss" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
+    <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
+    <execution />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1csC4N2q8KgPBqL3zuh93VuSx9v" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="Git.Branch.Popup.ShowAllRemotes" value="true" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="TERMINAL_CUSTOM_COMMANDS_GOT_IT" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="preferences.sourceCode" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="22329295-f09a-44b3-aaa9-43a5251dceb3" name="Default Changelist" comment="" />
+      <created>1591307721366</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1591307721366</updated>
+      <workItem from="1591307722524" duration="3682000" />
+      <workItem from="1591379008205" duration="519000" />
+      <workItem from="1591727970941" duration="2728000" />
+      <workItem from="1591740658591" duration="238000" />
+      <workItem from="1591741081481" duration="72000" />
+      <workItem from="1591828637948" duration="878000" />
+      <workItem from="1591975756171" duration="13226000" />
+      <workItem from="1592000934774" duration="591000" />
+      <workItem from="1592251531027" duration="11501000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="2" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="-1028" y="-217" key="#Notifications" timestamp="1592328685588">
+      <screen x="-2560" y="-577" width="2560" height="1057" />
+    </state>
+    <state x="-1028" y="-217" key="#Notifications/0.23.1440.877/-2560.-577.2560.1057@-2560.-577.2560.1057" timestamp="1592328685588" />
+    <state x="-1131" y="-410" key="SettingsEditor" timestamp="1591310695732">
+      <screen x="-2560" y="-577" width="2560" height="1057" />
+    </state>
+    <state x="-1131" y="-410" key="SettingsEditor/0.23.1440.877/-2560.-577.2560.1057@-2560.-577.2560.1057" timestamp="1591310695732" />
+    <state x="-933" y="-416" width="586" height="735" key="find.popup" timestamp="1591729737391">
+      <screen x="-2560" y="-577" width="2560" height="1057" />
+    </state>
+    <state x="-933" y="-416" width="586" height="735" key="find.popup/0.23.1440.877/-2560.-577.2560.1057@-2560.-577.2560.1057" timestamp="1591729737391" />
+    <state x="-1117" y="-341" width="670" height="676" key="search.everywhere.popup" timestamp="1592323169447">
+      <screen x="-2560" y="-577" width="2560" height="1057" />
+    </state>
+    <state x="-1117" y="-341" width="670" height="676" key="search.everywhere.popup/0.23.1440.877/-2560.-577.2560.1057@-2560.-577.2560.1057" timestamp="1592323169447" />
+  </component>
+</project>

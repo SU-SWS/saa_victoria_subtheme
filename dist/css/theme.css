@@ -1,4 +1,4 @@
-.su-button.su-button--big, .su-link.su-button.su-button--big {
+.su-button.su-button--big, .su-link.su-button.su-button--big, .paragraph-item .saa-banner--no-image .su-hero .su-card .su-card__contents .su-button.su-button--big {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-family: "Source Sans Pro", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
@@ -15,16 +15,16 @@
   transition: background-color 0.25s ease-in-out, color 0.25s ease-in-out;
 }
 
-.su-button.su-button--big a, .su-link.su-button.su-button--big a {
+.su-button.su-button--big a, .su-link.su-button.su-button--big a, .paragraph-item .saa-banner--no-image .su-hero .su-card .su-card__contents .su-button.su-button--big a {
   font-weight: 400;
   text-decoration: none;
 }
 
-.su-button.su-button--big:active, .su-button.su-button--big:focus, .su-button.su-button--big:hover {
+.su-button.su-button--big:active, .paragraph-item .saa-banner--no-image .su-hero .su-card .su-card__contents .su-button.su-button--big:active, .su-button.su-button--big:focus, .paragraph-item .saa-banner--no-image .su-hero .su-card .su-card__contents .su-button.su-button--big:focus, .su-button.su-button--big:hover, .paragraph-item .saa-banner--no-image .su-hero .su-card .su-card__contents .su-button.su-button--big:hover {
   text-decoration: underline;
 }
 
-.su-button.su-button--big, .su-link.su-button.su-button--big {
+.su-button.su-button--big, .su-link.su-button.su-button--big, .paragraph-item .saa-banner--no-image .su-hero .su-card .su-card__contents .su-button.su-button--big {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-family: "Source Sans Pro", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
@@ -41,12 +41,12 @@
   transition: background-color 0.25s ease-in-out, color 0.25s ease-in-out;
 }
 
-.su-button.su-button--big a, .su-link.su-button.su-button--big a {
+.su-button.su-button--big a, .su-link.su-button.su-button--big a, .paragraph-item .saa-banner--no-image .su-hero .su-card .su-card__contents .su-button.su-button--big a {
   font-weight: 400;
   text-decoration: none;
 }
 
-.su-button.su-button--big:active, .su-button.su-button--big:focus, .su-button.su-button--big:hover {
+.su-button.su-button--big:active, .paragraph-item .saa-banner--no-image .su-hero .su-card .su-card__contents .su-button.su-button--big:active, .su-button.su-button--big:focus, .paragraph-item .saa-banner--no-image .su-hero .su-card .su-card__contents .su-button.su-button--big:focus, .su-button.su-button--big:hover, .paragraph-item .saa-banner--no-image .su-hero .su-card .su-card__contents .su-button.su-button--big:hover {
   text-decoration: underline;
 }
 
@@ -324,7 +324,7 @@ a {
   text-decoration: underline;
 }
 
-.su-button.su-button--big, .su-link.su-button.su-button--big {
+.su-button.su-button--big, .su-link.su-button.su-button--big, .paragraph-item .saa-banner--no-image .su-hero .su-card .su-card__contents .su-button.su-button--big {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-family: "Source Sans Pro", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
@@ -341,12 +341,12 @@ a {
   transition: background-color 0.25s ease-in-out, color 0.25s ease-in-out;
 }
 
-.su-button.su-button--big a, .su-link.su-button.su-button--big a {
+.su-button.su-button--big a, .su-link.su-button.su-button--big a, .paragraph-item .saa-banner--no-image .su-hero .su-card .su-card__contents .su-button.su-button--big a {
   font-weight: 400;
   text-decoration: none;
 }
 
-.su-button.su-button--big:active, .su-button.su-button--big:focus, .su-button.su-button--big:hover {
+.su-button.su-button--big:active, .paragraph-item .saa-banner--no-image .su-hero .su-card .su-card__contents .su-button.su-button--big:active, .su-button.su-button--big:focus, .paragraph-item .saa-banner--no-image .su-hero .su-card .su-card__contents .su-button.su-button--big:focus, .su-button.su-button--big:hover, .paragraph-item .saa-banner--no-image .su-hero .su-card .su-card__contents .su-button.su-button--big:hover {
   text-decoration: underline;
 }
 
@@ -646,7 +646,7 @@ a {
   color: #3C47B1;
 }
 
-.su-button.su-button--big, .su-link.su-button.su-button--big {
+.su-button.su-button--big, .su-link.su-button.su-button--big, .paragraph-item .saa-banner--no-image .su-hero .su-card .su-card__contents .su-button.su-button--big {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-family: "Source Sans Pro", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
@@ -663,16 +663,16 @@ a {
   transition: background-color 0.25s ease-in-out, color 0.25s ease-in-out;
 }
 
-.su-button.su-button--big a, .su-link.su-button.su-button--big a {
+.su-button.su-button--big a, .su-link.su-button.su-button--big a, .paragraph-item .saa-banner--no-image .su-hero .su-card .su-card__contents .su-button.su-button--big a {
   font-weight: 400;
   text-decoration: none;
 }
 
-.su-button.su-button--big:active, .su-button.su-button--big:focus, .su-button.su-button--big:hover {
+.su-button.su-button--big:active, .paragraph-item .saa-banner--no-image .su-hero .su-card .su-card__contents .su-button.su-button--big:active, .su-button.su-button--big:focus, .paragraph-item .saa-banner--no-image .su-hero .su-card .su-card__contents .su-button.su-button--big:focus, .su-button.su-button--big:hover, .paragraph-item .saa-banner--no-image .su-hero .su-card .su-card__contents .su-button.su-button--big:hover {
   text-decoration: underline;
 }
 
-.su-button.su-button--big, .su-link.su-button.su-button--big {
+.su-button.su-button--big, .su-link.su-button.su-button--big, .paragraph-item .saa-banner--no-image .su-hero .su-card .su-card__contents .su-button.su-button--big {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-family: "Source Sans Pro", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
@@ -689,12 +689,12 @@ a {
   transition: background-color 0.25s ease-in-out, color 0.25s ease-in-out;
 }
 
-.su-button.su-button--big a, .su-link.su-button.su-button--big a {
+.su-button.su-button--big a, .su-link.su-button.su-button--big a, .paragraph-item .saa-banner--no-image .su-hero .su-card .su-card__contents .su-button.su-button--big a {
   font-weight: 400;
   text-decoration: none;
 }
 
-.su-button.su-button--big:active, .su-button.su-button--big:focus, .su-button.su-button--big:hover {
+.su-button.su-button--big:active, .paragraph-item .saa-banner--no-image .su-hero .su-card .su-card__contents .su-button.su-button--big:active, .su-button.su-button--big:focus, .paragraph-item .saa-banner--no-image .su-hero .su-card .su-card__contents .su-button.su-button--big:focus, .su-button.su-button--big:hover, .paragraph-item .saa-banner--no-image .su-hero .su-card .su-card__contents .su-button.su-button--big:hover {
   text-decoration: underline;
 }
 
@@ -752,7 +752,7 @@ a {
           box-shadow: -2px -2px 6px #0098db, 0.6, 2px 2px 6px #0098db, 0.5;
 }
 
-.su-button.su-button--big, .su-link.su-button.su-button--big {
+.su-button.su-button--big, .su-link.su-button.su-button--big, .paragraph-item .saa-banner--no-image .su-hero .su-card .su-card__contents .su-button.su-button--big {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-family: "Source Sans Pro", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
@@ -769,12 +769,12 @@ a {
   transition: background-color 0.25s ease-in-out, color 0.25s ease-in-out;
 }
 
-.su-button.su-button--big a, .su-link.su-button.su-button--big a {
+.su-button.su-button--big a, .su-link.su-button.su-button--big a, .paragraph-item .saa-banner--no-image .su-hero .su-card .su-card__contents .su-button.su-button--big a {
   font-weight: 400;
   text-decoration: none;
 }
 
-.su-button.su-button--big:active, .su-button.su-button--big:focus, .su-button.su-button--big:hover {
+.su-button.su-button--big:active, .paragraph-item .saa-banner--no-image .su-hero .su-card .su-card__contents .su-button.su-button--big:active, .su-button.su-button--big:focus, .paragraph-item .saa-banner--no-image .su-hero .su-card .su-card__contents .su-button.su-button--big:focus, .su-button.su-button--big:hover, .paragraph-item .saa-banner--no-image .su-hero .su-card .su-card__contents .su-button.su-button--big:hover {
   text-decoration: underline;
 }
 
@@ -836,6 +836,7 @@ a {
 }
 
 .paragraph-item .saa-banner--no-image .su-hero {
+  height: auto;
   min-height: unset;
 }
 
@@ -844,23 +845,199 @@ a {
 }
 
 .paragraph-item .saa-banner--no-image .su-hero .su-card.su-hero__card {
-  margin: 0;
-  position: relative;
-  max-width: 100%;
-  height: 100%;
-  left: 0;
-  top: 0;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: #ec0513;
   border: 0;
   -webkit-box-shadow: none;
           box-shadow: none;
-  background: #b1040e;
+  color: #ffffff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  left: 0;
+  margin: 0;
+  max-width: 100%;
+  position: relative;
+  text-align: center;
+  top: 0;
+}
+
+@media only screen and (min-width: 0) {
+  .paragraph-item .saa-banner--no-image .su-hero .su-card.su-hero__card {
+    padding: 4rem;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .paragraph-item .saa-banner--no-image .su-hero .su-card.su-hero__card {
+    padding: 4.5rem;
+  }
+}
+
+@media only screen and (min-width: 1500px) {
+  .paragraph-item .saa-banner--no-image .su-hero .su-card.su-hero__card {
+    padding: 4.75rem;
+  }
+}
+
+.paragraph-item .saa-banner--no-image .su-hero .su-card .su-card__contents {
+  padding: 1px 0 0 0;
+}
+
+@media (min-width: 992px) {
+  .paragraph-item .saa-banner--no-image .su-hero .su-card .su-card__contents {
+    max-width: 864px;
+    display: inline;
+  }
+}
+
+@media (min-width: 1200px) {
+  .paragraph-item .saa-banner--no-image .su-hero .su-card .su-card__contents {
+    max-width: 1024px;
+  }
+}
+
+.paragraph-item .saa-banner--no-image .su-hero .su-card .su-card__contents span,
+    .paragraph-item .saa-banner--no-image .su-hero .su-card .su-card__contents h2 {
+  margin-bottom: 26px;
+}
+
+.paragraph-item .saa-banner--no-image .su-hero .su-card .su-card__contents p {
+  margin-bottom: 18px;
+}
+
+.paragraph-item .saa-banner--no-image .su-hero .su-card .su-card__contents a,
+    .paragraph-item .saa-banner--no-image .su-hero .su-card .su-card__contents .su-link,
+    .paragraph-item .saa-banner--no-image .su-hero .su-card .su-card__contents .su-link--action {
+  margin-top: 12px;
   color: #ffffff;
 }
 
-.paragraph-item .saa-banner--no-image .su-hero .su-card.su-hero__card .su-button {
+.paragraph-item .saa-banner--no-image .su-hero .su-card .su-card__contents a:hover, .paragraph-item .saa-banner--no-image .su-hero .su-card .su-card__contents a:focus,
+      .paragraph-item .saa-banner--no-image .su-hero .su-card .su-card__contents .su-link:hover,
+      .paragraph-item .saa-banner--no-image .su-hero .su-card .su-card__contents .su-link:focus,
+      .paragraph-item .saa-banner--no-image .su-hero .su-card .su-card__contents .su-link--action:hover,
+      .paragraph-item .saa-banner--no-image .su-hero .su-card .su-card__contents .su-link--action:focus {
+  text-decoration: underline;
+}
+
+.paragraph-item .saa-banner--no-image .su-hero .su-card .su-card__contents .su-link--action {
+  color: #ffffff;
+}
+
+.paragraph-item .saa-banner--no-image .su-hero .su-card .su-card__contents .su-link--action::after {
+  background: #ffffff;
+}
+
+.paragraph-item .saa-banner--no-image .su-hero .su-card .su-card__contents .su-link--action:hover, .paragraph-item .saa-banner--no-image .su-hero .su-card .su-card__contents .su-link--action:focus {
+  text-decoration: underline;
+}
+
+.paragraph-item .saa-banner--no-image .su-hero .su-card .su-card__contents .su-button {
+  background: #505EEC;
+  color: #ffffff;
+  padding: 10px 30px;
+}
+
+.paragraph-item .saa-banner--no-image .su-hero .su-card .su-card__contents .su-button:hover, .paragraph-item .saa-banner--no-image .su-hero .su-card .su-card__contents .su-button:focus {
+  background: #3C47B1;
+  color: #ffffff;
+}
+
+.paragraph-item .saa-banner--no-image .su-hero .su-card .su-card__contents .su-button:focus {
+  -webkit-box-shadow: -2px -2px 6px #0098db, 0.6, 2px 2px 6px #0098db, 0.5;
+          box-shadow: -2px -2px 6px #0098db, 0.6, 2px 2px 6px #0098db, 0.5;
+}
+
+.paragraph-item .saa-banner--no-image .su-hero .su-card .su-card__contents .su-button.su-button--secondary {
+  -webkit-box-shadow: "none";
+          box-shadow: "none";
+  background: #ffffff;
+  color: #505EEC;
+  border: 1px solid #505EEC;
+}
+
+.paragraph-item .saa-banner--no-image .su-hero .su-card .su-card__contents .su-button.su-button--secondary:hover, .paragraph-item .saa-banner--no-image .su-hero .su-card .su-card__contents .su-button.su-button--secondary:focus {
+  border: 1px solid #2e2d29;
+}
+
+.paragraph-item .saa-banner--no-image .su-hero .su-card .su-card__contents .su-button.su-button--big {
+  padding: 1rem 2rem 1.15rem;
+  background-color: #b1040e;
+  color: #ffffff;
+  padding: 1.3rem 2.8rem 1.5rem;
+  font-size: 2.5rem;
+  background: #505EEC;
+  color: #ffffff;
+  font-size: 2.8rem !important;
+}
+
+.paragraph-item .saa-banner--no-image .su-hero .su-card .su-card__contents .su-button.su-button--big:hover, .paragraph-item .saa-banner--no-image .su-hero .su-card .su-card__contents .su-button.su-button--big:focus {
+  background-color: #2e2d29;
+  color: #ffffff;
+}
+
+.paragraph-item .saa-banner--no-image .su-hero .su-card .su-card__contents .su-button.su-button--big:focus {
+  -webkit-box-shadow: 0 0 3px #4d4f53, 0 0 7px #4d4f53;
+          box-shadow: 0 0 3px #4d4f53, 0 0 7px #4d4f53;
+}
+
+@media only screen and (min-width: 768px) {
+  .paragraph-item .saa-banner--no-image .su-hero .su-card .su-card__contents .su-button.su-button--big {
+    padding: 1.5rem 3rem 1.8rem;
+    font-size: 2.8rem;
+  }
+}
+
+@media only screen and (min-width: 1500px) {
+  .paragraph-item .saa-banner--no-image .su-hero .su-card .su-card__contents .su-button.su-button--big {
+    font-size: 3rem;
+  }
+}
+
+.paragraph-item .saa-banner--no-image .su-hero .su-card .su-card__contents .su-button.su-button--big:hover, .paragraph-item .saa-banner--no-image .su-hero .su-card .su-card__contents .su-button.su-button--big:focus {
+  background: #3C47B1;
+  color: #ffffff;
+}
+
+.paragraph-item .saa-banner--no-image .su-hero .su-card .su-card__contents .su-button.su-button--big:focus {
+  -webkit-box-shadow: -2px -2px 6px #0098db, 0.6, 2px 2px 6px #0098db, 0.5;
+          box-shadow: -2px -2px 6px #0098db, 0.6, 2px 2px 6px #0098db, 0.5;
+}
+
+.paragraph-item .saa-banner--no-image .su-hero .su-card .su-card__contents .su-button.su-button--vivid-red {
+  background: #ec0513;
+  color: #ffffff;
+}
+
+.paragraph-item .saa-banner--no-image .su-hero .su-card .su-card__contents .su-button.su-button--vivid-red:hover, .paragraph-item .saa-banner--no-image .su-hero .su-card .su-card__contents .su-button.su-button--vivid-red:focus {
+  background: #CE0D0D;
+}
+
+.paragraph-item .saa-banner--no-image .su-hero .su-card .su-card__contents .su-button.su-button--vivid-red:focus {
+  -webkit-box-shadow: -2px -2px 6px #0098db, 0.6, 2px 2px 6px #0098db, 0.5;
+          box-shadow: -2px -2px 6px #0098db, 0.6, 2px 2px 6px #0098db, 0.5;
+}
+
+.paragraph-item .saa-banner--no-image .su-hero .su-card .su-card__contents .su-button.su-button--bright-red {
   background: #b1040e;
   color: #ffffff;
   border: 1px solid #ffffff;
+}
+
+.paragraph-item .saa-banner--no-image .su-hero .su-card .su-card__contents .su-button.su-button--bright-red:hover, .paragraph-item .saa-banner--no-image .su-hero .su-card .su-card__contents .su-button.su-button--bright-red:focus {
+  background: #ffffff;
+  color: #2e2d29;
+}
+
+.paragraph-item .saa-banner--no-image .su-hero .su-card .su-card__contents .su-button.su-button--bright-red:focus {
+  -webkit-box-shadow: -2px -2px 6px #0098db, 0.6, 2px 2px 6px #0098db, 0.5;
+          box-shadow: -2px -2px 6px #0098db, 0.6, 2px 2px 6px #0098db, 0.5;
 }
 
 .paragraph-item .saa-banner--has-image .su-hero .su-hero__media {
