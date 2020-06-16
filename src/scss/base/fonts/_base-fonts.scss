@@ -34,12 +34,6 @@ h1,
 .su-type-a {
   @include type-a;
 }
-h1 {
-  @include saa-font--calluna-base;
-  font-size: 2em;
-  margin: 0.67em 0;
-}
-
 
 h2,
 .su-type-b {
@@ -68,7 +62,12 @@ h6,
 
 // SAA specifics
 
-h1,
+h1 {
+  @include saa-font--calluna-base;
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
 h2,
 h3,
 h4,
