@@ -97659,7 +97659,7 @@ video {
 /* SAA Specific colors, Stanford/Decanter colors are not defined here */
 
 html {
-  font-family: Proxima Nova;
+  font-family: proxima-nova, sans-serif;
 }
 
 h1,
@@ -97670,14 +97670,14 @@ h5,
 su-font-splash,
 p.su-callout-text,
 .sa-font--calluna-black {
-  font-family: Calluna;
+  font-family: Calluna, serif;
   font-weight: 900;
   line-height: 119.41%;
   letter-spacing: 0.5px;
 }
 
 .su-drop-cap::first-letter {
-  font-family: Calluna;
+  font-family: Calluna, serif;
   font-weight: 900;
   line-height: 119.41%;
   letter-spacing: 0.5px;

@@ -441,8 +441,12 @@ a {
   padding-top: 0;
 }
 
+.su-card.su-card--icon .su-card__contents {
+  font-family: proxima-nova, sans-serif;
+}
+
 .su-card.su-card--icon .su-card__contents > h2 {
-  font-family: Calluna;
+  font-family: Calluna, serif;
   font-weight: 900;
   line-height: 119.41%;
   letter-spacing: 0.5px;
@@ -706,7 +710,7 @@ a {
   position: relative;
   left: 0;
   top: 0;
-  border: none;
+  border: 0;
   -webkit-box-shadow: "none";
           box-shadow: "none";
   color: #ffffff;
@@ -790,7 +794,7 @@ a {
   position: relative;
   left: 0;
   top: 0;
-  border: none;
+  border: 0;
   -webkit-box-shadow: "none";
           box-shadow: "none";
   color: #ffffff;
