@@ -442,11 +442,11 @@ a {
 }
 
 .su-card.su-card--icon .su-card__contents {
-  font-family: proxima-nova, sans-serif;
+  font-family: proxima-nova, "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 .su-card.su-card--icon .su-card__contents > h2 {
-  font-family: Calluna, serif;
+  font-family: Calluna, Georgia, "Times New Roman", serif;
   font-weight: 900;
   line-height: 119.41%;
   letter-spacing: 0.5px;
