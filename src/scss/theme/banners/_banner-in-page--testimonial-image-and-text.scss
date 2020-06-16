@@ -51,27 +51,28 @@ $banner-circle--image-width: 200px;
           position: unset;
           text-align: center;
           top: 100px;
+        }
 
-          .su-card__contents {
-            //@apply
-            //max-w-screen-lg
-            //p-0;
-            max-width: 1024px;
-            padding: 0;
+        .su-card__contents {
+          //@apply
+          //max-w-screen-lg
+          //p-0;
+          max-width: 1024px;
+          padding: 0;
 
-            > *:not(:last-child) {
-              margin-bottom: 1.2rem;
+          > *:not(:last-child) {
+            margin-bottom: 1.2rem;
+          }
+
+          h2 {
+            font-size: 3.5rem;
+
+            &::before {
+              content: open-quote;
             }
 
-            h2{
-              font-size: 3.5rem;
-
-              &::before {
-                content: open-quote;
-              }
-              &::after {
-                content: close-quote;
-              }
+            &::after {
+              content: close-quote;
             }
           }
 
