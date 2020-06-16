@@ -97749,6 +97749,15 @@ h1,
   }
 }
 
+h1 {
+  font-family: Calluna, Georgia, "Times New Roman", serif;
+  font-weight: 900;
+  line-height: 119.41%;
+  letter-spacing: 0.5px;
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
 h2,
 .su-type-b {
   font-size: 1.953125em;
