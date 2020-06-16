@@ -40,30 +40,30 @@
           position: relative;
           text-align: center;
           top: 0;
+        }
 
-          .su-card__contents {
-            //@apply p-0;
-            padding: 0;
+        .su-card__contents {
+          //@apply p-0;
+          padding: 0;
 
-            span,
-            h2 {
-              margin-bottom: 26px;
-            }
+          @include grid-media-min('lg') {
+            //@apply inline max-w-screen-lg;
+            max-width: $banner-b--lg;
+            display: inline;
+          }
 
-            p {
-              margin-bottom: 18px;
-            }
+          @include grid-media-min('xl') {
+            //@apply max-w-screen-lg;
+            max-width: $banner-b--xl;
+          }
 
-            @include grid-media-min('lg') {
-              //@apply inline max-w-screen-lg;
-              max-width: $banner-b--lg;
-              display: inline;
-            }
+          span,
+          h2 {
+            margin-bottom: 26px;
+          }
 
-            @include grid-media-min('xl') {
-              //@apply max-w-screen-lg;
-              max-width: $banner-b--xl;
-            }
+          p {
+            margin-bottom: 18px;
           }
 
           .su-link,
@@ -89,7 +89,6 @@
             }
           }
 
-
           // Might not need this as the current default button styling is saa-button-purple
           .su-button {
             @include saa-button-purple;
@@ -98,5 +97,4 @@
       }
     }
   }
-
 }
