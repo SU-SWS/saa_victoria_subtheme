@@ -1,6 +1,11 @@
 // const { colors } = require('tailwindcss/defaultTheme');
 
 module.exports = {
+  corePlugins: {
+    borderCollapse: false,
+  //   fontFamily: false,
+    fontSize: false,
+  },
   // prefix: 'test-', // not working, but other settings like colors are working
   theme: {
     boxShadow: {

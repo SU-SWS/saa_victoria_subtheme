@@ -1,7 +1,7 @@
 @charset "UTF-8";
 
-$saa-font--calluna: Calluna, serif;
-$saa-font--proxima-nova: proxima-nova, sans-serif;
+$saa-font--calluna: Calluna, Georgia, "Times New Roman", serif;
+$saa-font--proxima-nova: proxima-nova, "Helvetica Neue", Helvetica, Arial, sans-serif;
 
 @mixin saa-font--calluna-base {
   font-family: $saa-font--calluna;

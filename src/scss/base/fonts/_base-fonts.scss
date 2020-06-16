@@ -5,7 +5,62 @@
 html,
 .su-card .su-card__contents {
   font-family: $saa-font--proxima-nova;
+  font-size: $su-root-font-size;
 }
+
+// pulling in decanter styles to override base tailwind settings
+
+body {
+  @include modular-typography-base;
+  color: $su-color-black;
+}
+
+p {
+  line-height: $su-base-line-height;
+  @include margin(0 null 1em null);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+*[class^="su-type"] {
+  @include types;
+}
+
+h1,
+.su-type-a {
+  @include type-a;
+}
+
+h2,
+.su-type-b {
+  @include type-b;
+}
+
+h3,
+.su-type-c {
+  @include type-c;
+}
+
+h4,
+.su-type-d {
+  @include type-d;
+}
+
+h5,
+.su-type-e {
+  @include type-e;
+}
+
+h6,
+.su-type-f {
+  @include type-f;
+}
+
+// SAA specifics
 
 h1,
 h2,
