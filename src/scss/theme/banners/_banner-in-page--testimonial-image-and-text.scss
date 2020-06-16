@@ -1,7 +1,6 @@
 @charset "UTF-8";
 
 $banner-circle--image-width: 200px;
-$banner-circle--padding: 20px;
 
 // only apply to banners inside the react paragraph page content section
 .paragraph-item {
@@ -21,38 +20,48 @@ $banner-circle--padding: 20px;
         position: unset;
 
         img { // Image display has been set to media image style - Medium (220)
+          border-radius: 50%;
           max-width: $banner-circle--image-width;
           max-height: $banner-circle--image-width;
           margin-left: auto;
           margin-right: auto;
-          border-radius: 50%;
           padding: 0;
-          //margin-top: $banner-circle--padding;
-          //margin-bottom: $banner-circle--padding;
         }
       }
 
       .su-card {
         &.su-hero__card {
-          @apply
-          relative
-          max-w-screen-lg
-          left-0
-          h-full
-          text-center
-          border-none
-          shadow-none
-          pt-8;
+          //@apply
+          //max-w-screen-lg
+          //left-0
+          //h-full
+          //text-center
+          //border-none
+          //shadow-none
+          //pt-8;
           background: transparent;
-          position: unset;
           color: $su-color-black;
+          border: 0;
+          box-shadow: none;
+          height: 100%;
+          left: 0;
+          max-width: 1024px;
           margin: 0 auto;
+          padding-top: 2rem;
+          position: unset;
+          text-align: center;
           top: 100px;
 
           .su-card__contents {
-            @apply
-            max-w-screen-lg
-            p-0;
+            //@apply
+            //max-w-screen-lg
+            //p-0;
+            max-width: 1024px;
+            padding: 0;
+
+            > *:not(:last-child) {
+              margin-bottom: 1.2rem;
+            }
 
             h2{
               font-size: 3.5rem;
@@ -68,11 +77,10 @@ $banner-circle--padding: 20px;
 
           .su-link,
           a {
-            padding-top: 20px;
+            margin-bottom: 1.8rem;
           }
         }
       }
     }
   }
-
 }
