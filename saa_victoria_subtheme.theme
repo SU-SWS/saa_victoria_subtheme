@@ -21,19 +21,20 @@ function saa_victoria_subtheme_preprocess_ds_entity_view(&$variables) {
   // if banner has an image, add a class
   if (isset($variables['content']['#paragraph']) && $variables['content']['#paragraph']->bundle() == 'stanford_banner') {
     if(isset($variables['content']['#fields']['hero_image']['su_banner_image']['#object']) ) {
-      $variables['attributes']['class'] = array_merge($variables['attributes']['class'], ['saa-banner--has-image']);
+        $variables['attributes']['class'][] = 'saa-banner--has-image';
+
       // maybe in future change the media handling to be image style Medium Square (220x220) w machine name 'medium_square'
-      $variables['content']['#fields']['hero_image']['su_banner_image'][0]['#stanford_media_image_style'] = 'full_responsive';
+      // $variables['content']['#fields']['hero_image']['su_banner_image'][0]['#stanford_media_image_style'] = 'full_responsive';
 
       // check if there is a card
       if(isset($variables['content']['#fields']['hero_super_headline']['su_banner_sup_header']['#object']) || isset($variables['content']['#fields']['hero_headline']['su_banner_header']['#object']) || isset($variables['content']['#fields']['hero_body']['su_banner_body']['#object']) ) {
-        $variables['attributes']['class'] = array_merge($variables['attributes']['class'], ['saa-banner--has-card']);
+        $variables['attributes']['class'][] = 'saa-banner--has-card';
       } else {
-        $variables['attributes']['class'] = array_merge($variables['attributes']['class'], ['saa-banner--no-card']);
+        $variables['attributes']['class'][] = 'saa-banner--no-card';
       }
 
     } else {
-      $variables['attributes']['class'] = array_merge($variables['attributes']['class'], ['saa-banner--no-image']);
+      $variables['attributes']['class'][] = 'saa-banner--no-image';
     }
   }
 }
