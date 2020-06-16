@@ -2,16 +2,16 @@
 
 .su-link,
 a {
-  @apply text-vivid_red;
+  color: $su-color-vivid-red;
   @apply no-underline;
 
   &:hover,
   &:focus {
-    @apply text-vivid_red_dark;
+    color: $su-color-vivid-red-dark;
   }
 
   &::after {
-    @apply bg-vivid_red;
+    background-color: $su-color-vivid-red;
 
     &:hover {
       @apply cursor-pointer;
@@ -20,13 +20,13 @@ a {
 
   &:hover::after,
   &:focus::after {
-    @apply bg-vivid_red_dark;
+    background-color: $su-color-vivid-red-dark;
   }
 
   &.su-link--internal::after {
     &:hover,
     &:focus {
-      @apply bg-vivid_red;
+      background-color: $su-color-vivid-red;
     }
   }
 
@@ -35,7 +35,19 @@ a {
   }
 
   &.disabled {
-    @apply text-gray-700;
+    color: $su-color-cool-grey;
   }
 }
 
+.su-wysiwyg-text {
+  a:not(.su-button) {
+    color: $su-color-vivid-red;
+    text-decoration: underline;
+
+    &:hover,
+    &:focus {
+      color: $su-color-black;
+      text-decoration: underline;
+    }
+  }
+}
