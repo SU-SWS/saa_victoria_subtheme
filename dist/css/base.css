@@ -97784,7 +97784,15 @@ h6,
   font-size: 0.9em;
 }
 
-h1,
+h1 {
+  font-family: Calluna, Georgia, "Times New Roman", serif;
+  font-weight: 900;
+  line-height: 119.41%;
+  letter-spacing: 0.5px;
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
 h2,
 h3,
 h4,

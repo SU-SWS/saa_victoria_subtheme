@@ -69,8 +69,8 @@
 }
 
 .su-button.su-button--secondary {
-  -webkit-box-shadow: "none";
-          box-shadow: "none";
+  -webkit-box-shadow: none;
+          box-shadow: none;
   background: #ffffff;
   color: #505EEC;
   border: 1px solid #505EEC;
@@ -171,8 +171,8 @@
 }
 
 .su-link.su-button.su-button--secondary {
-  -webkit-box-shadow: "none";
-          box-shadow: "none";
+  -webkit-box-shadow: none;
+          box-shadow: none;
   background: #ffffff;
   color: #505EEC;
   border: 1px solid #505EEC;
@@ -711,8 +711,8 @@ a {
   left: 0;
   top: 0;
   border: 0;
-  -webkit-box-shadow: "none";
-          box-shadow: "none";
+  -webkit-box-shadow: none;
+          box-shadow: none;
   color: #ffffff;
   margin: 0;
   padding: 0;
@@ -795,8 +795,8 @@ a {
   left: 0;
   top: 0;
   border: 0;
-  -webkit-box-shadow: "none";
-          box-shadow: "none";
+  -webkit-box-shadow: none;
+          box-shadow: none;
   color: #ffffff;
   margin: 0;
   padding: 0;
@@ -955,8 +955,8 @@ a {
 }
 
 .paragraph-item .saa-banner--no-image .su-hero .su-card .su-card__contents .su-button.su-button--secondary {
-  -webkit-box-shadow: "none";
-          box-shadow: "none";
+  -webkit-box-shadow: none;
+          box-shadow: none;
   background: #ffffff;
   color: #505EEC;
   border: 1px solid #505EEC;
