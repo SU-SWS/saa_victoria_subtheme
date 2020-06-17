@@ -21,9 +21,10 @@ function saa_victoria_subtheme_preprocess_ds_entity_view(&$variables) {
   // if banner has an image, add a class
   if (isset($variables['content']['#paragraph']) && $variables['content']['#paragraph']->bundle() == 'stanford_banner') {
     if(isset($variables['content']['#fields']['hero_image']['su_banner_image']['#object']) ) {
-        $variables['attributes']['class'][] = 'saa-banner--has-image';
+      $variables['attributes']['class'][] = 'saa-banner--has-image';
 
       // maybe in future change the media handling to be image style Medium Square (220x220) w machine name 'medium_square'
+      // banners use 'full_responsive' mode already. this is a placeholder to use this line once a responsive 1:1 ratio style exists in our d8core
       // $variables['content']['#fields']['hero_image']['su_banner_image'][0]['#stanford_media_image_style'] = 'full_responsive';
 
       // check if there is a card
