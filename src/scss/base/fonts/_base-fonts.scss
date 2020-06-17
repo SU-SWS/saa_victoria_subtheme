@@ -2,7 +2,11 @@
 
 @import '../../utilities/index'; // katria come back to, is this the right approach?
 
-html,
+html {
+  font-family: $saa-font--proxima-nova;
+  @include modular-typography(0)
+}
+
 .su-card .su-card__contents {
   font-family: $saa-font--proxima-nova;
   font-size: $su-root-font-size;
