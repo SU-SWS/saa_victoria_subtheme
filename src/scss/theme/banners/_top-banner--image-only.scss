@@ -3,8 +3,10 @@
 // top banners only:
 .su-page-banner {
   .saa-banner--has-image {
-    .su-hero__media {
-      @include aspect-ratio(3, 1);
+    &.saa-banner--no-card {
+      .su-hero__media {
+        @include aspect-ratio(3, 1);
+      }
     }
   }
 }
