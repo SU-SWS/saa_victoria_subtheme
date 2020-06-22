@@ -1,0 +1,9 @@
+@charset "UTF-8";
+
+.paragraph {
+  table {
+    tr:nth-child(even) {
+      background: $su-color-fog;
+    }
+  }
+}
