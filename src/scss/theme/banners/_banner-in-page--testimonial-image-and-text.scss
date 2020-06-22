@@ -65,7 +65,7 @@ $banner-circle--image-width: 200px;
 
           > span {
             order: 2;
-            @include modular-typography(1);
+            @include modular-typography(-1);
             font-weight: normal;
           }
 
@@ -84,6 +84,10 @@ $banner-circle--image-width: 200px;
 
           > p {
             order: 3;
+          }
+
+          > .su-card__button {
+            order: 4;
           }
 
           > *:not(:last-child) {

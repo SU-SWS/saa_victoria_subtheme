@@ -4,7 +4,7 @@
 
 html {
   font-family: $saa-font--proxima-nova;
-  @include modular-typography(0)
+  font-size: $su-root-font-size;
 }
 
 .su-card .su-card__contents {
