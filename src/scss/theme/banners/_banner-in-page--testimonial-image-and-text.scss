@@ -65,7 +65,7 @@ $banner-circle--image-width: 200px;
 
           > span {
             order: 2;
-            @include modular-typography(-1);
+            @include modular-typography(1);
             font-weight: normal;
           }
 
