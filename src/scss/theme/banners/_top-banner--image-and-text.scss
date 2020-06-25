@@ -13,6 +13,10 @@
         &.su-hero__card {
           @include saa-banner--bright-red-card-common;
           max-width: 50%;
+
+          @include grid-media-max('sm') {
+            max-width: 100%;
+          }
         }
       }
     }
