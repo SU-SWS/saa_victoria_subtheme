@@ -1,53 +1,107 @@
 @charset "UTF-8";
 
 $banner-circle--image-width: 200px;
-$banner-circle--padding: 20px;
 
 // only apply to banners inside the react paragraph page content section
 .paragraph-item {
-
   // if there is an image and a card  - testimonial banner
   .saa-banner--has-image {
     .su-hero {
-      .su-hero__media {
-        background: $su-color-white;
+      background: $su-color-light-sandstone;
+      height: auto;
+      min-height: unset;
+      position: unset;
+      @include modular-spacing('padding-top', 5);
+      @include modular-spacing('padding-bottom', 7);
 
-        img {
-          max-width: $banner-circle--image-width;
-          max-height: $banner-circle--image-width;
+      .su-hero__media {
+        background: transparent;
+        min-height: unset;
+        position: unset;
+
+        img { // Image display has been set to media image style - Medium (220)
+          border-radius: 50%;
+          width: $banner-circle--image-width;
+          height: $banner-circle--image-width;
           margin-left: auto;
           margin-right: auto;
-          border-radius: 50%;
+          object-fit: cover;
           padding: 0;
-          margin-top: $banner-circle--padding;
-          margin-bottom: $banner-circle--padding;
+          @include modular-spacing('margin-bottom', -2);
         }
       }
 
       .su-card {
         &.su-hero__card {
-          background: none;
+          //@apply
+          //max-w-screen-lg
+          //left-0
+          //h-full
+          //text-center
+          //border-none
+          //shadow-none
+          //pt-8;
+          background: transparent;
           color: $su-color-black;
-          /* width: 50%; */
-          /* height: 100%; */
-          margin: 0 auto;
-          position: relative;
-          max-width: 1024px;
-          height: 100%;
-          left: 0;
-          top: 100px;
-          padding-top: 20px;
           border: 0;
           box-shadow: none;
+          height: 100%;
+          left: 0;
+          max-width: 1024px;
+          margin: 0 auto;
+          position: unset;
           text-align: center;
+          top: 100px;
+        }
+
+        .su-card__contents {
+          //@apply
+          //max-w-screen-lg
+          //p-0;
+          max-width: 1024px;
+          padding: 0;
+          display: flex;
+          flex-direction: column;
+
+          > span {
+            order: 2;
+            @include modular-typography(1);
+            font-weight: normal;
+          }
+
+          h2 {
+            order: 1;
+            @include modular-typography(3);
+
+            &::before {
+              content: open-quote;
+            }
+
+            &::after {
+              content: close-quote;
+            }
+          }
+
+          > p {
+            order: 3;
+          }
+
+          > .su-card__button {
+            order: 4;
+          }
+
+          > *:not(:last-child) {
+            margin-bottom: 1.2rem;
+            @include modular-spacing('margin-bottom', -1)
+          }
+
 
           .su-link,
           a {
-            padding-top: 20px;
+            @include modular-spacing('margin-bottom', 0);
           }
         }
       }
     }
   }
-
 }
