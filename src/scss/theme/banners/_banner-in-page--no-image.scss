@@ -96,9 +96,9 @@
             }
           }
 
-          // Might not need this as the current default button styling is saa-button-purple
+          // Might not need this as the current default button styling is saa-button--purple
           .su-button {
-            @include saa-button-purple;
+            @include saa-button--purple;
           }
         }
       }

@@ -1,1 +1,6 @@
-.paragraph table tr:nth-child(2n){background:#f4f4f4}
+.paragraph table tr:nth-child(even) {
+  background: #f4f4f4;
+}
+
+
+/*# sourceMappingURL=components.css.map*/

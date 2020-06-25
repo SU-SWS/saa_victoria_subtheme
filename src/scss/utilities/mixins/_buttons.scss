@@ -1,92 +1,57 @@
 @charset "UTF-8";
 
+@mixin saa-button--hover-and-focus {
+  &:hover,
+  &:focus {
+    @include saa-button--hover;
+  }
+
+  &:focus {
+    @include saa-button--focus;
+  }
+}
+
+@mixin saa-button--hover {
+  background: $saa-color-electric-purple-dark;
+  color: $su-color-white;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
 @mixin saa-button--focus {
   box-shadow: $box-shadow--focus;
 }
 
+// white or ghost buttons
+@mixin saa-button--secondary {
+  @include saa-button--hover-and-focus;
+  box-shadow: none;
+  background: $su-color-white;
+  color: $saa-color-electric-purple;
+  border: 1px solid $saa-color-electric-purple;
+}
+
+@mixin saa-button--secondary-on-red {
+  @include saa-button--secondary;
+  border: 1px solid $su-color-white;
+}
+
 // purple buttons
-@mixin saa-button-purple {
+@mixin saa-button--purple {
+  @include saa-button--hover-and-focus;
   background: $saa-color-electric-purple;
   color: $su-color-white;
   padding: 10px 30px;
 
-  &:hover,
-  &:focus {
-    background: $saa-color-electric-purple-dark;
-    color: $su-color-white;
-  }
-
-  &:focus {
-    @include saa-button--focus;
-  }
-
   &.su-button--secondary {
-    box-shadow: none;
-    background: $su-color-white;
-    color: $saa-color-electric-purple;
-    border: 1px solid $saa-color-electric-purple;
-
-    &:hover,
-    &:focus {
-      border: 1px solid $su-color-black;
-    }
+    @include saa-button--secondary;
   }
 
   &.su-button--big {
     @include button-big; // should set big font size but it doesn't. big size should be set out of decanter anyway.
+    @include saa-button--hover-and-focus;
     background: $saa-color-electric-purple;
     color: $su-color-white;
     font-size: 2.8rem !important; // this is not responsive, come back to this because decanter mixin isn't applying
-
-    &:hover,
-    &:focus {
-      background: $saa-color-electric-purple-dark;
-      color: $su-color-white;
-    }
-
-    &:focus {
-      @include saa-button--focus;
-    }
-  }
-
-  &.su-button--vivid-red {
-    @include saa-button--vivid-red
-  }
-
-  &.su-button--bright-red {
-    @include saa-button--bright-red
-  }
-}
-
-// vivid red button
-@mixin saa-button--vivid-red {
-  background: $su-color-vivid-red;
-  color: $su-color-white;
-
-  &:hover,
-  &:focus {
-    background: $su-color-vivid-red-dark;
-  }
-
-  &:focus {
-    @include saa-button--focus;
-  }
-}
-
-// bright red button coming
-// vivid red button
-@mixin saa-button--bright-red {
-  background: $su-color-bright-red;
-  color: $su-color-white;
-  border: 1px solid $su-color-white;
-
-  &:hover,
-  &:focus {
-    background: $su-color-white;
-    color: $su-color-black;
-  }
-
-  &:focus {
-    @include saa-button--focus;
   }
 }
