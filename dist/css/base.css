@@ -97658,8 +97658,7 @@ video {
 
 /* SAA Specific colors, Stanford/Decanter colors are not defined here */
 
-html,
-.su-card .su-card__contents {
+html {
   font-family: proxima-nova, "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 62.5%;
 }
