@@ -249,7 +249,7 @@ a {
 .su-link:hover, .su-link:focus,
   a:hover,
   a:focus {
-  color: #CE0D0D;
+  color: #8c1515;
 }
 
 .su-link::after,
@@ -265,13 +265,13 @@ a {
 .su-link:hover::after, .su-link:focus::after,
   a:hover::after,
   a:focus::after {
-  background-color: #CE0D0D;
+  background-color: #8c1515;
 }
 
 .su-link.su-link--internal::after:hover, .su-link.su-link--internal::after:focus,
   a.su-link--internal::after:hover,
   a.su-link--internal::after:focus {
-  background-color: #ec0513;
+  background-color: #8c1515;
 }
 
 .su-link.su-link--video::after,
@@ -290,8 +290,107 @@ a {
 }
 
 .su-wysiwyg-text a:not(.su-button):hover, .su-wysiwyg-text a:not(.su-button):focus {
-  color: #2e2d29;
+  color: #8c1515;
   text-decoration: underline;
+}
+
+.su-link--action::after,
+.su-link--download::after,
+.su-link--external::after,
+.su-link--internal::after,
+.su-link--jump::after,
+.su-link--more::after,
+.su-link--video::after {
+  background-color: #ec0513;
+}
+
+.su-link--action::after:hover, .su-link--action::after:focus,
+  .su-link--download::after:hover,
+  .su-link--download::after:focus,
+  .su-link--external::after:hover,
+  .su-link--external::after:focus,
+  .su-link--internal::after:hover,
+  .su-link--internal::after:focus,
+  .su-link--jump::after:hover,
+  .su-link--jump::after:focus,
+  .su-link--more::after:hover,
+  .su-link--more::after:focus,
+  .su-link--video::after:hover,
+  .su-link--video::after:focus {
+  background-color: #8c1515;
+}
+
+.su-link--action:hover::after, .su-link--action:focus::after,
+.su-link--download:hover::after,
+.su-link--download:focus::after,
+.su-link--external:hover::after,
+.su-link--external:focus::after,
+.su-link--internal:hover::after,
+.su-link--internal:focus::after,
+.su-link--jump:hover::after,
+.su-link--jump:focus::after,
+.su-link--more:hover::after,
+.su-link--more:focus::after,
+.su-link--video:hover::after,
+.su-link--video:focus::after {
+  background-color: #8c1515;
+}
+
+.bg-bright-red .su-link .su-link,
+.bg-bright-red .su-link a {
+  --text-opacity: 1;
+  color: #fff;
+  color: rgba(255, 255, 255, var(--text-opacity));
+  text-decoration: underline;
+}
+
+.bg-bright-red .su-link .su-link:hover, .bg-bright-red .su-link .su-link:focus,
+  .bg-bright-red .su-link a:hover,
+  .bg-bright-red .su-link a:focus {
+  text-decoration: underline;
+  color: #FBD115;
+}
+
+.bg-bright-red .su-link .su-link::after,
+  .bg-bright-red .su-link a::after {
+  --bg-opacity: 1;
+  background-color: #fff;
+  background-color: rgba(255, 255, 255, var(--bg-opacity));
+}
+
+.bg-bright-red .su-link .su-link::after:hover,
+    .bg-bright-red .su-link a::after:hover {
+  cursor: pointer;
+  background-color: #FBD115;
+}
+
+.bg-bright-red .su-link .su-link:hover::after, .bg-bright-red .su-link .su-link:focus::after,
+  .bg-bright-red .su-link a:hover::after,
+  .bg-bright-red .su-link a:focus::after {
+  background-color: #FBD115;
+}
+
+.bg-bright-red .su-link .su-link.su-link--action,
+  .bg-bright-red .su-link a.su-link--action {
+  text-decoration: none;
+}
+
+.bg-bright-red .su-link .su-link.su-link--internal::after:hover, .bg-bright-red .su-link .su-link.su-link--internal::after:focus,
+  .bg-bright-red .su-link a.su-link--internal::after:hover,
+  .bg-bright-red .su-link a.su-link--internal::after:focus {
+  background-color: #FBD115;
+}
+
+.bg-bright-red .su-link .su-link.su-link--video::after,
+  .bg-bright-red .su-link a.su-link--video::after {
+  width: 14px;
+}
+
+.bg-bright-red .su-link .su-link.disabled,
+  .bg-bright-red .su-link a.disabled {
+  --text-opacity: 1;
+  color: #4d4f53;
+  color: rgba(77, 79, 83, var(--text-opacity));
 }
 
 .su-button.su-button--big, .su-link.su-button.su-button--big, .paragraph-item .saa-banner--no-image .su-hero .su-card .su-card__contents .su-button.su-button--big {
@@ -695,15 +794,59 @@ a {
 
 .su-page-banner .saa-banner--has-image .su-hero .su-card.su-hero__card .su-link,
   .su-page-banner .saa-banner--has-image .su-hero .su-card.su-hero__card a {
-  color: #ffffff;
+  --text-opacity: 1;
+  color: #fff;
+  color: rgba(255, 255, 255, var(--text-opacity));
+  text-decoration: underline;
 }
 
 .su-page-banner .saa-banner--has-image .su-hero .su-card.su-hero__card .su-link:hover, .su-page-banner .saa-banner--has-image .su-hero .su-card.su-hero__card .su-link:focus,
     .su-page-banner .saa-banner--has-image .su-hero .su-card.su-hero__card a:hover,
     .su-page-banner .saa-banner--has-image .su-hero .su-card.su-hero__card a:focus {
   text-decoration: underline;
-  -webkit-box-shadow: none;
-          box-shadow: none;
+  color: #FBD115;
+}
+
+.su-page-banner .saa-banner--has-image .su-hero .su-card.su-hero__card .su-link::after,
+    .su-page-banner .saa-banner--has-image .su-hero .su-card.su-hero__card a::after {
+  --bg-opacity: 1;
+  background-color: #fff;
+  background-color: rgba(255, 255, 255, var(--bg-opacity));
+}
+
+.su-page-banner .saa-banner--has-image .su-hero .su-card.su-hero__card .su-link::after:hover,
+      .su-page-banner .saa-banner--has-image .su-hero .su-card.su-hero__card a::after:hover {
+  cursor: pointer;
+  background-color: #FBD115;
+}
+
+.su-page-banner .saa-banner--has-image .su-hero .su-card.su-hero__card .su-link:hover::after, .su-page-banner .saa-banner--has-image .su-hero .su-card.su-hero__card .su-link:focus::after,
+    .su-page-banner .saa-banner--has-image .su-hero .su-card.su-hero__card a:hover::after,
+    .su-page-banner .saa-banner--has-image .su-hero .su-card.su-hero__card a:focus::after {
+  background-color: #FBD115;
+}
+
+.su-page-banner .saa-banner--has-image .su-hero .su-card.su-hero__card .su-link.su-link--action,
+    .su-page-banner .saa-banner--has-image .su-hero .su-card.su-hero__card a.su-link--action {
+  text-decoration: none;
+}
+
+.su-page-banner .saa-banner--has-image .su-hero .su-card.su-hero__card .su-link.su-link--internal::after:hover, .su-page-banner .saa-banner--has-image .su-hero .su-card.su-hero__card .su-link.su-link--internal::after:focus,
+    .su-page-banner .saa-banner--has-image .su-hero .su-card.su-hero__card a.su-link--internal::after:hover,
+    .su-page-banner .saa-banner--has-image .su-hero .su-card.su-hero__card a.su-link--internal::after:focus {
+  background-color: #FBD115;
+}
+
+.su-page-banner .saa-banner--has-image .su-hero .su-card.su-hero__card .su-link.su-link--video::after,
+    .su-page-banner .saa-banner--has-image .su-hero .su-card.su-hero__card a.su-link--video::after {
+  width: 14px;
+}
+
+.su-page-banner .saa-banner--has-image .su-hero .su-card.su-hero__card .su-link.disabled,
+    .su-page-banner .saa-banner--has-image .su-hero .su-card.su-hero__card a.disabled {
+  --text-opacity: 1;
+  color: #4d4f53;
+  color: rgba(77, 79, 83, var(--text-opacity));
 }
 
 .su-page-banner .saa-banner--has-image .su-hero .su-card.su-hero__card .su-button {
@@ -725,6 +868,10 @@ a {
 .su-page-banner .saa-banner--has-image .su-hero .su-card.su-hero__card .su-button:focus {
   -webkit-box-shadow: -2px -2px 6px #0098db, 0.6, 2px 2px 6px #0098db, 0.5;
           box-shadow: -2px -2px 6px #0098db, 0.6, 2px 2px 6px #0098db, 0.5;
+}
+
+.su-page-banner .saa-banner--has-image .su-hero .su-card.su-hero__card .su-button:hover, .su-page-banner .saa-banner--has-image .su-hero .su-card.su-hero__card .su-button:focus {
+  border: 1px solid #26319F;
 }
 
 .su-page-banner .saa-banner--has-image.saa-banner--no-card .su-hero__media {
@@ -814,15 +961,59 @@ a {
 
 .su-page-banner .saa-banner--no-image .su-hero .su-hero__card .su-link,
   .su-page-banner .saa-banner--no-image .su-hero .su-hero__card a {
-  color: #ffffff;
+  --text-opacity: 1;
+  color: #fff;
+  color: rgba(255, 255, 255, var(--text-opacity));
+  text-decoration: underline;
 }
 
 .su-page-banner .saa-banner--no-image .su-hero .su-hero__card .su-link:hover, .su-page-banner .saa-banner--no-image .su-hero .su-hero__card .su-link:focus,
     .su-page-banner .saa-banner--no-image .su-hero .su-hero__card a:hover,
     .su-page-banner .saa-banner--no-image .su-hero .su-hero__card a:focus {
   text-decoration: underline;
-  -webkit-box-shadow: none;
-          box-shadow: none;
+  color: #FBD115;
+}
+
+.su-page-banner .saa-banner--no-image .su-hero .su-hero__card .su-link::after,
+    .su-page-banner .saa-banner--no-image .su-hero .su-hero__card a::after {
+  --bg-opacity: 1;
+  background-color: #fff;
+  background-color: rgba(255, 255, 255, var(--bg-opacity));
+}
+
+.su-page-banner .saa-banner--no-image .su-hero .su-hero__card .su-link::after:hover,
+      .su-page-banner .saa-banner--no-image .su-hero .su-hero__card a::after:hover {
+  cursor: pointer;
+  background-color: #FBD115;
+}
+
+.su-page-banner .saa-banner--no-image .su-hero .su-hero__card .su-link:hover::after, .su-page-banner .saa-banner--no-image .su-hero .su-hero__card .su-link:focus::after,
+    .su-page-banner .saa-banner--no-image .su-hero .su-hero__card a:hover::after,
+    .su-page-banner .saa-banner--no-image .su-hero .su-hero__card a:focus::after {
+  background-color: #FBD115;
+}
+
+.su-page-banner .saa-banner--no-image .su-hero .su-hero__card .su-link.su-link--action,
+    .su-page-banner .saa-banner--no-image .su-hero .su-hero__card a.su-link--action {
+  text-decoration: none;
+}
+
+.su-page-banner .saa-banner--no-image .su-hero .su-hero__card .su-link.su-link--internal::after:hover, .su-page-banner .saa-banner--no-image .su-hero .su-hero__card .su-link.su-link--internal::after:focus,
+    .su-page-banner .saa-banner--no-image .su-hero .su-hero__card a.su-link--internal::after:hover,
+    .su-page-banner .saa-banner--no-image .su-hero .su-hero__card a.su-link--internal::after:focus {
+  background-color: #FBD115;
+}
+
+.su-page-banner .saa-banner--no-image .su-hero .su-hero__card .su-link.su-link--video::after,
+    .su-page-banner .saa-banner--no-image .su-hero .su-hero__card a.su-link--video::after {
+  width: 14px;
+}
+
+.su-page-banner .saa-banner--no-image .su-hero .su-hero__card .su-link.disabled,
+    .su-page-banner .saa-banner--no-image .su-hero .su-hero__card a.disabled {
+  --text-opacity: 1;
+  color: #4d4f53;
+  color: rgba(77, 79, 83, var(--text-opacity));
 }
 
 .su-page-banner .saa-banner--no-image .su-hero .su-hero__card .su-button {
@@ -844,6 +1035,10 @@ a {
 .su-page-banner .saa-banner--no-image .su-hero .su-hero__card .su-button:focus {
   -webkit-box-shadow: -2px -2px 6px #0098db, 0.6, 2px 2px 6px #0098db, 0.5;
           box-shadow: -2px -2px 6px #0098db, 0.6, 2px 2px 6px #0098db, 0.5;
+}
+
+.su-page-banner .saa-banner--no-image .su-hero .su-hero__card .su-button:hover, .su-page-banner .saa-banner--no-image .su-hero .su-hero__card .su-button:focus {
+  border: 1px solid #26319F;
 }
 
 .paragraph-item .saa-banner--no-image .su-hero {

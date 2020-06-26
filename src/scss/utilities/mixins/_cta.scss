@@ -4,11 +4,12 @@
   .su-link,
   a {
     @apply text-white;
-    @apply no-underline;
+    text-decoration: underline;
 
     &:hover,
     &:focus {
       @apply underline;
+      color: $saa-color-dandelion;
     }
 
     &::after {
@@ -16,18 +17,23 @@
 
       &:hover {
         @apply cursor-pointer;
+        background-color: $saa-color-dandelion;
       }
     }
 
     &:hover::after,
     &:focus::after {
-      @apply bg-white;
+      background-color: $saa-color-dandelion;
+    }
+
+    &.su-link--action {
+      @apply no-underline;
     }
 
     &.su-link--internal::after {
       &:hover,
       &:focus {
-        @apply bg-white;
+        background-color: $saa-color-dandelion;
       }
     }
 

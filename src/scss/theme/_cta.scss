@@ -7,7 +7,7 @@ a {
 
   &:hover,
   &:focus {
-    color: $su-color-vivid-red-dark;
+    color: $su-color-cardinal-red;
   }
 
   &::after {
@@ -20,13 +20,13 @@ a {
 
   &:hover::after,
   &:focus::after {
-    background-color: $su-color-vivid-red-dark;
+    background-color: $su-color-cardinal-red;
   }
 
   &.su-link--internal::after {
     &:hover,
     &:focus {
-      background-color: $su-color-vivid-red;
+      background-color: $su-color-cardinal-red;
     }
   }
 
@@ -46,8 +46,38 @@ a {
 
     &:hover,
     &:focus {
-      color: $su-color-black;
+      color: $su-color-cardinal-red;
       text-decoration: underline;
     }
   }
+}
+
+
+// link icons
+.su-link--action,
+.su-link--download,
+.su-link--external,
+.su-link--internal,
+.su-link--jump,
+.su-link--more,
+.su-link--video {
+  &::after {
+    background-color: $su-color-vivid-red;
+    &:hover,
+    &:focus {
+      background-color: $su-color-cardinal-red;
+    }
+  }
+  &:hover,
+  &:focus {
+    &::after {
+      background-color: $su-color-cardinal-red;
+    }
+  }
+}
+
+
+// red background
+.bg-bright-red .su-link {
+  @include cta-white-on-bright-red;
 }
