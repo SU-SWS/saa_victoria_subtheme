@@ -1,0 +1,24 @@
+@charset "UTF-8";
+
+.su-local-footer__action-links {
+  .su-link,
+  a {
+    @include cta-vivid-red;
+  }
+}
+
+.su-local-footer__header .su-link--internal {
+  @include saa-button--purple;
+  border-radius: 0px;
+  box-shadow: none;
+
+  &:hover,
+  &:focus {
+    box-shadow: none;
+
+    &::after {
+      background-color: $su-color-white;
+    }
+  }
+
+}

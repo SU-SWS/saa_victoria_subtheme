@@ -2,41 +2,7 @@
 
 .su-link,
 a {
-  color: $su-color-vivid-red;
-  @apply no-underline;
-
-  &:hover,
-  &:focus {
-    color: $su-color-cardinal-red;
-  }
-
-  &::after {
-    background-color: $su-color-vivid-red;
-
-    &:hover {
-      @apply cursor-pointer;
-    }
-  }
-
-  &:hover::after,
-  &:focus::after {
-    background-color: $su-color-cardinal-red;
-  }
-
-  &.su-link--internal::after {
-    &:hover,
-    &:focus {
-      background-color: $su-color-cardinal-red;
-    }
-  }
-
-  &.su-link--video::after {
-    width: 14px; // video icon is too wide, 13px cuts it off, temp fix
-  }
-
-  &.disabled {
-    color: $su-color-cool-grey;
-  }
+  @include cta-vivid-red;
 }
 
 .su-wysiwyg-text {
