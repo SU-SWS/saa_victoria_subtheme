@@ -34,6 +34,7 @@
 @mixin saa-button--secondary-on-red {
   @include saa-button--secondary;
   border: 1px solid $su-color-white;
+
   &:hover,
   &:focus {
     border: 1px solid $saa-color-electric-purple-dark;

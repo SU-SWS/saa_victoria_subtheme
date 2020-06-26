@@ -18,7 +18,9 @@
 
 // set buttons to secondary style when on vivid red background
 // this can be overridden but this is a default setting
-.bg-vivid-red .su-button {
-  @include saa-button--secondary;
+.bg-vivid-red {
+  .su-button {
+    @include saa-button--secondary;
+  }
 }
 

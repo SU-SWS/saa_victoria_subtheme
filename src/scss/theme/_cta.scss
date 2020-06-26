@@ -63,11 +63,13 @@ a {
 .su-link--video {
   &::after {
     background-color: $su-color-vivid-red;
+
     &:hover,
     &:focus {
       background-color: $su-color-cardinal-red;
     }
   }
+
   &:hover,
   &:focus {
     &::after {
@@ -78,6 +80,8 @@ a {
 
 
 // red background
-.bg-bright-red .su-link {
-  @include cta-white-on-bright-red;
+.bg-bright-red {
+  .su-link {
+    @include cta-white-on-bright-red;
+  }
 }
