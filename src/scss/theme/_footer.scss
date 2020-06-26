@@ -7,20 +7,21 @@
   }
 }
 
-.su-local-footer__header .su-link--internal {
-  @include saa-button--purple;
-  border-radius: 0px;
-  box-shadow: none;
-
-  &:hover,
-  &:focus {
+.su-local-footer__header {
+  .su-link--internal {
+    @include saa-button--purple;
+    border-radius: 0;
     box-shadow: none;
 
-    &::after {
-      background-color: $su-color-white;
+    &:hover,
+    &:focus {
+      box-shadow: none;
+
+      &::after {
+        background-color: $su-color-white;
+      }
     }
   }
-
 }
 
 
