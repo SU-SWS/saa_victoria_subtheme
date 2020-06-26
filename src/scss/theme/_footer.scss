@@ -22,3 +22,11 @@
   }
 
 }
+
+
+.su-local-footer__columns {
+  input[type="submit"] {
+    @include saa-button--purple;
+    margin-top: 14px;
+  }
+}
