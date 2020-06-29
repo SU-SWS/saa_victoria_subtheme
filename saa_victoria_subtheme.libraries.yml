@@ -108,3 +108,16 @@ fonts:
       # Clarendon, Proxima Nova & Calluna fonts package
       'https://use.typekit.net/udw3cbu.css' : { type: external, minified: true }
 #      font-family: clarendon-text-pro, serif;
+
+associates:
+  version: VERSION
+  css:
+    base:
+      associates/src/components/letter/letter.css: { }
+      associates/src/components/nameTabs/nameTabs.css: { }
+      associates/src/components/newMembers/newMembers.css: { }
+      associates/src/components/search/search.css: { }
+      associates/src/components/searchResults/searchResults.css: { }
+      associates/src/components/app.css: { }
+  js:
+    associates/src/components/index.js: {}
