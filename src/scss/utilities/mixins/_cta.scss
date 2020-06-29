@@ -1,14 +1,53 @@
 @charset "UTF-8";
 
+@mixin cta-vivid-red {
+  color: $su-color-vivid-red;
+  @apply no-underline;
+
+  &:hover,
+  &:focus {
+    color: $su-color-cardinal-red;
+  }
+
+  &::after {
+    background-color: $su-color-vivid-red;
+
+    &:hover {
+      @apply cursor-pointer;
+    }
+  }
+
+  &:hover::after,
+  &:focus::after {
+    background-color: $su-color-cardinal-red;
+  }
+
+  &.su-link--internal::after {
+    &:hover,
+    &:focus {
+      background-color: $su-color-cardinal-red;
+    }
+  }
+
+  &.su-link--video::after {
+    width: 14px; // video icon is too wide, 13px cuts it off, temp fix
+  }
+
+  &.disabled {
+    color: $su-color-cool-grey;
+  }
+}
+
 @mixin cta-white-on-bright-red {
   .su-link,
   a {
     @apply text-white;
-    @apply no-underline;
+    text-decoration: underline;
 
     &:hover,
     &:focus {
       @apply underline;
+      color: $saa-color-dandelion;
     }
 
     &::after {
@@ -16,18 +55,23 @@
 
       &:hover {
         @apply cursor-pointer;
+        background-color: $saa-color-dandelion;
       }
     }
 
     &:hover::after,
     &:focus::after {
-      @apply bg-white;
+      background-color: $saa-color-dandelion;
+    }
+
+    &.su-link--action {
+      @apply no-underline;
     }
 
     &.su-link--internal::after {
       &:hover,
       &:focus {
-        @apply bg-white;
+        background-color: $saa-color-dandelion;
       }
     }
 
