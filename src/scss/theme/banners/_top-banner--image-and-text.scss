@@ -16,6 +16,10 @@
 
           @include grid-media-max('sm') {
             max-width: 100%;
+
+            .su-card__contents {
+              width: 100%;
+            }
           }
         }
       }
