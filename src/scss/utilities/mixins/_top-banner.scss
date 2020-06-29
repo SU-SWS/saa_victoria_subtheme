@@ -1,6 +1,7 @@
 @charset "UTF-8";
 
 @mixin saa-banner--bright-red-card-common {
+  @include cta-white-on-bright-red;
   display: flex;
   align-items: flex-end;
   position: relative;
@@ -16,18 +17,8 @@
   min-height: inherit;
   background: $su-color-bright-red;
 
-  .su-link,
-  a {
-    color: $su-color-white;
-
-    &:hover,
-    &:focus {
-      text-decoration: underline;
-      box-shadow: none;
-    }
-  }
 
   .su-button {
-    @include saa-button--bright-red;
+    @include saa-button--secondary-on-red;
   }
 }

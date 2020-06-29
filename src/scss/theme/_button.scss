@@ -6,20 +6,21 @@
 // override decanter button styles here to use new colors and any other differences
 // default button style for this theme
 
-//.su-wysiwyg-text .su-button,
-//.su-wysiwyg-text a.su-button,
 .su-button {
-  @include saa-button-purple;
+  @include saa-button--purple;
 }
 
 .su-link {
   &.su-button {
-    @include saa-button-purple;
+    @include saa-button--purple;
   }
 }
 
-// red buttons are default when on purple background
-.bg-electric-purple > * > .su-button { // something like this, check structure
-  @include saa-button--vivid-red;
+// set buttons to secondary style when on vivid red background
+// this can be overridden but this is a default setting
+.bg-vivid-red {
+  .su-button {
+    @include saa-button--secondary;
+  }
 }
 
