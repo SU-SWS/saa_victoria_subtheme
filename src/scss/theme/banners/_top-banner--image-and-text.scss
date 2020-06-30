@@ -12,7 +12,10 @@
       .su-card {
         &.su-hero__card {
           @include saa-banner--bright-red-card-common;
-          max-width: 50%;
+
+          @include grid-media-min('md') {
+            max-width: 50%;
+          }
         }
       }
     }
