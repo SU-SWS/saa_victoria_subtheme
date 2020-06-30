@@ -14,6 +14,10 @@ $banner-circle--image-width: 200px;
       @include modular-spacing('padding-top', 5);
       @include modular-spacing('padding-bottom', 7);
 
+      @include grid-media-max('md') {
+        @include modular-spacing('padding', 3);
+      }
+
       .su-hero__media {
         background: transparent;
         min-height: unset;
