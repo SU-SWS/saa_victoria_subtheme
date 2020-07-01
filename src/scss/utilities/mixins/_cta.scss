@@ -2,7 +2,7 @@
 
 @mixin cta-vivid-red {
   color: $su-color-vivid-red;
-  @apply no-underline;
+  text-decoration: none;
 
   &:hover,
   &:focus {
@@ -13,7 +13,7 @@
     background-color: $su-color-vivid-red;
 
     &:hover {
-      @apply cursor-pointer;
+      cursor: pointer;
     }
   }
 
@@ -41,20 +41,20 @@
 @mixin cta-white-on-bright-red {
   .su-link,
   a {
-    @apply text-white;
+    //@apply text-white;
     text-decoration: underline;
 
     &:hover,
     &:focus {
-      @apply underline;
+      //@apply underline;
       color: $saa-color-dandelion;
     }
 
     &::after {
-      @apply bg-white;
+      //@apply bg-white;
 
       &:hover {
-        @apply cursor-pointer;
+        //@apply cursor-pointer;
         background-color: $saa-color-dandelion;
       }
     }
@@ -65,7 +65,7 @@
     }
 
     &.su-link--action {
-      @apply no-underline;
+      //@apply no-underline;
     }
 
     &.su-link--internal::after {
@@ -80,7 +80,7 @@
     }
 
     &.disabled {
-      @apply text-gray-700;
+      //@apply text-gray-700;
     }
   }
 

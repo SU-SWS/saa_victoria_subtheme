@@ -1,5 +1,6 @@
 @charset "UTF-8";
 
+
 .su-local-footer__action-links {
   .su-link,
   a {
@@ -8,11 +9,15 @@
 }
 
 .su-local-footer__header {
+
+  @apply italic;
+  @apply text-yellow-700;
+
   .su-link--internal {
     @include saa-button--purple;
     border-radius: 0;
     box-shadow: none;
-
+    // @apply shadow-none;
     &:hover,
     &:focus {
       box-shadow: none;
