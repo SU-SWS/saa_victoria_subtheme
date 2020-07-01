@@ -1,14 +1,12 @@
 @charset "UTF-8";
 
-// @import '../../utilities/index';
-
 // top banners only:
 .su-page-banner {
   // if there is NO image and a card
   .saa-banner--no-image {
     .su-hero {
       .su-hero__media {
-        //@apply hidden;
+        @apply hidden;
       }
 
       .su-hero__card {
