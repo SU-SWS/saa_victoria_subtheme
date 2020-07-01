@@ -1,20 +1,28 @@
 {
-  "name": "my-app",
+  "name": "associates",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
     "axios": "^0.19.0",
+    "babel-loader": "^8.1.0",
     "bootstrap": "^4.3.1",
+    "css-loader": "^3.6.0",
     "fast-sort": "^1.5.6",
+    "html-loader": "^1.1.0",
+    "html-webpack-plugin": "^4.3.0",
     "react": "^16.9.0",
     "react-autosuggest": "^9.4.3",
     "react-bootstrap": "^1.0.0-beta.11",
     "react-dom": "^16.9.0",
-    "react-scripts": "3.1.1"
+    "react-scripts": "3.1.1",
+    "sass-loader": "^8.0.2",
+    "style-loader": "^1.2.1"
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
+    "build": "webpack --mode=development",
+    "publish": "webpack --mode=production",
+    "watch": "webpack --mode=development --watch",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
