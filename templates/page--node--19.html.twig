@@ -1,69 +1,32 @@
 {{ attach_library('saa_victoria_subtheme/associates') }}
 
-{# Create classes array. The 'node' class is required for contextual edit links. #}
-{% set node_classes = ['node'] %}
-{% set node_classes = node_classes|merge([
-  node.type ? node.type.entity.label|clean_class,
-  view_mode ? 'node--layout-' ~ view_mode|clean_class
-]) %}
-{% set title_classes = [ node.bundle|clean_class ~ '__title'] %}
-{% set attributes = attributes.addClass(node_classes) %}
-{% set attributes = attributes.removeAttribute('role') %}
+{%- include "@basic-dist/decanter/components/brand-bar/brand-bar.twig" with { modifier_class : brand_bar_variant } -%}
 
-{% if page %}
-{# Node as a page should be a section. #}
-<section{{ attributes }}>
-  {# Node in a list should be it's own article. #}
-  {% else %}
-  <article{{ attributes }}>
-    {% endif %}
-    {% if title_prefix or title_suffix or display_submitted or unpublished or page is empty and label %}
-      <header>
-        {{ title_prefix }}
-        {% if not page and label %}
-          <h2{{ title_attributes.addClass(title_classes) }}>
-            <a href="{{ url }}" rel="bookmark">{{ label }}</a>
-          </h2>
-        {% endif %}
-        {{ title_suffix }}
+{%- if page.help -%}
+  {{ page.help }}
+{%- endif -%}
 
-        {% if display_submitted %}
-          <div class="submitted">
-            {{ author_picture }}
-            {% trans %}Submitted by {{ author_name }} on {{ date }}{% endtrans %}
-            {{ metadata }}
-          </div>
-        {% endif %}
+<header class="su-masthead su-masthead--right">
+  <section>
+    {%- if page.header -%}
+      {{ page.header }}
+    {%- endif -%}
+    {%- if page.search -%}
+      {{ page.search }}
+    {%- endif -%}
+    {%- if page.menu -%}
+      {{ page.menu }}
+    {%- endif -%}
+  </section>
+</header>
 
-        {% if not node.published %}
-          {% set data = {
-            'attributes': create_attribute({'class': 'su-alert su-alert--warning'}),
-            'alert_text': "This page is currently unpublished and not visible to the public."|t,
-          } %}
-          {% include "@basic-dist/decanter/components/alert/alert.twig" with data %}
-        {% endif %}
-      </header>
-    {% endif %}
+<div class="page-content">
+  <a name="page-content" id="page-content" tabindex="-1" class="visually-hidden focusable">Page Content</a>
+  {{ page.content }}
+  <div id="root">React app should load here...</div>
+</div>
 
-    <div{{ content_attributes.addClass('content') }}>
-      {{ content|without('links') }}
-
-      {# This might be the right place to print out the Associates React widget #}
-
-    </div><!-- /.content -->
-
-    {% if content.links %}
-      <div class="links">
-        {{ content.links }}
-      </div><!-- /.links -->
-    {% endif %}
-
-    <h2>Testing</h2>
-    <div id="root"></div>
-    {# Or maybe this might be the right place to print out the Associates React widget #}
-
-  {% if page %}
-    </section><!-- /.node as page -->
-  {% else %}
-    </article><!-- /.node as a list -->
-  {% endif %}
+<footer id="footer">
+  {{ page.footer }}
+  {%- include "@basic-dist/decanter/components/global-footer/global-footer.twig" -%}
+</footer>
