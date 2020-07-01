@@ -98431,6 +98431,10 @@ a {
   bottom: 0;
 }
 
+.su-page-banner .saa-banner--no-image .su-hero .su-hero__media {
+  display: none;
+}
+
 .su-page-banner .saa-banner--no-image .su-hero .su-hero__card {
   display: -webkit-box;
   display: -ms-flexbox;
