@@ -18,7 +18,7 @@ module.exports = {
         }
       },
       {
-        test: /\.css$/i,
+        test: /\.(sc|c)ss$/i,
         use: [
           // Creates the main.css
           MiniCssExtractPlugin.loader,
@@ -27,16 +27,18 @@ module.exports = {
           // Translates CSS into CommonJS
           'css-loader',
           // Compiles Sass to CSS
-          //'sass-loader',
+          'sass-loader',
         ],
       },
     ]
   },
   resolve: {
     extensions: ['.js', '.jsx'],
-    modules: [path.resolve(__dirname, 'src')]
+    modules: [path.resolve(__dirname, 'src'), 'node_modules']
   },
   plugins: [
-    new MiniCssExtractPlugin(),
+    new MiniCssExtractPlugin({
+      filename: '[name].css',
+    }),
   ],
 };
