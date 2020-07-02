@@ -8,7 +8,6 @@ base theme: stanford_basic
 libraries:
   - saa_victoria_subtheme/allpages
   - saa_victoria_subtheme/fonts
-  - saa_victoria_subtheme/associates
 
 regions:
   page_top: 'Page top'

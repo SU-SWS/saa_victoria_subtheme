@@ -117,3 +117,8 @@ associates:
   js:
     src/associates/lib/app.bundle.js: {}
 
+bootstrap:
+  version: VERSION
+  css:
+    base:
+      'https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css' : { type: external, minified: true }
