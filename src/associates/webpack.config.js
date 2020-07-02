@@ -7,7 +7,7 @@ module.exports = {
     filename: 'app.bundle.js',
     path: path.resolve(__dirname, 'lib'),
   },
-  devtool: 'source-map',
+  devtool: 'none',
   module: {
     rules: [
       {
@@ -18,17 +18,9 @@ module.exports = {
         }
       },
       {
-        test: /\.html$/,
-        use: [
-          {
-            loader: "html-loader"
-          }
-        ]
-      },
-      {
         test: /\.css$/i,
         use: [
-          // Creates
+          // Creates the main.css
           MiniCssExtractPlugin.loader,
           // Creates `style` nodes from JS strings
           // 'style-loader',
@@ -42,7 +34,7 @@ module.exports = {
   },
   resolve: {
     extensions: ['.js', '.jsx'],
-    modules: [path.resolve(__dirname, 'src'), 'node_modules']
+    modules: [path.resolve(__dirname, 'src')]
   },
   plugins: [
     new MiniCssExtractPlugin(),
