@@ -113,12 +113,7 @@ associates:
   version: VERSION
   css:
     base:
-      src/associates/src/components/letter/letter.css: { }
-      src/associates/src/components/nameTabs/nameTabs.css: { }
-      src/associates/src/components/newMembers/newMembers.css: { }
-      src/associates/src/components/search/search.css: { }
-      src/associates/src/components/searchResults/searchResults.css: { }
-      src/associates/src/components/app.css: { }
+      src/associates/lib/main.css: {}
   js:
     src/associates/lib/app.bundle.js: {}
 
