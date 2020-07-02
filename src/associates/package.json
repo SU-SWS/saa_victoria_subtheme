@@ -9,7 +9,7 @@
     "css-loader": "^3.6.0",
     "fast-sort": "^1.5.6",
     "html-loader": "^1.1.0",
-    "html-webpack-plugin": "^4.3.0",
+    "mini-css-extract-plugin": "^0.9.0",
     "react": "^16.9.0",
     "react-autosuggest": "^9.4.3",
     "react-bootstrap": "^1.0.0-beta.11",

@@ -1,0 +1,107 @@
+button {
+  background-color: #8c1515;
+  color: white;
+  height: 30px;
+  padding: 0 1.5em;
+  float: right;
+  margin-right: 50%;
+}
+
+.resultsContainer {
+  margin-bottom: 3em;
+  margin-top: 3em;
+}
+
+.react-autosuggest__input {
+  width: 25%;
+}
+
+.newMembersToggle {
+  margin-top: 3em;
+}
+
+input[type="checkbox"] {
+  float: left;
+  margin-right: 1%;
+  margin-top: 4px;
+}
+
+.name {
+  margin-left: 5%;
+  padding: 0.3em 0;
+  display: inline-block;
+  width: 40%;
+}
+
+.degrees {
+  margin-left: 5%;
+  display: inline;
+}
+
+body {
+  /* font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif; */
+  color: #726543;
+  font-size: 13px;
+}
+
+.newMembersToggle {
+  margin-top: 2em;
+  margin-left: 3%;
+}
+
+.nav-tabs .nav-item.active {
+  background-color: #726543;
+  color: white;
+}
+
+.nav-tabs .nav-item {
+  background-color: #dcdac1;
+  color: #726543;
+  border: 1px solid #c1bda2;
+  border-radius: 0;
+}
+
+.tab-pane {
+  background-color: #f3f1ed;
+  border-color: #dddbc3;
+}
+
+.nav {
+  margin-top: 3em;
+}
+
+/* .nav,
+.tab-content { */
+/* width: 60%; */
+/* } */
+
+h5 {
+  width: 95%;
+  color: #7d9a18;
+  border-bottom: 1px dashed #e0ddd6;
+  padding: 10px;
+  margin: 0 auto 20px auto;
+}
+
+.topLink {
+  color: #8c1515;
+  float: right;
+  margin-right: 2%;
+  margin-top: -1.7em;
+}
+
+main {
+  margin-top: 2em;
+}
+
+header {
+  margin-left: 3%;
+}
+
+.counter {
+  margin-bottom: 1em;
+}
+
+
+/*# sourceMappingURL=main.css.map*/

@@ -2652,111 +2652,6 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
 
 /***/ }),
 
-/***/ "./node_modules/css-loader/dist/runtime/api.js":
-/*!*****************************************************!*\
-  !*** ./node_modules/css-loader/dist/runtime/api.js ***!
-  \*****************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-/*
-  MIT License http://www.opensource.org/licenses/mit-license.php
-  Author Tobias Koppers @sokra
-*/
-// css base code, injected by the css-loader
-// eslint-disable-next-line func-names
-module.exports = function (useSourceMap) {
-  var list = []; // return the list of modules as css string
-
-  list.toString = function toString() {
-    return this.map(function (item) {
-      var content = cssWithMappingToString(item, useSourceMap);
-
-      if (item[2]) {
-        return "@media ".concat(item[2], " {").concat(content, "}");
-      }
-
-      return content;
-    }).join('');
-  }; // import a list of modules into the list
-  // eslint-disable-next-line func-names
-
-
-  list.i = function (modules, mediaQuery, dedupe) {
-    if (typeof modules === 'string') {
-      // eslint-disable-next-line no-param-reassign
-      modules = [[null, modules, '']];
-    }
-
-    var alreadyImportedModules = {};
-
-    if (dedupe) {
-      for (var i = 0; i < this.length; i++) {
-        // eslint-disable-next-line prefer-destructuring
-        var id = this[i][0];
-
-        if (id != null) {
-          alreadyImportedModules[id] = true;
-        }
-      }
-    }
-
-    for (var _i = 0; _i < modules.length; _i++) {
-      var item = [].concat(modules[_i]);
-
-      if (dedupe && alreadyImportedModules[item[0]]) {
-        // eslint-disable-next-line no-continue
-        continue;
-      }
-
-      if (mediaQuery) {
-        if (!item[2]) {
-          item[2] = mediaQuery;
-        } else {
-          item[2] = "".concat(mediaQuery, " and ").concat(item[2]);
-        }
-      }
-
-      list.push(item);
-    }
-  };
-
-  return list;
-};
-
-function cssWithMappingToString(item, useSourceMap) {
-  var content = item[1] || ''; // eslint-disable-next-line prefer-destructuring
-
-  var cssMapping = item[3];
-
-  if (!cssMapping) {
-    return content;
-  }
-
-  if (useSourceMap && typeof btoa === 'function') {
-    var sourceMapping = toComment(cssMapping);
-    var sourceURLs = cssMapping.sources.map(function (source) {
-      return "/*# sourceURL=".concat(cssMapping.sourceRoot || '').concat(source, " */");
-    });
-    return [content].concat(sourceURLs).concat([sourceMapping]).join('\n');
-  }
-
-  return [content].join('\n');
-} // Adapted from convert-source-map (MIT)
-
-
-function toComment(sourceMap) {
-  // eslint-disable-next-line no-undef
-  var base64 = btoa(unescape(encodeURIComponent(JSON.stringify(sourceMap))));
-  var data = "sourceMappingURL=data:application/json;charset=utf-8;base64,".concat(base64);
-  return "/*# ".concat(data, " */");
-}
-
-/***/ }),
-
 /***/ "./node_modules/dom-helpers/activeElement.js":
 /*!***************************************************!*\
   !*** ./node_modules/dom-helpers/activeElement.js ***!
@@ -50978,14 +50873,7 @@ function (_React$Component) {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-// Imports
-var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(/*! ../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
-exports = ___CSS_LOADER_API_IMPORT___(false);
-// Module
-exports.push([module.i, "main {\n  margin-top: 2em;\n}\n\nheader {\n  margin-left: 3%;\n}\n\n.counter {\n  margin-bottom: 1em;\n}\n", ""]);
-// Exports
-module.exports = exports;
-
+// extracted by mini-css-extract-plugin
 
 /***/ }),
 
@@ -51074,14 +50962,7 @@ var Letter = function Letter(props) {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-// Imports
-var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(/*! ../../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
-exports = ___CSS_LOADER_API_IMPORT___(false);
-// Module
-exports.push([module.i, ".name {\n  margin-left: 5%;\n  padding: 0.3em 0;\n  display: inline-block;\n  width: 40%;\n}\n\n.degrees {\n  margin-left: 5%;\n  display: inline;\n}\n", ""]);
-// Exports
-module.exports = exports;
-
+// extracted by mini-css-extract-plugin
 
 /***/ }),
 
@@ -51571,14 +51452,7 @@ function (_React$Component) {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-// Imports
-var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(/*! ../../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
-exports = ___CSS_LOADER_API_IMPORT___(false);
-// Module
-exports.push([module.i, "body {\n  /* font-family: \"Trebuchet MS\", \"Lucida Sans Unicode\", \"Lucida Grande\",\n    \"Lucida Sans\", Arial, sans-serif; */\n  color: #726543;\n  font-size: 13px;\n}\n\n.newMembersToggle {\n  margin-top: 2em;\n  margin-left: 3%;\n}\n\n.nav-tabs .nav-item.active {\n  background-color: #726543;\n  color: white;\n}\n\n.nav-tabs .nav-item {\n  background-color: #dcdac1;\n  color: #726543;\n  border: 1px solid #c1bda2;\n  border-radius: 0;\n}\n\n.tab-pane {\n  background-color: #f3f1ed;\n  border-color: #dddbc3;\n}\n\n.nav {\n  margin-top: 3em;\n}\n\n/* .nav,\n.tab-content { */\n/* width: 60%; */\n/* } */\n\nh5 {\n  width: 95%;\n  color: #7d9a18;\n  border-bottom: 1px dashed #e0ddd6;\n  padding: 10px;\n  margin: 0 auto 20px auto;\n}\n\n.topLink {\n  color: #8c1515;\n  float: right;\n  margin-right: 2%;\n  margin-top: -1.7em;\n}\n", ""]);
-// Exports
-module.exports = exports;
-
+// extracted by mini-css-extract-plugin
 
 /***/ }),
 
@@ -51620,14 +51494,7 @@ var NewMembers = function NewMembers(props) {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-// Imports
-var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(/*! ../../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
-exports = ___CSS_LOADER_API_IMPORT___(false);
-// Module
-exports.push([module.i, ".newMembersToggle {\n  margin-top: 3em;\n}\n\ninput[type=\"checkbox\"] {\n  float: left;\n  margin-right: 1%;\n  margin-top: 4px;\n}\n", ""]);
-// Exports
-module.exports = exports;
-
+// extracted by mini-css-extract-plugin
 
 /***/ }),
 
@@ -51824,14 +51691,7 @@ function (_React$Component) {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-// Imports
-var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(/*! ../../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
-exports = ___CSS_LOADER_API_IMPORT___(false);
-// Module
-exports.push([module.i, ".react-autosuggest__input {\n  width: 25%;\n}\n", ""]);
-// Exports
-module.exports = exports;
-
+// extracted by mini-css-extract-plugin
 
 /***/ }),
 
@@ -51958,14 +51818,7 @@ function (_React$Component) {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-// Imports
-var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(/*! ../../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
-exports = ___CSS_LOADER_API_IMPORT___(false);
-// Module
-exports.push([module.i, "button {\n  background-color: #8c1515;\n  color: white;\n  height: 30px;\n  padding: 0 1.5em;\n  float: right;\n  margin-right: 50%;\n}\n\n.resultsContainer {\n  margin-bottom: 3em;\n  margin-top: 3em;\n}\n", ""]);
-// Exports
-module.exports = exports;
-
+// extracted by mini-css-extract-plugin
 
 /***/ }),
 
