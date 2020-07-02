@@ -112,5 +112,5 @@ fonts:
 associates:
   version: VERSION
   js:
-    associates/src/lib/components/app.js: { minified: true }
+    src/associates/lib/components/app.js: {}
 
