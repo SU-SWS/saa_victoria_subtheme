@@ -39,21 +39,3 @@ function saa_victoria_subtheme_preprocess_ds_entity_view(&$variables) {
     }
   }
 }
-
-/**
- * Implements hook_page_attachments().
- */
-function saa_victoria_subtheme_page_attachments(array &$attachments) {
-  // Get the node from the route.
-  $node = \Drupal::routeMatch()->getParameter('node');
-
-  // Not a node.. Then just continue.
-  if (!$node instanceof NodeInterface) {
-    return;
-  }
-
-  // Check for our type and add library if a match.
-  if ($node->getType() == "stanford_page") {
-    $attachments['#attached']['library'][] = 'saa_victoria_subtheme/associates';
-  }
-}
