@@ -1,6 +1,5 @@
-body {
-  background: #ff0099;
-}
+//@import '../../../scss/config/index.scss';
+
 header,
 .newMembersToggle {
   margin-left: 0;
@@ -10,10 +9,22 @@ header,
   input {
     height: 18px;
     width: 18px;
+    border: 2px solid #919294;
+    border-radius: 3px;
     clip-path: unset;
     clip: unset;
     position: unset;
+
+    &:hover,
+    &:focus {
+      cursor: pointer;
+    }
+
+    &[type="checkbox"]:checked {
+      color: #8c1515;
+    }
   }
+
 }
 .nav-tabs {
   .nav-item {
@@ -53,6 +64,7 @@ header,
     &:hover,
     &:focus {
       background: #f4f4f4;
+      cursor: pointer;
     }
   }
 }
