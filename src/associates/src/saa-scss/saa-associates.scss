@@ -1,3 +1,76 @@
 body {
   background: #ff0099;
 }
+header,
+.newMembersToggle {
+  margin-left: 0;
+}
+
+.newMembersToggle {
+  input {
+    height: 18px;
+    width: 18px;
+    clip-path: unset;
+    clip: unset;
+    position: unset;
+  }
+}
+.nav-tabs {
+  .nav-item {
+    background: #4d4f53;
+    color: #fff;
+
+    &.active {
+      background: #8C1515;
+    }
+
+    @media only screen and (min-width: 768px) {
+      padding: 0.8rem 1.5rem;
+    }
+  }
+}
+
+.react-autosuggest__container {
+  position: relative;
+}
+
+.react-autosuggest__input {
+  padding: .6rem 2rem .8rem;
+  width: 50%;
+}
+
+.react-autosuggest__suggestions-container--open {
+  width: 50%;
+  height: 250px;
+  overflow: scroll;
+  border: 1px solid #000;
+  background: #fff;
+  position: absolute;
+
+  .react-autosuggest__suggestion {
+    padding-left: 2rem;
+
+    &:hover,
+    &:focus {
+      background: #f4f4f4;
+    }
+  }
+}
+
+.tab-pane {
+  background: transparent;
+  > div > div:nth-child(even) {
+    background: #f4f4f4;
+  }
+
+  h5 {
+    width: 100%;
+    color: #8c1515;
+    font-size: 28px;
+    //@include modular-typography(2);
+  }
+
+  b {
+    font-weight: unset;
+  }
+}

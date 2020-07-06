@@ -58,7 +58,8 @@ class SearchResults extends React.Component {
   render() {
     return (
       <div>
-        <button onClick={this.search}>SEARCH</button>
+        {/* Commenting out button since it appears to have no purpose */}
+        {/*<button onClick={this.search}>SEARCH</button>*/}
         <div className="resultsContainer">{this.state.results}</div>
       </div>
     );
