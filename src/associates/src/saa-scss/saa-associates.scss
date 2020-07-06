@@ -26,13 +26,14 @@ header,
   }
 
 }
+
 .nav-tabs {
   .nav-item {
     background: #4d4f53;
     color: #fff;
 
     &.active {
-      background: #8C1515;
+      background: #8c1515;
     }
 
     @media only screen and (min-width: 768px) {
@@ -46,7 +47,7 @@ header,
 }
 
 .react-autosuggest__input {
-  padding: .6rem 2rem .8rem;
+  padding: 0.6rem 2rem 0.8rem;
   width: 50%;
 }
 
@@ -71,6 +72,7 @@ header,
 
 .tab-pane {
   background: transparent;
+
   > div > div:nth-child(even) {
     background: #f4f4f4;
   }

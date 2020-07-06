@@ -5,7 +5,7 @@ module.exports = {
   entry: './src/index.js',
   output: {
     filename: 'app.bundle.js',
-    path: path.resolve(__dirname, 'lib'),
+    path: path.resolve(__dirname, 'lib')
   },
   devtool: 'none',
   module: {
@@ -27,9 +27,9 @@ module.exports = {
           // Translates CSS into CommonJS
           'css-loader',
           // Compiles Sass to CSS
-          'sass-loader',
-        ],
-      },
+          'sass-loader'
+        ]
+      }
     ]
   },
   resolve: {
@@ -37,6 +37,6 @@ module.exports = {
     modules: [path.resolve(__dirname, 'src'), 'node_modules']
   },
   plugins: [
-    new MiniCssExtractPlugin,
-  ],
+    new MiniCssExtractPlugin()
+  ]
 };
