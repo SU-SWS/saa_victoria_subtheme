@@ -1,5 +1,9 @@
 //@import '../../../scss/config/index.scss';
 
+main {
+  font-family: proxima-nova;
+}
+
 header,
 .newMembersToggle {
   margin-left: 0;
@@ -53,6 +57,7 @@ header,
 
 .react-autosuggest__suggestions-container--open {
   width: 50%;
+  max-width: 46rem;
   height: 250px;
   overflow: scroll;
   border: 1px solid #000;
