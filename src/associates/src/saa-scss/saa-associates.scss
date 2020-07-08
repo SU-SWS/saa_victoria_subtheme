@@ -10,10 +10,10 @@ header,
 }
 
 .newMembersToggle {
-  input {
+  input[type="checkbox"] {
     height: 18px;
     width: 18px;
-    border: 2px solid #919294;
+    border: 2px solid #8c1515;
     border-radius: 3px;
     clip-path: unset;
     clip: unset;
@@ -24,8 +24,8 @@ header,
       cursor: pointer;
     }
 
-    &[type="checkbox"]:checked {
-      color: #8c1515;
+    &:checked {
+      background-color: #8c1515;
     }
   }
 
