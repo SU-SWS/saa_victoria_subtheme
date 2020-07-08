@@ -1,0 +1,20 @@
+@charset "UTF-8";
+
+$card-circle--width: 140px;
+
+.paragraph--type--stanford-wysiwyg {
+  .su-wysiwyg-text {
+    .align-left {
+      .media {
+        padding-bottom: 105%;
+        position: absolute;
+      }
+    }
+    .align-left ~ * {
+      margin-left: $card-circle--width + 30px; // width of circle plus padding
+    }
+    .su-button {
+      float: left; // check if this messes up anything anywhere
+    }
+  }
+}

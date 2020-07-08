@@ -1,0 +1,13 @@
+@charset "UTF-8";
+
+$card-circle--width: 140px;
+
+.paragraph--type--stanford-wysiwyg {
+  .su-wysiwyg-text {
+    .align-left {
+      img[width='220'] {
+        max-width: 140px;
+      }
+    }
+  }
+}
