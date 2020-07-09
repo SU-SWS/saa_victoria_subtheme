@@ -15,7 +15,7 @@ $card-circle--width: 140px;
       margin-left: $card-circle--width + 30px; // width of circle plus padding
     }
 
-    .su-button {
+    .align-left ~ .su-button {
       float: left; // check if this messes up anything anywhere
     }
   }
