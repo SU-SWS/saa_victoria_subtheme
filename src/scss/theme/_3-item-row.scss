@@ -1,0 +1,11 @@
+@charset "UTF-8";
+
+.node--layout-full {
+  .jumpstart-ui--one-column .react-paragraphs-row .paragraph-item.flex-4-of-12.ptype-stanford-wysiwyg {
+    // is 28% but breaks from 1501-1518px breakpoints
+    @media screen and (min-width: 1500px) and (max-width: 1520px) {
+      //max-width: 27%; // we are verifying where and when this issue happens and we might not include this code.
+    }
+  }
+}
+
