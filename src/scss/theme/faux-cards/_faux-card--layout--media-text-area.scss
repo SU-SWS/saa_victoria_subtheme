@@ -3,32 +3,34 @@
   .react-paragraphs-row {
     &.container-2-items {
       // set margin and spacing for media caption on the right/last
-      .paragraph-item.ptype-stanford-wysiwyg.flex-6-of-12 ~ .paragraph-item.ptype-stanford-media-caption.flex-6-of-12 {
+      //.paragraph-item.ptype-stanford-wysiwyg.flex-6-of-12 ~ .paragraph-item.ptype-stanford-media-caption.flex-6-of-12 {
+      //
+      //  @include grid-media-min(lg) {
+      //    max-width: 44%;
+      //    margin-left: 0px;
+      //    margin-right: 3%;
+      //  }
+      //
+      //  @include grid-media-min(xl) {
+      //    max-width: 48%;
+      //  }
+      //}
 
-        @include grid-media-min(lg) {
-          max-width: 45%;
-          margin-left: 0px;
-          margin-right: 2%;
-        }
-
-        @include grid-media-min(xl) {
-          max-width: 49%;
-        }
-      }
-
+      // set margin and spacing for media caption on the right/last
+      .paragraph-item.ptype-stanford-wysiwyg.flex-6-of-12 ~ .paragraph-item.ptype-stanford-media-caption.flex-6-of-12,
       // set margin and spacing for media caption on the left/first
       .paragraph-item.ptype-stanford-media-caption.flex-6-of-12 ~ .paragraph-item.ptype-stanford-wysiwyg.flex-6-of-12 {
         margin-top: -80px; // to counteract the previous element's bottom margin,
         // neccessary since we can only style this unique case by stylig the second element
-        @include grid-media-min(lg) {
-          max-width: 45%;
+        @include grid-media-min(lg) { // 992
+          max-width: 44%;
           margin-top: 0;
           margin-left: 0;
-          margin-right: 2%;
+          margin-right: 3%;
         }
 
-        @include grid-media-min(xl) {
-          max-width: 49%;
+        @include grid-media-min(xl) { // 1500
+          max-width: 47%;
         }
       }
     }

@@ -1,12 +1,20 @@
 @charset "UTF-8";
 
+/* Note that the small square horizontal card utilizes styles from small circle horizontal card.
+  see _faux-card--horizontal-min-circle.scss
+  */
+
 $card-circle--width: 140px;
 
 .paragraph--type--stanford-wysiwyg {
   .su-wysiwyg-text {
     .align-left {
       img[width='220'] {
-        max-width: 140px;
+        display: none;
+        @include grid-media-min(sm) {
+          display: block;
+          max-width: 140px;
+        }
       }
     }
   }
