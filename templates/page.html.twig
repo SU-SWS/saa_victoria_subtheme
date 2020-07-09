@@ -1,4 +1,4 @@
-{%- include "themes/custom/saa_victoria_subtheme/templates/components/brand-bar/saa--brand-bar.html.twig" with { modifier_class : brand_bar_variant } -%}
+{%- include "themes/custom/saa_victoria_subtheme/templates/components/brand-bar/saa--brand-bar.html.twig" with { modifier_class : "su-brand-bar--dark" } -%}
 
 {%- if page.help -%}
   {{ page.help }}
@@ -6,9 +6,7 @@
 
 <header class="su-masthead su-masthead--right">
   <section>
-    {%- if page.header -%}
-      {{  page.header }}
-    {%- endif -%}
+    {%- include "themes/custom/saa_victoria_subtheme/templates/components/lockup/saa--lockup.html.twig" with { modifier_class : "su-lockup--option-a", line1: site_name } -%}
     {%- if page.search -%}
       {{ page.search }}
     {%- endif -%}
