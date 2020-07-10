@@ -2,6 +2,10 @@
 
 .paragraph--type--stanford-wysiwyg {
   .su-wysiwyg-text {
+    & > .align-center ~ p.su-subheading {
+      @include modular-spacing('margin', 2 null null null);
+    }
+
     .su-button {
       float: none; // set float - is this needed?
     }

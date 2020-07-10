@@ -4,8 +4,6 @@
 //  Faux Cards - styling text area paragraph to look like cards
 //
 
-
-
 // Config and supporting scss.
 @import '../../config/index';
 @import 'faux-card--fonts';
@@ -14,3 +12,4 @@
 @import 'faux-card--horizontal-general';
 @import 'faux-card--vertical-general';
 @import 'faux-card--layout--media-text-area';
+@import "media-caption-text-area-layout";
