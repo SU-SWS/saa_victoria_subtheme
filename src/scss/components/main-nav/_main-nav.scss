@@ -1,0 +1,17 @@
+@charset "UTF-8";
+
+.su-multi-menu {
+  .su-multi-menu__menu {
+    > .su-multi-menu__link {
+      color: #2E2D29;
+
+      &:hover {
+        color: #8C1515;
+      }
+
+      &.su-multi-menu__item--active-trail {
+        color: #E50808;
+      }
+    }
+  }
+}
