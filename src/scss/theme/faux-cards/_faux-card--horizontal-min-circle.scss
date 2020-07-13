@@ -15,13 +15,10 @@ $card-circle--width: 140px;
         }
       }
     }
+
     @include grid-media-min(sm) {
       .align-left ~ * {
         margin-left: $card-circle--width + 30px; // width of circle plus padding
-      }
-
-      .align-left ~ .su-button {
-        float: left; // check if this messes up anything anywhere
       }
     }
   }
