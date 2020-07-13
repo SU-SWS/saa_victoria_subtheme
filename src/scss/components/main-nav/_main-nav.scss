@@ -18,31 +18,33 @@
     }
   }
 
-  > .su-multi-menu__menu > .su-multi-menu__item {
-    .su-multi-menu__link {
-      color: #2e2d29;
-
-      &:hover {
-        color: #8c1515;
-      }
-    }
-
-    &.su-multi-menu__item--active-trail {
+  @include grid-media-min('lg') {
+    > .su-multi-menu__menu > .su-multi-menu__item {
       .su-multi-menu__link {
-        color: #e50808;
-
-        &::before {
-          color: #e50808;
-          background-color: #e50808;
-        }
+        color: #2e2d29;
 
         &:hover {
           color: #8c1515;
-          text-decoration: none;
+        }
+      }
+
+      &.su-multi-menu__item--active-trail {
+        .su-multi-menu__link {
+          color: #e50808;
 
           &::before {
+            color: #e50808;
+            background-color: #e50808;
+          }
+
+          &:hover {
             color: #8c1515;
-            background-color: #8c1515;
+            text-decoration: none;
+
+            &::before {
+              color: #8c1515;
+              background-color: #8c1515;
+            }
           }
         }
       }
