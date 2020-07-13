@@ -1,9 +1,6 @@
 <?php
 
 use Drupal\Core\Form\FormStateInterface;
-use Drupal\Core\Url;
-use Drupal\Core\Link;
-use Drupal\Core\Render\Markup;
 
 // Set theme name to use in the key values.
 $theme_name = \Drupal::theme()->getActiveTheme()->getName();
@@ -16,7 +13,6 @@ function saa_victoria_subtheme_form_system_theme_settings_alter(array &$form, Fo
     '#type' => 'fieldset',
     '#title' => t('Theme Specific Settings'),
   ];
-
 
   // BrowserSync support.
   $form['options_settings']['stanford_basic_browser_sync'] = [
@@ -50,5 +46,4 @@ function saa_victoria_subtheme_form_system_theme_settings_alter(array &$form, Fo
       'visible' => [':input[name="browser_sync[enabled]"]' => ['checked' => TRUE]],
     ],
   ];
-
 }
