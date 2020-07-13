@@ -3,6 +3,7 @@
 /**
  * @file
  * SAA Theme Settings.
+ * Note: Theme settings are close to Stanford Basic but hide brandbar and masthead style options, since those are enforced with custom styles in this theme.
  */
 
 use Drupal\Core\Form\FormStateInterface;
