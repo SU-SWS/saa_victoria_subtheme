@@ -2,7 +2,7 @@
 
 /**
  * @file
- * SAA Theme Settings
+ * SAA Theme Settings.
  */
 
 use Drupal\Core\Form\FormStateInterface;
