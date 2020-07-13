@@ -1,5 +1,10 @@
 <?php
 
+/**
+ * SAA Theme Settings
+ * Additional theme settings form
+ */
+
 use Drupal\Core\Form\FormStateInterface;
 
 // Set theme name to use in the key values.
