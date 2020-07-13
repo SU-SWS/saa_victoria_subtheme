@@ -2,10 +2,13 @@
 
 .su-site-search__input {
   border-radius: 0;
+  padding: 0.9rem 3.9rem 0.9rem 1.6rem;
 }
 
 .su-site-search__submit {
-  width: 12px;
-  height: 12px;
-  background-size: 12px;
+  background: url("#{$su-image-path}/icon-search.svg") no-repeat 0 0;
+  width: 18px;
+  height: 18px;
+  background-size: 18px;
+  top: 1.3rem;
 }
