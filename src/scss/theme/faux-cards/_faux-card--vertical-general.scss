@@ -2,7 +2,7 @@
 
 .paragraph--type--stanford-wysiwyg {
   .su-wysiwyg-text {
-    & > .align-center ~ p.su-subheading {
+    & > .align-center ~ .su-subheading {
       @include modular-spacing('margin', 2 null null null);
     }
 
