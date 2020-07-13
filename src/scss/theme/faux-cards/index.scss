@@ -6,10 +6,19 @@
 
 // Config and supporting scss.
 @import '../../config/index';
+
+// introduces basic font styles for faux-card style 'subtitle' (should only be used in faux cards)
 @import 'faux-card--fonts';
+
+// These two files work together and apply to faux-cards created with one text area, left-aligned circle or 220 square images.
 @import 'faux-card--horizontal-min-circle';
 @import 'faux-card--horizontal-min-square';
+
+// applies to text area always, but specific to font styles used only for faux-cards
 @import 'faux-card--horizontal-general';
 @import 'faux-card--vertical-general';
+
+// css here limits to apply for font styles only in faux-cards and only when there isn't a preceding image
+// targets a text area used next to a media paragraph as long as the faux-card "subtitle" font style is used only for faux-cards.
 @import 'faux-card--layout--media-text-area';
 @import "media-caption-text-area-layout";
