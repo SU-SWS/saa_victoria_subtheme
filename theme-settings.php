@@ -1,8 +1,8 @@
 <?php
 
 /**
+ * @file
  * SAA Theme Settings
- * Additional theme settings form
  */
 
 use Drupal\Core\Form\FormStateInterface;
