@@ -17,6 +17,7 @@ header,
     cursor: pointer;
     height: 18px;
     width: 18px;
+    z-index: 0;
 
     &::before {
       position: absolute;
@@ -60,6 +61,7 @@ header,
 
 .react-autosuggest__container {
   position: relative;
+  z-index: 1;
 }
 
 .react-autosuggest__input {
