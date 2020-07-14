@@ -1,33 +1,5 @@
 @charset "UTF-8";
 
-.su-local-footer__action-links {
-  .su-link,
-  a {
-    @include cta-vivid-red;
-  }
-}
-
-.su-local-footer__header {
-  .su-link--internal {
-    @include saa-button--purple;
-    border-radius: 0;
-    box-shadow: none;
-
-    &:hover,
-    &:focus {
-      box-shadow: none;
-
-      &::after {
-        background-color: $su-color-white;
-      }
-    }
-  }
-}
-
-
 .su-local-footer__columns {
-  input[type="submit"] {
-    @include saa-button--purple;
-    margin-top: 14px;
-  }
+
 }
