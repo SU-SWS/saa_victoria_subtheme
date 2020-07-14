@@ -1,0 +1,10 @@
+@charset "UTF-8";
+
+.paragraph--type--stanford-wysiwyg {
+  .su-wysiwyg-text {
+    & > p:first-of-type {
+      margin-top: 0; // this applies to the sub-title font style in Large horizontal card -
+      // KATRIA REBECCA need to see if it breaks/messes up regular paragraphs in a noticeable way though
+    }
+  }
+}

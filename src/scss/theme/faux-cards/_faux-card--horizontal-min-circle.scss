@@ -1,0 +1,25 @@
+@charset "UTF-8";
+
+$card-circle--width: 140px;
+
+.paragraph--type--stanford-wysiwyg {
+  .su-wysiwyg-text {
+    .align-left {
+      .media {
+        display: none;
+        @include grid-media-min(sm) {
+          display: block;
+          padding-top: 0;
+          padding-bottom: 105%;
+          position: absolute;
+        }
+      }
+    }
+
+    @include grid-media-min(sm) {
+      .align-left ~ * {
+        margin-left: $card-circle--width + 30px; // width of circle plus padding
+      }
+    }
+  }
+}
