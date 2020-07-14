@@ -1,0 +1,109 @@
+//@import '../../../scss/config/index.scss';
+
+main {
+  font-family: proxima-nova;
+}
+
+header,
+.newMembersToggle {
+  margin-left: 0;
+}
+
+.newMembersToggle {
+  input[type="checkbox"] {
+    position: relative;
+    clip-path: unset;
+    clip: unset;
+    cursor: pointer;
+    height: 18px;
+    width: 18px;
+    z-index: 0;
+
+    &::before {
+      position: absolute;
+      top: 0;
+      left: 0;
+      content: "";
+      display: block;
+      height: 18px;
+      width: 18px;
+      border: 2px solid #8c1515;
+      border-radius: 3px;
+      background-color: transparent;
+    }
+
+    // Currently the check-fill isn't working — we can return to this in a later ticket
+    //&:checked::after {
+    //  background-color: #8c1515;
+    //}
+
+    &:hover,
+    &:focus {
+      cursor: pointer;
+    }
+  }
+}
+
+.nav-tabs {
+  .nav-item {
+    background: #4d4f53;
+    color: #fff;
+
+    &.active {
+      background: #8c1515;
+    }
+
+    @media only screen and (min-width: 768px) {
+      padding: 0.8rem 1.5rem;
+    }
+  }
+}
+
+.react-autosuggest__container {
+  position: relative;
+  z-index: 1;
+}
+
+.react-autosuggest__input {
+  padding: 0.6rem 2rem 0.8rem;
+  width: 50%;
+}
+
+.react-autosuggest__suggestions-container--open {
+  width: 50%;
+  max-width: 46rem;
+  height: 250px;
+  overflow: scroll;
+  border: 1px solid #000;
+  background: #fff;
+  position: absolute;
+
+  .react-autosuggest__suggestion {
+    padding-left: 2rem;
+
+    &:hover,
+    &:focus {
+      background: #f4f4f4;
+      cursor: pointer;
+    }
+  }
+}
+
+.tab-pane {
+  background: transparent;
+
+  > div > div:nth-child(even) {
+    background: #f4f4f4;
+  }
+
+  h5 {
+    width: 100%;
+    color: #8c1515;
+    font-size: 28px;
+    //@include modular-typography(2);
+  }
+
+  b {
+    font-weight: unset;
+  }
+}
