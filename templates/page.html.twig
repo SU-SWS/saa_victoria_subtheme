@@ -1,0 +1,27 @@
+{%- include "themes/custom/saa_victoria_subtheme/templates/components/brand-bar/saa--brand-bar.html.twig" with { modifier_class : "su-brand-bar--dark" } -%}
+
+{%- if page.help -%}
+  {{ page.help }}
+{%- endif -%}
+
+<header class="su-masthead su-masthead--right">
+  <section>
+    {%- include "themes/custom/saa_victoria_subtheme/templates/components/lockup/saa--lockup.html.twig" with { modifier_class : "su-lockup--option-a", line1: site_name } -%}
+    {%- if page.search -%}
+      {{ page.search }}
+    {%- endif -%}
+    {%- if page.menu -%}
+      {{ page.menu }}
+    {%- endif -%}
+  </section>
+</header>
+
+<div class="page-content">
+  <a name="page-content" id="page-content" tabindex="-1" class="visually-hidden focusable">Page Content</a>
+  {{ page.content }}
+</div>
+
+<footer id="footer">
+  {{ page.footer }}
+  {%- include "@basic-dist/decanter/components/global-footer/global-footer.twig" -%}
+</footer>
