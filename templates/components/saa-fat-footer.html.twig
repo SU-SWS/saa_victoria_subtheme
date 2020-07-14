@@ -32,6 +32,66 @@
 
 {%- extends "@decanter/components/local-footer/local-footer.twig" -%}
 
+{% block contentcell1 %}
+  {#
+    The address is optional so don't put non-address content in it.
+    Use the `cell1` variable instead.
+  #}
+
+    <address class="su-local-footer__address">
+      <p class="address" translate="no"><span class="organization">Stanford Alumni Association</span><br>
+        <span class="address-line1">Frances C. Arrillaga Alumni Center</span><br>
+        <span class="address-line2">326 Galvez Street</span><br>
+        <span class="locality">Stanford</span>, <span class="administrative-area">CA</span> <span class="postal-code">94305-6105</span><br>
+{#        <span class="country">United States</span></p>#}
+    </address>
+  {# Stylized links. See local-footer.json for structure for macro. #}
+    <ul class="su-local-footer__action-links">
+      <li><a href="https://alumni.stanford.edu/get/page/directory/search?pgOrg=saa">Find an alum</a></li>
+      <li><a href="https://alumni.stanford.edu/tools/mail?level=12&groupname=saa&pgOrg=saa&dbc=y">Check your alumni email</a></li>
+      <li><a href="http://giving.stanford.edu/">Give to Stanford</a></li>
+    </ul>
+  {# Stylized links. See local-footer.json for structure for macro. #}
+  <ul class="su-local-footer__social-links">
+    <li>
+      <a href="https://www.facebook.com/stanfordalumni" class="su-local-footer__social-facebook">
+        <i aria-hidden="true"></i>
+        <span>Stanford Facebook</span>
+      </a>
+    </li>
+    <li>
+      <a href="https://www.instagram.com/stanford/" class="su-local-footer__social-instagram">
+        <i aria-hidden="true"></i>
+        <span>Stanford Instagram</span>
+      </a>
+    </li>
+    <li>
+      <a href="https://twitter.com/stanfordalumni" class="su-local-footer__social-twitter">
+        <i aria-hidden="true"></i>
+        <span>Twitter</span>
+      </a>
+    </li>
+    <li>
+      <a href="https://www.linkedin.com/groups/74186/" class="su-local-footer__social-linkedin">
+        <i aria-hidden="true"></i>
+        <span>LinkedIn</span>
+      </a>
+    </li>
+    <li>
+      <a href="http://youtube.com" class="su-local-footer__social-youtube">
+        <i aria-hidden="true"></i>
+        <span>Youtube</span>
+      </a>
+    </li>
+    <li>
+      <a href="internal:/interior-page" class="su-local-footer__social-internal:">
+        <i aria-hidden="true"></i>
+        <span>local link</span>
+      </a>
+    </li>
+  </ul>
+{% endblock %}
+
 {% block contentcell2 %}
   {# Link SEction 1 - top left links. #}
   <nav class="saa-local-footer__links-section saa-local-footer__links-section-1" aria-label="footer primary nav">
