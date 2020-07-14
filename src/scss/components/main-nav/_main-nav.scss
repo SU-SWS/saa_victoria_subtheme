@@ -23,12 +23,12 @@
       .su-multi-menu__link {
         color: $su-color-black;
 
-        &:hover {
+        &:hover,
+        &:focus {
           color: $su-color-cardinal-red;
           text-decoration: none;
 
           &::before {
-            color: $su-color-cardinal-red;
             background-color: $su-color-cardinal-red;
             transform: scaleX(1);
             visibility: visible;
@@ -41,7 +41,6 @@
           color: $su-color-bright-red;
 
           &::before {
-            color: $su-color-bright-red;
             background-color: $su-color-bright-red;
           }
 
@@ -51,7 +50,6 @@
             text-decoration: none;
 
             &::before {
-              color: $su-color-cardinal-red;
               background-color: $su-color-cardinal-red;
             }
           }
