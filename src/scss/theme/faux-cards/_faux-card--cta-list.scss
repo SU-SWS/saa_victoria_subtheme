@@ -2,7 +2,7 @@
 
 .paragraph--type--stanford-wysiwyg {
   .su-wysiwyg-text {
-    a.su-link--action ~ .su-link--action {
+    .su-link--action ~ .su-link--action {
       @include modular-spacing('margin', 0 null null null);
       display: inline-block;
       line-height: 125%;
