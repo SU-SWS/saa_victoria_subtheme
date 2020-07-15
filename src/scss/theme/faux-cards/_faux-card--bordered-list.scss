@@ -1,0 +1,14 @@
+@charset "UTF-8";
+
+.paragraph--type--stanford-wysiwyg {
+  .su-wysiwyg-text {
+    h5 {
+      @include modular-spacing('padding', 0 null 1 null);
+      border-top: 1px solid $su-color-cool-grey;
+      line-height: 125%;
+      font-family: $saa-font--proxima-nova;
+      font-weight: normal;
+      margin-bottom: 0;
+    }
+  }
+}
