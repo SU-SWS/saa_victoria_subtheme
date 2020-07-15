@@ -108,3 +108,17 @@ fonts:
       # Clarendon, Proxima Nova & Calluna fonts package
       'https://use.typekit.net/udw3cbu.css' : { type: external, minified: true }
 #      font-family: clarendon-text-pro, serif;
+
+associates:
+  version: VERSION
+  css:
+    base:
+      src/associates/lib/main.css: {}
+  js:
+    src/associates/lib/app.bundle.js: {}
+
+bootstrap:
+  version: VERSION
+  css:
+    base:
+      'https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css' : { type: external, minified: true }

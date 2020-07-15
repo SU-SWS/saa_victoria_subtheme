@@ -7,6 +7,14 @@
   @include saa-button--purple;
 }
 
+.su-button--big {
+  @include saa-button--big;
+}
+
+.su-button--secondary {
+  @include saa-button--secondary;
+}
+
 .su-link {
   &.su-button {
     @include saa-button--purple;

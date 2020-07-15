@@ -1,0 +1,13 @@
+button {
+  background-color: #8c1515;
+  color: white;
+  height: 30px;
+  padding: 0 1.5em;
+  float: right;
+  margin-right: 50%;
+}
+
+.resultsContainer {
+  margin-bottom: 3em;
+  margin-top: 3em;
+}
