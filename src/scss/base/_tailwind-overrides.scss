@@ -1,0 +1,10 @@
+@charset "UTF-8";
+
+// Tailwind preflight.css file unsets ol and ul styles.
+ul {
+  list-style: disc;
+}
+
+ol {
+  list-style: decimal;
+}
