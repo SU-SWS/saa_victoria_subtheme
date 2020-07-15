@@ -22,3 +22,9 @@
 // targets a text area used next to a media paragraph as long as the faux-card "subtitle" font style is used only for faux-cards.
 @import 'faux-card--layout--media-text-area';
 @import "media-caption-text-area-layout";
+
+// applies to h5 in text area for bordered lists
+@import 'faux-card--bordered-list';
+
+// applies to cta-links in lists (entered with links separated by <br> inside a paragraph.
+@import 'faux-card--cta-list';
