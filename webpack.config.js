@@ -48,7 +48,7 @@ var webpackConfig = {
   devtool: 'source-map',
   // What build?
   entry: {
-    "saa_victoria":  path.resolve(srcSass, "config/index.scss"),
+    "saa-victoria":  path.resolve(srcSass, "config/index.scss"),
     "scripts":       path.resolve(srcJS,   "scripts.js"),
 
   },
