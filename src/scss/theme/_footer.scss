@@ -10,10 +10,6 @@
 
 .su-local-footer__header {
 
-  // TODO : Katria, I put these in for testing.  Please remove. (IDM)
-  @apply italic;
-  @apply text-yellow-700;
-
   .su-link--internal {
     @include saa-button--purple;
     border-radius: 0;

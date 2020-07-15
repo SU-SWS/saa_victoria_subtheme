@@ -56,13 +56,8 @@ $tag-height: 70px;
       & > h2 {
         @include saa-font--calluna-base;
       }
-
-      padding-top: 0;
+      //padding-top: 0; // is this needed or good?
     }
-
-    //.contextual-region + .su-card__contents {
-    //
-    //}
 
     .su-button {
       @include modular-spacing('margin', 1 null null null);
