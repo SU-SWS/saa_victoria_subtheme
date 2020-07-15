@@ -13,7 +13,8 @@
 // indents and relying on a component class for other applications.
 
 // Config and supporting scss.
-
+@import 'tailwind-overrides';
+@import 'fonts/index';
 @import 'tailwind--modular-spacing--padding';
 @import 'tailwind--modular-spacing--margin';
 
