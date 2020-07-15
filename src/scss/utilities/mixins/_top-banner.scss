@@ -18,7 +18,9 @@
   background: $su-color-bright-red;
 
 
-  .su-button {
+  .su-button,
+  .su-button--big,
+  .su-button--secondary {
     @include saa-button--secondary-on-red;
   }
 }

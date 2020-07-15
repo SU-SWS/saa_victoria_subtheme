@@ -40,7 +40,7 @@
 
 @mixin cta-white-on-bright-red {
   .su-link,
-  a {
+  a:not(.su-button):not(.su-button--secondary):not(.su-button--big) {
     @apply text-white;
     text-decoration: underline;
 
