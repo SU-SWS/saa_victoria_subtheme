@@ -2,6 +2,7 @@
 
 .su-link,
 a {
+  // cta-vivid-red mixin includes the call to action link styles
   @include cta-vivid-red;
 }
 
@@ -14,32 +15,6 @@ a {
     &:focus {
       color: $su-color-cardinal-red;
       text-decoration: underline;
-    }
-  }
-}
-
-
-// link icons
-.su-link--action,
-.su-link--download,
-.su-link--external,
-.su-link--internal,
-.su-link--jump,
-.su-link--more,
-.su-link--video {
-  &::after {
-    background-color: $su-color-vivid-red;
-
-    &:hover,
-    &:focus {
-      background-color: $su-color-cardinal-red;
-    }
-  }
-
-  &:hover,
-  &:focus {
-    &::after {
-      background-color: $su-color-cardinal-red;
     }
   }
 }
