@@ -19,19 +19,24 @@ a {
   }
 }
 
-  // red background
+// red background
 .bg-bright-red {
   .su-link {
     @include cta-white-on-bright-red;
   }
 }
-.paragraph-item .saa-banner--has-image {
-  .su-link,
-  a:not(.su-button):not(.su-button--secondary):not(.su-button--big) {
-    @include cta-dark-vivid-red;
+
+// Testimonial Banner accessible link styles
+.paragraph-item {
+  .saa-banner--has-image {
+    .su-link,
+    a:not(.su-button):not(.su-button--secondary):not(.su-button--big) {
+      @include cta-dark-vivid-red;
+    }
   }
 }
 
+// Local Footer accessible link styles
 .su-local-footer {
   .su-local-footer__primary-links,
   .su-local-footer__secondary-links,
