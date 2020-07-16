@@ -7,11 +7,7 @@
   &:hover,
   &:focus {
     color: $su-color-cardinal-red;
-
-    &::after {
-      color: $su-color-cardinal-red;
-      @apply cursor-pointer;
-    }
+    @apply cursor-pointer;
   }
 
   &::after {
@@ -25,6 +21,11 @@
   &.su-link--jump,
   &.su-link--top,
   &.su-link--internal {
+
+    &::after {
+      background-color: $su-color-vivid-red;
+    }
+
     &:hover,
     &:focus {
       &::after {
@@ -87,6 +88,28 @@
       @apply text-gray-700;
     }
   }
-
 }
 
+// This link style is for use
+@mixin cta-dark-vivid-red {
+  @include cta-vivid-red;
+  color: $su-color-vivid-red-dark;
+  @apply no-underline;
+
+  &::after {
+    background-color: $su-color-vivid-red-dark;
+  }
+
+  &.su-link--action,
+  &.su-link--external,
+  &.su-link--download,
+  &.su-link--video,
+  &.su-link--jump,
+  &.su-link--top,
+  &.su-link--internal {
+
+    &::after {
+      background-color: $su-color-vivid-red-dark;
+    }
+  }
+}

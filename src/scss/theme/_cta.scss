@@ -19,10 +19,28 @@ a {
   }
 }
 
-
-// red background
+  // red background
 .bg-bright-red {
   .su-link {
     @include cta-white-on-bright-red;
   }
 }
+.paragraph-item .saa-banner--has-image {
+  .su-link,
+  a:not(.su-button):not(.su-button--secondary):not(.su-button--big) {
+    @include cta-dark-vivid-red;
+  }
+}
+
+.su-local-footer {
+  .su-local-footer__primary-links,
+  .su-local-footer__secondary-links,
+  .su-local-footer__action-links {
+    .su-link,
+    a {
+      @include cta-dark-vivid-red;
+    }
+  }
+}
+
+
