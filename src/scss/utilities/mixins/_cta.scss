@@ -10,10 +10,6 @@
     @apply cursor-pointer;
   }
 
-  &::after {
-    background-color: $su-color-vivid-red;
-  }
-
   &.su-link--action,
   &.su-link--external,
   &.su-link--download,
