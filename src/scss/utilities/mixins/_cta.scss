@@ -14,10 +14,6 @@
     }
   }
 
-  &::after {
-    background-color: $su-color-vivid-red;
-  }
-
   &.su-link--action,
   &.su-link--external,
   &.su-link--download,
@@ -25,6 +21,10 @@
   &.su-link--jump,
   &.su-link--top,
   &.su-link--internal {
+    &::after {
+      background-color: $su-color-vivid-red;
+    }
+
     &:hover,
     &:focus {
       &::after {
