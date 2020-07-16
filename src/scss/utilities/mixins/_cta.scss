@@ -7,25 +7,29 @@
   &:hover,
   &:focus {
     color: $su-color-cardinal-red;
-  }
 
-  &::after {
-    background-color: $su-color-vivid-red;
-
-    &:hover {
+    &::after {
+      color: $su-color-cardinal-red;
       @apply cursor-pointer;
     }
   }
 
-  &:hover::after,
-  &:focus::after {
-    background-color: $su-color-cardinal-red;
+  &::after {
+    background-color: $su-color-vivid-red;
   }
 
-  &.su-link--internal::after {
+  &.su-link--action,
+  &.su-link--external,
+  &.su-link--download,
+  &.su-link--video,
+  &.su-link--jump,
+  &.su-link--top,
+  &.su-link--internal {
     &:hover,
     &:focus {
-      background-color: $su-color-cardinal-red;
+      &::after {
+        background-color: $su-color-cardinal-red;
+      }
     }
   }
 
