@@ -75,7 +75,7 @@
 .su-local-footer__action-links {
   .su-link,
   a {
-    @include cta-vivid-red;
+    @include cta-vivid-red;  // change to cta-vivid-red-dark once that is merged in and available
   }
 }
 
