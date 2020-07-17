@@ -94,7 +94,8 @@
   }
 }
 
-// This link style is for use
+// This link style is for used to override the vivid-red cta styles for colored background (i.e. Sandstone, Light Grey).
+// It inherits the hover and focus styling from the vivid-red cta mixin
 @mixin cta-dark-vivid-red {
   @include cta-vivid-red;
   color: $su-color-vivid-red-dark;
