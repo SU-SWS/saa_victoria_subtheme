@@ -7,25 +7,34 @@
   &:hover,
   &:focus {
     color: $su-color-cardinal-red;
+    @apply cursor-pointer;
+
+    &::after {
+      background-color: $su-color-cardinal-red;
+    }
   }
 
   &::after {
     background-color: $su-color-vivid-red;
+  }
 
-    &:hover {
-      @apply cursor-pointer;
+  &.su-link--action,
+  &.su-link--external,
+  &.su-link--download,
+  &.su-link--video,
+  &.su-link--jump,
+  &.su-link--top,
+  &.su-link--internal {
+
+    &::after {
+      background-color: $su-color-vivid-red;
     }
-  }
 
-  &:hover::after,
-  &:focus::after {
-    background-color: $su-color-cardinal-red;
-  }
-
-  &.su-link--internal::after {
     &:hover,
     &:focus {
-      background-color: $su-color-cardinal-red;
+      &::after {
+        background-color: $su-color-cardinal-red;
+      }
     }
   }
 
@@ -40,7 +49,7 @@
 
 @mixin cta-white-on-bright-red {
   .su-link,
-  a {
+  a:not(.su-button):not(.su-button--secondary):not(.su-button--big) {
     @apply text-white;
     text-decoration: underline;
 
@@ -83,6 +92,29 @@
       @apply text-gray-700;
     }
   }
-
 }
 
+// This link style is for used to override the vivid-red cta styles for colored background (i.e. Sandstone, Light Grey).
+// It inherits the hover and focus styling from the vivid-red cta mixin
+@mixin cta-dark-vivid-red {
+  @include cta-vivid-red;
+  color: $su-color-vivid-red-dark;
+  @apply no-underline;
+
+  &::after {
+    background-color: $su-color-vivid-red-dark;
+  }
+
+  &.su-link--action,
+  &.su-link--external,
+  &.su-link--download,
+  &.su-link--video,
+  &.su-link--jump,
+  &.su-link--top,
+  &.su-link--internal {
+
+    &::after {
+      background-color: $su-color-vivid-red-dark;
+    }
+  }
+}

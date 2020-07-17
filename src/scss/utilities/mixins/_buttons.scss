@@ -30,6 +30,11 @@
   color: $saa-color-electric-purple;
   border: 1px solid $saa-color-electric-purple;
   text-decoration: none;
+
+  &:hover,
+  &:focus {
+    box-shadow: none;
+  }
 }
 @mixin saa-button--big {
   @include button-big; // should set big font size but it doesn't. big size should be set out of decanter anyway.

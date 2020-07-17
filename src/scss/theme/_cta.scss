@@ -2,6 +2,7 @@
 
 .su-link,
 a {
+  // cta-vivid-red mixin includes the call to action link styles
   @include cta-vivid-red;
 }
 
@@ -18,36 +19,44 @@ a {
   }
 }
 
-
-// link icons
-.su-link--action,
-.su-link--download,
-.su-link--external,
-.su-link--internal,
-.su-link--jump,
-.su-link--more,
-.su-link--video {
-  &::after {
-    background-color: $su-color-vivid-red;
-
-    &:hover,
-    &:focus {
-      background-color: $su-color-cardinal-red;
-    }
-  }
-
-  &:hover,
-  &:focus {
-    &::after {
-      background-color: $su-color-cardinal-red;
-    }
-  }
-}
-
-
 // red background
 .bg-bright-red {
   .su-link {
     @include cta-white-on-bright-red;
   }
 }
+
+// Testimonial Banner accessible link styles
+.paragraph-item {
+  .saa-banner--has-image {
+    .su-link:not(.su-button):not(.su-button--secondary):not(.su-button--big),
+    a:not(.su-button):not(.su-button--secondary):not(.su-button--big) {
+      @include cta-dark-vivid-red;
+    }
+  }
+}
+
+// Local Footer accessible link styles
+.su-local-footer {
+  .su-local-footer__primary-links,
+  .su-local-footer__secondary-links,
+  .su-local-footer__action-links {
+    .su-link:not(.su-button):not(.su-button--secondary):not(.su-button--big),
+    a:not(.su-button):not(.su-button--secondary):not(.su-button--big) {
+      @include cta-dark-vivid-red;
+    }
+  }
+
+  .su-local-footer__header {
+    .su-link,
+    a {
+      &.su-link--internal {
+        &::after {
+          background-color: $su-color-white;
+        }
+      }
+    }
+  }
+}
+
+

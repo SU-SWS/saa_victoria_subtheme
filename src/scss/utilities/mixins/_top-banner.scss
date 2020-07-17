@@ -17,8 +17,10 @@
   min-height: inherit;
   background: $su-color-bright-red;
 
-
-  .su-button {
+  // Only the secondary button styles should be used on this bright red banner
+  .su-button,
+  .su-button--big,
+  .su-button--secondary {
     @include saa-button--secondary-on-red;
   }
 }
