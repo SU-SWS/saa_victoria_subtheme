@@ -57,11 +57,15 @@
 }
 
 // purple buttons
-@mixin saa-button--purple {
+@mixin saa-button--purple--only {
   @include saa-button--hover-and-focus;
   background: $saa-color-electric-purple;
   color: $su-color-white;
   padding: 10px 30px;
+}
+
+@mixin saa-button--purple {
+  @include saa-button--purple--only;
 
   &.su-button--secondary {
     @include saa-button--secondary;
