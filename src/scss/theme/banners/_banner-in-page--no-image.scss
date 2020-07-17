@@ -98,8 +98,15 @@
           }
 
           // Might not need this as the current default button styling is saa-button--purple
-          .su-button {
-            @include saa-button--purple;
+          .su-button,
+          .su-button--big,
+          .su-button--secondary {
+            @include saa-button--purple--only;
+          }
+
+          .su-button--big {
+            font-size: 2rem !important; // TODO: Katria, this is not responsive, fix this after webpack reorg pr is merged, see main big button mixin in our theme
+            padding: 10px 30px;
           }
         }
       }
