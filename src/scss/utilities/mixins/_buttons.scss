@@ -41,7 +41,9 @@
   @include saa-button--hover-and-focus;
   background: $saa-color-electric-purple;
   color: $su-color-white;
-  font-size: 2.8rem !important; // this is not responsive, come back to this because decanter mixin isn't applying
+  @include grid-media-min('xl') {
+    font-size: 2.8rem !important; // TODO: Katria, this is not responsive, come back to this because decanter mixin is being overridden, fix this after webpack reorg pr is merged
+  }
 }
 
 @mixin saa-button--secondary-on-red {
