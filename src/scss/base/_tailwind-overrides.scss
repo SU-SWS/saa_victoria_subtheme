@@ -8,3 +8,9 @@ ul {
 ol {
   list-style: decimal;
 }
+// fix decanter setting some things to 0 or a default
+input, select, textarea {
+  margin: .2em 0;
+  padding: 1rem .7em;
+  line-height: 1.3;
+}
