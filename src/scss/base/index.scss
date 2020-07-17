@@ -18,6 +18,7 @@
 @import '../utilities/index';
 // set the stanford basic base styles AFTER tailwind
 // decanter modular spacing, modeled after tailwind
+@import 'tailwind-overrides';
 @import 'tailwind--modular-spacing--padding';
 @import 'tailwind--modular-spacing--margin';
 @import 'fonts/index';
