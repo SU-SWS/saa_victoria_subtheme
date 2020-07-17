@@ -8,6 +8,10 @@
   &:focus {
     color: $su-color-cardinal-red;
     @apply cursor-pointer;
+
+    &::after {
+      background-color: $su-color-cardinal-red;
+    }
   }
 
   &::after {

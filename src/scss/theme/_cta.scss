@@ -46,6 +46,17 @@ a {
       @include cta-dark-vivid-red;
     }
   }
+
+  .su-local-footer__header {
+    .su-link,
+      a {
+        &.su-link--internal {
+          &::after {
+            background-color: $su-color-white;
+        }
+      }
+    }
+  }
 }
 
 
