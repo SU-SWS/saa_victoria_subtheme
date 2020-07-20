@@ -20,6 +20,10 @@ $card-circle--width: 140px;
       .align-left ~ * {
         margin-left: $card-circle--width + 30px; // width of circle plus padding
       }
+      .align-left ~ h2,
+      .align-left ~ h3 {
+        padding-top: 0;
+      }
     }
   }
 }
