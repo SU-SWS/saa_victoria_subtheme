@@ -1,5 +1,19 @@
 @charset "UTF-8";
 
+.su-brand-bar {
+  height: 50px;
+}
+
+.su-brand-bar__container {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+.su-brand-bar__logo {
+  margin-top: 0;
+}
+
 .su-brand-bar__img {
-  height: 18px;
+  height: 22px;
 }
