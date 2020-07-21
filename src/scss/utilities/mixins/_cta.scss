@@ -1,7 +1,7 @@
 @charset "UTF-8";
 
 @mixin cta-vivid-red {
-  color: $su-color-vivid-red;
+  color: $saa-color-vivid-red;
   @apply no-underline;
 
   &:hover,
@@ -15,7 +15,7 @@
   }
 
   &::after {
-    background-color: $su-color-vivid-red;
+    background-color: $saa-color-vivid-red;
   }
 
   &.su-link--action,
@@ -27,7 +27,7 @@
   &.su-link--internal {
 
     &::after {
-      background-color: $su-color-vivid-red;
+      background-color: $saa-color-vivid-red;
     }
 
     &:hover,
