@@ -38,8 +38,8 @@
   form {
     .su-button:focus,
     .su-button:hover,
-    input[type=submit]:focus,
-    input[type=submit]:hover {
+    input[type="submit"]:focus,
+    input[type="submit"]:hover {
       background-color: $saa-color-electric-purple-dark;
     }
   }
