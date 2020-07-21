@@ -1,12 +1,18 @@
 @charset "UTF-8";
 @import "../../utilities/index";
 
-.react-paragraphs-row.container-1-items {
+.container-1-items {
   .su-card {
     &.su-card--icon {
 
+      .su-card__contents {
+        span {
+          @include modular-typography(1);
+        }
+      }
+
       h2 {
-        @include modular-typography(2);
+        @include modular-typography(3);
       }
 
       p {
@@ -14,5 +20,4 @@
       }
     }
   }
-
 }
