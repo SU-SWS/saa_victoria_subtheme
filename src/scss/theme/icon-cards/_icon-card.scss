@@ -1,5 +1,5 @@
 @charset "UTF-8";
-@import "../utilities/index"; // katria come back to, if this is the right approach
+@import "../../utilities/index";
 
 // Icon Card styles will go here
 $tag-width: 20px;
@@ -46,6 +46,10 @@ $tag-height: 70px;
       text-left;
       margin: 0;
       @include modular-spacing('padding', 4 4 4 4);
+
+      & > :first-child {
+        margin-top: 0;
+      }
     }
 
     .contextual-region + .su-card__contents {
