@@ -1,31 +1,40 @@
 @charset "UTF-8";
 
 @mixin cta-vivid-red {
-  color: $su-color-vivid-red;
-  text-decoration: none;
+  color: $saa-color-vivid-red;
+  @apply no-underline;
 
   &:hover,
   &:focus {
     color: $su-color-cardinal-red;
-  }
+    @apply cursor-pointer;
 
-  &::after {
-    background-color: $su-color-vivid-red;
-
-    &:hover {
-      cursor: pointer;
+    &::after {
+      background-color: $su-color-cardinal-red;
     }
   }
 
-  &:hover::after,
-  &:focus::after {
-    background-color: $su-color-cardinal-red;
+  &::after {
+    background-color: $saa-color-vivid-red;
   }
 
-  &.su-link--internal::after {
+  &.su-link--action,
+  &.su-link--external,
+  &.su-link--download,
+  &.su-link--video,
+  &.su-link--jump,
+  &.su-link--top,
+  &.su-link--internal {
+
+    &::after {
+      background-color: $saa-color-vivid-red;
+    }
+
     &:hover,
     &:focus {
-      background-color: $su-color-cardinal-red;
+      &::after {
+        background-color: $su-color-cardinal-red;
+      }
     }
   }
 
@@ -40,21 +49,21 @@
 
 @mixin cta-white-on-bright-red {
   .su-link,
-  a {
-    //@apply text-white;
+  a:not(.su-button):not(.su-button--secondary):not(.su-button--big) {
+    @apply text-white;
     text-decoration: underline;
 
     &:hover,
     &:focus {
-      //@apply underline;
+      @apply underline;
       color: $saa-color-dandelion;
     }
 
     &::after {
-      //@apply bg-white;
+      @apply bg-white;
 
       &:hover {
-        //@apply cursor-pointer;
+        @apply cursor-pointer;
         background-color: $saa-color-dandelion;
       }
     }
@@ -65,7 +74,7 @@
     }
 
     &.su-link--action {
-      //@apply no-underline;
+      @apply no-underline;
     }
 
     &.su-link--internal::after {
@@ -80,9 +89,32 @@
     }
 
     &.disabled {
-      //@apply text-gray-700;
+      @apply text-gray-700;
     }
   }
-
 }
 
+// This link style is for used to override the vivid-red cta styles for colored background (i.e. Sandstone, Light Grey).
+// It inherits the hover and focus styling from the vivid-red cta mixin
+@mixin cta-dark-vivid-red {
+  @include cta-vivid-red;
+  color: $su-color-vivid-red-dark;
+  @apply no-underline;
+
+  &::after {
+    background-color: $su-color-vivid-red-dark;
+  }
+
+  &.su-link--action,
+  &.su-link--external,
+  &.su-link--download,
+  &.su-link--video,
+  &.su-link--jump,
+  &.su-link--top,
+  &.su-link--internal {
+
+    &::after {
+      background-color: $su-color-vivid-red-dark;
+    }
+  }
+}

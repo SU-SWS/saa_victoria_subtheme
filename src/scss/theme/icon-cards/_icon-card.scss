@@ -1,14 +1,9 @@
 @charset "UTF-8";
+@import "../../utilities/index";
 
 // Icon Card styles will go here
 $tag-width: 20px;
 $tag-height: 70px;
-
-.basic-component {
-  // @apply text-gray-700;
-  font-size: larger;
-  background-color: $saa-color-electric-purple-dark;
-}
 
 .su-card {
   &.su-card--icon {
@@ -28,9 +23,9 @@ $tag-height: 70px;
       content: "";
       height: $tag-height;
       width: $tag-width;
-      // @apply
-      // block
-      // absolute;  // top left corner inside the card
+      @apply
+      block
+      absolute;  // top left corner inside the card
       background: $saa-color-electric-purple;
 
       &.tag-color--electric-purple::before {
@@ -47,16 +42,26 @@ $tag-height: 70px;
     }
 
     .su-card__contents {
-      // @apply text-left;
+      @apply
+      text-left;
       margin: 0;
       @include modular-spacing('padding', 4 4 4 4);
 
+      & > :first-child {
+        margin-top: 0;
+      }
+    }
+
+    .contextual-region + .su-card__contents {
+      padding-top: 0;
+    }
+
+    .su-card__contents {
       @include saa-font--proxima-nova-base;
 
       & > h2 {
         @include saa-font--calluna-base;
       }
-      //padding-top: 0; // is this needed or good?
     }
 
     .su-button {
