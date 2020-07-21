@@ -1,1 +1,26 @@
 @charset "UTF-8";
+
+.su-secondary-nav--light {
+
+  // current page
+  .su-secondary-nav__item--current > .su-secondary-nav__link {
+    color: $saa-color-vivid-red;
+
+    &:before {
+      background-color: $saa-color-vivid-red;
+    }
+  }
+
+  .su-secondary-nav__link {
+    color: $su-color-black;
+
+    &:hover,
+    &:focus {
+      color: $su-color-cardinal-red;
+
+      &::before {
+        background-color: $su-color-cardinal-red;
+      }
+    }
+  }
+}
