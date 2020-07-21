@@ -6,7 +6,7 @@
   .su-secondary-nav__item--current > .su-secondary-nav__link {
     color: $saa-color-vivid-red;
 
-    &:before {
+    &::before {
       background-color: $saa-color-vivid-red;
     }
   }
