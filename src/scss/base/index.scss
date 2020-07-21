@@ -12,17 +12,10 @@
 // of the ul element may be completely unstyled, removing list markers and
 // indents and relying on a component class for other applications.
 
-// Config and supporting scss.
-@import '../config/index';
-@import "~tailwindcss";
-@import '../utilities/index';
-// set the stanford basic base styles AFTER tailwind
-// decanter modular spacing, modeled after tailwind
-@import 'tailwind-overrides';
-@import 'tailwind-overrides';
 @import 'fonts/index';
 @import 'tailwind--modular-spacing--padding';
 @import 'tailwind--modular-spacing--margin';
+@import 'tailwind-overrides';
 
 .stanford-starter {
   &::after {
