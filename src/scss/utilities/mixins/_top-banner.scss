@@ -17,6 +17,10 @@
   min-height: inherit;
   background: $su-color-bright-red;
 
+  h2 {
+    @include modular-typography(3);
+  }
+
   // Only the secondary button styles should be used on this bright red banner
   .su-button,
   .su-button--big,
