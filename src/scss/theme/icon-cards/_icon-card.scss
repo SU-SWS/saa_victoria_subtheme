@@ -46,6 +46,10 @@ $tag-height: 70px;
       text-left;
       margin: 0;
       @include modular-spacing('padding', 4 4 4 4);
+
+      & > :first-child {
+        margin-top: 0;
+      }
     }
 
     .contextual-region + .su-card__contents {

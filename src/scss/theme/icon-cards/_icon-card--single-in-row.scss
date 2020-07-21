@@ -1,0 +1,18 @@
+@charset "UTF-8";
+@import "../../utilities/index"; // katria come back to, if this is the right approach
+
+.react-paragraphs-row.container-1-items {
+  .su-card {
+    &.su-card--icon {
+
+      h2 {
+        @include modular-typography(2);
+      }
+
+      p {
+        @include modular-typography(1);
+      }
+    }
+  }
+
+}
