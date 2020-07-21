@@ -11,3 +11,13 @@
   padding-left: 0;
   border-left: 0;
 }
+
+@include grid-media-min('lg') {
+  .su-masthead {
+    .su-lockup--option-a {
+      .su-lockup__line1 {
+        line-height: 1.2em;
+      }
+    }
+  }
+}
