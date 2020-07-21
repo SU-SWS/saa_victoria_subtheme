@@ -1,5 +1,7 @@
 @charset "UTF-8";
 
+@import '../../utilities/index';
+
 .su-multi-menu {
   .su-multi-menu__nav-toggle--right {
     &:hover::before,
@@ -9,11 +11,11 @@
     }
 
     &[aria-expanded="true"] {
-      color: $su-color-bright-red;
+      color: $saa-color-vivid-red;
 
       &::before {
-        color: $su-color-bright-red;
-        background-color: $su-color-bright-red;
+        color: $saa-color-vivid-red;
+        background-color: $saa-color-vivid-red;
       }
     }
   }
@@ -38,10 +40,10 @@
 
       &.su-multi-menu__item--active-trail {
         .su-multi-menu__link {
-          color: $su-color-bright-red;
+          color: $saa-color-vivid-red;
 
           &::before {
-            background-color: $su-color-bright-red;
+            background-color: $saa-color-vivid-red;
           }
 
           &:hover,
