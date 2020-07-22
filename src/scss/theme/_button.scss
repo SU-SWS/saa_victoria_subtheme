@@ -2,7 +2,7 @@
 
 // this will only pull in the original tailwind from node_modules, not our custom version
 @import '../utilities/index';
-
+.button, // special override for user-login page
 // override decanter button styles here to use new colors and any other differences
 // default button style for this theme
 
@@ -33,7 +33,6 @@
 }
 
 // special overrides
-
 .system-main-block {
   form {
     .su-button:focus,
