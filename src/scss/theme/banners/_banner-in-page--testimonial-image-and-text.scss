@@ -109,3 +109,15 @@ $banner-circle--image-width: 200px;
     }
   }
 }
+
+
+// when on a page with a sidebar nav, needs adjustments:
+.jumpstart-ui--two-column.centered-container {
+  .flex-lg-9-of-12.main-region {
+    .su-hero {
+      .su-card__contents {
+        max-width: 700px;
+      }
+    }
+  }
+}
