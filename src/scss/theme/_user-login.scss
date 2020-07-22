@@ -2,8 +2,22 @@
 
 .system-main-block {
   form {
-    background: $su-color-fog;
-    opacity: 0.9;
+    background: rgba($su-color-fog, 0.9);
     color: $su-color-black;
+
+    input {
+      background: $su-color-white;
+    }
+    // special button overrides
+    .button, {
+      @include saa-button--purple;
+    }
+
+    .su-button:focus,
+    .su-button:hover,
+    input[type="submit"]:focus,
+    input[type="submit"]:hover {
+      background-color: $saa-color-electric-purple-dark;
+    }
   }
 }
