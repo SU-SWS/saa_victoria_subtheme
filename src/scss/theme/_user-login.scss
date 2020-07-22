@@ -8,11 +8,13 @@
     input {
       background: $su-color-white;
     }
-    // special button overrides
+
+    // This button class is used when Local Drupal login is enabled
     .button {
       @include saa-button--purple;
     }
 
+    // special button overrides
     .su-button:focus,
     .su-button:hover,
     input[type="submit"]:focus,
