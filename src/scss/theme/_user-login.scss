@@ -9,7 +9,7 @@
       background: $su-color-white;
     }
     // special button overrides
-    .button, {
+    .button {
       @include saa-button--purple;
     }
 
