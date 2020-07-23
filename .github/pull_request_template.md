@@ -12,9 +12,9 @@
 
 # Steps to Test
 
-1. Do this
-1. Then this
-2. Then this
+1. Pull down the branch
+2. Clear the site cache
+3. Then this
 
 # Affected Projects or Products
 - Does this PR impact any particular projects, products, or modules?
