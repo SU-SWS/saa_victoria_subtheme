@@ -12,7 +12,7 @@ $banner-circle--image-width: 200px;
       min-height: unset;
       position: unset;
       @include modular-spacing('padding-top', 5);
-      @include modular-spacing('padding-bottom', 7);
+      @include modular-spacing('padding-bottom', 6);
 
       @include grid-media-max('md') {
         @include modular-spacing('padding', 3);
