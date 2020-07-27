@@ -3,7 +3,8 @@
 .paragraph {
 
   // table immediately after an h2 or h3
-  h2 ~ table, h3 ~ table {
+  h2 ~ table,
+  h3 ~ table {
     margin-top: 0;
   }
 
