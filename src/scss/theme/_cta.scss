@@ -9,12 +9,24 @@ a {
 .su-wysiwyg-text {
   a:not(.su-button):not(.su-button--secondary):not(.su-button--big) {
     color: $saa-color-vivid-red;
-    text-decoration: underline;
 
-    &:hover,
-    &:focus {
-      color: $su-color-cardinal-red;
+    // regular plain links or non-action icon links
+    &:not(.su-link--action) {
       text-decoration: underline;
+
+      &:hover,
+      &:focus {
+        color: $su-color-cardinal-red;
+        text-decoration: underline;
+      }
+    }
+
+    // applies to action links
+    &.su-link--action {
+      &:hover,
+      &:focus {
+        color: $su-color-cardinal-red;
+      }
     }
   }
 }

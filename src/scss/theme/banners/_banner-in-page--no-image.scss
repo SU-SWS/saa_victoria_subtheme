@@ -63,6 +63,7 @@
           }
 
           p {
+            @include modular-typography(1);
             margin-bottom: 18px;
           }
 
