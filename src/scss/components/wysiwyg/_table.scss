@@ -1,6 +1,12 @@
 @charset "UTF-8";
 
 .paragraph {
+
+  // table immediately after an h2 or h3
+  h2 ~ table, h3 ~ table {
+    margin-top: 0;
+  }
+
   table {
     tr:nth-child(even) {
       background: $su-color-fog;
