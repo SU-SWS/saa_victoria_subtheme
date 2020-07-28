@@ -11,6 +11,14 @@ ol {
   padding-left: 1em;
 }
 
+ol[type="a"] {
+  list-style: lower-alpha;
+}
+
+ol[type="I"] {
+  list-style: upper-roman;
+}
+
 // fix decanter setting some things to 0 or a default
 input,
 select,
