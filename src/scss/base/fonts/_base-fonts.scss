@@ -85,3 +85,8 @@ p.su-callout-text,
 // what about su-font-splash and other text styles?
 //su-font-splash,
 //p.su-callout-text
+
+// overridding decanter and base specific source sans declaration
+.su-card .su-card__contents {
+  @include saa-font--proxima-nova-base;
+}
