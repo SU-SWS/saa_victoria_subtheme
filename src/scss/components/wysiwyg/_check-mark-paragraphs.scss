@@ -2,8 +2,10 @@
 
 .su-wysiwyg-text {
   .check-mark-paragraph {
-    margin-bottom: 22px;
+    margin-bottom: 12px;
     margin-left: 50px;
+    line-height: 150%;
+
     &::before {
       content: url("#{$su-image-path}/check.svg");
       width: 16px;
