@@ -15,6 +15,10 @@ ol[type="a"] {
   list-style: lower-alpha;
 }
 
+ol[type="i"] {
+  list-style: lower-roman;
+}
+
 ol[type="I"] {
   list-style: upper-roman;
 }
