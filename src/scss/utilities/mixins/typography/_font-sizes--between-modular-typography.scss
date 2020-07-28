@@ -1,0 +1,9 @@
+@charset "UTF-8";
+
+// this is used for the sizing between modular typography 0 and -1
+@mixin saa-modular-typography-small {
+  font-size: 15px;
+  @include grid-media-min('md') {
+    font-size: 17px;
+  }
+}

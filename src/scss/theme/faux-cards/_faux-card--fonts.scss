@@ -7,17 +7,13 @@
   }
 
   p.su-subheading {
+    @include saa-modular-typography-small;
     @include modular-spacing('margin', 2 null null null);
 
     margin-bottom: 5px;
     line-height: 1;
-    font-size: 15px;
     font-weight: bold;
     text-transform: capitalize;
-
-    @include grid-media-min('md') {
-      font-size: 17px;
-    }
 
     & ~ * {
       padding-top: 0;
