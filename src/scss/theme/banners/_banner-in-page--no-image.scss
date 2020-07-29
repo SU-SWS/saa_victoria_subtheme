@@ -57,6 +57,11 @@
             max-width: $banner-b--xl;
           }
 
+          // small text / superheading field
+          span {
+            @include saa-modular-typography-small;
+          }
+
           span,
           h2 {
             margin-bottom: 26px;
