@@ -10,20 +10,20 @@ ul {
 ol {
   list-style: decimal;
   padding-left: 1em;
-}
 
-ol.list-a {
-  list-style: lower-alpha;
-}
+  &.list--a {
+    list-style: lower-alpha;
+  }
 
-ol.list-A {
-  list-style: upper-alpha;
-}
+  &.list--A {
+    list-style: upper-alpha;
+  }
 
-ol.list-i {
-  list-style: lower-roman;
-}
+  &.list--i {
+    list-style: lower-roman;
+  }
 
-ol.list-I {
-  list-style: upper-roman;
+  &.list--I {
+    list-style: upper-roman;
+  }
 }
