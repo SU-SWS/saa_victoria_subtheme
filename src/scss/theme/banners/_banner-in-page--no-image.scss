@@ -74,41 +74,43 @@
 
 
           // regular links and action links
-          a:not(.su-button):not(.su-button--secondary):not(.su-button--big),
-          .su-link,
-          .su-link--action {
-            margin-top: 12px;
-            color: $su-color-white;
-            // Note: This does not use the @cta-white-on-bright-red mixin because the yellow hover is not accessible on vivid-red bg
-          }
+          //a:not(.su-button):not(.su-button--secondary):not(.su-button--big),
+          //.su-link,
+          //.su-link--action {
+          //  margin-top: 12px;
+          //  color: $su-color-white;
+          //  // Note: This does not use the @cta-white-on-bright-red mixin because the yellow hover is not accessible on vivid-red bg
+          //}
 
-          // regular links, not action links
+          // regular links and action links
           a:not(.su-button):not(.su-button--secondary):not(.su-button--big),
           .su-link {
-            text-decoration: underline;
+            margin-top: 12px;
+            color: $su-color-white;
 
-            &:hover,
-            &:focus {
-              color: $saa-color-extra-light-cloud;
+            &:not(.su-link--action) {
+              text-decoration: underline;
             }
-          }
 
-          .su-link--action {
-            // cta-white-on-bright-red currently does not include the action link styling (.su-link--action)
-            text-decoration: none;
-
+            // for action and other types of links
             &::after {
               //@apply bg-white;
               background: $su-color-white;
             }
 
-            //&:hover,
-            //&:focus {
-            //  //@apply underline;
-            //  text-decoration: underline;
-            //  color: $saa-color-extra-light-cloud;
-            //}
+            &:hover,
+            &:focus {
+              color: $saa-color-extra-light-cloud;
+              text-decoration: underline;
+            }
           }
+
+          // action link specific overrides
+          //a.su-link--action,
+          //.su-link--action {
+          //  // cta-white-on-bright-red currently does not include the action link styling (.su-link--action)
+          //  text-decoration: none;
+          //}
 
           // Might not need this as the current default button styling is saa-button--purple
           .su-button,
