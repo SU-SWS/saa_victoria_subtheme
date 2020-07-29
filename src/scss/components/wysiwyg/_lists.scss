@@ -1,0 +1,23 @@
+@charset "UTF-8";
+
+// Note: These are needed because decanter sets to none.
+ol {
+  list-style: decimal;
+  padding-left: 1em;
+}
+
+ol.list-a {
+  list-style: lower-alpha;
+}
+
+ol.list-A {
+  list-style: upper-alpha;
+}
+
+ol.list-i {
+  list-style: lower-roman;
+}
+
+ol.list-I {
+  list-style: upper-roman;
+}
