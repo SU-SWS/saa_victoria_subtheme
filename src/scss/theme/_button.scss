@@ -2,7 +2,6 @@
 
 // override decanter button styles here to use new colors and any other differences
 // default button style for this theme
-
 .su-button {
   @include saa-button--purple;
 }
@@ -26,18 +25,5 @@
 .bg-vivid-red {
   .su-button {
     @include saa-button--secondary;
-  }
-}
-
-// special overrides
-
-.system-main-block {
-  form {
-    .su-button:focus,
-    .su-button:hover,
-    input[type="submit"]:focus,
-    input[type="submit"]:hover {
-      background-color: $saa-color-electric-purple-dark;
-    }
   }
 }
