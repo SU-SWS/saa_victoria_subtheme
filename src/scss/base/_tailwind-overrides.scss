@@ -1,11 +1,5 @@
 @charset "UTF-8";
 
-// Tailwind preflight.css file unsets ol and ul styles.
-ul {
-  list-style: disc;
-  padding-left: 1em;
-}
-
 // fix decanter setting some things to 0 or a default
 input,
 select,

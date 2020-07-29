@@ -1,5 +1,11 @@
 @charset "UTF-8";
 
+// Tailwind preflight.css file unsets ol and ul styles.
+ul {
+  list-style: disc;
+  padding-left: 1em;
+}
+
 // Note: These are needed because decanter sets to none.
 ol {
   list-style: decimal;
