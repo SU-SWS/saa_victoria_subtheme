@@ -83,8 +83,7 @@
           //}
 
           // regular links and action links
-          a:not(.su-button):not(.su-button--secondary):not(.su-button--big),
-          .su-link {
+          a:not(.su-button):not(.su-button--secondary):not(.su-button--big) {
             margin-top: 12px;
             color: $su-color-white;
 
