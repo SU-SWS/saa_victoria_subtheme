@@ -60,6 +60,7 @@
           // small text / superheading field
           span {
             @include saa-modular-typography-small;
+            padding-top: 1px; // fixes letters getting cut off
           }
 
           span,
