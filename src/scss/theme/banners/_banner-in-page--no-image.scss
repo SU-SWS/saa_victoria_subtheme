@@ -28,7 +28,7 @@
           @include modular-spacing('padding', 3);
 
           align-items: center;
-          background: $saa-color-vivid-red;
+          background: $su-color-vivid-red-dark;
           border: 0;
           box-shadow: none;
           color: $su-color-white;
@@ -72,25 +72,27 @@
             margin-bottom: 18px;
           }
 
+
+          // regular links and action links
+          //a:not(.su-button):not(.su-button--secondary):not(.su-button--big),
+          //.su-link,
+          //.su-link--action {
+          //  margin-top: 12px;
+          //  color: $su-color-white;
+          //  // Note: This does not use the @cta-white-on-bright-red mixin because the yellow hover is not accessible on vivid-red bg
+          //}
+
+          // regular links and action links
           a:not(.su-button):not(.su-button--secondary):not(.su-button--big),
-          .su-link,
-          .su-link--action {
+          .su-link {
             margin-top: 12px;
             color: $su-color-white;
 
-            // Note: This does not use the @cta-white-on-bright-red mixin because the yellow hover is not accessible on vivid-red bg
-            &:hover,
-            &:focus {
+            &:not(.su-link--action) {
               text-decoration: underline;
             }
-          }
 
-          .su-link--action {
-            // cta-white-on-bright-red currently does not include the action link styling (.su-link--action)
-            //@include cta-white-on-bright-red;
-            //@apply text-white;
-            color: $su-color-white;
-
+            // for action and other types of links
             &::after {
               //@apply bg-white;
               background: $su-color-white;
@@ -98,7 +100,7 @@
 
             &:hover,
             &:focus {
-              //@apply underline;
+              color: $saa-color-extra-light-cloud;
               text-decoration: underline;
             }
           }
