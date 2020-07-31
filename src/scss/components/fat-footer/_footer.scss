@@ -3,6 +3,8 @@
 
 /* Footer Layout */
 .su-local-footer__columns {
+  @include modular-spacing('padding-top', 4);
+
   @include grid-media-min(xl) {
     -ms-grid-columns: 3fr 2fr 2fr 2fr;
     grid-template-columns: 3fr 2fr 2fr 2fr;
@@ -25,9 +27,6 @@
       min-width: calc(33% - 24px);  // change to 1/3 width instead of 1/2 width
       max-width: calc(33% - 24px);
 
-      a {
-        color: $su-color-black;
-      }
     }
   }
 
@@ -37,84 +36,103 @@
 
 }
 
+// General styles
+.su-local-footer  {
 
-/* First Column Styles */
+  nav {
+    a {
+      @include cta-vivid-red;
+      // only difference should be regular state is black:
+      color: $su-color-black;
 
-// logo
-.su-fat-footer__logo {
-  max-width: 250px;
-  @include modular-spacing('padding-bottom', 4);
+      &:hover,
+      &:focus {
+        //color: $su-color-vivid-red-dark;
+
+    }
+  }
 }
 
-.su-local-footer__address .organization {
-  font-weight: bold;
-}
 
 
-/* Link Section Headings  */
+  /* First Column Styles */
 
-// probably a better way to do spacing with headers,
+  // logo
+  .su-fat-footer__logo {
+    max-width: 250px;
+    @include modular-spacing('padding-bottom', 4);
+  }
+
+  .su-local-footer__address .organization {
+    font-weight: bold;
+  }
+
+
+  /* Link Section Headings  */
+
+  // probably a better way to do spacing with headers,
   // but this is a quick way for now,
   // need to think about how to handle with all the different layouts with the columns.
 
-.su-local-footer__list-heading {
-  @include modular-spacing('padding', 2 null 2 null);
-}
-
-@media only screen and (min-width: 1200px) { // Katria change to variable
-  .saa-local-footer__links-section-1 {
-    .su-local-footer__list-heading {
-      padding-top: 0;
-    }
+  .su-local-footer__list-heading {
+    @include modular-spacing('padding', 2 null 2 null);
   }
-}
 
-@media only screen and (min-width: 1200px) { // Katria change to variable
-  saa-local-footer__links-section-2 {
-    .su-local-footer__list-heading {
-      padding-top: 0;
-    }
-  }
-}
-
-@media only screen and (min-width: 1500px) { // Katria change to variable
-  saa-local-footer__links-section-3 {
-    .su-local-footer__list-heading {
-      padding-top: 0;
-    }
-  }
-}
-
-
-/* Links and buttons in the footer */
-.su-local-footer__action-links {
-  .su-link,
-  a {
-    @include cta-vivid-red;  // change to cta-vivid-red-dark once that is merged in and available
-  }
-}
-
-.su-local-footer__header {
-  .su-link--internal {
-    @include saa-button--purple;
-    border-radius: 0;
-    box-shadow: none;
-
-    &:hover,
-    &:focus {
-      box-shadow: none;
-
-      &::after {
-        background-color: $su-color-white;
+  @media only screen and (min-width: 1200px) { // Katria change to variable
+    .saa-local-footer__links-section-1 {
+      .su-local-footer__list-heading {
+        padding-top: 0;
       }
     }
   }
-}
+
+  @media only screen and (min-width: 1200px) { // Katria change to variable
+    .saa-local-footer__links-section-2 {
+      .su-local-footer__list-heading {
+        padding-top: 0;
+      }
+    }
+  }
+
+  @media only screen and (min-width: 1500px) { // Katria change to variable
+    .saa-local-footer__links-section-3 {
+      .su-local-footer__list-heading {
+        padding-top: 0;
+      }
+    }
+  }
 
 
-.su-local-footer__columns {
-  input[type="submit"] {
-    @include saa-button--purple;
-    margin-top: 14px;
+  /* Links and buttons in the footer */
+  .su-local-footer__action-links {
+    .su-link,
+    a {
+      @include cta-vivid-red;  // change to cta-vivid-red-dark once that is merged in and available
+    }
+  }
+
+  .su-local-footer__header {
+    .su-link--internal {
+      @include saa-button--purple;
+      border-radius: 0;
+      box-shadow: none;
+
+      &:hover,
+      &:focus {
+        box-shadow: none;
+
+        &::after {
+          background-color: $su-color-white;
+        }
+      }
+    }
+  }
+
+
+  .su-local-footer__columns {
+    input[type="submit"] {
+      @include saa-button--purple;
+      margin-top: 14px;
+    }
   }
 }
