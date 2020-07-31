@@ -75,7 +75,7 @@
   // need to think about how to handle with all the different layouts with the columns.
 
   .su-local-footer__list-heading {
-    @include modular-spacing('padding', 2 null 2 null);
+    @include modular-spacing('padding', 2 null 0 null);
   }
 
   @media only screen and (min-width: 1200px) { // Katria change to variable
@@ -102,6 +102,9 @@
     }
   }
 
+  .su-local-footer ul > li {
+    @include modular-spacing('margin-bottom', -2);
+  }
 
   /* Links and buttons in the footer */
   .su-local-footer__action-links {
