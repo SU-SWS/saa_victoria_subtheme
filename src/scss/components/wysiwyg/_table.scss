@@ -13,4 +13,15 @@
       background: $su-color-fog;
     }
   }
+
+  // table label
+  @include grid-media-max(sm) {
+    .table--label-above {
+        &:before {
+          content: "Note: Scroll to the right to see all the data.";
+          font-style: italic;
+          font-size: 16px;
+        }
+      }
+  }
 }
