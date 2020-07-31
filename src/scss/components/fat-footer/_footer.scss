@@ -2,6 +2,15 @@
 
 
 /* Footer Layout */
+.su-local-footer__columns {
+  @include grid-media-min(xl) {
+    -ms-grid-columns: 3fr 2fr 2fr 2fr;
+    grid-template-columns: 3fr 2fr 2fr 2fr;
+    grid-template-areas: "A B B C";
+  }
+}
+
+
 .su-local-footer__cell1 {
   border-right: solid 1px $su-color-cool-grey;
 }
@@ -30,6 +39,12 @@
 
 
 /* First Column Styles */
+
+// logo
+.su-fat-footer__logo {
+  max-width: 250px;
+  @include modular-spacing('padding-bottom', 4);
+}
 
 .su-local-footer__address .organization {
   font-weight: bold;
