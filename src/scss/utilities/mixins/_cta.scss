@@ -56,7 +56,8 @@
     &:hover,
     &:focus {
       @apply underline;
-      color: $saa-color-dandelion;
+      text-decoration: underline;
+      color: $saa-color-extra-light-cloud;
     }
 
     &::after {
@@ -64,23 +65,28 @@
 
       &:hover {
         @apply cursor-pointer;
-        background-color: $saa-color-dandelion;
+        background-color: $saa-color-extra-light-cloud;
       }
     }
 
     &:hover::after,
     &:focus::after {
-      background-color: $saa-color-dandelion;
+      background-color: $saa-color-extra-light-cloud;
     }
 
     &.su-link--action {
       @apply no-underline;
+
+      &:hover,
+      &:focus {
+        @apply underline;
+      }
     }
 
     &.su-link--internal::after {
       &:hover,
       &:focus {
-        background-color: $saa-color-dandelion;
+        background-color: $saa-color-extra-light-cloud;
       }
     }
 
