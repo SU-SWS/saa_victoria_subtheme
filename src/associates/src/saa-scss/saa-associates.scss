@@ -1,4 +1,9 @@
-//@import '../../../scss/config/index.scss';
+// My theme's config settings.
+$su-image-path: "../../../../node_modules/decanter/core/src/img";
+$fa-font-path:  "../../../../node_modules/@fortawesome/fontawesome-free/scss/variables";
+
+// Import Decanter Library:
+@import '../../../../node_modules/decanter/core/src/scss/decanter-no-markup';
 
 main {
   font-family: proxima-nova;
@@ -50,7 +55,7 @@ header,
     color: #fff;
 
     &.active {
-      background: #8c1515;
+      background: $su-color-dark-red;
     }
 
     @media only screen and (min-width: 768px) {

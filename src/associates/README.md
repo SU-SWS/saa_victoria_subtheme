@@ -14,9 +14,9 @@ The `webpack.config.js` and `package.json` scripts have been modified to compile
 
 To view the application on a Drupal page, please create a new Basic page and modify the`node--20.html.twig` template name to reflect the Basic page node.
 
----
 
-__Local Setup and Build Command(s)__
+
+## Local Setup and Build Command(s)
 
 Run the follow commands within the `associates` directory.
 
@@ -25,3 +25,5 @@ To install the necessary packages: `npm install`
 To compile files using webpack: `npm run build`
 
 
+## Additional Notes
+Stanford Decanter Library has been installed within this directory as well to follow the modular principle and to keep the react widget self-contained.
