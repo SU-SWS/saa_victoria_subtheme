@@ -17,8 +17,20 @@
   min-height: inherit;
   background: $su-color-bright-red;
 
+  h2 {
+    @include modular-typography(3);
+  }
 
-  .su-button {
+  // Only the secondary button styles should be used on this bright red banner
+  .su-button,
+  .su-button--big,
+  .su-button--secondary {
     @include saa-button--secondary-on-red;
+  }
+
+  // special override to enforce consistent button styles on red banners
+  .su-button--big {
+    font-size: 2rem !important; // TODO: Katria, this is not responsive, fix this after webpack reorg pr is merged, see main big button mixin in our theme
+    padding: 10px 30px;
   }
 }

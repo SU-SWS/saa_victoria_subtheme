@@ -43,9 +43,7 @@
  */
 #}
 <div {{ attributes }} class="su-lockup {{ modifier_class }}">
-  {% if link is not empty %}
-  <a href="{{ link }}" {{ link_attributes }}>
-  {% endif %}
+  <a href="{{ url('<front>') }}">
     {#- Cell container #2 -#}
     {% block cell2 %}
       {% if line1 is not empty or line2 is not empty or line3 is not empty %}
@@ -73,7 +71,5 @@
         {%- endblock -%}
       </div>
     {% endif %}
-    {% if link is not empty %}
   </a>
-  {% endif %}
 </div>

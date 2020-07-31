@@ -28,7 +28,7 @@
           @include modular-spacing('padding', 3);
 
           align-items: center;
-          background: $su-color-vivid-red;
+          background: $su-color-vivid-red-dark;
           border: 0;
           box-shadow: none;
           color: $su-color-white;
@@ -57,33 +57,42 @@
             max-width: $banner-b--xl;
           }
 
+          // small text / superheading field
+          span {
+            @include saa-modular-typography-small;
+            padding-top: 1px; // fixes letters getting cut off
+          }
+
           span,
           h2 {
             margin-bottom: 26px;
           }
 
           p {
+            @include modular-typography(1);
             margin-bottom: 18px;
           }
 
-          a,
-          .su-link,
-          .su-link--action {
+
+          // regular links and action links
+          //a:not(.su-button):not(.su-button--secondary):not(.su-button--big),
+          //.su-link,
+          //.su-link--action {
+          //  margin-top: 12px;
+          //  color: $su-color-white;
+          //  // Note: This does not use the @cta-white-on-bright-red mixin because the yellow hover is not accessible on vivid-red bg
+          //}
+
+          // regular links and action links
+          a:not(.su-button):not(.su-button--secondary):not(.su-button--big) {
             margin-top: 12px;
             color: $su-color-white;
 
-            &:hover,
-            &:focus {
+            &:not(.su-link--action) {
               text-decoration: underline;
             }
-          }
 
-          .su-link--action {
-            // cta-white-on-bright-red currently does not include the action link styling (.su-link--action)
-            //@include cta-white-on-bright-red;
-            //@apply text-white;
-            color: $su-color-white;
-
+            // for action and other types of links
             &::after {
               //@apply bg-white;
               background: $su-color-white;
@@ -91,14 +100,21 @@
 
             &:hover,
             &:focus {
-              //@apply underline;
+              color: $saa-color-extra-light-cloud;
               text-decoration: underline;
             }
           }
 
           // Might not need this as the current default button styling is saa-button--purple
-          .su-button {
-            @include saa-button--purple;
+          .su-button,
+          .su-button--big,
+          .su-button--secondary {
+            @include saa-button--purple--only;
+          }
+
+          .su-button--big {
+            font-size: 2rem !important; // TODO: Katria, this is not responsive, fix this after webpack reorg pr is merged, see main big button mixin in our theme
+            padding: 10px 30px;
           }
         }
       }

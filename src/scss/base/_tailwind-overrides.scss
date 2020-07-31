@@ -1,0 +1,10 @@
+@charset "UTF-8";
+
+// fix decanter setting some things to 0 or a default
+input,
+select,
+textarea {
+  margin: 0.2em 0;
+  padding: 1rem 0.7em;
+  line-height: 1.3;
+}

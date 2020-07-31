@@ -1,0 +1,25 @@
+@charset "UTF-8";
+
+.system-main-block {
+  form {
+    background: rgba($su-color-fog, 0.9);
+    color: $su-color-black;
+
+    input {
+      background: $su-color-white;
+    }
+
+    // This button class is used when Local Drupal login is enabled
+    .button {
+      @include saa-button--purple;
+    }
+
+    // special button overrides
+    .su-button:focus,
+    .su-button:hover,
+    input[type="submit"]:focus,
+    input[type="submit"]:hover {
+      background-color: $saa-color-electric-purple-dark;
+    }
+  }
+}

@@ -1,7 +1,5 @@
 @charset "UTF-8";
 
-@import '../../utilities/index'; // katria come back to, is this the right approach?
-
 html {
   font-family: $saa-font--proxima-nova;
   font-size: $su-root-font-size;
@@ -63,7 +61,7 @@ h6,
 
 h1 {
   @include saa-font--calluna-base;
-  font-size: 2em;
+  @include modular-typography(4);
   margin: 0.67em 0;
 }
 
@@ -85,3 +83,8 @@ p.su-callout-text,
 // what about su-font-splash and other text styles?
 //su-font-splash,
 //p.su-callout-text
+
+// overridding decanter and base specific source sans declaration
+.su-card .su-card__contents {
+  @include saa-font--proxima-nova-base;
+}

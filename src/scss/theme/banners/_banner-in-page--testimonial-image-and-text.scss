@@ -11,12 +11,14 @@ $banner-circle--image-width: 200px;
       height: auto;
       min-height: unset;
       position: unset;
-      @include modular-spacing('padding-top', 5);
-      @include modular-spacing('padding-bottom', 7);
-
       @include grid-media-max('md') {
         @include modular-spacing('padding', 3);
       }
+
+      @include modular-spacing('padding-top', 5);
+      @include modular-spacing('padding-bottom', 6);
+
+
 
       .su-hero__media {
         background: transparent;
@@ -92,6 +94,10 @@ $banner-circle--image-width: 200px;
 
           > .su-card__button {
             order: 4;
+
+            a.su-link.su-button {
+              margin-bottom: 0;
+            }
           }
 
           > *:not(:last-child) {
@@ -104,6 +110,26 @@ $banner-circle--image-width: 200px;
           a {
             @include modular-spacing('margin-bottom', 0);
           }
+        }
+      }
+    }
+  }
+}
+
+
+// when on a page with a sidebar nav, needs adjustments:
+.jumpstart-ui--two-column.centered-container {
+  .flex-lg-9-of-12.main-region {
+    .su-hero {
+      // when on a sidebar-nav page, needs less bottom spacing
+      @include modular-spacing('padding-bottom', 5);
+
+      .su-card__contents {
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 90%;
+        @include grid-media-min(lg) {
+          max-width: 80%;
         }
       }
     }

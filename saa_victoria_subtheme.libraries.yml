@@ -89,17 +89,8 @@
 allpages:
   version: VERSION
   css:
-    base:
-      dist/css/base.css: { weight: 100 }
-    layout:
-      dist/css/layout.css: {}
-    component:
-      dist/css/components.css: {}
-    state:
-      dist/css/state.css: {}
     theme:
-      dist/css/theme.css: {}
-      dist/css/print.css: { media: print }
+      dist/css/saa-victoria.css: {minified: true }
 
 fonts:
   css:
@@ -108,3 +99,17 @@ fonts:
       # Clarendon, Proxima Nova & Calluna fonts package
       'https://use.typekit.net/udw3cbu.css' : { type: external, minified: true }
 #      font-family: clarendon-text-pro, serif;
+
+associates:
+  version: VERSION
+  css:
+    base:
+      src/associates/lib/main.css: {}
+  js:
+    src/associates/lib/app.bundle.js: {}
+
+bootstrap:
+  version: VERSION
+  css:
+    base:
+      'https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css' : { type: external, minified: true }

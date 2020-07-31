@@ -3,14 +3,19 @@
 /* SAA Specific colors, Stanford/Decanter colors are not defined here */
 
 // Purples
-$saa-color-electric-purple: #505EEC;
-$saa-color-electric-purple-dark: #26319F;
+$saa-color-electric-purple: #505eec;
+$saa-color-electric-purple-dark: #26319f;
 
-$saa-color-dandelion: #FBD115;
+$saa-color-dandelion: #Fbd115;
 
-$saa-color-wintergreen: #77C7A0;
+$saa-color-wintergreen: #77c7a0;
 
-// su color
-$su-color-vivid-red-dark: #CE0D0D;
-$su-color-fog: #F4F4F4;
-$su-color-light-sandstone: #F9F6EF;
+$saa-color-vivid-red: #e50808;
+
+// needed for one small case where we need a color to pair with white that is lighter than decanter grays
+$saa-color-extra-light-cloud: #E9E9E9;
+
+// su colors - coming soon to Decanter colors
+$su-color-vivid-red-dark: #cE0d0d;
+$su-color-fog: #f4f4f4;
+$su-color-light-sandstone: #f9f6Ef;
