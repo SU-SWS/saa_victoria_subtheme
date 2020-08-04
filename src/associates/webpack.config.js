@@ -21,11 +21,11 @@ module.exports = {
   },
   resolve: {
     extensions: ['.js', '.jsx'],
+    modules: [path.resolve(__dirname, 'src'), 'node_modules'],
     alias: {
       'decanter-img': path.resolve(npmPackage + "/decanter/core/src/img"),
       '@fortawesome': path.resolve(npmPackage + '@fortawesome')
     }
-    modules: [path.resolve(__dirname, 'src'), 'node_modules'],
   },
   module: {
     rules: [
