@@ -1,13 +1,32 @@
+/**
+ * Webpack Configuration File
+ * @type {[type]}
+ */
+
 const path = require('path');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const npmPackage = path.resolve(__dirname, 'node_modules');
 
 module.exports = {
+  // What am i?
+  name: 'SAA Associates Directory',
+  // Allows for map files.
+  devtool: 'none',
+  // What build?
   entry: './src/index.js',
+  // Where put build?
   output: {
     filename: 'app.bundle.js',
     path: path.resolve(__dirname, 'lib')
   },
-  devtool: 'none',
+  resolve: {
+    extensions: ['.js', '.jsx'],
+    alias: {
+      'decanter-img': path.resolve(npmPackage + "/decanter/core/src/img"),
+      '@fortawesome': path.resolve(npmPackage + '@fortawesome')
+    }
+    modules: [path.resolve(__dirname, 'src'), 'node_modules'],
+  },
   module: {
     rules: [
       {
@@ -31,10 +50,6 @@ module.exports = {
         ]
       }
     ]
-  },
-  resolve: {
-    extensions: ['.js', '.jsx'],
-    modules: [path.resolve(__dirname, 'src'), 'node_modules']
   },
   plugins: [
     new MiniCssExtractPlugin()

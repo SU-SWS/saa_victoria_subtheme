@@ -1,9 +1,4 @@
-// My theme's config settings.
-$su-image-path: "../../../../node_modules/decanter/core/src/img";
-$fa-font-path:  "../../../../node_modules/@fortawesome/fontawesome-free/scss/variables";
-
-// Import Decanter Library:
-@import '../../../../node_modules/decanter/core/src/scss/decanter-no-markup';
+@charset 'UTF-8';
 
 main {
   font-family: proxima-nova;
