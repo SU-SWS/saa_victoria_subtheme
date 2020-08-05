@@ -23,7 +23,7 @@ header,
       cursor: pointer;
     }
 
-    + label:before {
+    + label::before {
       vertical-align: unset;
     }
   }
