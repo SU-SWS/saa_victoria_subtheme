@@ -22,7 +22,7 @@
 
   .su-nav-toggle {
     &::before {
-      background: $saa-color-vivid-red url("#{$su-image-path}/caret-down-white.svg") no-repeat center / 50%;;
+      background: $saa-color-vivid-red url("#{$su-image-path}/caret-down-white.svg") no-repeat center / 50%;
     }
 
     &:focus,
@@ -35,7 +35,7 @@
 
   .su-multi-menu__link:focus,
   .su-multi-menu__link:hover {
-    &:before {
+    &::before {
       background-color: $su-color-cardinal-red;
     }
   }
