@@ -75,6 +75,11 @@ header,
   ul {
     &.react-autosuggest__suggestions-list {
       list-style: none;
+      padding-left: 0rem;
+
+      li {
+        padding-left: 1rem;
+      }
     }
   }
 }
