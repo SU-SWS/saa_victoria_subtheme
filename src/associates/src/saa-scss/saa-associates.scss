@@ -11,12 +11,15 @@ header,
 
 .newMembersToggle {
   input[type="checkbox"] {
+    background: transparent;
+    border: 0;
+    color: transparent;
     clip-path: unset;
     clip: unset;
     cursor: pointer;
     height: 0;
     width: 0;
-    z-index: 0;
+    z-index: -10;
 
     &:hover,
     &:focus {
@@ -75,7 +78,7 @@ header,
   ul {
     &.react-autosuggest__suggestions-list {
       list-style: none;
-      padding-left: 0rem;
+      padding-left: 0;
 
       li {
         padding-left: 1rem;
