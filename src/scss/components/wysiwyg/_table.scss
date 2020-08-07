@@ -18,7 +18,7 @@
   @include grid-media-max(sm) {
     .table--label-above {
       &::before {
-        content: "Note: Scroll to the right to see all the data.";
+        content: "Table best viewed in landscape mode.";
         font-style: italic;
         font-size: 16px;
       }
