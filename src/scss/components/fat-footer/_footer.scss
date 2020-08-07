@@ -1,11 +1,12 @@
 @charset "UTF-8";
 
-
 /* Footer Layout */
 .su-local-footer__columns {
   @include modular-spacing('padding-top', 4);
 
-  @include grid-media-min(xl) {
+  // need to adjust for other sizes and adjust grid template to work with the content columns
+
+  @include grid-media-min(xl) { // 1200px
     -ms-grid-columns: 3fr 2fr 2fr 2fr;
     grid-template-columns: 3fr 2fr 2fr 2fr;
     grid-template-areas: "A B B C";
@@ -43,13 +44,8 @@
     a {
       @include cta-vivid-red;
       // only difference should be regular state is black:
-      color: $su-color-black;
-
-      &:hover,
-      &:focus {
-        //color: $su-color-vivid-red-dark;
-
-    }
+      //color: $su-color-black;
+      @apply text-black;
   }
 }
 
@@ -64,7 +60,7 @@
   }
 
   .su-local-footer__address .organization {
-    font-weight: bold;
+    @apply font-bold;
   }
 
 
@@ -81,7 +77,7 @@
   @media only screen and (min-width: 1200px) { // Katria change to variable
     .saa-local-footer__links-section-1 {
       .su-local-footer__list-heading {
-        padding-top: 0;
+        @apply pt-0;
       }
     }
   }
@@ -89,7 +85,7 @@
   @media only screen and (min-width: 1200px) { // Katria change to variable
     .saa-local-footer__links-section-2 {
       .su-local-footer__list-heading {
-        padding-top: 0;
+        @apply pt-0;
       }
     }
   }
@@ -97,7 +93,7 @@
   @media only screen and (min-width: 1500px) { // Katria change to variable
     .saa-local-footer__links-section-3 {
       .su-local-footer__list-heading {
-        padding-top: 0;
+        @apply pt-0;
       }
     }
   }
@@ -117,12 +113,13 @@
   .su-local-footer__header {
     .su-link--internal {
       @include saa-button--purple;
-      border-radius: 0;
-      box-shadow: none;
+      @apply
+      rounded-none
+      shadow-none;
 
       &:hover,
       &:focus {
-        box-shadow: none;
+        @apply shadow-none;
 
         &::after {
           background-color: $su-color-white;
