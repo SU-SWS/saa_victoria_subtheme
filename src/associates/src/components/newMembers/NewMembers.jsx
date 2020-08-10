@@ -6,11 +6,12 @@ const NewMembers = props => {
     <div className="newMembersToggle">
       <input
         type="checkbox"
+        id="newMembers"
         name="newMembers"
         value="true"
         onChange={props.handleChange}
       />
-      <p>View Only New Members</p>
+      <label for="newMembers">View Only New Members</label>
     </div>
   );
 };
