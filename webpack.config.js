@@ -48,13 +48,9 @@ var webpackConfig = {
   devtool: 'source-map',
   // What build?
   entry: {
-    "base":          path.resolve(srcSass, "base/index.scss"),
+    "saa-victoria":  path.resolve(srcSass, "config/index.scss"),
     "scripts":       path.resolve(srcJS,   "scripts.js"),
-    "components":    path.resolve(srcSass, "components/index.scss"),
-    "layout":        path.resolve(srcSass, "layout/index.scss"),
-    "print":         path.resolve(srcSass, "print/index.scss"),
-    "state":         path.resolve(srcSass, "state/index.scss"),
-    "theme":         path.resolve(srcSass, "theme/index.scss"),
+
   },
   // Where put build?
   output: {

@@ -1,5 +1,6 @@
 @charset "UTF-8";
 
+
 .su-local-footer__action-links {
   .su-link,
   a {
@@ -8,6 +9,7 @@
 }
 
 .su-local-footer__header {
+
   .su-link--internal {
     @include saa-button--purple;
     border-radius: 0;

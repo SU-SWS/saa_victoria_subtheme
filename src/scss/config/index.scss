@@ -4,5 +4,14 @@
 $su-image-path: "~decanter/core/src/img";
 $fa-font-path:  "~@fortawesome/fontawesome-free/webfonts";
 
-// Import Decanter Library:
+// Imports
+@import "~tailwindcss";
 @import '~decanter/core/src/scss/decanter-no-markup';
+@import '../utilities/index.scss';
+@import '../base/index.scss';
+@import '../components/index.scss';
+@import '../layout/index.scss';
+@import '../print/index.scss';
+@import '../state/index.scss';
+@import '../theme/index.scss';
+
