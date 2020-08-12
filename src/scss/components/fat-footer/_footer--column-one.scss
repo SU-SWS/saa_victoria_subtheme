@@ -1,0 +1,23 @@
+@charset "UTF-8";
+
+/* First Column Styles */
+.su-local-footer {
+  // logo
+  .su-fat-footer__logo {
+    max-width: 250px;
+    @include modular-spacing('padding-bottom', 4 );
+  }
+
+  .su-local-footer__address {
+    @include modular-spacing('padding-right', 3);
+
+    .organization {
+      @apply font-bold;
+    }
+  }
+
+  .saa-footer--legal-links {
+    @include modular-spacing('padding-top', 4 );
+    max-width: 300px;
+  }
+}

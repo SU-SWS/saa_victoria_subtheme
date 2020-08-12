@@ -1,68 +1,85 @@
 @charset "UTF-8";
 
 /* Footer Layout */
-.su-local-footer__columns {
-  @include modular-spacing('padding-top', 4);
+.su-local-footer {
+  .su-local-footer__columns {
+    @include modular-spacing('padding-top', 4);
 
-  // need to adjust for other sizes and adjust grid template to work with the content columns
+    //-ms-grid-columns: 2fr 2fr;
+    //grid-template-columns: 2fr 2fr;
+    grid-template-areas: "A B";
 
-  @include grid-media-min(xl) { // 1200px
-    -ms-grid-columns: 3fr 2fr 2fr 2fr;
-    grid-template-columns: 3fr 2fr 2fr 2fr;
-    grid-template-areas: "A B B C";
+    // need to adjust for other sizes and adjust grid template to work with the content columns
+    @include grid-media-min(md) { // 1200px
+      -ms-grid-columns: 2fr 3fr;
+      grid-template-columns: 2fr 3fr;
+      grid-column-gap: 60px;
+    }
+    @include grid-media-min(xl) { // 1200px
+      -ms-grid-columns: 3fr 6fr;
+      grid-template-columns: 3fr 6fr;
+      grid-column-gap: 90px;
+    }
   }
-}
 
+  // border when there are 2 sections:
+  @include grid-media-min(md) {
+    .su-local-footer__cell1 {
+      border-right: solid 1px $su-color-cool-grey;
+      @include modular-spacing('padding-right', 3);
+    }
+  }
 
-.su-local-footer__cell1 {
-  border-right: solid 1px $su-color-cool-grey;
-}
+  // Change middle column area into 3-column right area
+  .su-local-footer__columns .su-local-footer__cell2 {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
+    grid-area: B;
 
-// Change middle column area into 3-column right area
-.su-local-footer__columns .su-local-footer__cell2 {
-
-  @media only screen and (min-width: 1500px) { // Katria change to variable
-    grid-column: 2 / 5;
+    @include grid-media-min(md) {
+      @apply
+      flex
+      flex-wrap
+      justify-between;
+    }
 
     nav {
-      min-width: calc(33% - 24px);  // change to 1/3 width instead of 1/2 width
-      max-width: calc(33% - 24px);
+      @apply pt-0;
+      @include modular-spacing('padding-bottom', 3);
 
+      @include grid-media-max(md) {
+        min-width: 100%;
+        max-width: 100%;
+        // last one remove padding (duplicate)
+        &.saa-local-footer__links-section-6 {
+          @apply pb-0;
+        }
+      }
+      // between 768 and 992px needs to be 1 column to the side
+
+      @include grid-media-min(md) { // 992px
+        min-width: calc(49% - 24px); // change to 1/3 width instead of 1/2 width
+        max-width: calc(49% - 24px);
+      }
+
+      @include grid-media-min(xl) { // 1200px
+        min-width: calc(33% - 24px);  // change to 1/3 width instead of 1/2 width
+        max-width: calc(33% - 24px);
+      }
+
+    }
+
+    h2 {
+      @include saa-modular-typography-small-heading;
+      @apply pt-0;
     }
   }
 
 
-}
-.su-local-footer__columns .su-local-footer__cell2 {
-
-}
-
-// General styles
-.su-local-footer  {
-
-  nav {
-    a {
-      @include cta-vivid-red;
-      // only difference should be regular state is black:
-      //color: $su-color-black;
-      @apply text-black;
+  .su-local-footer__cell3 {
+    @apply hidden;
   }
-}
-
-
-
-  /* First Column Styles */
-
-  // logo
-  .su-fat-footer__logo {
-    max-width: 250px;
-    @include modular-spacing('padding-bottom', 4);
-  }
-
-  .su-local-footer__address .organization {
-    @apply font-bold;
-  }
-
 
   /* Link Section Headings  */
 
@@ -74,65 +91,7 @@
     @include modular-spacing('padding', 2 null 0 null);
   }
 
-  @media only screen and (min-width: 1200px) { // Katria change to variable
-    .saa-local-footer__links-section-1 {
-      .su-local-footer__list-heading {
-        @apply pt-0;
-      }
-    }
-  }
-
-  @media only screen and (min-width: 1200px) { // Katria change to variable
-    .saa-local-footer__links-section-2 {
-      .su-local-footer__list-heading {
-        @apply pt-0;
-      }
-    }
-  }
-
-  @media only screen and (min-width: 1500px) { // Katria change to variable
-    .saa-local-footer__links-section-3 {
-      .su-local-footer__list-heading {
-        @apply pt-0;
-      }
-    }
-  }
-
   .su-local-footer ul > li {
     @include modular-spacing('margin-bottom', -2);
-  }
-
-  /* Links and buttons in the footer */
-  .su-local-footer__action-links {
-    .su-link,
-    a {
-      @include cta-vivid-red;  // change to cta-vivid-red-dark once that is merged in and available
-    }
-  }
-
-  .su-local-footer__header {
-    .su-link--internal {
-      @include saa-button--purple;
-      @apply
-      rounded-none
-      shadow-none;
-
-      &:hover,
-      &:focus {
-        @apply shadow-none;
-
-        &::after {
-          background-color: $su-color-white;
-        }
-      }
-    }
-  }
-
-
-  .su-local-footer__columns {
-    input[type="submit"] {
-      @include saa-button--purple;
-      margin-top: 14px;
-    }
   }
 }
