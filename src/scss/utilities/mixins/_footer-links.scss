@@ -1,0 +1,8 @@
+@charset "UTF-8";
+
+@mixin footer--black-link {
+  @include cta-vivid-red;
+  @include saa-modular-typography-medium-small;
+  // only difference should be regular state is black:
+  @apply text-black;
+}
