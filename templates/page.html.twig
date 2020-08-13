@@ -22,6 +22,8 @@
 </div>
 
 <footer id="footer">
-  {{ page.footer }}
+{#  {{ page.footer }}#}
+  {%- include "themes/custom/saa_victoria_subtheme/templates/components/fat-footer/saa-fat-footer.html.twig" with { modifier_class : "test" } -%}
+
   {%- include "@basic-dist/decanter/components/global-footer/global-footer.twig" -%}
 </footer>

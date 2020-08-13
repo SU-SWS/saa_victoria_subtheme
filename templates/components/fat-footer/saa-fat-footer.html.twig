@@ -1,0 +1,169 @@
+{# Glue code for Decanter's component #}
+{% import "@jumpstart_ui/macros/field-links-to-list.twig" as linklist %}
+{% import "@jumpstart_ui/macros/field-links-to-social-list.twig" as sociallist %}
+
+{%- set weblogin_text = weblogin_text|render|striptags('<drupal-render-placeholder>')|trim -%}
+{%- if weblogin_text is empty -%}
+  {%- set weblogin_url = '' -%}
+{%- endif -%}
+{%- set lockup_title = lockup_title|render|striptags('<drupal-render-placeholder>')|trim|convert_encoding('UTF-8', 'HTML-ENTITIES') -%}
+{%- set signup_form_method = signup_form_method|render|striptags('<drupal-render-placeholder>')|trim -%}
+{%- set signup_form_action = signup_form_action|render|striptags('<drupal-render-placeholder>')|trim|convert_encoding('UTF-8', 'HTML-ENTITIES') -%}
+{%- set signup_form_field_submit_value = signup_form_field_submit_value|render|striptags('<drupal-render-placeholder>')|trim -%}
+{%- set action_links = linklist.create_list(action_links) -%}
+{%- set social_links = sociallist.create_list(social_links) -%}
+{#{%- set primary_links = linklist.create_list(primary_links) -%}#}
+{#{%- set secondary_links = linklist.create_list(secondary_links) -%}#}
+{#{%- set primary_links_header = primary_links_header|render|striptags('<drupal-render-placeholder><a>')|trim -%}#}
+{#{%- set secondary_links_header = secondary_links_header|render|striptags('<drupal-render-placeholder><a>')|trim -%}#}
+
+{% if attributes is not empty %}
+  {% set attributes = attributes.removeClass('su-local-footer') %}
+{% else %}
+  {% set attributes = create_attribute() %}
+{% endif %}
+
+{% if modifier_class is not empty %}
+  {% set attributes = attributes.addClass(modifier_class) %}
+{% endif %}
+
+{% set modifier_class = attributes.class %}
+{% set attributes = attributes|without('class') %}
+
+{%- extends "@decanter/components/local-footer/local-footer.twig" -%}
+
+{% block contentcell1 %}
+  {#
+    The address is optional so don't put non-address content in it.
+    Use the `cell1` variable instead.
+  #}
+{#  <div class="su-fat-footer__logo-container"><a {{ attributes }} class="su-fat-footer__logo" href="https://stanford.edu"><img src="{{ base_path ~ directory }}/src/assets/svg/saa-logo-color.svg" alt="Stanford Alumni" class="su-fat-footer__logo" /></a></div>#}
+  <div class="su-fat-footer__logo-container"><img src="{{ base_path ~ directory }}/src/assets/svg/saa-logo-color.svg" alt="Stanford Alumni" class="su-fat-footer__logo" /></div>
+    <address class="su-local-footer__address">
+      <p class="address" translate="no"><span class="organization">Stanford Alumni Association</span><br>
+        <span class="address-line1">Frances C. Arrillaga Alumni Center</span><br>
+        <span class="address-line2">326 Galvez Street</span><br>
+        <span class="locality">Stanford</span>, <span class="administrative-area">CA</span> <span class="postal-code">94305-6105</span><br>
+{#        <span class="country">United States</span></p>#}
+    </address>
+  {# Stylized links. See local-footer.json for structure for macro. #}
+    <ul class="su-local-footer__action-links">
+      <li><a href="https://alumni.stanford.edu/get/page/directory/search?pgOrg=saa">Find an alum</a></li>
+      <li><a href="https://alumni.stanford.edu/tools/mail?level=12&groupname=saa&pgOrg=saa&dbc=y">Check your alumni email</a></li>
+      <li><a href="http://giving.stanford.edu/">Give to Stanford</a></li>
+    </ul>
+  {# Stylized links. See local-footer.json for structure for macro. #}
+  <ul class="su-local-footer__social-links">
+    <li>
+      <a href="https://www.facebook.com/stanfordalumni" class="su-local-footer__social-facebook">
+        <i aria-hidden="true"></i>
+        <span>Stanford Facebook</span>
+      </a>
+    </li>
+    <li>
+      <a href="https://www.linkedin.com/groups/74186/" class="su-local-footer__social-linkedin">
+        <i aria-hidden="true"></i>
+        <span>LinkedIn</span>
+      </a>
+    </li>
+    <li>
+      <a href="https://twitter.com/stanfordalumni" class="su-local-footer__social-twitter">
+        <i aria-hidden="true"></i>
+        <span>Twitter</span>
+      </a>
+    </li>
+    <li>
+      <a href="https://www.instagram.com/stanfordalumni" class="su-local-footer__social-instagram">
+        <i aria-hidden="true"></i>
+        <span>Stanford Instagram</span>
+      </a>
+    </li>
+    <li>
+      <a href="https://www.youtube.com/user/StanfordAlumni/" class="su-local-footer__social-youtube">
+        <i aria-hidden="true"></i>
+        <span>Youtube</span>
+      </a>
+    </li>
+    <li>
+      <a href="internal:/interior-page" class="su-local-footer__social-internal:">
+        <i aria-hidden="true"></i>
+        <span>local link</span>
+      </a>
+    </li>
+  </ul>
+
+  <div class="saa-footer--legal-links">
+    <a href="https://alumni.stanford.edu/get/page/accessibility">Accessibility</a> |
+    <a href="https://alumni.stanford.edu/get/page/privacy">Privacy Policy</a> |
+    <a href="https://alumni.stanford.edu/get/page/terms">Terms of Use</a> |
+    <a href="https://alumni.stanford.edu/get/page/codeofconduct">Code of Conduct</a>
+  </div>
+{% endblock %}
+
+{% block contentcell2 %}
+  {# Link SEction 1 - top left links. #}
+  <nav class="saa-local-footer__links-section saa-local-footer__links-section-1" aria-label="footer primary nav">
+    <h2 class="su-local-footer__list-heading">Events</h2>
+    <ul class="saa-local-footer__links-column-1">
+      <li><a href="https://alumni.stanford.edu/get/page/events">Explore all events</a></li>
+      <li><a href="https://alumni.stanford.edu/get/page/reunion/home">Reunion Homecoming</a></li>
+      <li><a href="https://alumni.stanford.edu/get/page/events/virtual">Virtual events</a></li>
+    </ul>
+  </nav>
+  {# Link SEction 1 - top left links. #}
+  <nav class="saa-local-footer__links-section saa-local-footer__links-section-2" aria-label="footer primary nav">
+    <h2 class="su-local-footer__list-heading">Communities</h2>
+    <ul class="saa-local-footer__links-column-2">
+      <li><a href="https://alumni.stanford.edu/get/page/groups/main">Clubs and groups</a></li>
+      <li><a href="https://alumni.stanford.edu/get/page/youngalumni/home">Young Alumni</a></li>
+{#      <li><a href="/">Grad Alumni</a></li>#}
+      <li><a href="https://alumni.stanford.edu/get/page/students/">Students</a></li>
+    </ul>
+  </nav>
+  {# Link SEction 1 - top left links. #}
+  <nav class="saa-local-footer__links-section saa-local-footer__links-section-3" aria-label="footer primary nav">
+    <h2 class="su-local-footer__list-heading">Reading & resources</h2>
+    <ul class="saa-local-footer__links-column-3">
+{#      <li><a href="/">News/Announcements</a></li>#}
+      <li><a href="https://alumni.stanford.edu/get/page/life-long-learning/learn-join">Webcasts and podcasts</a></li>
+      <li><a href="https://stanfordmag.org/">STANFORD magazine</a></li>
+      <li><a href="https://alumni.stanford.edu/get/page/career">Career connections</a></li>
+      <li><a href="https://alumni.stanford.edu/get/page/life-long-learning/learn-join">Newsletters</a></li>
+    </ul>
+  </nav>
+  <nav class="saa-local-footer__links-section saa-local-footer__links-section-4" aria-label="footer primary nav">
+    <h2 class="su-local-footer__list-heading">Programs & perks</h2>
+    <ul class="saa-local-footer__links-column-4">
+      <li><a href="https://alumni.stanford.edu/get/page/perks/index">Alumni perks</a></li>
+      <li><a href="https://alumni.stanford.edu/get/page/membership/home">Alumni membership</a></li>
+      <li><a href="https://alumni.stanford.edu/get/page/travel-study/overview">Sierra programs</a></li>
+      <li><a href="https://alumni.stanford.edu/get/page/travel-study/overview">Travel/Study</a></li>
+      <li><a href="https://partners.vinoshipper.com/stanford">Wine collection</a></li>
+      <li><a href="https://alumni.stanford.edu/get/page/resources/shop/home">Alumni store</a></li>
+    </ul>
+  </nav>
+  {# Link SEction 1 - top left links. #}
+  <nav class="saa-local-footer__links-section saa-local-footer__links-section-5" aria-label="footer primary nav">
+    <h2 class="su-local-footer__list-heading">Volunteer</h2>
+    <ul class="saa-local-footer__links-column-5">
+      <li><a href="https://alumni.stanford.edu/get/page/landing/volunteering">Getting started</a></li>
+      <li><a href="https://alumni.stanford.edu/get/page/volunteering/leadership">Volunteer leadership</a></li>
+      <li><a href="https://alumni.stanford.edu/get/page/volunteering/recognition/home">Stanford Associates</a></li>
+      <li><a href="https://alumni.stanford.edu/get/page/volunteering/beyondthefarm/">Beyond the Farm</a></li>
+      <li><a href="https://alumni.stanford.edu/get/page/volunteering/trustee/home">Trustee nominations</a></li>
+    </ul>
+  </nav>
+  {# Link SEction 1 - top left links. #}
+  <nav class="saa-local-footer__links-section saa-local-footer__links-section-6" aria-label="footer primary nav">
+    <h2 class="su-local-footer__list-heading">About</h2>
+    <ul class="saa-local-footer__links-column-6">
+      <li><a href="https://alumni.stanford.edu/get/page/about-us">About SAA</a></li>
+      <li><a href="https://alumni.stanford.edu/get/page/resources/alumnicenter/">Your alumni center</a></li>
+      <li><a href="https://alumni.stanford.edu/get/page/resources/eventplanning/">Event planning</a></li>
+      <li><a href="https://alumni.stanford.edu/get/page/help/contact-us">Contact us</a></li>
+    </ul>
+  </nav>
+{% endblock %}
+
+{% block contentcell3 %}
+{% endblock %}
