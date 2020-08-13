@@ -9,13 +9,26 @@
   &:focus {
     @include saa-button--focus;
   }
+
+  &::after {
+    @apply bg-white;
+  }
 }
 
 @mixin saa-button--hover {
-  background: $saa-color-electric-purple-dark;
-  color: $su-color-white;
-  text-decoration: underline;
-  cursor: pointer;
+  //background: $saa-color-electric-purple-dark;
+  //color: $su-color-white;
+  //text-decoration: underline;
+  //cursor: pointer;
+  @apply
+    bg-electric_purple_dark
+    text-white
+    underline
+    pointer;
+
+  &::after {
+    @apply bg-white;
+  }
 }
 
 @mixin saa-button--focus {
@@ -25,22 +38,40 @@
 // white or ghost buttons
 @mixin saa-button--secondary {
   @include saa-button--hover-and-focus;
-  box-shadow: none;
-  background: $su-color-white;
-  color: $saa-color-electric-purple;
-  border: 1px solid $saa-color-electric-purple;
-  text-decoration: none;
+  //box-shadow: none;
+  //background: $su-color-white;
+  //color: $saa-color-electric-purple;
+  //border: 1px solid $saa-color-electric-purple;
+  //text-decoration: none;
+  @apply
+  shadow-none
+  bg-white
+  text-electric_purple
+  border
+  border-solid
+  border-electric_purple
+  no-underline;
 
+  &::after {
+    @apply bg-electric_purple;
+  }
+
+  // most hover and focus is handled in mixin referenced above
   &:hover,
   &:focus {
-    box-shadow: none;
+    //box-shadow: none;
+    @apply
+    shadow-none;
   }
 }
 @mixin saa-button--big {
   @include button-big; // should set big font size but it doesn't. big size should be set out of decanter anyway.
   @include saa-button--hover-and-focus;
-  background: $saa-color-electric-purple;
-  color: $su-color-white;
+  @apply
+  bg-electric_purple
+  text-white;
+  //background: $saa-color-electric-purple;
+  //color: $su-color-white;
   @include grid-media-min('xl') {
     font-size: 2.8rem !important; // TODO: Katria, this is not responsive, come back to this because decanter mixin is being overridden, fix this after webpack reorg pr is merged
   }
@@ -48,20 +79,31 @@
 
 @mixin saa-button--secondary-on-red {
   @include saa-button--secondary;
-  border: 1px solid $su-color-white;
+  //border: 1px solid $su-color-white;
+  @apply
+  border
+  border-solid
+  border-white;
 
   &:hover,
   &:focus {
-    border: 1px solid $saa-color-electric-purple-dark;
+    //border: 1px solid $saa-color-electric-purple-dark;
+    @apply
+    border
+    border-solid
+    border-electric_purple_dark;
   }
 }
 
 // purple buttons
 @mixin saa-button--purple--only {
   @include saa-button--hover-and-focus;
-  background: $saa-color-electric-purple;
-  color: $su-color-white;
+  //background: $saa-color-electric-purple;
+  //color: $su-color-white;
   padding: 10px 30px;
+  @apply
+  bg-electric_purple
+  text-white;
 }
 
 @mixin saa-button--purple {
