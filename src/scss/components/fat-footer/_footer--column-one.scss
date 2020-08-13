@@ -5,7 +5,7 @@
   // logo
   .su-fat-footer__logo {
     max-width: 250px;
-    @include modular-spacing('padding-bottom', 4 );
+    @include modular-spacing('padding-bottom', 4);
   }
 
   .su-local-footer__address {
@@ -17,7 +17,7 @@
   }
 
   .saa-footer--legal-links {
-    @include modular-spacing('padding-top', 3 );
+    @include modular-spacing('padding-top', 3);
     max-width: 300px;
   }
 }
