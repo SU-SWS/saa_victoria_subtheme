@@ -17,7 +17,7 @@
   }
 
   .saa-footer--legal-links {
-    @include modular-spacing('padding-top', 4 );
+    @include modular-spacing('padding-top', 3 );
     max-width: 300px;
   }
 }

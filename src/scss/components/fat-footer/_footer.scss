@@ -11,8 +11,8 @@
 
     // need to adjust for other sizes and adjust grid template to work with the content columns
     @include grid-media-min(md) { // 1200px
-      -ms-grid-columns: 2fr 3fr;
-      grid-template-columns: 2fr 3fr;
+      -ms-grid-columns: 3fr 5fr;
+      grid-template-columns: 3fr 5fr;
       grid-column-gap: 60px;
     }
     @include grid-media-min(xl) { // 1200px
