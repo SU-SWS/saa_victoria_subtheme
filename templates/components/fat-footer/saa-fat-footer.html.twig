@@ -34,11 +34,15 @@
 
 {% block contentcell1 %}
   {#
-    The address is optional so don't put non-address content in it.
+    The address is optional so don't put non-address
+    content in it.
     Use the `cell1` variable instead.
   #}
 {#  <div class="su-fat-footer__logo-container"><a {{ attributes }} class="su-fat-footer__logo" href="https://stanford.edu"><img src="{{ base_path ~ directory }}/src/assets/svg/saa-logo-color.svg" alt="Stanford Alumni" class="su-fat-footer__logo" /></a></div>#}
-  <div class="su-fat-footer__logo-container"><img src="{{ base_path ~ directory }}/dist/assets/svg/saa-logo-color.svg" alt="Stanford Alumni" class="su-fat-footer__logo" /></div>
+
+  <div class="su-fat-footer__logo-container">
+    <img src="{{ base_path ~ directory }}/dist/assets/svg/saa-logo-color.svg" alt="Stanford Alumni" class="su-fat-footer__logo" />
+  </div>
     <address class="su-local-footer__address">
       <p class="address" translate="no"><span class="organization">Stanford Alumni Association</span><br>
         <span class="address-line1">Frances C. Arrillaga Alumni Center</span><br>
