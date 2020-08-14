@@ -41,7 +41,9 @@
       }
 
       nav {
-        @apply pt-0;
+        @apply
+        pt-0
+        mx-0;
         @include modular-spacing('padding-bottom', 3);
 
         @include grid-media-max(md) {
