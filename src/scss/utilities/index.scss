@@ -1,6 +1,4 @@
 @charset "UTF-8";
 
-@import
-'../config/index',
-'mixins/index',
-'variables/index';
+@import 'mixins/index.scss';
+@import 'variables/index.scss';
