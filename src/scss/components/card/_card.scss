@@ -1,0 +1,22 @@
+@charset "UTF-8";
+
+.su-card {
+  .su-card__contents {
+    span {
+      @include type-e;
+    }
+
+    h2 {
+      @include type-b;
+    }
+
+    p {
+      @include type-e;
+      line-height: 35.7px;
+
+      @include grid-media-max('sm') {
+        line-height: 22.4px;
+      }
+    }
+  }
+}
