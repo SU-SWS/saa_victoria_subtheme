@@ -11,11 +11,10 @@
 // component’s structure to be “swappable”, and omitting these entirely should
 // not break the component’s functionality or basic usability.
 
+// Config and supporting scss.
+//@import '../config/index';
 @import 'button';
 @import 'cta';
-@import 'icon-cards/index';
 @import 'link_classes';
 @import 'banners/index';
-@import 'faux-cards/index';
-@import 'footer';
 @import 'user-login';

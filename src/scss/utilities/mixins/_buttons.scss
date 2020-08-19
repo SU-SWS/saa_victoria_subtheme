@@ -40,16 +40,6 @@
   color: $su-color-white;
   text-decoration: underline;
   cursor: pointer;
-  //@apply
-  //  bg-electric_purple_dark
-  //  text-white
-  //  underline
-  //  pointer;
-
-  &::after {
-    //@apply bg-white;
-    //background-color: $su-color-white;
-  }
 }
 
 @mixin saa-button--focus {
@@ -64,14 +54,6 @@
   color: $saa-color-electric-purple;
   border: 1px solid $saa-color-electric-purple;
   text-decoration: none;
-  //@apply
-  //shadow-none
-  //bg-white
-  //text-electric_purple
-  //border
-  //border-solid
-  //border-electric_purple
-  //no-underline;
 
   @include saa-button--purple-icons;
   //&::after {
@@ -86,8 +68,10 @@
   }
 }
 @mixin saa-button--big {
-  @include button-big; // should set big font size but it doesn't. big size should be set out of decanter anyway.
+  @include button-big;
   @include saa-button--hover-and-focus;
+  background: $saa-color-electric-purple;
+  color: $su-color-white;
   @include saa-button--white-icons;
 
   @apply
@@ -106,19 +90,11 @@
 
 @mixin saa-button--secondary-on-red {
   @include saa-button--secondary;
-  //border: 1px solid $su-color-white;
-  @apply
-  border
-  border-solid
-  border-white;
+  border: 1px solid $su-color-white;
 
   &:hover,
   &:focus {
-    //border: 1px solid $saa-color-electric-purple-dark;
-    @apply
-    border
-    border-solid
-    border-electric_purple_dark;
+    border: 1px solid $saa-color-electric-purple-dark;
   }
 }
 

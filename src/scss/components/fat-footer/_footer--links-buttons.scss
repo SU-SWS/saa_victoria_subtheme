@@ -1,0 +1,58 @@
+@charset "UTF-8";
+
+
+.su-local-footer {
+
+  // first column links
+
+  //Action link styles
+  .su-local-footer__action-links {
+    .su-link,
+    a {
+      @include cta-vivid-red;  // change to cta-vivid-red-dark once that is merged in and available
+      @include saa-modular-typography-medium-small;
+    }
+  }
+
+  // first column bottom links
+  .saa-footer--legal-links {
+    a {
+      @include footer--black-link;
+      font-size: 16px; // always 16px
+    }
+  }
+
+  nav {
+    // all regular navigation links
+    a {
+      @include footer--black-link;
+    }
+  }
+
+  // footer buttons
+  .su-local-footer__header {
+    .su-link--internal {
+      @include saa-button--purple;
+      @apply
+      rounded-none
+      shadow-none;
+
+      &:hover,
+      &:focus {
+        @apply shadow-none;
+
+        &::after {
+          background-color: $su-color-white;
+        }
+      }
+    }
+  }
+
+  // special button in footer
+  .su-local-footer__columns {
+    input[type="submit"] {
+      @include saa-button--purple;
+      margin-top: 14px;
+    }
+  }
+}
