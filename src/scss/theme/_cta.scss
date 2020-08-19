@@ -11,11 +11,6 @@ a {
     &:not(.su-button):not(.su-button--secondary):not(.su-button--big) {
       color: $saa-color-vivid-red;
 
-      // regular plain links or non-action icon links
-      &:not(.su-link--action):not(.su-link--download):not(.su-link--external):not(.su-link--internal):not(.su-link--jump):not(.su-link--top):not(.su-link--more):not(.su-link--video) {
-        text-decoration: underline;
-      }
-
       &:hover,
       &:focus {
         color: $su-color-cardinal-red;
