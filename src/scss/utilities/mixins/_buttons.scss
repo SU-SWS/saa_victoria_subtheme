@@ -20,7 +20,9 @@
 
   &:hover,
   &:focus {
-    background-color: $su-color-white;
+    &::after {
+      background-color: $su-color-white;
+    }
   }
 }
 
@@ -49,17 +51,12 @@
 // white or ghost buttons
 @mixin saa-button--secondary {
   @include saa-button--hover-and-focus;
+  @include saa-button--purple-icons;
   box-shadow: none;
   background: $su-color-white;
   color: $saa-color-electric-purple;
   border: 1px solid $saa-color-electric-purple;
   text-decoration: none;
-
-  @include saa-button--purple-icons;
-  //&::after {
-  //  //@apply bg-electric_purple;
-  //  background-color: $saa-color-electric-purple;
-  //}
 
   // most hover and focus is handled in mixin referenced above
   &:hover,
@@ -70,20 +67,11 @@
 @mixin saa-button--big {
   @include button-big;
   @include saa-button--hover-and-focus;
+  @include saa-button--white-icons;
   background: $saa-color-electric-purple;
   color: $su-color-white;
-  @include saa-button--white-icons;
 
-  @apply
-  bg-electric_purple
-  text-white;
-  //background: $saa-color-electric-purple;
-  //color: $su-color-white;
-  @include grid-media-min('xl') {
-    font-size: 2.8rem !important; // TODO: Katria, this is not responsive, come back to this because decanter mixin is being overridden, fix this after webpack reorg pr is merged
-  }
   &::after {
-    //@apply bg-white;
     background-color: $su-color-white;
   }
 }
