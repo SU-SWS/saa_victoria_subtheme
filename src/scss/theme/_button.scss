@@ -30,7 +30,9 @@
 
 // Adjust button's right padding when it includes an icon
 
-.su-button, .su-button--secondary, .su-button--big {
+.su-button,
+.su-button--secondary,
+.su-button--big {
   &.su-link--action,
   &.su-link--external,
   &.su-link--download,
