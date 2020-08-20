@@ -1,5 +1,31 @@
 @charset "UTF-8";
 
+@mixin saa-button--white-icons {
+  &::after {
+    background-color: $su-color-white;
+  }
+
+  &:hover,
+  &:focus {
+    &::after {
+      background-color: $su-color-white;
+    }
+  }
+}
+
+@mixin saa-button--purple-icons {
+  &::after {
+    background-color: $saa-color-electric-purple;
+  }
+
+  &:hover,
+  &:focus {
+    &::after {
+      background-color: $su-color-white;
+    }
+  }
+}
+
 @mixin saa-button--hover-and-focus {
   &:hover,
   &:focus {
@@ -25,12 +51,14 @@
 // white or ghost buttons
 @mixin saa-button--secondary {
   @include saa-button--hover-and-focus;
+  @include saa-button--purple-icons;
   box-shadow: none;
   background: $su-color-white;
   color: $saa-color-electric-purple;
   border: 1px solid $saa-color-electric-purple;
   text-decoration: none;
 
+  // most hover and focus is handled in mixin referenced above
   &:hover,
   &:focus {
     box-shadow: none;
@@ -39,8 +67,13 @@
 @mixin saa-button--big {
   @include button-big;
   @include saa-button--hover-and-focus;
+  @include saa-button--white-icons;
   background: $saa-color-electric-purple;
   color: $su-color-white;
+
+  &::after {
+    background-color: $su-color-white;
+  }
 }
 
 @mixin saa-button--secondary-on-red {
@@ -56,6 +89,7 @@
 // purple buttons
 @mixin saa-button--purple--only {
   @include saa-button--hover-and-focus;
+  @include saa-button--white-icons;
   background: $saa-color-electric-purple;
   color: $su-color-white;
   padding: 10px 30px;

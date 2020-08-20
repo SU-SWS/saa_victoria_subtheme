@@ -18,24 +18,27 @@
     background-color: $saa-color-vivid-red;
   }
 
-  &.su-link--action,
-  &.su-link--external,
-  &.su-link--download,
-  &.su-link--video,
-  &.su-link--jump,
-  &.su-link--top,
-  &.su-link--internal {
+  &:not(.su-button) {
+    &.su-link--action,
+    &.su-link--external,
+    &.su-link--download,
+    &.su-link--video,
+    &.su-link--jump,
+    &.su-link--top,
+    &.su-link--internal {
 
-    &::after {
-      background-color: $saa-color-vivid-red;
-    }
-
-    &:hover,
-    &:focus {
       &::after {
-        background-color: $su-color-cardinal-red;
+        background-color: $saa-color-vivid-red;
+      }
+
+      &:hover,
+      &:focus {
+        &::after {
+          background-color: $su-color-cardinal-red;
+        }
       }
     }
+
   }
 
   &.su-link--video::after {

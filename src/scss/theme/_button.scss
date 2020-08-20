@@ -27,3 +27,35 @@
     @include saa-button--secondary;
   }
 }
+
+// Adjust button's right padding when it includes an icon
+
+.su-button,
+.su-button--secondary,
+.su-button--big {
+  &.su-link--action,
+  &.su-link--external,
+  &.su-link--download,
+  &.su-link--video,
+  &.su-link--jump,
+  //&.su-link--top,  // not yet supported - can enable once it is added later
+  &.su-link--internal {
+    padding-right: 22px;  // this visually looks the same, due to the space around the icon
+  }
+}
+
+.su-button--big {
+  &.su-link--action,
+  &.su-link--external,
+  &.su-link--download,
+  &.su-link--video,
+  &.su-link--jump,
+  //&.su-link--top,  // not yet supported - can enable once it is added later
+  &.su-link--internal {
+    &::after {
+      // larger icon due to larger text in su-button--big
+      width: 14px;
+      height: 14px;
+    }
+  }
+}
