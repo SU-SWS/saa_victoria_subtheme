@@ -18,7 +18,7 @@
     background-color: $saa-color-vivid-red;
   }
 
-  &:not(.su-button) {
+  &:not(.su-button):not(.su-button--secondary):not(.su-button--big) {
     &.su-link--action,
     &.su-link--external,
     &.su-link--download,
