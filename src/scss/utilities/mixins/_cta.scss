@@ -2,7 +2,6 @@
 
 @mixin cta-vivid-red {
   color: $saa-color-vivid-red;
-  @apply no-underline;
 
   &:hover,
   &:focus {
@@ -26,6 +25,7 @@
     &.su-link--jump,
     &.su-link--top,
     &.su-link--internal {
+      @apply no-underline;
 
       &::after {
         background-color: $saa-color-vivid-red;
