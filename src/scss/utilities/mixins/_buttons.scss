@@ -70,8 +70,6 @@
   @include saa-button--white-icons;
   background: $saa-color-electric-purple;
   color: $su-color-white;
-  // @TODO: See if we need this so that there isn't any underline on buttons in default state
-  text-decoration: none;
 
   &::after {
     background-color: $su-color-white;
@@ -95,8 +93,6 @@
   background: $saa-color-electric-purple;
   color: $su-color-white;
   padding: 10px 30px;
-  // @TODO: See if we need this so that there isn't any underline on buttons in default state
-  text-decoration: none;
 }
 
 @mixin saa-button--purple {
