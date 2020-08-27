@@ -4,6 +4,10 @@
   .su-wysiwyg-text {
     h5 {
       @include modular-spacing('padding', 0 null 1 null);
+      @include grid-media-max(sm) {
+        margin-top: $mobile-modular-spacing-0;
+        margin-bottom: $mobile-modular-spacing-1;
+      }
       border-top: 1px solid $su-color-cool-grey;
       line-height: 125%;
       font-family: $saa-font--proxima-nova;

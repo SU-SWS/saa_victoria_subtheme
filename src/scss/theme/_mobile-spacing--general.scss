@@ -1,0 +1,7 @@
+@charset "UTF-8";
+
+.node-stanford-page-title {
+  @include grid-media-max(sm) {
+    margin-top: $mobile-modular-spacing-5; // down from 8rem to 50px
+  }
+}

@@ -8,7 +8,10 @@
 
   p.su-subheading {
     @include saa-modular-typography-small;
-    @include modular-spacing('margin', 2 null null null);
+    @include modular-spacing('margin-top', 2);
+    @include grid-media-max(sm) {
+      margin-top: $mobile-modular-spacing-2;
+    }
 
     margin-bottom: 5px;
     line-height: 1;
