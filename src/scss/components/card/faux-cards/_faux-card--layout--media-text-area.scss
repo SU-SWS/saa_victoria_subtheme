@@ -4,27 +4,11 @@
   .react-paragraphs-row {
     &.container-2-items {
       // set margin and spacing for media caption on the right/last
-      //.paragraph-item.ptype-stanford-wysiwyg.flex-6-of-12 ~ .paragraph-item.ptype-stanford-media-caption.flex-6-of-12 {
-      //
-      //  @include grid-media-min(lg) {
-      //    max-width: 44%;
-      //    margin-left: 0px;
-      //    margin-right: 3%;
-      //  }
-      //
-      //  @include grid-media-min(xl) {
-      //    max-width: 48%;
-      //  }
-      //}
-
-      // set margin and spacing for media caption on the right/last
       .paragraph-item.ptype-stanford-wysiwyg.flex-6-of-12 ~ .paragraph-item.ptype-stanford-media-caption.flex-6-of-12,
       // set margin and spacing for media caption on the left/first
       .paragraph-item.ptype-stanford-media-caption.flex-6-of-12 ~ .paragraph-item.ptype-stanford-wysiwyg.flex-6-of-12 {
-        //margin-top: 0;
-        //position: relative;
         @include grid-media-max(sm) {
-          margin-top: -80px; // to counteract the previous element's bottom margin,
+          margin-top: -80px; // negative margin required in this one case, to counteract the previous element's bottom margin, position doesn't work as ewll
           margin-bottom: $mobile-modular-spacing-7;
         }
 
