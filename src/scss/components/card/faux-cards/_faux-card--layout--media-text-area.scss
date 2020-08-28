@@ -21,7 +21,11 @@
       .paragraph-item.ptype-stanford-wysiwyg.flex-6-of-12 ~ .paragraph-item.ptype-stanford-media-caption.flex-6-of-12,
       // set margin and spacing for media caption on the left/first
       .paragraph-item.ptype-stanford-media-caption.flex-6-of-12 ~ .paragraph-item.ptype-stanford-wysiwyg.flex-6-of-12 {
-        margin-top: -80px; // to counteract the previous element's bottom margin,
+        margin-top: -50px; // to counteract the previous element's bottom margin,
+
+        @include grid-media-min(md) {
+          margin-top: -80px; // to counteract the previous element's bottom margin,
+        }
         // neccessary since we can only style this unique case by stylig the second element
         @include grid-media-min(lg) { // 992
           max-width: 44%;
