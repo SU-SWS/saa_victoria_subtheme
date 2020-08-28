@@ -21,13 +21,18 @@
       .paragraph-item.ptype-stanford-wysiwyg.flex-6-of-12 ~ .paragraph-item.ptype-stanford-media-caption.flex-6-of-12,
       // set margin and spacing for media caption on the left/first
       .paragraph-item.ptype-stanford-media-caption.flex-6-of-12 ~ .paragraph-item.ptype-stanford-wysiwyg.flex-6-of-12 {
-        margin-top: 0;
-        position: relative;
-        top: -35px; // to counteract the previous element's bottom margin,
+        //margin-top: 0;
+        //position: relative;
+        @include grid-media-max(sm) {
+          margin-top: -80px; // to counteract the previous element's bottom margin,
+          margin-bottom: $mobile-modular-spacing-7;
+        }
 
         @include grid-media-min(md) {
-          top: -80px; // to counteract the previous element's bottom margin,
+          margin-top: -90px; // to counteract the previous element's bottom margin,
+          @include modular-spacing('margin-bottom', 5);
         }
+
         // positioning is neccessary since we can only style this unique case by styling the second element
         @include grid-media-min(lg) { // 992
           max-width: 44%;
