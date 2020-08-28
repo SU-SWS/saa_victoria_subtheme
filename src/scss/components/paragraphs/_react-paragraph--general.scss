@@ -1,0 +1,9 @@
+@charset "UTF-8";
+
+.content {
+  .paragraph-item {
+    @include grid-media-max(sm) {
+      margin-bottom: $mobile-modular-spacing-5; // down from 108px to 50px, 70px was too much still
+    }
+  }
+}
