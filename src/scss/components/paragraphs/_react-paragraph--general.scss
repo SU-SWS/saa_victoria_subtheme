@@ -1,7 +1,9 @@
 @charset "UTF-8";
 
-.content .paragraph-item {
-  @include grid-media-max(sm) {
-    margin-bottom: $mobile-modular-spacing-7; // down from 108px to 70px
+.content {
+  .paragraph-item {
+     @include grid-media-max(sm) {
+       margin-bottom: $mobile-modular-spacing-7; // down from 108px to 70px
+     }
   }
 }
