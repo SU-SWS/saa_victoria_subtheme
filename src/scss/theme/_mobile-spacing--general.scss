@@ -14,3 +14,23 @@
     }
   }
 }
+
+// when a heading follows a <p> tag, it results in too much space on mobile
+@include grid-media-max(sm) {
+  .su-wysiwyg-text {
+    p + h2 {
+      padding-top: $mobile-modular-spacing-1;
+    }
+
+    p + h3 {
+      padding-top: $mobile-modular-spacing-0;
+    }
+
+    .su-font-splash,
+    p.su-font-splash {
+      padding-top: 0;
+    }
+  }
+
+
+}
