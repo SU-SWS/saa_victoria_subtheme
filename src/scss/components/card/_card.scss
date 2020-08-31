@@ -11,11 +11,13 @@
     }
 
     p {
-      @include type-e;
-      line-height: 35.7px;
+      //@include type-e;
+      //@include type-d; // this would be 22.5 px on desktop, and 20px on mobile i think?
+      @include saa-modular-typography-small-heading; // this would be 20px to 18px
+      line-height: 1.2em;
 
       @include grid-media-max('sm') {
-        line-height: 22.4px;
+        //line-height: 22.4px;
       }
     }
   }

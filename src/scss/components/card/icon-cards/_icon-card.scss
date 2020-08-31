@@ -3,6 +3,7 @@
 // Icon Card styles will go here
 $icon-size: 48px;
 $tag-width: 20px;
+$tag-width--mobile: 15px;
 $tag-height: 70px;
 
 .su-card {
@@ -29,6 +30,10 @@ $tag-height: 70px;
       content: "";
       height: $tag-height;
       width: $tag-width;
+      @include grid-media-max(sm) {
+        width: $tag-width--mobile;
+      }
+
       @apply
       block
       absolute;  // top left corner inside the card
