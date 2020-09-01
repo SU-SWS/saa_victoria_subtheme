@@ -2,6 +2,7 @@
 
 @mixin cta-vivid-red {
   color: $saa-color-vivid-red;
+  @apply underline;
 
   &:hover,
   &:focus {

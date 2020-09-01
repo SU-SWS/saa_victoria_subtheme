@@ -11,8 +11,8 @@
     }
 
     p {
-      @include saa-modular-typography-small-heading; // this would be 20px to 18px
-      line-height: 1.2em;
+      @include saa-modular-typography-small-heading;
+      line-height: 1.4em;
     }
   }
 }
