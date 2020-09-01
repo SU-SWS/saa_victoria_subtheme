@@ -26,7 +26,7 @@
     &.su-link--jump,
     &.su-link--top,
     &.su-link--internal {
-      @apply no-underline;
+      text-decoration: none;
 
       &::after {
         background-color: $saa-color-vivid-red;
@@ -36,6 +36,7 @@
       &:focus {
         &::after {
           background-color: $su-color-cardinal-red;
+          text-decoration: underline;
         }
       }
     }
@@ -59,7 +60,6 @@
 
     &:hover,
     &:focus {
-      @apply underline;
       text-decoration: underline;
       color: $saa-color-extra-light-cloud;
     }
@@ -77,6 +77,8 @@
     &:focus::after {
       background-color: $saa-color-extra-light-cloud;
     }
+
+
 
     &.su-link--action {
       @apply no-underline;
