@@ -6,7 +6,7 @@ a {
   @include cta-vivid-red;
 }
 
-.paragraph-item:not(.ptype-stanford-banner) {
+.paragraph-item {
   a {
     &:not(.su-button):not(.su-button--secondary):not(.su-button--big) {
       color: $saa-color-vivid-red;
