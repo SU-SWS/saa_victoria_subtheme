@@ -109,7 +109,7 @@
 @mixin cta-dark-vivid-red {
   @include cta-vivid-red;
   color: $su-color-vivid-red-dark;
-  @apply no-underline;
+  text-decoration: underline;
 
   &::after {
     background-color: $su-color-vivid-red-dark;
@@ -122,6 +122,7 @@
   &.su-link--jump,
   &.su-link--top,
   &.su-link--internal {
+    @apply no-underline;
 
     &::after {
       background-color: $su-color-vivid-red-dark;
