@@ -6,7 +6,8 @@ a {
   @include cta-vivid-red;
 }
 
-.su-wysiwyg-text {
+.su-wysiwyg-text,
+.su-card {
   a {
     &:not(.su-button):not(.su-button--secondary):not(.su-button--big) {
       color: $saa-color-vivid-red;
