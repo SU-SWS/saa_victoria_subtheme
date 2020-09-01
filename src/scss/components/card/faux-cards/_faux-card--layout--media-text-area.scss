@@ -7,14 +7,15 @@
       .paragraph-item.ptype-stanford-wysiwyg.flex-6-of-12 ~ .paragraph-item.ptype-stanford-media-caption.flex-6-of-12,
       // set margin and spacing for media caption on the left/first
       .paragraph-item.ptype-stanford-media-caption.flex-6-of-12 ~ .paragraph-item.ptype-stanford-wysiwyg.flex-6-of-12 {
-        @include grid-media-max(sm) {
+        @include grid-media-max(md) {
           margin-top: -$mobile-modular-spacing-2; // negative margin required in this one case, to counteract the previous element's bottom margin, position doesn't work as ewll
           margin-bottom: $mobile-modular-spacing-7;
         }
-
         @include grid-media-min(md) {
-          margin-top: -90px; // to counteract the previous element's bottom margin,
-          @include modular-spacing('margin-bottom', 5);
+          @include grid-media-max(lg) {
+            margin-top: -90px; // to counteract the previous element's bottom margin,
+            @include modular-spacing('margin-bottom', 5);
+          }
         }
 
         // positioning is neccessary since we can only style this unique case by styling the second element

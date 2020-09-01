@@ -11,12 +11,8 @@
     }
 
     p {
-      @include type-e;
-      line-height: 35.7px;
-
-      @include grid-media-max('sm') {
-        line-height: 22.4px;
-      }
+      @include saa-modular-typography-small-heading; // this would be 20px to 18px
+      line-height: 1.2em;
     }
   }
 }

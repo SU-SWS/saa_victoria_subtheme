@@ -2,7 +2,7 @@
 
 .node-stanford-page-title {
   @include grid-media-max(sm) {
-    margin-top: $mobile-modular-spacing-5; // down from 8rem to 50px
+    margin-top: $mobile-modular-spacing-7; // down from 8rem to 50px
   }
 }
 
@@ -19,11 +19,14 @@
 @include grid-media-max(sm) {
   .su-wysiwyg-text {
     p + h2 {
-      padding-top: $mobile-modular-spacing-1;
+      //padding-top: $mobile-modular-spacing-1;
+      @include modular-spacing('padding-top', -2);
     }
 
     p + h3 {
-      padding-top: $mobile-modular-spacing-0;
+      //padding-top: $mobile-modular-spacing-0;
+      @include modular-spacing('padding-top', -3);
+
     }
 
     .su-font-splash,
