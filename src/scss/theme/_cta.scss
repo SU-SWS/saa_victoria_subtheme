@@ -6,9 +6,7 @@ a {
   @include cta-vivid-red;
 }
 
-// If a new component is added and needs these styles, it would have to be overridden here...
-//.su-wysiwyg-text,
-//.su-card {
+.paragraph-item:not(.ptype-stanford-banner) {
   a {
     &:not(.su-button):not(.su-button--secondary):not(.su-button--big) {
       color: $saa-color-vivid-red;
@@ -20,7 +18,7 @@ a {
       }
     }
   }
-//}
+}
 
 // red background
 .bg-bright-red {
