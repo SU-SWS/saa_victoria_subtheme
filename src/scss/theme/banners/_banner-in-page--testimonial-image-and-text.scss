@@ -108,8 +108,11 @@ $banner-circle--image-width: 200px;
 
           .su-link,
           a {
-            @include cta-dark-vivid-red;
             @include modular-spacing('margin-bottom', 0);
+
+            &:not(.su-button):not(.su-button--secondary):not(.su-button--big) {
+              @include cta-dark-vivid-red;
+            }
           }
         }
       }
@@ -136,12 +139,3 @@ $banner-circle--image-width: 200px;
     }
   }
 }
-
-// Testimonial Banner accessible link styles
-//.paragraph-item {
-//  .saa-banner--has-image {
-//    .su-link:not(.su-button):not(.su-button--secondary):not(.su-button--big),
-//    a:not(.su-button):not(.su-button--secondary):not(.su-button--big) {
-//    }
-//  }
-//}
