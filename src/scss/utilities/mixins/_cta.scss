@@ -34,6 +34,8 @@
 
       &:hover,
       &:focus {
+        text-decoration: underline;
+
         &::after {
           background-color: $su-color-cardinal-red;
           text-decoration: underline;
