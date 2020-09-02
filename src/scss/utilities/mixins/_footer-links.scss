@@ -7,4 +7,9 @@
   @apply
   text-black
   no-underline;
+
+  &:hover,
+  &:focus {
+   @apply underline;
+  }
 }
