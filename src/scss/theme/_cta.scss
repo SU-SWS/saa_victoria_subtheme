@@ -6,34 +6,25 @@ a {
   @include cta-vivid-red;
 }
 
-.su-wysiwyg-text {
-  a {
-    &:not(.su-button):not(.su-button--secondary):not(.su-button--big) {
-      color: $saa-color-vivid-red;
-
-      &:hover,
-      &:focus {
-        color: $su-color-cardinal-red;
-        text-decoration: underline;
-      }
-    }
-  }
-}
+//.paragraph-item {
+//  a {
+//    &:not(.su-button):not(.su-button--secondary):not(.su-button--big) {
+//      @include cta-vivid-red;
+//      //color: $saa-color-vivid-red;
+//      //
+//      //&:hover,
+//      //&:focus {
+//      //  color: $su-color-cardinal-red;
+//      //  text-decoration: underline;
+//      //}
+//    }
+//  }
+//}
 
 // red background
 .bg-bright-red {
   .su-link {
     @include cta-white-on-bright-red;
-  }
-}
-
-// Testimonial Banner accessible link styles
-.paragraph-item {
-  .saa-banner--has-image {
-    .su-link:not(.su-button):not(.su-button--secondary):not(.su-button--big),
-    a:not(.su-button):not(.su-button--secondary):not(.su-button--big) {
-      @include cta-dark-vivid-red;
-    }
   }
 }
 

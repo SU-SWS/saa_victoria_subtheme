@@ -12,6 +12,7 @@
     @include link($su-color-white, $su-color-cool-grey);
   }
 }
+
 .su-links-text--white--no-hover {
   @include link($su-color-white, $su-color-white);
   a {
@@ -25,6 +26,7 @@
     @include link($su-color-cool-grey-15, $su-color-cool-grey);
   }
 }
+
 .su-links-text--red {
   @include link($su-color-cardinal-red, $su-color-bright-red);
   a {

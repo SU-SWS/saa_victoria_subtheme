@@ -105,10 +105,14 @@ $banner-circle--image-width: 200px;
             @include modular-spacing('margin-bottom', -1)
           }
 
-
+          // Note, currently no link classes are available inside this banner, so no su-link--something classes will work.
           .su-link,
           a {
             @include modular-spacing('margin-bottom', 0);
+
+            &:not(.su-button):not(.su-button--secondary):not(.su-button--big) {
+              @include cta-dark-vivid-red;
+            }
           }
         }
       }

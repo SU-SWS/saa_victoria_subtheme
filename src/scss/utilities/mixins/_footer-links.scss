@@ -4,5 +4,12 @@
   @include cta-vivid-red;
   @include saa-modular-typography-medium-small;
   // only difference should be regular state is black:
-  @apply text-black;
+  @apply
+  text-black
+  no-underline;
+
+  &:hover,
+  &:focus {
+    @apply underline;
+  }
 }
