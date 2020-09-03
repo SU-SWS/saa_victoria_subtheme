@@ -16,6 +16,10 @@
     }
   }
 
+  .map-link {
+    @apply font-bold;
+  }
+
   .saa-footer--legal-links {
     @include modular-spacing('padding-top', 3);
     max-width: 250px;
