@@ -9,6 +9,7 @@ html {
 
 body {
   @include modular-typography-base;
+  font-family: $saa-font--proxima-nova;
   color: $su-color-black;
 }
 
