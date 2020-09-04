@@ -14,14 +14,23 @@
 }
 
 @mixin saa-button--purple-icons {
-  &::after {
-    background-color: $saa-color-electric-purple;
-  }
-
-  &:hover,
-  &:focus {
+  &,
+  &.su-link--action,
+  &.su-link--external,
+  &.su-link--download,
+  &.su-link--video,
+  &.su-link--jump,
+  &.su-link--top,
+  &.su-link--internal { // needed specificity to override new module updates
     &::after {
-      background-color: $su-color-white;
+      background-color: $saa-color-electric-purple;
+    }
+
+    &:hover,
+    &:focus {
+      &::after {
+        background-color: $su-color-white;
+      }
     }
   }
 }

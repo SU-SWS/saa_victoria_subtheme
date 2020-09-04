@@ -10,6 +10,7 @@
   @include saa-button--big;
 }
 
+a.su-button--secondary, // needed to override module styles
 .su-button--secondary {
   @include saa-button--secondary;
 }
