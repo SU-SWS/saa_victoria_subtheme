@@ -1,16 +1,42 @@
 @charset "UTF-8";
 
 html {
-  font-family: $saa-font--proxima-nova;
+  @include saa-font--proxima-nova-base;
   font-size: $su-root-font-size;
 }
 
 // pulling in decanter styles to override base tailwind settings
 
+// overriding fonts from Stanford Basic
+.su-button,
+.su-button--big,
+.su-button--big.su-link,
+.su-button--secondary,
+.su-button--secondary.su-link,
+.su-button.su-link,
+.su-cta .su-cta__button,
+.su-local-footer__header
+.su-link--internal,
+[type="button"],
+[type="image"],
+[type="reset"],
+[type="submit"],
+button,
+.su-multi-menu,
+.su-masthead .su-site-search__input {
+  @include saa-font--proxima-nova-base;
+}
+
+
 body {
   @include modular-typography-base;
   @include saa-font--proxima-nova-base;
   color: $su-color-black;
+}
+
+// Do NOT override the fonts in the global footer
+.su-global-footer {
+  @include sans;
 }
 
 p {
