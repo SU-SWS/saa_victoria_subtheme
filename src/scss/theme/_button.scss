@@ -39,9 +39,9 @@ a.su-button--secondary, // needed to override module styles
   &.su-link--download,
   &.su-link--video,
   &.su-link--jump,
-  //&.su-link--top,  // not yet supported - can enable once it is added later
+  &.su-link--top,  // not yet supported
   &.su-link--internal {
-    padding-right: 22px;  // this visually looks the same, due to the space around the icon
+    padding-right: 22px;
   }
 }
 
@@ -51,7 +51,7 @@ a.su-button--secondary, // needed to override module styles
   &.su-link--download,
   &.su-link--video,
   &.su-link--jump,
-  //&.su-link--top,  // not yet supported - can enable once it is added later
+  &.su-link--top,  // not yet supported
   &.su-link--internal {
     &::after {
       // larger icon due to larger text in su-button--big
