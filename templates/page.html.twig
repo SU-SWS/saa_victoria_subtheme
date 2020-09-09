@@ -1,4 +1,16 @@
+{#would skip-to link go here#}
+{%- if template_path_skiplink is empty -%}
+  {%- set template_path_skiplink = "@decanter/components/skiplinks/link.twig" with { target_id : "page-content" } -%}
+{%- endif -%}
+{%- if template_path_skiplink is empty -%}
+  {%- set template_path_skiplink = "@decanter/components/skiplinks/link.twig" with { target_id : "secondary-links", link_text: "Skip to secondary links" } -%}
+{%- endif -%}
+{#<a href="#secondary-links" class="su-skiplinks">'Skip to secondary links')</a>#}
+
+
 {%- include "@saa_victoria_subtheme/components/brand-bar/saa--brand-bar.html.twig" with { modifier_class : "su-brand-bar--dark" } -%}
+
+
 
 {%- if page.help -%}
   {{ page.help }}
@@ -16,10 +28,10 @@
   </section>
 </header>
 
-<div class="page-content">
+<main id="page-content" class="page-content">
   <a name="page-content" id="page-content" tabindex="-1" class="visually-hidden focusable">Page Content</a>
   {{ page.content }}
-</div>
+</main>
 
 <footer id="footer">
 {#  {{ page.footer }}#}
