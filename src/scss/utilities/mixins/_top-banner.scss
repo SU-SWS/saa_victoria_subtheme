@@ -30,7 +30,6 @@
 
   // special override to enforce consistent button styles on red banners
   .su-button--big {
-    //font-size: 2rem !important; // TODO: Katria, this is not responsive, fix this after webpack reorg pr is merged, see main big button mixin in our theme
     padding: 10px 30px;
   }
 }
