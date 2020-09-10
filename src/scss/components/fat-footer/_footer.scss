@@ -6,7 +6,6 @@
     @include modular-spacing('padding-top', 4);
     grid-template-areas: "A B";
 
-    // need to adjust for other sizes and adjust grid template to work with the content columns
     @include grid-media-min('md') { // 1200px
       -ms-grid-columns: 3fr 5fr;
       grid-template-columns: 3fr 5fr;
@@ -51,12 +50,11 @@
           min-w-full
           max-w-full;
 
-          // last one remove padding (duplicate)
+          // no padding on last section
           &.saa-local-footer__links-section-6 {
             @apply pb-0;
           }
         }
-        // between 768 and 992px needs to be 1 column to the side
 
         @include grid-media-min('md') {
           min-width: calc(49% - 24px);
@@ -80,7 +78,6 @@
     }
 
     /* Link Section Headings  */
-
     .su-local-footer__list-heading {
       @include modular-spacing('padding', 2 null 0 null);
     }
