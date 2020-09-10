@@ -9,7 +9,7 @@
   p.su-subheading {
     @include saa-modular-typography-small;
     @include modular-spacing('margin-top', 2);
-    @include grid-media-max(sm) {
+    @include grid-media-max('sm') {
       margin-top: $mobile-modular-spacing-2;
     }
 
