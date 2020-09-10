@@ -19,12 +19,10 @@
 @include grid-media-max(sm) {
   .su-wysiwyg-text {
     p + h2 {
-      //padding-top: $mobile-modular-spacing-1;
       @include modular-spacing('padding-top', -2);
     }
 
     p + h3 {
-      //padding-top: $mobile-modular-spacing-0;
       @include modular-spacing('padding-top', -3);
 
     }
@@ -34,6 +32,4 @@
       padding-top: 0;
     }
   }
-
-
 }
