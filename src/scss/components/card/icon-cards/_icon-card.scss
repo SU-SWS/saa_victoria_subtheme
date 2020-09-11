@@ -52,7 +52,7 @@ $tag-height: 70px;
     }
 
     .su-card__contents {
-      @include modular-spacing('padding', 4 4 4 4);
+      @include modular-spacing('padding', 4);
       @include grid-media-max('sm') {
         padding: $mobile-modular-spacing-3;
       }
