@@ -19,9 +19,7 @@
         // positioning is neccessary since we can only style this unique case by styling the second element
         @include grid-media-min('lg') {
           max-width: 44%;
-          margin-top: 0;
-          margin-left: 0;
-          margin-right: 3%;
+          @include margin(0 3% null 0);
         }
 
         @include grid-media-min('xl') {
