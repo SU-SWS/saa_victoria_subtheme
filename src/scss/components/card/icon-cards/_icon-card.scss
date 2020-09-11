@@ -78,7 +78,7 @@ $tag-height: 70px;
     }
 
     .su-button {
-      @include modular-spacing('margin', 1 null null null);
+      @include modular-spacing('margin', 1 null null);
       @include grid-media-max('sm') {
         margin-top: $mobile-modular-spacing-1;
       }
@@ -258,4 +258,3 @@ $tag-height: 70px;
     }
   }
 }
-
