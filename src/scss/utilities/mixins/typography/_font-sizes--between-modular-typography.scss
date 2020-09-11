@@ -19,7 +19,7 @@
 
 @mixin saa-modular-typography-small-heading {
   font-size: 18px;
-  @include grid-media-min(md) { // 992px
+  @include grid-media-min('md') {
     font-size: 20px;
   }
 }

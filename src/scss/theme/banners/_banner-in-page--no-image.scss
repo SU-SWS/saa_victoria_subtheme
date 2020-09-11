@@ -13,20 +13,7 @@
 
       .su-card {
         &.su-hero__card {
-          //@apply
-          //relative
-          //shadow-none
-          //max-w-full
-          //h-full
-          //border-0
-          //left-0
-          //top-0
-          //text-center
-          //flex
-          //items-center
-          //justify-center;
           @include modular-spacing('padding', 3);
-
           align-items: center;
           background: $su-color-vivid-red-dark;
           border: 0;
@@ -43,17 +30,14 @@
         }
 
         .su-card__contents {
-          //@apply p-0;
           padding: 1px 0 0 0;
 
           @include grid-media-min('lg') {
-            //@apply inline max-w-screen-lg;
             max-width: $banner-b--lg;
             display: inline;
           }
 
           @include grid-media-min('xl') {
-            //@apply max-w-screen-lg;
             max-width: $banner-b--xl;
           }
 
@@ -73,16 +57,6 @@
             margin-bottom: 18px;
           }
 
-
-          // regular links and action links
-          //a:not(.su-button):not(.su-button--secondary):not(.su-button--big),
-          //.su-link,
-          //.su-link--action {
-          //  margin-top: 12px;
-          //  color: $su-color-white;
-          //  // Note: This does not use the @cta-white-on-bright-red mixin because the yellow hover is not accessible on vivid-red bg
-          //}
-
           // regular links and action links
           a:not(.su-button):not(.su-button--secondary):not(.su-button--big) {
             margin-top: 12px;
@@ -94,7 +68,6 @@
 
             // for action and other types of links
             &::after {
-              //@apply bg-white;
               background: $su-color-white;
             }
 
@@ -105,7 +78,7 @@
             }
           }
 
-          // Might not need this as the current default button styling is saa-button--purple
+          // Enforce only classic button style
           .su-button,
           .su-button--big,
           .su-button--secondary {

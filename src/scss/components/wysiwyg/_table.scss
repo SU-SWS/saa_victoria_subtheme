@@ -15,7 +15,7 @@
   }
 
   // table label
-  @include grid-media-max(sm) {
+  @include grid-media-max('sm') {
     .table--label-above {
       &::before {
         content: "Table best viewed in landscape mode.";

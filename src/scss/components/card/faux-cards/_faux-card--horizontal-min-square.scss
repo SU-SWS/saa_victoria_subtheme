@@ -11,7 +11,7 @@ $card-circle--width: 140px;
     .align-left {
       img[width='220'] {
         display: none;
-        @include grid-media-min(sm) {
+        @include grid-media-min('sm') {
           display: block;
           max-width: 140px;
         }

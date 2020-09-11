@@ -6,21 +6,6 @@ a {
   @include cta-vivid-red;
 }
 
-//.paragraph-item {
-//  a {
-//    &:not(.su-button):not(.su-button--secondary):not(.su-button--big) {
-//      @include cta-vivid-red;
-//      //color: $saa-color-vivid-red;
-//      //
-//      //&:hover,
-//      //&:focus {
-//      //  color: $su-color-cardinal-red;
-//      //  text-decoration: underline;
-//      //}
-//    }
-//  }
-//}
-
 // red background
 .bg-bright-red {
   .su-link {
@@ -50,5 +35,3 @@ a {
     }
   }
 }
-
-
