@@ -79,7 +79,7 @@
 
     /* Link Section Headings  */
     .su-local-footer__list-heading {
-      @include modular-spacing('padding', 2 null 0 null);
+      @include modular-spacing('padding', 2 null 0);
     }
 
     ul {
