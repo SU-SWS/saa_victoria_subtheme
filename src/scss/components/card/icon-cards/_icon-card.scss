@@ -1,6 +1,5 @@
 @charset "UTF-8";
 
-// Icon Card styles will go here
 $icon-size: 48px;
 $tag-width: 20px;
 $tag-width--mobile: 15px;
@@ -9,11 +8,11 @@ $tag-height: 70px;
 .su-card {
   &.su-card--icon {
 
-    // icon settings
+    // icon
     img {
       margin-right: 0;
       @include modular-spacing('margin', 4 null 2 4);
-      @include grid-media-max(sm) {
+      @include grid-media-max('sm') {
         margin-top: $mobile-modular-spacing-3;
         margin-right: $mobile-modular-spacing-3;
         margin-left: $mobile-modular-spacing-3;
@@ -30,7 +29,7 @@ $tag-height: 70px;
       content: "";
       height: $tag-height;
       width: $tag-width;
-      @include grid-media-max(sm) {
+      @include grid-media-max('sm') {
         width: $tag-width--mobile;
       }
 
@@ -53,8 +52,8 @@ $tag-height: 70px;
     }
 
     .su-card__contents {
-      @include modular-spacing('padding', 4 4 4 4);
-      @include grid-media-max(sm) {
+      @include modular-spacing('padding', 4);
+      @include grid-media-max('sm') {
         padding: $mobile-modular-spacing-3;
       }
       @apply
@@ -79,14 +78,15 @@ $tag-height: 70px;
     }
 
     .su-button {
-      @include modular-spacing('margin', 1 null null null);
-      @include grid-media-max(sm) {
+      @include modular-spacing('margin', 1 null null);
+      @include grid-media-max('sm') {
         margin-top: $mobile-modular-spacing-1;
       }
     }
   }
 }
-// add colored tags in order, for while we don't have interface customization yet:
+
+// add colored tags in order, while we don't have interface customization yet:
 
 // 3 card row, 1 in 3
 .container-3-items:nth-of-type(3n-2) {
@@ -258,4 +258,3 @@ $tag-height: 70px;
     }
   }
 }
-

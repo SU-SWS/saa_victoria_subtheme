@@ -4,7 +4,7 @@
   .su-wysiwyg-text {
     & > .align-center ~ .su-subheading {
       @include modular-spacing('margin-top', 2);
-      @include grid-media-max(sm) {
+      @include grid-media-max('sm') {
         margin-top: $mobile-modular-spacing-2;
       }
     }

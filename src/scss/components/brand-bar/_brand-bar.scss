@@ -1,7 +1,10 @@
 @charset "UTF-8";
 
+$saa-brand-bar--height: 50px;
+$saa-brand-bar--img--height: 22px;
+
 .su-brand-bar {
-  height: 50px;
+  height: $saa-brand-bar--height;
 }
 
 .su-brand-bar__container {
@@ -15,5 +18,5 @@
 }
 
 .su-brand-bar__img {
-  height: 22px;
+  height: $saa-brand-bar--img--height;
 }
