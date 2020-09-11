@@ -64,7 +64,7 @@ class App extends React.Component {
     return (
       <main>
         <header>
-          <div id="associates--top-of-page" name="top" />
+          <div id="associates--top-of-page"/>
           <Counter
             className="counter"
             count={this.state.names ? this.state.names.length : 0}
