@@ -1,23 +1,12 @@
 @charset "UTF-8";
 
 .su-lockup {
-  font-family: Calluna;
-  font-style: normal;
-  font-weight: 900;
+  @include saa-font--calluna-base;
+  letter-spacing: normal;
   font-size: 44px;
 }
 
 .su-lockup__cell2 {
   padding-left: 0;
   border-left: 0;
-}
-
-@include grid-media-min('lg') {
-  .su-masthead {
-    .su-lockup--option-a {
-      .su-lockup__line1 {
-        line-height: 1.2em;
-      }
-    }
-  }
 }

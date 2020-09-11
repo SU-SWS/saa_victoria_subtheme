@@ -1,14 +1,14 @@
 @charset "UTF-8";
 
 .node-stanford-page-title {
-  @include grid-media-max(sm) {
+  @include grid-media-max('sm') {
     margin-top: $mobile-modular-spacing-7; // down from 8rem to 50px
   }
 }
 
 // regular paragraphs in WYSIWYG
 .su-wysiwyg-text {
-  @include grid-media-max(sm) {
+  @include grid-media-max('sm') {
     p {
       margin-bottom: 2.2rem; // is 3.2rem on desktop
     }
@@ -16,15 +16,13 @@
 }
 
 // when a heading follows a <p> tag, it results in too much space on mobile
-@include grid-media-max(sm) {
+@include grid-media-max('sm') {
   .su-wysiwyg-text {
     p + h2 {
-      //padding-top: $mobile-modular-spacing-1;
       @include modular-spacing('padding-top', -2);
     }
 
     p + h3 {
-      //padding-top: $mobile-modular-spacing-0;
       @include modular-spacing('padding-top', -3);
 
     }
@@ -34,6 +32,4 @@
       padding-top: 0;
     }
   }
-
-
 }

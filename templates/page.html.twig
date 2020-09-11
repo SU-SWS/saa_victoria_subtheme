@@ -30,10 +30,6 @@
 </main>
 
 <footer id="footer">
-{#  {{ page.footer }}#}
-
-{#  {%- include "{{ base_path ~ directory }}/templates/components/fat-footer/saa-fat-footer.html.twig"  -%}#}
   {%- include "@saa_victoria_subtheme/components/fat-footer/saa-fat-footer.html.twig" with { modifier_class : "test" } -%}
-
   {%- include "@basic-dist/decanter/components/global-footer/global-footer.twig" -%}
 </footer>
