@@ -23,7 +23,7 @@
 {# Possibly split this out into a masthead template, but i thought we had some challenge doing that? #}
 
 {% block header %}
-  <section class="katria-test-inside-header">
+  <section>
     {%- include "@saa_victoria_subtheme/components/lockup/saa--lockup.html.twig" with { modifier_class : "su-lockup--option-a", line1: site_name } -%}
     {%- if page.search -%}
       {{ page.search }}
