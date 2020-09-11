@@ -1,4 +1,8 @@
-{%- extends "@stanford_basic/templates/page.html.twig"  -%}
+
+{# Need to get this working so it's formatted better, must be missing something:  #}
+{#{%- extends "@stanford_basic/templates/page.html.twig"  -%}#}
+{% extends 'themes/custom/stanford_basic/templates/page.html.twig' %}
+
 
 {#would skip-to link go here#}
 {#  This actually goes in the html template, and it should be getting these links already from stanford basic's html template:  #}
@@ -19,7 +23,7 @@
 {# Possibly split this out into a masthead template, but i thought we had some challenge doing that? #}
 
 {% block header %}
-  <section>
+  <section class="katria-test-inside-header">
     {%- include "@saa_victoria_subtheme/components/lockup/saa--lockup.html.twig" with { modifier_class : "su-lockup--option-a", line1: site_name } -%}
     {%- if page.search -%}
       {{ page.search }}
