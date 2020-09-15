@@ -12,6 +12,10 @@
     &::after {
       background-color: $su-color-cardinal-red;
     }
+
+    & svg.mailto {
+      fill: $su-color-cardinal-red;
+    }
   }
 
   &::after {
