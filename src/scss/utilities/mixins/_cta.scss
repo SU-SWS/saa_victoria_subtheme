@@ -1,6 +1,23 @@
 @charset "UTF-8";
 
+@mixin mailto-links-with-cta {
+  &.su-link--action,
+  &.su-link--external,
+  &.su-link--download,
+  &.su-link--video,
+  &.su-link--jump,
+  &.su-link--top,
+  &.su-link--internal {
+    // do not allow cta icons AND email icon under any circumstance
+    &.mailto::after {
+      display: none;
+    }
+  }
+}
+
+
 @mixin cta-vivid-red {
+  @include mailto-links-with-cta;
   color: $saa-color-vivid-red;
   @apply underline;
 
@@ -69,6 +86,7 @@
 @mixin cta-white-on-bright-red {
   .su-link,
   a:not(.su-button):not(.su-button--secondary):not(.su-button--big) {
+    @include mailto-links-with-cta;
     @apply text-white;
     text-decoration: underline;
 
@@ -96,8 +114,6 @@
       background-color: $saa-color-extra-light-cloud;
     }
 
-
-
     &.su-link--action {
       @apply no-underline;
 
@@ -118,6 +134,8 @@
       width: 14px; // video icon is too wide, 13px cuts it off, temp fix
     }
 
+
+
     &.disabled {
       @apply text-gray-700;
     }
@@ -132,6 +150,7 @@
 // It inherits the hover and focus styling from the vivid-red cta mixin
 @mixin cta-dark-vivid-red {
   @include cta-vivid-red;
+  @include mailto-links-with-cta;
   color: $su-color-vivid-red-dark;
   text-decoration: underline;
 

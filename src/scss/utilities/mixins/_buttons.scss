@@ -73,6 +73,7 @@
 @mixin saa-button--secondary {
   @include saa-button--hover-and-focus;
   @include saa-button--purple-icons;
+  @include mailto-links-with-cta;
   box-shadow: none;
   background: $su-color-white;
   color: $saa-color-electric-purple;
@@ -85,10 +86,12 @@
     box-shadow: none;
   }
 }
+
 @mixin saa-button--big {
   @include button-big;
   @include saa-button--hover-and-focus;
   @include saa-button--white-icons;
+  @include mailto-links-with-cta;
   background: $saa-color-electric-purple;
   color: $su-color-white;
 
@@ -99,6 +102,7 @@
 
 @mixin saa-button--secondary-on-red {
   @include saa-button--secondary;
+  @include mailto-links-with-cta;
   border: 1px solid $su-color-white;
 
   &:hover,
@@ -111,6 +115,7 @@
 @mixin saa-button--purple--only {
   @include saa-button--hover-and-focus;
   @include saa-button--white-icons;
+  @include mailto-links-with-cta;
   background: $saa-color-electric-purple;
   color: $su-color-white;
   padding: 10px 30px;
