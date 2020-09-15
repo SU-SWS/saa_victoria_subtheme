@@ -63,6 +63,10 @@
   color: $su-color-white;
   text-decoration: underline;
   cursor: pointer;
+
+  & svg.mailto {
+    fill: $su-color-white;
+  }
 }
 
 @mixin saa-button--focus {
