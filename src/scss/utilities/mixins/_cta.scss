@@ -40,6 +40,10 @@
           background-color: $su-color-cardinal-red;
           text-decoration: underline;
         }
+
+        & svg.mailto {
+          fill: $su-color-cardinal-red;
+        }
       }
     }
 
@@ -51,6 +55,10 @@
 
   &.disabled {
     color: $su-color-cool-grey;
+  }
+
+  & svg.mailto {
+    fill: $saa-color-vivid-red;
   }
 }
 
@@ -64,6 +72,10 @@
     &:focus {
       text-decoration: underline;
       color: $saa-color-extra-light-cloud;
+
+      & svg.mailto {
+        fill: $saa-color-extra-light-cloud;
+      }
     }
 
     &::after {
@@ -106,6 +118,10 @@
       @apply text-gray-700;
     }
   }
+
+  & svg.mailto {
+    fill: $su-color-white;
+  }
 }
 
 // This link style is for used to override the vivid-red cta styles for colored background (i.e. Sandstone, Light Grey).
@@ -117,6 +133,10 @@
 
   &::after {
     background-color: $su-color-vivid-red-dark;
+  }
+
+  & svg.mailto {
+    fill: $su-color-vivid-red-dark;
   }
 
   &.su-link--action,

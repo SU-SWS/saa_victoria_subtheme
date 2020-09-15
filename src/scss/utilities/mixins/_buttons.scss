@@ -11,6 +11,10 @@
       background-color: $su-color-white;
     }
   }
+
+  & svg.mailto {
+    fill: $su-color-white;
+  }
 }
 
 @mixin saa-button--purple-icons {
@@ -31,6 +35,14 @@
       &::after {
         background-color: $su-color-white;
       }
+
+      & svg.mailto {
+        fill: $su-color-white;
+      }
+    }
+
+    & svg.mailto {
+      fill: $saa-color-electric-purple;
     }
   }
 }
