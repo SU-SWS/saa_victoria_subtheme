@@ -71,10 +71,18 @@
               background: $su-color-white;
             }
 
+            & svg.mailto {
+              fill: $su-color-white;
+            }
+
             &:hover,
             &:focus {
               color: $saa-color-extra-light-cloud;
               text-decoration: underline;
+
+              & svg.mailto {
+                fill: $saa-color-extra-light-cloud;
+              }
             }
           }
 

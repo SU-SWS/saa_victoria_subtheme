@@ -41,7 +41,9 @@ a.su-button--secondary, // needed to override module styles
   &.su-link--jump,
   &.su-link--top,  // not yet supported
   &.su-link--internal {
-    padding-right: 22px;
+    &:not(.mailto) {
+      padding-right: 22px;
+    }
   }
 }
 
