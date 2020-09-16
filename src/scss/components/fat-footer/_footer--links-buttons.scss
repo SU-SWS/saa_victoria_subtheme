@@ -4,13 +4,15 @@
 .su-local-footer {
 
   // first column links
+  .map-link {
+    @include cta-dark-vivid-red;
+  }
 
   // Action link styles
-  .map-link,
   .su-local-footer__action-links {
     .su-link,
     a {
-      @include cta-vivid-red;  // change to cta-vivid-red-dark once that is merged in and available
+      @include cta-dark-vivid-red;
       @include saa-modular-typography-medium-small;
     }
   }
