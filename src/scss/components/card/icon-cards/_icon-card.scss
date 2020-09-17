@@ -87,9 +87,7 @@ $tag-height: 70px;
 }
 
 // add colored tags in order, while we don't have interface customization yet:
-
-
-.node.su-page-components {
+.su-page-components {
   & > div:nth-of-type(3n-2) { // rows A
 
     // 1 items, row 1
@@ -273,6 +271,7 @@ $tag-height: 70px;
 
   } // End of Rows C
 }
+
 
 
 
