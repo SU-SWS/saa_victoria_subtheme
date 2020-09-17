@@ -154,8 +154,19 @@
   color: $su-color-vivid-red-dark;
   text-decoration: underline;
 
-  &::after {
-    background-color: $su-color-vivid-red-dark;
+  // needed for specificity to override the setting in the cta vivid red mixin
+  &:not(.su-button):not(.su-button--secondary):not(.su-button--big) {
+    &.su-link--action,
+    &.su-link--external,
+    &.su-link--download,
+    &.su-link--video,
+    &.su-link--jump,
+    &.su-link--top,
+    &.su-link--internal {
+      &::after {
+        background-color: $su-color-vivid-red-dark;
+      }
+    }
   }
 
   & svg.mailto {
