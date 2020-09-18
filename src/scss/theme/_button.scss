@@ -6,6 +6,11 @@
   @include saa-button--purple;
 }
 
+// needs specific override because external link module is taking precedence
+.su-button.su-link--external {
+  @apply no-underline;
+}
+
 .su-button--big {
   @include saa-button--big;
 }
