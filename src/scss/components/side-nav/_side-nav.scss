@@ -27,7 +27,7 @@
   // override one part for needed specificity
   a {
     // we'll never have buttons inside the menu, but this is needed for specificity
-    .su-secondary-nav__link:not(.su-button):not(.su-button--secondary):not(.su-button--big) {
+    &.su-secondary-nav__link:not(.su-button):not(.su-button--secondary):not(.su-button--big) {
       &::after {
         background-color: $su-color-black;
       }
