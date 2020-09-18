@@ -14,16 +14,21 @@
   .su-secondary-nav__link {
     color: $su-color-black;
 
-    &::after {
-      background-color: $su-color-black;
-    }
-
     &:hover,
     &:focus {
       color: $su-color-cardinal-red;
 
       &::before {
         background-color: $su-color-cardinal-red;
+      }
+    }
+  }
+
+  // override one part for needed specificity
+  a {
+    .su-secondary-nav__link:not(.su-button):not(.su-button--secondary):not(.su-button--big) {
+      &::after {
+        background-color: $su-color-black;
       }
     }
   }
