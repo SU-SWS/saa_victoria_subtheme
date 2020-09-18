@@ -14,6 +14,10 @@
   .su-secondary-nav__link {
     color: $su-color-black;
 
+    &::after {
+      background-color: $su-color-black;
+    }
+
     &:hover,
     &:focus {
       color: $su-color-cardinal-red;
