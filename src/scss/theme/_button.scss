@@ -9,6 +9,7 @@
 // needs specific override because external link module is taking precedence
 .su-button.su-link--external {
   @apply no-underline;
+  @include saa-button--hover-and-focus; // reset underline on hover/focus etc.
 }
 
 .su-button--big {
