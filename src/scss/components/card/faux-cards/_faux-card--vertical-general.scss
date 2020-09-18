@@ -3,10 +3,13 @@
 .paragraph--type--stanford-wysiwyg {
   .su-wysiwyg-text {
     & > .align-center ~ .su-subheading {
-      @include modular-spacing('margin-top', 2);
-      @include grid-media-max('sm') {
-        margin-top: $mobile-modular-spacing-2;
-      }
+      padding-top: 0;
+    }
+
+    & > .align-center ~ h2,
+    & > .align-center ~ h3,
+    & > .align-center ~ h4 {
+      padding-top: 0;
     }
   }
 }
