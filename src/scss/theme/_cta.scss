@@ -2,8 +2,14 @@
 
 .su-link,
 a {
-  // cta-vivid-red mixin includes the call to action link styles
+  // cta-vivid-red mixin includes the call to action icon styles
   @include cta-vivid-red;
+}
+
+a svg.mailto {
+  display: inline;
+  position: relative;
+  top: -4px; // center with letters
 }
 
 // red background
