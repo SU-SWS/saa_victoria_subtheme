@@ -1,5 +1,7 @@
 @charset "UTF-8";
 
+$saa-cta--line-height: 1.25;
+
 @mixin mailto-links-with-cta {
   &.su-link--action,
   &.su-link--external,
@@ -20,7 +22,6 @@
   @include mailto-links-with-cta;
   color: $saa-color-vivid-red;
   @apply underline;
-  line-height: 1.25;
 
   &:hover,
   &:focus {
@@ -49,6 +50,7 @@
     &.su-link--top,
     &.su-link--internal {
       text-decoration: none;
+      line-height: $saa-cta--line-height;
 
       &::after {
         background-color: $saa-color-vivid-red;
@@ -90,7 +92,7 @@
     @include mailto-links-with-cta;
     @apply text-white;
     text-decoration: underline;
-    line-height: 1.25;
+    line-height: $saa-cta--line-height;
 
     &:hover,
     &:focus {
@@ -115,6 +117,18 @@
     &:focus::after {
       background-color: $saa-color-extra-light-cloud;
     }
+
+    &.su-link--action,
+    &.su-link--external,
+    &.su-link--download,
+    &.su-link--video,
+    &.su-link--jump,
+    &.su-link--top,
+    &.su-link--internal {
+      line-height: $saa-cta--line-height;
+    }
+
+
 
     &.su-link--action {
       @apply no-underline;
