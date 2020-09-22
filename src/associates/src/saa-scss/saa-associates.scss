@@ -1,109 +1,113 @@
-//@import '../../../scss/config/index.scss';
+@charset "UTF-8";
 
-main {
-  font-family: proxima-nova;
-  margin-bottom: 2.3rem;
-}
+// all styles scoped to just the Associates react widget
+#su-associates {
+  main {
+    font-family: proxima-nova;
+    margin-bottom: 2.3rem;
+  }
 
-header,
-.newMembersToggle {
-  margin-left: 0;
-}
+  header,
+  .newMembersToggle {
+    margin-left: 0;
+  }
 
-.newMembersToggle {
-  input[type="checkbox"] {
-    background: transparent;
-    border: 0;
-    color: transparent;
-    clip-path: unset;
-    clip: unset;
-    cursor: pointer;
-    margin: 5px;
-    height: 1px;
-    width: 1px;
-    z-index: -1;
 
-    &:hover,
-    &:focus {
+  .newMembersToggle {
+    input[type="checkbox"] {
+      background: transparent;
+      border: 0;
+      color: transparent;
+      clip-path: unset;
+      clip: unset;
       cursor: pointer;
-    }
+      margin: 5px;
+      height: 1px;
+      width: 1px;
+      z-index: -1;
 
-    + label::before {
-      vertical-align: unset;
-    }
-  }
-}
+      &:hover,
+      &:focus {
+        cursor: pointer;
+      }
 
-.nav-tabs {
-  .nav-item {
-    background: #4d4f53;
-    color: #fff;
-
-    &.active {
-      background: #8c1515;
-    }
-
-    @media only screen and (min-width: 768px) {
-      padding: 0.8rem 1.5rem;
-    }
-  }
-}
-
-.react-autosuggest__container {
-  position: relative;
-  z-index: 1;
-}
-
-.react-autosuggest__input {
-  padding: 0.6rem 2rem 0.8rem;
-  width: 50%;
-}
-
-.react-autosuggest__suggestions-container--open {
-  width: 50%;
-  max-width: 46rem;
-  height: 250px;
-  overflow: scroll;
-  border: 1px solid #000;
-  background: #fff;
-  position: absolute;
-
-  .react-autosuggest__suggestion {
-    &:hover,
-    &:focus {
-      background: #f4f4f4;
-      cursor: pointer;
-    }
-  }
-
-
-  ul {
-    &.react-autosuggest__suggestions-list {
-      list-style: none;
-      padding-left: 0;
-
-      li {
-        padding-left: 1rem;
+      + label::before {
+        vertical-align: unset;
       }
     }
   }
-}
 
-.tab-pane {
-  background: transparent;
+  .nav-tabs {
+    .nav-item {
+      background: #4d4f53;
+      color: #fff;
 
-  > div > div:nth-child(even) {
-    background: #f4f4f4;
+      &.active {
+        background: #8c1515;
+      }
+
+      @media only screen and (min-width: 768px) {
+        padding: 0.8rem 1.5rem;
+      }
+    }
   }
 
-  h5 {
-    width: 100%;
-    color: #8c1515;
-    font-size: 28px;
-    //@include modular-typography(2);
+  .react-autosuggest__container {
+    position: relative;
+    z-index: 1;
   }
 
-  b {
-    font-weight: unset;
+  .react-autosuggest__input {
+    padding: 0.6rem 2rem 0.8rem;
+    width: 50%;
+  }
+
+  .react-autosuggest__suggestions-container--open {
+    width: 50%;
+    max-width: 46rem;
+    height: 250px;
+    overflow: scroll;
+    border: 1px solid #000;
+    background: #fff;
+    position: absolute;
+
+    .react-autosuggest__suggestion {
+      &:hover,
+      &:focus {
+        background: #f4f4f4;
+        cursor: pointer;
+      }
+    }
+
+
+    ul {
+      &.react-autosuggest__suggestions-list {
+        list-style: none;
+        padding-left: 0;
+
+        li {
+          padding-left: 1rem;
+        }
+      }
+    }
+  }
+
+  .tab-pane {
+    background: transparent;
+
+    > div > div:nth-child(even) {
+      background: #f4f4f4;
+    }
+
+    h5 {
+      width: 100%;
+      color: #8c1515;
+      font-size: 28px;
+      //@include modular-typography(2);
+    }
+
+    b {
+      font-weight: unset;
+    }
   }
 }
