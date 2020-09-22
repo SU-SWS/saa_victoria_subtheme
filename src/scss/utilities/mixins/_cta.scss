@@ -20,6 +20,7 @@
   @include mailto-links-with-cta;
   color: $saa-color-vivid-red;
   @apply underline;
+  line-height: 1.25;
 
   &:hover,
   &:focus {
@@ -89,6 +90,7 @@
     @include mailto-links-with-cta;
     @apply text-white;
     text-decoration: underline;
+    line-height: 1.25;
 
     &:hover,
     &:focus {
@@ -133,8 +135,6 @@
     &.su-link--video::after {
       width: 14px; // video icon is too wide, 13px cuts it off, temp fix
     }
-
-
 
     &.disabled {
       @apply text-gray-700;
