@@ -111,19 +111,3 @@
     }
   }
 }
-
-
-/* -- Page with associates has issues I can't seem to remove -- */
-@media (max-width: 991px) {
-  .page-associates-test-page {
-    .su-multi-menu__nav-toggle {
-      padding-bottom: 0;
-      margin-top: 10px;
-
-      &:after {
-        // height is already set to 26px, for some reason it won't work on THIS page, without:
-        min-height: 26px;
-      }
-    }
-  }
-}
