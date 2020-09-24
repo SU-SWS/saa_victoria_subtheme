@@ -39,35 +39,26 @@ $banner-circle--image-width: 200px;
 
       .su-card {
         &.su-hero__card {
-          //@apply
-          //max-w-screen-lg
-          //left-0
-          //h-full
-          //text-center
-          //border-none
-          //shadow-none
-          //pt-8;
+          @apply
+          left-0
+          h-full
+          text-center
+          border-none
+          shadow-none;
           background: transparent;
           color: $su-color-black;
-          border: 0;
-          box-shadow: none;
-          height: 100%;
-          left: 0;
           max-width: 1024px;
           margin: 0 auto;
           position: unset;
-          text-align: center;
           top: 100px;
         }
 
         .su-card__contents {
-          //@apply
-          //max-w-screen-lg
-          //p-0;
-          max-width: 1024px;
-          padding: 0;
-          display: flex;
-          flex-direction: column;
+          @apply
+          max-w-screen-lg
+          p-0
+          flex
+          flex-col;
 
           > span {
             order: 2;
