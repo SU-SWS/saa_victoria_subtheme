@@ -2,42 +2,13 @@
 
 .su-link,
 a {
-  // cta-vivid-red mixin includes the call to action icon styles
+  // Note: cta-vivid-red mixin includes the call to action icon styles
   @include cta-vivid-red;
 }
 
 a svg.mailto {
   display: inline;
   position: relative;
-  top: -4px; // center with letters
+  top: -4px; // center vertically with text
 }
 
-// red background
-.bg-bright-red {
-  .su-link {
-    @include cta-white-on-bright-red;
-  }
-}
-
-// Local Footer accessible link styles
-.su-local-footer {
-  .su-local-footer__primary-links,
-  .su-local-footer__secondary-links,
-  .su-local-footer__action-links {
-    .su-link:not(.su-button):not(.su-button--secondary):not(.su-button--big),
-    a:not(.su-button):not(.su-button--secondary):not(.su-button--big) {
-      @include cta-dark-vivid-red;
-    }
-  }
-
-  .su-local-footer__header {
-    .su-link,
-    a {
-      &.su-link--internal {
-        &::after {
-          background-color: $su-color-white;
-        }
-      }
-    }
-  }
-}

@@ -4,29 +4,31 @@
   // if there is NO image and a card  - all red full width
   .saa-banner--no-image {
     .su-hero {
-      height: auto;
+      @apply h-auto;
       min-height: unset;
 
       .su-hero__media {
-        display: none;
+        @apply hidden;
       }
 
       .su-card {
         &.su-hero__card {
           @include modular-spacing('padding', 3);
-          align-items: center;
+          @apply
+          text-center
+          border-none
+          shadow-none
+          flex
+          justify-center
+          items-center
+          left-0
+          top-0
+          m-0
+          max-w-full
+          relative
+          text-center;
           background: $su-color-vivid-red-dark;
-          border: 0;
-          box-shadow: none;
           color: $su-color-white;
-          display: flex;
-          justify-content: center;
-          left: 0;
-          margin: 0;
-          max-width: 100%;
-          position: relative;
-          text-align: center;
-          top: 0;
         }
 
         .su-card__contents {
@@ -34,7 +36,7 @@
 
           @include grid-media-min('lg') {
             max-width: $banner-b--lg;
-            display: inline;
+            @apply inline;
           }
 
           @include grid-media-min('xl') {
@@ -63,7 +65,7 @@
             color: $su-color-white;
 
             &:not(.su-link--action) {
-              text-decoration: underline;
+              @apply underline;
             }
 
             // for action and other types of links
@@ -78,7 +80,7 @@
             &:hover,
             &:focus {
               color: $saa-color-extra-light-cloud;
-              text-decoration: underline;
+              @apply underline;
 
               & svg.mailto {
                 fill: $saa-color-extra-light-cloud;
@@ -94,7 +96,6 @@
           }
 
           .su-button--big {
-            font-size: 2rem !important; // TODO: Katria, this is not responsive, fix this after webpack reorg pr is merged, see main big button mixin in our theme
             padding: 10px 30px;
           }
         }
