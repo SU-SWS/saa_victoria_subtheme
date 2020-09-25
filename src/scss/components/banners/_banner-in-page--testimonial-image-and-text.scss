@@ -86,7 +86,7 @@ $banner-circle--image-width: 200px;
           > .su-card__button {
             order: 4;
 
-            a.su-link.su-button {
+            &.su-button {
               @apply mb-0;
             }
           }
