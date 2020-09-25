@@ -120,8 +120,6 @@ $banner-circle--image-width: 200px;
 
       .su-card__contents {
         @apply mx-auto;
-        //margin-left: auto;
-        //margin-right: auto;
         max-width: 90%;
         @include grid-media-min('lg') {
           max-width: 80%;
