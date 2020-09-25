@@ -5,11 +5,9 @@
   .saa-banner--no-image {
     .su-hero {
       @apply h-auto;
-      //height: auto;
       min-height: unset;
 
       .su-hero__media {
-        //display: none;
         @apply hidden;
       }
 
