@@ -2,12 +2,11 @@
 
 /**
  * @file
- *
  * Update/Refresh the externally attached theme on several sites.
  */
 
 // Initialize.
-$config;
+$config = NULL;
 
 // Get common settings/vars.
 require "common.inc";

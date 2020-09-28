@@ -2,12 +2,11 @@
 
 /**
  * @file
- *
  * Change the VCS branch on an external theme in ACSF.
  */
 
 // Initialize.
-$config;
+$config = NULL;
 
 // Get common settings/vars.
 require "common.inc";
@@ -48,4 +47,4 @@ foreach ($config->sites as $site_name => $site_id) {
 }
 
 // Close it.
-curl_close ($ch);
+curl_close($ch);

@@ -2,7 +2,6 @@
 
 /**
  * @file
- *
  * Common settings parsing.
  */
 
