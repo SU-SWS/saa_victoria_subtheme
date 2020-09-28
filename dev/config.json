@@ -1,0 +1,23 @@
+{
+  "config": {
+    "username": "Shea McKinney",
+    "apiKey": "7dd7a6274275d4fd33709a174767a702badefc2d",
+    "api": "https://www.test-cardinalsites.acsitefactory.com/api/v1",
+    "vcsUrl": "git@github.com:su-sws/saa_victoria_subtheme.git",
+    "vcsTarget": "1.x"
+  },
+  "sites": {
+    "jumpstartsaastyle": "10191",
+    "saa3c": "9581",
+    "saaalumnicenterevents": "16891",
+    "saaalumnicommittee": "16896",
+    "saaassociates": "16876",
+    "saaawards": "8656",
+    "saabeyonthefarm": "16886",
+    "saasierracamp": "16881",
+    "saastudents": "16871",
+    "saauserguide": "17051",
+    "saayoungalumni": "16866",
+    "saayouralumnicente": "16901"
+  }
+}

@@ -1,0 +1,76 @@
+services:
+
+  # What to call the service hosting the site.
+  cardinalsites:
+
+    # Use PHP 7.2 with Apache
+    image: pookmish/tugboat:latest
+
+    # Set this as the default service. This does a few things
+    #   1. Clones the git repository into the service container
+    #   2. Exposes port 80 to the Tugboat HTTP proxy
+    #   3. Routes requests to the preview URL to this service
+    default: true
+
+    # Wait until the mysql service is done building
+    depends: mysql
+
+    # A set of commands to run while building this service
+    commands:
+
+      # Commands that set up the basic preview infrastructure
+      init:
+        # Install drush-launcher
+        - wget -O /usr/local/bin/drush https://github.com/drush-ops/drush-launcher/releases/download/0.6.0/drush.phar
+        - chmod +x /usr/local/bin/drush
+
+        # Symlink the tugboat directory to the docker image expected path.
+        - rm -rf /var/www/localhost
+        - ln -snf ${TUGBOAT_ROOT} /var/www/localhost
+        - ln -s docroot htdocs
+
+        # Install dependencies as a baseline for other previews.
+        - cp "${TUGBOAT_ROOT}/.tugboat/tugboat.blt.yml" "${TUGBOAT_ROOT}/blt/local.blt.yml"
+        - composer install --no-ansi
+
+        # Init the settings files.
+        - vendor/bin/blt blt:init:settings
+        - rm "${TUGBOAT_ROOT}/docroot/sites/default/local.drush.yml"
+
+        # Copy SimpleSAMLphp configuration to prevent annoying errors.
+        - vendor/bin/blt source:build:simplesamlphp-config
+        # Install Drupal
+        - vendor/bin/blt drupal:install
+        - drush user:create tugboat --password=tugboat
+        - drush user:role:add administrator tugboat
+        - drush user:password Alex tugboat
+        - drush user:password Morgan tugboat
+        - drush user:password Sam tugboat
+        - drush user:password Kennedy tugboat
+        - drush user:password Jamie tugboat
+        - chmod -R 777 docroot/sites/default/files
+
+      # Commands that are run on base previews to create the new preview.
+      build:
+        # Install/update packages managed by composer.
+        - composer install --no-ansi
+        - drush cr
+        # Update Drupal and modify users.
+        - vendor/bin/blt drupal:update
+        - drush pmu simplesamlphp_auth -y
+      online:
+        # Restart the Apache service when it's all ready.
+        - httpd -k restart
+
+    # Collection of urls to compare visual results.
+    visualdiffs:
+      - /
+      - /people
+      - /resources
+      - /about
+
+  # What to call the service hosting MySQL. This name also acts as the
+  # hostname to access the service by from the php service.
+  mysql:
+    # Use the latest available 5.x version of MySQL
+    image: tugboatqa/mysql:5
