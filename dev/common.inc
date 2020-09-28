@@ -1,6 +1,9 @@
 <?php
+
 /**
  * @file
+ *
+ * Common settings parsing.
  */
 
 // Variables and paths.

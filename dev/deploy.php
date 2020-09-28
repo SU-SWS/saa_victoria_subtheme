@@ -1,23 +1,41 @@
 <?php
+
 /**
  * @file
+ *
+ * Update/Refresh the externally attached theme on several sites.
  */
 
+// Initialize.
+$config;
+
+// Get common settings/vars.
 require "common.inc";
+
+// The action/endpoint from the API.
 $endpoint = 'external-theme-refresh';
+
+// POST variables.
 $post = [];
-$headers = array(
+
+// CURL headers.
+$headers = [
   'Content-Type: application/json',
-);
+];
+
+// Authentication.
 $user_pass = addslashes($config->config->username) . ":" . addslashes($config->config->apiKey);
 
+// Initialize CURL.
 $ch = curl_init();
 curl_setopt($ch, CURLOPT_POST, 1);
-curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+curl_setopt($ch, CURLOPT_RETURNTRANSFER, TRUE);
 curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
 curl_setopt($ch, CURLOPT_USERPWD, $user_pass);
 curl_setopt($ch, CURLOPT_POSTFIELDS, http_build_query($post));
 
+// Loop through each of the sites configured in config.json and execute the
+// action on them through the API.
 foreach ($config->sites as $site_name => $site_id) {
   $url = $config->config->api . '/sites/' . $site_id . '/' . $endpoint;
   curl_setopt($ch, CURLOPT_URL, $url);
@@ -26,5 +44,5 @@ foreach ($config->sites as $site_name => $site_id) {
   var_dump($server_output);
 }
 
-# Close it.
-curl_close ($ch);
+// Close it.
+curl_close($ch);
