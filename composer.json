@@ -10,6 +10,7 @@
     "su-sws/stanford_basic": "dev-8.x-4.x"
   },
   "scripts": {
-    "deploy-theme-updates": "php dev/deploy.php"
+    "deploy-theme-updates": "php dev/deploy.php",
+    "set-theme-branch": "php dev/change-branch.php"
   }
 }
