@@ -6,7 +6,7 @@
  */
 
 // Initialize.
-$config = (object)[];
+$config = (object) [];
 
 // Get common settings/vars.
 require "common.inc";
