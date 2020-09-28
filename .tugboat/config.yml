@@ -1,9 +1,10 @@
 services:
 
   # What to call the service hosting the site.
-  cardinalsites:
+  victoria_subtheme:
+    checkout: false
 
-    # Use PHP 7.2 with Apache
+    # Use PHP 7.3 with Apache
     image: pookmish/tugboat:latest
 
     # Set this as the default service. This does a few things
@@ -61,13 +62,6 @@ services:
       online:
         # Restart the Apache service when it's all ready.
         - httpd -k restart
-
-    # Collection of urls to compare visual results.
-    visualdiffs:
-      - /
-      - /people
-      - /resources
-      - /about
 
   # What to call the service hosting MySQL. This name also acts as the
   # hostname to access the service by from the php service.
