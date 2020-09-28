@@ -101,7 +101,7 @@ Bulk refreshing the theme will pull down the latest from the branch each site is
 3. From this directory run `composer deploy-theme-updates`
 
 *Deploying new branches/tags*
-Bulk refreshing the theme will pull down the latest from the branch each site is set to.
+Bulk deploying new branches and tags will change the target on the site.
 
 0. Follow the steps in setup.
 1. Edit `config.json` and add/remove from the sites section. You will need the shortname and the site id for each site. You can get that information by logging into the ACSF dashboard and searching for the site.
