@@ -39,9 +39,9 @@
         {% if not node.published %}
           {%
             set data = {
-            'attributes': create_attribute({'class': 'su-alert su-alert--warning'}),
-            'alert_text': "This page is currently unpublished and not visible to the public."|t,
-          }
+              'attributes': create_attribute({'class': 'su-alert su-alert--warning'}),
+              'alert_text': "This page is currently unpublished and not visible to the public."|t,
+            }
           %}
           {% include "@basic-dist/decanter/components/alert/alert.twig" with data %}
         {% endif %}
