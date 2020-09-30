@@ -11,14 +11,11 @@
   {%- endif -%}
 {%- endblock -%}
 
-{#{%- if page.help -%}#}
-{#  {{ page.help }}#}
-{#{%- endif -%}#}
+{# Help area inherits #}
+{# Main content area inherits #}
 
-<div class="page-content" id="page-content">
-  {{ page.content }}
-</div>
-
-<footer id="footer">
-  {%- include "@basic-dist/decanter/components/global-footer/global-footer.twig" -%}
-</footer>
+{% block block_footer %}
+  <footer id="footer">
+    {%- include "@basic-dist/decanter/components/global-footer/global-footer.twig" -%}
+  </footer>
+{%- endblock -%}

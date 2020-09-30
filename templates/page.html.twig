@@ -4,7 +4,7 @@
 {% extends 'themes/custom/stanford_basic/templates/page.html.twig' %}
 
 
-{#would skip-to link go here#}
+{#would skip-to link go here? #}
 {#  This actually goes in the html template, and it should be getting these links already from stanford basic's html template:  #}
 {#{%- if template_path_skiplink is empty -%}#}
 {#  {%- include "@decanter/components/skiplinks/link.twig" with { target_id : "page-content" } -%}#}
@@ -42,7 +42,7 @@
 {#  {{ page.content }}#}
 {#</main>#}
 
-{% block footer %}
+{% block block_footer %}
   {%- include "@saa_victoria_subtheme/components/fat-footer/saa-fat-footer.html.twig" with { modifier_class : "test" } -%}
   {%- include "@basic-dist/decanter/components/global-footer/global-footer.twig" -%}
 {% endblock %}
