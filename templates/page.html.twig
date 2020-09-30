@@ -14,7 +14,7 @@
 {#{%- endif -%}#}
 {#<a href="#secondary-links" class="su-skiplinks">'Skip to secondary links')</a>#}
 
-{% block brandbar %}
+{% block block_brandbar %}
   {%- include "@saa_victoria_subtheme/components/brand-bar/saa--brand-bar.html.twig" with { modifier_class : "su-brand-bar--dark" } -%}
 {% endblock %}
 
@@ -22,16 +22,18 @@
 
 {# Possibly split this out into a masthead template, but i thought we had some challenge doing that? #}
 
-{% block header %}
-  <section>
-    {%- include "@saa_victoria_subtheme/components/lockup/saa--lockup.html.twig" with { modifier_class : "su-lockup--option-a", line1: site_name } -%}
-    {%- if page.search -%}
-      {{ page.search }}
-    {%- endif -%}
-    {%- if page.menu -%}
-      {{ page.menu }}
-    {%- endif -%}
-  </section>
+{% block block_header %}
+  <header class="su-masthead su-masthead--right">
+    <section>
+      {%- include "@saa_victoria_subtheme/components/lockup/saa--lockup.html.twig" with { modifier_class : "su-lockup--option-a", line1: site_name } -%}
+      {%- if page.search -%}
+        {{ page.search }}
+      {%- endif -%}
+      {%- if page.menu -%}
+        {{ page.menu }}
+      {%- endif -%}
+    </section>
+  </header>
 {% endblock %}
 
 {# same main block -- inheritted now #}

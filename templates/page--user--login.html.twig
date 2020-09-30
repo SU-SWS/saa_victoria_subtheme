@@ -1,8 +1,19 @@
 {%- include "@saa_victoria_subtheme/components/brand-bar/saa--brand-bar.html.twig" with { modifier_class : "su-brand-bar--dark" } -%}
 
-{%- if page.help -%}
-  {{ page.help }}
-{%- endif -%}
+{# Remove Nav and Search. #}
+{%- block block_header -%}
+  {%- if page.header -%}
+    <header class="su-masthead su-masthead--right">
+      <section>
+        {{ page.header }}
+      </section>
+    </header>
+  {%- endif -%}
+{%- endblock -%}
+
+{#{%- if page.help -%}#}
+{#  {{ page.help }}#}
+{#{%- endif -%}#}
 
 <div class="page-content" id="page-content">
   {{ page.content }}
