@@ -1,21 +1,5 @@
-{%- include "@saa_victoria_subtheme/components/brand-bar/saa--brand-bar.html.twig" with { modifier_class : "su-brand-bar--dark" } -%}
+{% extends "@stanford_basic/page--user--login.html.twig" %}
 
-{# Remove Nav and Search. #}
-{%- block block_header -%}
-  {%- if page.header -%}
-    <header class="su-masthead su-masthead--right">
-      <section>
-        {{ page.header }}
-      </section>
-    </header>
-  {%- endif -%}
-{%- endblock -%}
-
-{# Help area inherits #}
-{# Main content area inherits #}
-
-{% block block_footer %}
-  <footer id="footer">
-    {%- include "@basic-dist/decanter/components/global-footer/global-footer.twig" -%}
-  </footer>
-{%- endblock -%}
+{% block block_header %}
+  {# Nothing #}
+{% endblock %}
