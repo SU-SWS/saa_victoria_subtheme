@@ -78,3 +78,34 @@ because we are using the patterns_ui module.
 If you view the .theme file you will see the function `saa_victoria_subtheme_preprocess_ds_entity_view`
 (Display Suite entity view).
 This is how we target our paragraph that has been processed with patterns ui module.
+
+## Bulk Deploying to ACSF Sites
+
+In the need to run theme-updates on multiple ACSF sites at once you can use the built in composer scripts.
+
+*Setup*
+1. Copy `/dev/config.example.json` to `/dev/config.json`
+2. Find your ACSF username and API key by logging into one of the ACSF dashboards. eg: https://www.cardinalsites.acsitefactory.com/user/
+3. Navigate to the `API Key` tab and generate or copy your API Key
+4. Update `config.json` to add your API key
+5. Navigate to the `Edit` tab and copy your Username. eg: `Shea McKinney`
+6. Add your username to the `config.json` file.
+7. Change the `config.api` url in the `config.json` file to point to the environment of choice. `dev-` for dev, `test-` for the test environment, and remove the prefix for production.
+
+*Refresh the theme*
+Bulk refreshing the theme will pull down the latest from the branch each site is set to.
+
+0. Follow the steps in setup.
+1. Edit `config.json` and add/remove from the sites section. You will need the shortname and the site id for each site. You can get that information by logging into the ACSF dashboard and searching for the site.
+2. Ensure the `api` path is pointing to the environment you want to refresh.
+3. From this directory run `composer deploy-theme-updates`
+
+*Deploying new branches/tags*
+Bulk deploying new branches and tags will change the target on the site.
+
+0. Follow the steps in setup.
+1. Edit `config.json` and add/remove from the sites section. You will need the shortname and the site id for each site. You can get that information by logging into the ACSF dashboard and searching for the site.
+2. Ensure the `api` path is pointing to the environment you want to change.
+3. Ensure the `vcsUrl` is correctly pointed to the repo of choice.
+4. Ensure the `vcsTarget` is set to the branch or tag you wish to change to.
+5. From this directory run `composer set-theme-branch`
