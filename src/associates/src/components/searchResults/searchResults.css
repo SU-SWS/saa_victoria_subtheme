@@ -1,4 +1,4 @@
-button {
+#su-associates button {
   background-color: #8c1515;
   color: white;
   height: 30px;
@@ -7,7 +7,7 @@ button {
   margin-right: 50%;
 }
 
-.resultsContainer {
+#su-associates .resultsContainer {
   margin-bottom: 3em;
   margin-top: 3em;
 }

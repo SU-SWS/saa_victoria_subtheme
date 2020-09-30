@@ -39,40 +39,31 @@ $banner-circle--image-width: 200px;
 
       .su-card {
         &.su-hero__card {
-          //@apply
-          //max-w-screen-lg
-          //left-0
-          //h-full
-          //text-center
-          //border-none
-          //shadow-none
-          //pt-8;
+          @apply
+          left-0
+          h-full
+          text-center
+          border-none
+          shadow-none;
           background: transparent;
           color: $su-color-black;
-          border: 0;
-          box-shadow: none;
-          height: 100%;
-          left: 0;
           max-width: 1024px;
           margin: 0 auto;
           position: unset;
-          text-align: center;
           top: 100px;
         }
 
         .su-card__contents {
-          //@apply
-          //max-w-screen-lg
-          //p-0;
-          max-width: 1024px;
-          padding: 0;
-          display: flex;
-          flex-direction: column;
+          @apply
+          max-w-screen-lg
+          p-0
+          flex
+          flex-col;
 
           > span {
             order: 2;
             @include modular-typography(1);
-            font-weight: normal;
+            @apply font-normal;
           }
 
           h2 {
@@ -95,8 +86,10 @@ $banner-circle--image-width: 200px;
           > .su-card__button {
             order: 4;
 
-            a.su-link.su-button {
-              margin-bottom: 0;
+            a {
+              &.su-button {
+                @apply mb-0;
+              }
             }
           }
 
@@ -105,7 +98,7 @@ $banner-circle--image-width: 200px;
             @include modular-spacing('margin-bottom', -1)
           }
 
-          // Note, currently no link classes are available inside this banner, so no su-link--something classes will work.
+          // Note, currently no link classes are available inside this banner, so none of the su-link--something classes will work.
           .su-link,
           a {
             @include modular-spacing('margin-bottom', 0);
@@ -120,7 +113,6 @@ $banner-circle--image-width: 200px;
   }
 }
 
-
 // when on a page with a sidebar nav, needs adjustments:
 .jumpstart-ui--two-column.centered-container {
   .flex-lg-9-of-12.main-region {
@@ -129,8 +121,7 @@ $banner-circle--image-width: 200px;
       @include modular-spacing('padding-bottom', 5);
 
       .su-card__contents {
-        margin-left: auto;
-        margin-right: auto;
+        @apply mx-auto;
         max-width: 90%;
         @include grid-media-min('lg') {
           max-width: 80%;

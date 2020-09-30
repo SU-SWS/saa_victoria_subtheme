@@ -27,7 +27,7 @@ body {
   border-color: #dddbc3;
 }
 
-.nav {
+#su-associates .nav {
   margin-top: 3em;
 }
 
@@ -36,7 +36,7 @@ body {
 /* width: 60%; */
 /* } */
 
-h5 {
+#su-associates h5 {
   width: 95%;
   color: #7d9a18;
   border-bottom: 1px dashed #e0ddd6;
@@ -44,7 +44,7 @@ h5 {
   margin: 0 auto 20px auto;
 }
 
-.topLink {
+#su-associates .topLink {
   color: #8c1515;
   float: right;
   margin-right: 2%;

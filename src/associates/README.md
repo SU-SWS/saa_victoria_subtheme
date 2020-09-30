@@ -10,9 +10,9 @@ Additional features built into the Associates application on the front end inclu
 
 The application was originally optimized for deployment on any server by compiling the React code to standard HTML, JS, and CSS.
 
-The `webpack.config.js` and `package.json` scripts have been modified to compile the React code to JS and CSS within the `lib` folder. These files are referenced within the SAA Victoria subtheme library and attached to the `node--20.html.twig` template.
+The `webpack.config.js` and `package.json` scripts have been modified to compile the React code to JS and CSS within the `lib` folder. These files are referenced within the SAA Victoria subtheme library and attached to the `node--61.html.twig` template.
 
-To view the application on a Drupal page, please create a new Basic page and modify the`node--20.html.twig` template name to reflect the Basic page node.
+To view the application on a Drupal page, please create a new Basic page and modify the`node--61.html.twig` template name to reflect the Basic page node.
 
 ---
 

@@ -1,6 +1,25 @@
 @charset "UTF-8";
 
+$saa-cta--line-height: 1.25;
+
+@mixin mailto-links-with-cta {
+  &.su-link--action,
+  &.su-link--external,
+  &.su-link--download,
+  &.su-link--video,
+  &.su-link--jump,
+  &.su-link--top,
+  &.su-link--internal {
+    // do not allow cta icons AND email icon under any circumstance
+    &.mailto::after {
+      display: none;
+    }
+  }
+}
+
+
 @mixin cta-vivid-red {
+  @include mailto-links-with-cta;
   color: $saa-color-vivid-red;
   @apply underline;
 
@@ -11,6 +30,10 @@
 
     &::after {
       background-color: $su-color-cardinal-red;
+    }
+
+    & svg.mailto {
+      fill: $su-color-cardinal-red;
     }
   }
 
@@ -27,6 +50,7 @@
     &.su-link--top,
     &.su-link--internal {
       text-decoration: none;
+      line-height: $saa-cta--line-height;
 
       &::after {
         background-color: $saa-color-vivid-red;
@@ -40,6 +64,10 @@
           background-color: $su-color-cardinal-red;
           text-decoration: underline;
         }
+
+        & svg.mailto {
+          fill: $su-color-cardinal-red;
+        }
       }
     }
 
@@ -52,18 +80,28 @@
   &.disabled {
     color: $su-color-cool-grey;
   }
+
+  & svg.mailto {
+    fill: $saa-color-vivid-red;
+  }
 }
 
 @mixin cta-white-on-bright-red {
   .su-link,
   a:not(.su-button):not(.su-button--secondary):not(.su-button--big) {
+    @include mailto-links-with-cta;
     @apply text-white;
     text-decoration: underline;
+    line-height: $saa-cta--line-height;
 
     &:hover,
     &:focus {
       text-decoration: underline;
       color: $saa-color-extra-light-cloud;
+
+      & svg.mailto {
+        fill: $saa-color-extra-light-cloud;
+      }
     }
 
     &::after {
@@ -78,6 +116,16 @@
     &:hover::after,
     &:focus::after {
       background-color: $saa-color-extra-light-cloud;
+    }
+
+    &.su-link--action,
+    &.su-link--external,
+    &.su-link--download,
+    &.su-link--video,
+    &.su-link--jump,
+    &.su-link--top,
+    &.su-link--internal {
+      line-height: $saa-cta--line-height;
     }
 
 
@@ -106,17 +154,37 @@
       @apply text-gray-700;
     }
   }
+
+  & svg.mailto {
+    fill: $su-color-white;
+  }
 }
 
 // This link style is for used to override the vivid-red cta styles for colored background (i.e. Sandstone, Light Grey).
 // It inherits the hover and focus styling from the vivid-red cta mixin
 @mixin cta-dark-vivid-red {
   @include cta-vivid-red;
+  @include mailto-links-with-cta;
   color: $su-color-vivid-red-dark;
   text-decoration: underline;
 
-  &::after {
-    background-color: $su-color-vivid-red-dark;
+  // needed for specificity to override the setting in the cta vivid red mixin
+  &:not(.su-button):not(.su-button--secondary):not(.su-button--big) {
+    &.su-link--action,
+    &.su-link--external,
+    &.su-link--download,
+    &.su-link--video,
+    &.su-link--jump,
+    &.su-link--top,
+    &.su-link--internal {
+      &::after {
+        background-color: $su-color-vivid-red-dark;
+      }
+    }
+  }
+
+  & svg.mailto {
+    fill: $su-color-vivid-red-dark;
   }
 
   &.su-link--action,

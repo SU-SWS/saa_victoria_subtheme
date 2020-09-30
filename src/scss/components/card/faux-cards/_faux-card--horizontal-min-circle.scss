@@ -10,7 +10,7 @@ $card-circle--width: 140px;
         @include grid-media-min('sm') {
           display: block;
           padding-top: 0;
-          padding-bottom: 105%;
+          padding-bottom: 0;
           position: absolute;
         }
       }

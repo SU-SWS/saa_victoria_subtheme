@@ -1,0 +1,7 @@
+@charset "UTF-8";
+
+.su-masthead {
+  @include grid-media-min(lg) {
+    min-height: 96px;
+  }
+}

@@ -1,11 +1,11 @@
-.name {
+#su-associates .name {
   margin-left: 5%;
   padding: 0.3em 0;
   display: inline-block;
   width: 40%;
 }
 
-.degrees {
+#su-associates .degrees {
   margin-left: 5%;
   display: inline;
 }
