@@ -15,7 +15,7 @@ require "common.inc";
 $endpoint = 'external-theme';
 
 // POST variables.
-$post = (object)[
+$post = (object) [
   'vcs_url' => $config->config->vcsUrl,
   'vcs_path' => $config->config->vcsTarget,
 ];
