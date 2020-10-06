@@ -30,7 +30,7 @@ $user_pass = addslashes($config->config->username) . ":" . addslashes($config->c
 
 // Initialize CURL.
 $ch = curl_init();
-curl_setopt($ch, CURLOPT_POST, 1);
+curl_setopt($ch, CURLOPT_CUSTOMREQUEST, 'PUT');
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, TRUE);
 curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
 curl_setopt($ch, CURLOPT_USERPWD, $user_pass);
