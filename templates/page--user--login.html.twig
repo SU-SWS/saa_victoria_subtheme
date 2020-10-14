@@ -1,13 +1,5 @@
-{%- include "@saa_victoria_subtheme/components/brand-bar/saa--brand-bar.html.twig" with { modifier_class : "su-brand-bar--dark" } -%}
+{% extends "@stanford_basic/page--user--login.html.twig" %}
 
-{%- if page.help -%}
-  {{ page.help }}
-{%- endif -%}
-
-<div class="page-content" id="page-content">
-  {{ page.content }}
-</div>
-
-<footer id="footer">
-  {%- include "@basic-dist/decanter/components/global-footer/global-footer.twig" -%}
-</footer>
+{% block block_header %}
+  {# Nothing #}
+{% endblock %}
