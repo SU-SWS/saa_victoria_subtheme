@@ -108,4 +108,6 @@ Bulk deploying new branches and tags will change the target on the site.
 2. Ensure the `api` path is pointing to the environment you want to change.
 3. Ensure the `vcsUrl` is correctly pointed to the repo of choice.
 4. Ensure the `vcsTarget` is set to the branch or tag you wish to change to.
+This could be '1.x' for branch 1.x or '8.1.1' for a tag called '8.1.1'. See background info on this: https://www.cardinalsites.acsitefactory.com/api/v1#Set-site-external-theme
 5. From this directory run `composer set-theme-branch`
+
