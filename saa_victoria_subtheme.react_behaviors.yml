@@ -1,19 +1,32 @@
 # Example react_behaviors plugin definitions.
 # Plugin property $defaults are defined in ReactBehaviorsPluginManager.
+card_type:
+  id: card_type
+  label: 'Card Paragraphs Type'
+  bundles:
+    - paragraphs_type|stanford_card
+  config:
+    select:
+      type: select
+      title: 'Card Type'
+      description: Select the style for displaying this card.
+      options:
+        su-card--icon: Icon Card
+        su-card--horizontal: Horizontal Card
+        su-card--vertical: Vertical Card
 card_style:
   id: card_style
-  label: 'Card Paragraphs and all Rows'
+  label: 'Card Paragraph Style'
   bundles:
-    - paragraphs_type|card
+    - paragraphs_type|stanford_card
   config:
     select:
       type: select
       title: 'Card Style'
       description: Select the style for displaying this card.
       options:
-        foo: Foo
-        bar: Bar
-        baz: Baz
+        su-minimal: Minimal (no border)
+        su-border: Border and Drop Shadow
 #first:
 #  id: first
 #  label: 'Card Paragraphs and all Rows'
