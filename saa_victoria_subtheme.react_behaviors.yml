@@ -10,6 +10,7 @@ card_type:
       type: select
       title: 'Card Type'
       description: Select the style for displaying this card.
+      default: su-card--icon
       options:
         su-card--icon: Icon Card
         su-card--horizontal: Horizontal Card
