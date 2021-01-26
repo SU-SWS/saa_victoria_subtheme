@@ -19,6 +19,7 @@ $saa-cta--line-height: 1.25;
 @mixin cta-hover-cardinal-red {
   &:hover,
   &:focus {
+    color: $su-color-cardinal-red;
     text-decoration: underline;
 
     &::after {
