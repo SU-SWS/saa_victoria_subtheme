@@ -39,3 +39,7 @@
     }
   }
 }
+
+.views-field-su-event-edit a {
+  @include saa-button--purple;
+}
