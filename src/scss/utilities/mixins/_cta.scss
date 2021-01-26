@@ -16,7 +16,21 @@ $saa-cta--line-height: 1.25;
     }
   }
 }
+@mixin cta-hover-cardinal-red {
+  &:hover,
+  &:focus {
+    text-decoration: underline;
 
+    &::after {
+      background-color: $su-color-cardinal-red;
+      text-decoration: underline;
+    }
+
+    & svg.mailto {
+      fill: $su-color-cardinal-red;
+    }
+  }
+}
 
 @mixin cta-vivid-red {
   @include mailto-links-with-cta;
@@ -56,6 +70,8 @@ $saa-cta--line-height: 1.25;
         background-color: $saa-color-vivid-red;
       }
 
+      // later we should replace this section to use the mixin:
+      // cta-hover-cardinal-red
       &:hover,
       &:focus {
         text-decoration: underline;

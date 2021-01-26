@@ -5,7 +5,9 @@
   .su-event-list-item__details {
     .event-list-item__type {
       a {
-        @include black-header-link;
+        //@include black-header-link;
+        // apply correct cardinal red hover styles only
+        @include cta-hover-cardinal-red;
       }
     }
 
@@ -33,7 +35,9 @@
 
       h2 {
         a {
-          @include black-header-link;
+          //@include black-header-link;
+          // apply correct cardinal red hover styles only
+          @include cta-hover-cardinal-red;
         }
       }
     }

@@ -21,6 +21,11 @@
 
     & > .menu {
       li {
+        a {
+          // apply correct cardinal red hover styles only
+          @include cta-hover-cardinal-red;
+        }
+
         &.menu-item--active-trail {
           &::before {
             color: $saa-color-vivid-red;
@@ -36,10 +41,9 @@
 
           a {
             @include cta-vivid-red;
-
-
           }
         }
+
       }
     }
   }
