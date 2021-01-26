@@ -1,17 +1,17 @@
 @charset "UTF-8";
-
+.su-event-list-item .su-event-list-item__details h2>a
 .su-event-list-item {
   // list style, not card
   .su-event-list-item__details {
     .event-list-item__type {
-      & > a {
+      a {
         @include black-header-link;
       }
+    }
 
-      h2 {
-        a {
-          @include cta-vivid-red;
-        }
+    h2 {
+      a {
+        @include cta-vivid-red;
       }
     }
   }
@@ -20,7 +20,7 @@
   &.su-event-card {
     .su-event-list-item__details {
       .event-list-item__type {
-        & > a {
+        a {
           @include cta-vivid-red;
           text-decoration: none;
 
@@ -28,11 +28,11 @@
             text-decoration: underline;
           }
         }
+      }
 
-        h2 {
-          a {
-            @include black-header-link;
-          }
+      h2 {
+        a {
+          @include black-header-link;
         }
       }
     }
