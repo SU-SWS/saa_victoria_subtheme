@@ -10,7 +10,7 @@
     }
 
     & > .menu {
-      li {
+      li.menu-item--active-trail {
         a {
           @include cta-vivid-red;
 

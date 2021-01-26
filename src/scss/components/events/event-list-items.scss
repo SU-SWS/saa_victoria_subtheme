@@ -4,6 +4,10 @@
   // list style, not card
   .su-event-list-item__details {
     .event-list-item__type {
+      & > a {
+        @include black-header-link;
+      }
+
       h2 {
         a {
           @include cta-vivid-red;
@@ -16,8 +20,19 @@
   &.su-event-card {
     .su-event-list-item__details {
       .event-list-item__type {
-        a {
+        & > a {
           @include cta-vivid-red;
+          text-decoration: none;
+
+          &::hover, &::focus {
+            text-decoration: underline;
+          }
+        }
+
+        h2 {
+          a {
+            @include black-header-link;
+          }
         }
       }
     }
