@@ -7,13 +7,18 @@
   &.block-menu {
     & > button {
       @include cta-vivid-red;
+
+      &:hover,
+      &:focus {
+        .su-link--jump {
+          color: $su-color-cardinal-red;
+        }
+      }
     }
 
     & > .menu {
-      li.menu-item--active-trail {
-        a {
-          @include cta-vivid-red;
-
+      li {
+        &.menu-item--active-trail {
           &::before {
             color: $saa-color-vivid-red;
           }
@@ -24,6 +29,12 @@
             &::before {
               color: $su-color-cardinal-red;
             }
+          }
+
+          a {
+            @include cta-vivid-red;
+
+
           }
         }
       }

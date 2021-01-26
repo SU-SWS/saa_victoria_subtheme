@@ -1,5 +1,5 @@
 @charset "UTF-8";
-.su-event-list-item .su-event-list-item__details h2>a
+
 .su-event-list-item {
   // list style, not card
   .su-event-list-item__details {
@@ -24,7 +24,8 @@
           @include cta-vivid-red;
           text-decoration: none;
 
-          &::hover, &::focus {
+          &:hover,
+          &:focus {
             text-decoration: underline;
           }
         }
