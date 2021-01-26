@@ -46,4 +46,9 @@
 
 .views-field-su-event-edit a {
   @include saa-button--purple;
+  border: none;
+
+  &:focus, &:hover {
+    border: none;
+  }
 }
