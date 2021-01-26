@@ -1,0 +1,10 @@
+@charset "UTF-8";
+
+.su-news-list__footer a {
+  @include saa-button--purple;
+  border: none;
+
+  &:focus, &:hover {
+    border: none;
+  }
+}
