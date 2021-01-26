@@ -1,0 +1,33 @@
+@charset "UTF-8";
+
+// This contains a mixin used for event and list pages.
+// It could possibly be used on other list pages in the future.
+
+@mixin list-page--block-menu {
+  &.block-menu {
+    & > button {
+      @include cta-vivid-red;
+    }
+
+    & > .menu {
+      li {
+        a {
+          @include cta-vivid-red;
+
+          &::before {
+            color: $saa-color-vivid-red;
+          }
+
+          &:hover,
+          &:focus {
+
+            &::before {
+              color: $su-color-cardinal-red;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+

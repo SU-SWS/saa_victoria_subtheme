@@ -1,0 +1,5 @@
+@charset "UTF-8";
+
+.news-topics {
+  @include list-page--block-menu;
+}
