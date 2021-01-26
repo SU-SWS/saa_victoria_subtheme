@@ -1,5 +1,11 @@
 @charset "UTF-8";
 
+.su-news-list {
+  a {
+    @include cta-vivid-red;
+  }
+}
+
 .su-news-list__footer a {
   @include saa-button--purple;
   border: none;
