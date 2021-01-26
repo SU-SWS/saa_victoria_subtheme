@@ -1,0 +1,25 @@
+@charset "UTF-8";
+
+.su-event-list-item {
+  // list style, not card
+  .su-event-list-item__details {
+    .event-list-item__type {
+      h2 {
+        a {
+          @include cta-vivid-red;
+        }
+      }
+    }
+  }
+
+  // card style
+  &.su-event-card {
+    .su-event-list-item__details {
+      .event-list-item__type {
+        a {
+          @include cta-vivid-red;
+        }
+      }
+    }
+  }
+}
