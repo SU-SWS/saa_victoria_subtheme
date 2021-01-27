@@ -1,16 +1,35 @@
 @charset "UTF-8";
 
+.su-news-external {
+  .su-news-list__item {
+    a {
+      &:focus,
+      &:hover {
+        &::after {
+         background-color: $su-color-cardinal-red;
+        }
+      }
+    }
+  }
+}
+
 .su-news-list {
   a {
     @include cta-vivid-red;
 
-    h2 {
-      &:focus,
-      &:hover {
-        &::after {
-          background-color: $su-color-cardinal-red;
-        }
-      }
+    //h2 {
+    //  &:focus,
+    //  &:hover {
+    //    &::after {
+    //      background-color: $su-color-cardinal-red;
+    //    }
+    //  }
+    //}
+  }
+
+  .su-news-list__topics {
+    a {
+      text-decoration: none;
     }
   }
 }
