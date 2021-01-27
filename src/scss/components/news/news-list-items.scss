@@ -3,6 +3,10 @@
 .su-news-external {
   .su-news-list__item {
     a {
+      &::after {
+        background-color: $saa-color-vivid-red;
+      }
+
       &:focus,
       &:hover {
         &::after {
@@ -16,20 +20,16 @@
 .su-news-list {
   a {
     @include cta-vivid-red;
-
-    //h2 {
-    //  &:focus,
-    //  &:hover {
-    //    &::after {
-    //      background-color: $su-color-cardinal-red;
-    //    }
-    //  }
-    //}
   }
 
   .su-news-list__topics {
     a {
       text-decoration: none;
+
+      &:focus,
+      &:hover {
+        text-decoration: underline;
+      }
     }
   }
 }
