@@ -8,9 +8,9 @@
 
 .su-news-list__footer a {
   @include saa-button--purple;
-  border: none;
+  box-shadow: none;
 
   &:focus, &:hover {
-    border: none;
+    box-shadow: none;
   }
 }
