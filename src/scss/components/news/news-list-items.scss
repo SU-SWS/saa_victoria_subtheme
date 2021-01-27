@@ -30,8 +30,8 @@
 
 .su-news-list {
   a {
-    text-decoration: none;
     @include cta-vivid-red;
+    text-decoration: none;
 
     &:focus,
     &:hover {
