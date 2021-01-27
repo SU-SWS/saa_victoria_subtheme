@@ -3,12 +3,16 @@
 .su-news-external {
   .su-news-list__item {
     a {
+      text-decoration: none;
+
       &::after {
         background-color: $saa-color-vivid-red;
       }
 
       &:focus,
       &:hover {
+        text-decoration: underline;
+
         &::after {
          background-color: $su-color-cardinal-red;
         }
@@ -41,5 +45,14 @@
   &:focus,
   &:hover {
     box-shadow: none;
+  }
+}
+
+
+.stanford-news--cards {
+  & > .more-link {
+    a {
+      @include saa-button--purple;
+    }
   }
 }
