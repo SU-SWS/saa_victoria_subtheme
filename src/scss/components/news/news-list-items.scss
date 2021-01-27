@@ -23,7 +23,15 @@
 
   &.su-card {
     .su-link {
-      @include cta-vivid-red;
+
+      &::after {
+        background-color: $su-color-black;
+      }
+
+      &:focus,
+      &:hover {
+        color: $su-color-cardinal-red;
+      }
     }
   }
 }
