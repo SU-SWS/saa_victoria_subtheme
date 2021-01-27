@@ -3,6 +3,15 @@
 .su-news-list {
   a {
     @include cta-vivid-red;
+
+    h2 {
+      &:focus,
+      &:hover {
+        &::after {
+          background-color: $su-color-cardinal-red;
+        }
+      }
+    }
   }
 }
 
@@ -10,7 +19,8 @@
   @include saa-button--purple;
   box-shadow: none;
 
-  &:focus, &:hover {
+  &:focus,
+  &:hover {
     box-shadow: none;
   }
 }
