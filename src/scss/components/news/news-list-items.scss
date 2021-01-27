@@ -2,7 +2,6 @@
 
 @mixin news-link-styles {
   a {
-    text-decoration: none;
 
     &::after {
       background-color: $saa-color-vivid-red;
@@ -31,7 +30,13 @@
 
 .su-news-list {
   a {
+    text-decoration: none;
     @include cta-vivid-red;
+
+    &:focus,
+    &:hover {
+      text-decoration: underline;
+    }
   }
 }
 
