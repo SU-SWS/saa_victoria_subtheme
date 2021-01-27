@@ -20,6 +20,12 @@
 
 .su-news-vertical-teaser {
   @include news-link-styles;
+
+  &.su-card {
+    .su-link {
+      @include cta-vivid-red;
+    }
+  }
 }
 
 .su-news-external {
