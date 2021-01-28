@@ -9,7 +9,6 @@
 
     &:focus,
     &:hover {
-      //text-decoration: underline;
       @apply underline;
 
       &::after {
@@ -29,11 +28,9 @@
         a {
           @include cta-vivid-red;
           @apply no-underline;
-          //text-decoration: none;
 
           &:focus,
           &:hover {
-            //text-decoration: underline;
             @apply underline;
           }
         }
@@ -68,12 +65,10 @@
 .su-news-list {
   a {
     @include cta-vivid-red;
-    //text-decoration: none;
     @apply no-underline;
 
     &:focus,
     &:hover {
-      //text-decoration: underline;
       @apply underline;
     }
   }
@@ -81,14 +76,12 @@
 
 .su-news-list__topics {
   a {
-    //text-decoration: none;
     @apply
     no-underline
     font-normal;
 
     &:focus,
     &:hover {
-      //text-decoration: underline;
       @apply underline;
     }
   }
