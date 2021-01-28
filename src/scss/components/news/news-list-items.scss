@@ -22,8 +22,17 @@
   @include news-link-styles;
 
   &.su-card {
+    .su-card__contents {
+      .news-vertical-teaser__topics {
+        a {
+          @include cta-vivid-red;
+        }
+      }
+    }
+
+
     .su-link {
-      &:not(.su-button):not(.su-button--secondary):not(.su-button--big):after {
+      &:not(.su-button):not(.su-button--secondary):not(.su-button--big):after { //  unfortunately required to specifically override)
         background-color: $su-color-black;
 
         &:focus,
