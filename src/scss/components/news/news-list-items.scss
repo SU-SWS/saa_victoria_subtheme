@@ -42,7 +42,7 @@
 
 
     .su-link {
-      &:not(.su-button):not(.su-button--secondary):not(.su-button--big):after { //  unfortunately required to specifically override)
+      &:not(.su-button):not(.su-button--secondary):not(.su-button--big)::after { //  unfortunately required to specifically override)
         background-color: $su-color-black;
 
         &:focus,
@@ -94,16 +94,17 @@
   }
 }
 
-.su-news-list__footer a {
-  @include saa-button--purple;
-  box-shadow: none;
-
-  &:focus,
-  &:hover {
+.su-news-list__footer {
+  a {
+    @include saa-button--purple;
     box-shadow: none;
+
+    &:focus,
+    &:hover {
+      box-shadow: none;
+    }
   }
 }
-
 
 .stanford-news--cards {
   & > .more-link {
