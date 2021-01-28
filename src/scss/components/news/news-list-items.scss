@@ -26,6 +26,12 @@
       .news-vertical-teaser__topics {
         a {
           @include cta-vivid-red;
+          text-decoration: none;
+
+          &:focus,
+          &:hover {
+            text-decoration: underline;
+          }
         }
       }
     }
