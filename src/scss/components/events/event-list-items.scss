@@ -7,6 +7,7 @@
       a {
         // apply correct cardinal red hover styles only
         @include cta-hover-cardinal-red;
+        @apply font-normal;
       }
     }
 
@@ -23,15 +24,12 @@
       .event-list-item__type {
         a {
           @include cta-vivid-red;
-          //text-decoration: none;
           @apply
           no-underline
           font-normal;
-          //font-weight: normal;
 
           &:hover,
           &:focus {
-            //text-decoration: underline;
             @apply underline;
           }
         }

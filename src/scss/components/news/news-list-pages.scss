@@ -14,3 +14,15 @@
     }
   }
 }
+
+// different classes are used, this is a blanket class for some areas
+.su-news-topics {
+  a {
+    // should be underline or not underline depending on specific cases, won't set broadly here
+
+    &:hover,
+    &:focus {
+      @apply underline;
+    }
+  }
+}
