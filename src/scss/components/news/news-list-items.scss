@@ -19,6 +19,7 @@
   }
 }
 
+// News Vertical Cards
 .su-news-vertical-teaser {
   @include news-link-styles;
 
@@ -58,6 +59,11 @@
   }
 }
 
+.su-news-list {
+
+}
+
+
 .su-news-external {
   .su-news-list__item {
     @include news-link-styles;
@@ -80,11 +86,15 @@
 
 .su-news-list__topics {
   a {
-    text-decoration: none;
+    //text-decoration: none;
+    @apply
+    no-underline
+    font-normal;
 
     &:focus,
     &:hover {
-      text-decoration: underline;
+      //text-decoration: underline;
+      @apply underline;
     }
   }
 }
