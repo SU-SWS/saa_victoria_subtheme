@@ -218,21 +218,3 @@ $saa-cta--line-height: 1.25;
     }
   }
 }
-
-
-// Heading cta styles, only used in News and Events
-// essentially overrides to be black to cardinal red
-// hover state should be consistent with all our other links
-@mixin black-header-link {
-  @include cta-vivid-red;
-  // only difference should be regular state is black:
-
-  @apply
-  text-black
-  no-underline;
-
-  &:hover,
-  &:focus {
-    @apply underline;
-  }
-}

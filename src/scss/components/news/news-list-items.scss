@@ -9,7 +9,8 @@
 
     &:focus,
     &:hover {
-      text-decoration: underline;
+      //text-decoration: underline;
+      @apply underline;
 
       &::after {
         background-color: $su-color-cardinal-red;
@@ -26,11 +27,13 @@
       .news-vertical-teaser__topics {
         a {
           @include cta-vivid-red;
-          text-decoration: none;
+          @apply no-underline;
+          //text-decoration: none;
 
           &:focus,
           &:hover {
-            text-decoration: underline;
+            //text-decoration: underline;
+            @apply underline;
           }
         }
       }
@@ -64,11 +67,13 @@
 .su-news-list {
   a {
     @include cta-vivid-red;
-    text-decoration: none;
+    //text-decoration: none;
+    @apply no-underline;
 
     &:focus,
     &:hover {
-      text-decoration: underline;
+      //text-decoration: underline;
+      @apply underline;
     }
   }
 }
