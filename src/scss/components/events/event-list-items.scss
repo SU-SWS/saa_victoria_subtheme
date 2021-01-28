@@ -44,11 +44,14 @@
   }
 }
 
-.views-field-su-event-edit a {
-  @include saa-button--purple;
-  box-shadow: none;
-
-  &:focus, &:hover {
+.views-field-su-event-edit {
+  a {
+    @include saa-button--purple;
     box-shadow: none;
+
+    &:focus,
+    &:hover {
+      box-shadow: none;
+    }
   }
 }

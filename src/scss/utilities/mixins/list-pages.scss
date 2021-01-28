@@ -11,10 +11,12 @@
 
       &:hover,
       &:focus {
-        .su-link.su-link--jump {
-          &::after {
-            background-color: $su-color-cardinal-red; // important required because the hover
-            //background-color: $su-color-cardinal-red!important; // important required because the hover
+        .su-link {
+          &.su-link--jump {
+            &::after {
+              background-color: $su-color-cardinal-red; // important required because the hover
+              //background-color: $su-color-cardinal-red!important; // important required because the hover
+            }
           }
         }
       }

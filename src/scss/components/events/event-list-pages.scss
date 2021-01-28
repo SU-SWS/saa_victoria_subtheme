@@ -13,7 +13,7 @@
 }
 
 .stanford-event-types {
-  .event-types__collapsable-menu:before {
+  .event-types__collapsable-menu::before {
     color: $saa-color-vivid-red;
 
     &:hover,
