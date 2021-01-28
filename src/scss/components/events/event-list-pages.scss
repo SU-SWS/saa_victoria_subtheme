@@ -3,3 +3,14 @@
 .stanford-event-types {
   @include list-page--block-menu;
 }
+
+.stanford-event-types {
+  .event-types__collapsable-menu:before {
+    color: $saa-color-vivid-red;
+
+    &:hover,
+    &:focus {
+      color: $su-color-cardinal-red;
+    }
+  }
+}

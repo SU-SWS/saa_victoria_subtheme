@@ -3,3 +3,14 @@
 .news-topics {
   @include list-page--block-menu;
 }
+
+.news-topics {
+   .news-topics__collapsable-menu:before {
+    color: $saa-color-vivid-red;
+
+    &:hover,
+    &:focus {
+      color: $su-color-cardinal-red;
+    }
+  }
+}
