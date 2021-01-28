@@ -1,12 +1,15 @@
 @charset "UTF-8";
 
 // make Events h1 match other h1's
-.section-event-list--title .jumpstart-ui-page-heading .heading-h1,
-.section-event-series-list--header .jumpstart-ui-page-heading .heading-h1,
-.section-events-past--header .jumpstart-ui-page-heading .heading-h1 {
-  @include type-a;
+.section-event-list--title,
+.section-event-series-list--header,
+.section-events-past--header {
+  .jumpstart-ui-page-heading {
+    .heading-h1 {
+      @include type-a;
+    }
+  }
 }
-
 
 .stanford-event-types {
   @include list-page--block-menu;
