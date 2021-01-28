@@ -5,7 +5,6 @@
   .su-event-list-item__details {
     .event-list-item__type {
       a {
-        //@include black-header-link;
         // apply correct cardinal red hover styles only
         @include cta-hover-cardinal-red;
       }
@@ -24,18 +23,22 @@
       .event-list-item__type {
         a {
           @include cta-vivid-red;
-          text-decoration: none;
+          //text-decoration: none;
+          @apply
+          no-underline
+          font-normal;
+          //font-weight: normal;
 
           &:hover,
           &:focus {
-            text-decoration: underline;
+            //text-decoration: underline;
+            @apply underline;
           }
         }
       }
 
       h2 {
         a {
-          //@include black-header-link;
           // apply correct cardinal red hover styles only
           @include cta-hover-cardinal-red;
         }
