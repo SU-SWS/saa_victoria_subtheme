@@ -23,9 +23,13 @@
 
   &.su-card {
     .su-link {
-
-      &::after {
+      &:not(.su-button):not(.su-button--secondary):not(.su-button--big):after {
         background-color: $su-color-black;
+
+        &:focus,
+        &:hover {
+          background-color: $su-color-cardinal-red;
+        }
       }
 
       &:focus,
