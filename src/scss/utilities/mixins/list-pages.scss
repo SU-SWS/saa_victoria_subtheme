@@ -11,7 +11,6 @@
 
       &:hover,
       &:focus {
-        @apply no-underline;
 
         .su-link {
           &.su-link--jump {
@@ -47,11 +46,6 @@
           a {
             @include cta-vivid-red;
             @apply no-underline;
-
-            &:hover,
-            &:focus {
-              @apply no-underline;
-            }
           }
         }
 
