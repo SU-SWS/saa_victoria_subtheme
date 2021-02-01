@@ -7,7 +7,8 @@
   &.block-menu {
     & > button {
       @include cta-vivid-red;
-
+      //text-decoration: none;
+      @apply no-underline;
 
       &:hover,
       &:focus {

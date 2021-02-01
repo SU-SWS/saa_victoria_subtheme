@@ -3,12 +3,16 @@
 .news-topics {
   @include list-page--block-menu; // common mixin for News and events navigation
 
-  .news-topics__collapsable-menu::before {
-    color: $saa-color-vivid-red;
+  .news-topics__collapsable-menu {
+    &::before {
+      color: $saa-color-vivid-red;
+    }
 
     &:hover,
     &:focus {
-      color: $su-color-cardinal-red;
+      &::before {
+        color: $su-color-cardinal-red;
+      }
     }
   }
 }
