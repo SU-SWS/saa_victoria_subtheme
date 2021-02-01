@@ -1,0 +1,29 @@
+@charset "UTF-8";
+
+// make Events h1 match other h1's on all event pages
+.section-event-list--title,
+.section-event-series-list--header,
+.section-events-past--header {
+  .jumpstart-ui-page-heading {
+    .heading-h1 {
+      @include type-a;
+    }
+  }
+}
+
+.stanford-event-types {
+  @include list-page--block-menu; // common mixin for News and events navigation
+
+  .event-types__collapsable-menu {
+    &::before {
+      color: $saa-color-vivid-red;
+    }
+
+    &:hover,
+    &:focus {
+      &::before {
+        color: $su-color-cardinal-red;
+      }
+    }
+  }
+}
