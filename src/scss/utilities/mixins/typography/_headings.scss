@@ -1,0 +1,7 @@
+@charset "UTF-8";
+
+@mixin h1-font {
+  @include saa-font--calluna-base;
+  @include modular-typography(4);
+  margin: 0.67em 0;
+}
