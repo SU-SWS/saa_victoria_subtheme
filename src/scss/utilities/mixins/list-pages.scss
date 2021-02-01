@@ -46,6 +46,11 @@
           a {
             @include cta-vivid-red;
             @apply no-underline;
+
+            &:hover,
+            &:focus {
+              @apply underline;
+            }
           }
         }
 
