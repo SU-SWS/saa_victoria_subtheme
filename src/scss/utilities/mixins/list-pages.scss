@@ -7,11 +7,12 @@
   &.block-menu {
     & > button {
       @include cta-vivid-red;
-      //text-decoration: none;
       @apply no-underline;
 
       &:hover,
       &:focus {
+        @apply no-underline;
+
         .su-link {
           &.su-link--jump {
             &::after {
@@ -31,12 +32,15 @@
         }
 
         &.menu-item--active-trail {
+          @apply no-underline;
+
           &::before {
             color: $saa-color-vivid-red;
           }
 
           &:hover,
           &:focus {
+            @apply no-underline;
 
             &::before {
               color: $su-color-cardinal-red;
