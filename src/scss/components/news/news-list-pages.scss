@@ -1,10 +1,8 @@
 @charset "UTF-8";
 
 .news-topics {
-  @include list-page--block-menu;
-}
+  @include list-page--block-menu; // common mixin for News and events navigation
 
-.news-topics {
   .news-topics__collapsable-menu::before {
     color: $saa-color-vivid-red;
 
