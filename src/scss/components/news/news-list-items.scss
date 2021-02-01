@@ -87,7 +87,8 @@
   }
 }
 
-.su-news-list__footer {
+// only visible to logged in editors
+.su-news-edit-article {
   a {
     @include saa-button--purple;
     box-shadow: none;

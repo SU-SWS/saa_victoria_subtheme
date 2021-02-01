@@ -5,7 +5,7 @@
   .su-event-list-item__details {
     .event-list-item__type {
       a {
-        // apply correct cardinal red hover styles only
+        // apply correct cardinal red hover styles only (black text by default)
         @include cta-hover-cardinal-red;
         @apply font-normal;
       }
@@ -37,7 +37,7 @@
 
       h2 {
         a {
-          // apply correct cardinal red hover styles only
+          // apply correct cardinal red hover styles only (black text by default)
           @include cta-hover-cardinal-red;
         }
       }
@@ -45,6 +45,7 @@
   }
 }
 
+// only visible to logged in editors
 .views-field-su-event-edit {
   a {
     @include saa-button--purple;
