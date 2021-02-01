@@ -15,15 +15,15 @@
   @include list-page--block-menu; // common mixin for News and events navigation
 
   .event-types__collapsable-menu {
-      &::before {
-        color: $saa-color-vivid-red;
-      }
+    &::before {
+      color: $saa-color-vivid-red;
+    }
 
-      &:hover,
-      &:focus {
-        &::before {
-          color: $su-color-cardinal-red;
-        }
+    &:hover,
+    &:focus {
+      &::before {
+        color: $su-color-cardinal-red;
       }
     }
+  }
 }

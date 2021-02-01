@@ -200,8 +200,10 @@ $saa-cta--line-height: 1.25;
     }
   }
 
-  & svg.mailto {
-    fill: $su-color-vivid-red-dark;
+  & svg {
+    &.mailto {
+      fill: $su-color-vivid-red-dark;
+    }
   }
 
   &.su-link--action,
