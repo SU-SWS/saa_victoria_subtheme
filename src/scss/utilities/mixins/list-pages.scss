@@ -32,15 +32,12 @@
         }
 
         &.menu-item--active-trail {
-          @apply no-underline;
-
           &::before {
             color: $saa-color-vivid-red;
           }
 
           &:hover,
           &:focus {
-            @apply no-underline;
 
             &::before {
               color: $su-color-cardinal-red;
@@ -49,6 +46,12 @@
 
           a {
             @include cta-vivid-red;
+            @apply no-underline;
+
+            &:hover,
+            &:focus {
+              @apply no-underline;
+            }
           }
         }
 
