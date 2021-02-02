@@ -1,0 +1,31 @@
+@charset "UTF-8";
+
+.news-topics {
+  @include list-page--block-menu; // common mixin for News and events navigation
+
+  .news-topics__collapsable-menu {
+    &::before {
+      color: $saa-color-vivid-red;
+    }
+
+    &:hover,
+    &:focus {
+      &::before {
+        color: $su-color-cardinal-red;
+      }
+    }
+  }
+}
+
+// As far as I can tell, this is for "More News Topics" sections on individual news item pages
+// you'd think it would use the other classes, but that is why this additional class is needed
+.su-news-topics {
+  a {
+    // should be underline or not underline depending on specific cases, won't set broadly here
+
+    &:hover,
+    &:focus {
+      @apply underline;
+    }
+  }
+}
