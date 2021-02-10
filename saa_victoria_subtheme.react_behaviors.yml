@@ -1,0 +1,97 @@
+# Example react_behaviors plugin definitions.
+# Plugin property $defaults are defined in ReactBehaviorsPluginManager.
+card_type:
+  id: card_type
+  label: 'Card Paragraphs Type'
+  bundles:
+    - paragraphs_type|stanford_card
+  config:
+    select:
+      type: select
+      title: 'Card Type'
+      description: Select the style for displaying this card.
+      default_value: su-card--icon
+      options:
+        su-card--icon: Icon Card
+        su-card--horizontal: Horizontal Card
+        su-card--vertical: Vertical Card
+card_style:
+  id: card_style
+  label: 'Card Paragraph Style'
+  bundles:
+    - paragraphs_type|stanford_card
+  config:
+    select:
+      type: select
+      title: 'Card Style'
+      description: Select the style for displaying this card.
+      default_value: su-border
+      options:
+        su-minimal: Minimal (no border)
+        su-border: Border and Drop Shadow
+#first:
+#  id: first
+#  label: 'Card Paragraphs and all Rows'
+#  bundles:
+#    - paragraphs_type|card
+#    - paragraphs_row_type|*
+#  config:
+#    select:
+#      type: select
+#      title: 'Foo Select'
+#      description: Foo Bar Baz
+#      options:
+#        foo: Foo
+#        bar: Bar
+#        baz: Baz
+#    multiple_select:
+#      type: select
+#      title: 'Multiple Select'
+#      description: Foo Bar Baz
+#      multiple: true
+#      options:
+#        foo: Foo
+#        bar: Bar
+#        baz: Baz
+#    textfield:
+#      type: textfield
+#      title: 'Text Field'
+#      description: 'Bar Foo Baz'
+#      default_value: 'This is my value'
+#    checkbox:
+#      type: checkbox
+#      title: 'Baz Checkbox'
+#      description: 'Baz Foo Bar'
+#      default_value: true
+#    checkboxes:
+#      type: checkboxes
+#      title: 'Checkboxes'
+#      descriptin: 'this is a set of checkboxes'
+#      options:
+#        foo: FOO
+#        bar: BAR
+#        baz: BAZ
+#      default_value:
+#        - baz
+#  id: second
+#  label: 'Foo Paragraphs only'
+#  bundles:
+#    - paragraph_type|foo
+#  config:
+#    foo:
+#      type: select
+#      title: 'Foo Select'
+#      description: Foo Bar Baz
+#      options:
+#        foo: Foo
+#        bar: Bar
+#        baz: Baz
+#    bar:
+#      type: textfield
+#      title: 'Bar Text Field'
+#      description: 'Bar Foo Baz'
+#    baz:
+#      type: checkbox
+#      title: 'Baz Checkbox'
+#      description: 'Baz Foo Bar'
+#      default_value: true
