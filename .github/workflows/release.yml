@@ -23,6 +23,8 @@ jobs:
         with:
           node-version: 15.x
       - run: npm ci
+      - run: git config --global user.email "sws-developers@lists.stanford.edu"
+      - run: git config --global user.name "Stanford Web Services"
       - run: npm run release:bump-patch
       - run: npm run release:changelog
       - run: npm run release:yaml
