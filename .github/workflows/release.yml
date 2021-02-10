@@ -21,6 +21,7 @@ jobs:
         with:
           node-version: 15.x
       - run: npm ci
+      - run: npm release:bump-patch
       - run: npm release:changelog
-      - run: npm release:bump
-      - run: npm release:ev
+      - run: npm release:yaml
+      - run: npm release -- patch
