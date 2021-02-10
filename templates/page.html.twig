@@ -1,26 +1,30 @@
-{%- include "@saa_victoria_subtheme/components/brand-bar/saa--brand-bar.html.twig" with { modifier_class : "su-brand-bar--dark" } -%}
+{#
+/**
+ * Page.html.twig from stanford_basic.
+ */
+#}
+{%- extends "@stanford_basic/page.html.twig" -%}
 
-{%- if page.help -%}
-  {{ page.help }}
-{%- endif -%}
+{# Change the brand bar. #}
+{%- set brand_bar_variant = "su-brand-bar--dark" -%}
+{%- set template_brand_bar = "@saa_victoria_subtheme/components/brand-bar/saa--brand-bar.html.twig" %}
 
-<header class="su-masthead su-masthead--right">
-  <section>
-    {%- include "@saa_victoria_subtheme/components/lockup/saa--lockup.html.twig" with { modifier_class : "su-lockup--option-a", line1: site_name } -%}
-    {%- if page.search -%}
+{# Override the block_header to swap in our lockup. #}
+
+{% block block_header %}
+  <header class="su-masthead su-masthead--right">
+    <section>
+      {%- include "@saa_victoria_subtheme/components/lockup/saa--lockup.html.twig" with { modifier_class : "su-lockup--option-a", line1: site_name } -%}
       {{ page.search }}
-    {%- endif -%}
-    {%- if page.menu -%}
       {{ page.menu }}
-    {%- endif -%}
-  </section>
-</header>
+    </section>
+  </header>
+{% endblock %}
 
-<div id="page-content" class="page-content">
-  {{ page.content }}
-</div>
-
-<footer id="footer">
-  {%- include "@saa_victoria_subtheme/components/fat-footer/saa-fat-footer.html.twig" with { modifier_class : "test" } -%}
-  {%- include "@basic-dist/decanter/components/global-footer/global-footer.twig" -%}
-</footer>
+{# Override the footer #}
+{% block block_footer %}
+  <footer id="footer">
+    {%- include "@saa_victoria_subtheme/components/fat-footer/saa-fat-footer.html.twig" -%}
+    {%- include "@basic-dist/decanter/components/global-footer/global-footer.twig" -%}
+  </footer>
+{% endblock %}

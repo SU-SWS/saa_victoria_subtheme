@@ -1,0 +1,59 @@
+@charset "UTF-8";
+
+.su-event-list-item {
+  // list style, not card
+  .su-event-list-item__details {
+    .event-list-item__type {
+      a {
+        // apply correct cardinal red hover styles only (black text by default)
+        @include cta-hover-cardinal-red;
+        @apply font-normal;
+      }
+    }
+
+    h2 {
+      a {
+        @include cta-vivid-red;
+      }
+    }
+  }
+
+  // card style
+  &.su-event-card {
+    .su-event-list-item__details {
+      .event-list-item__type {
+        a {
+          @include cta-vivid-red;
+          @apply
+          no-underline
+          font-normal;
+
+          &:hover,
+          &:focus {
+            @apply underline;
+          }
+        }
+      }
+
+      h2 {
+        a {
+          // apply correct cardinal red hover styles only (black text by default)
+          @include cta-hover-cardinal-red;
+        }
+      }
+    }
+  }
+}
+
+// only visible to logged in editors
+.views-field-su-event-edit {
+  a {
+    @include saa-button--purple;
+    box-shadow: none;
+
+    &:focus,
+    &:hover {
+      box-shadow: none;
+    }
+  }
+}

@@ -9,6 +9,8 @@
   }
 
   table {
+    @include modular-spacing('margin-top', 2);
+
     tr:nth-child(even) {
       background: $su-color-fog;
     }
@@ -17,6 +19,7 @@
   // table label
   @include grid-media-max('sm') {
     .table--label-above {
+
       &::before {
         content: "Table best viewed in landscape mode.";
         font-style: italic;

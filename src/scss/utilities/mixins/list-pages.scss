@@ -1,0 +1,61 @@
+@charset "UTF-8";
+
+// This contains a mixin used for event and list pages.
+// It could possibly be used on other list pages in the future.
+
+@mixin list-page--block-menu {
+  &.block-menu {
+    & > button {
+      @include cta-vivid-red;
+      @apply no-underline;
+
+      &:hover,
+      &:focus {
+
+        .su-link {
+          &.su-link--jump {
+            &::after {
+              background-color: $su-color-cardinal-red;
+
+            }
+          }
+        }
+      }
+    }
+
+    & > .menu {
+      li {
+        a {
+          // apply correct cardinal red hover styles only
+          @include cta-hover-cardinal-red;
+        }
+
+        &.menu-item--active-trail {
+          &::before {
+            color: $saa-color-vivid-red;
+          }
+
+          &:hover,
+          &:focus {
+
+            &::before {
+              color: $su-color-cardinal-red;
+            }
+          }
+
+          a {
+            @include cta-vivid-red;
+            @apply no-underline;
+
+            &:hover,
+            &:focus {
+              @apply underline;
+            }
+          }
+        }
+
+      }
+    }
+  }
+}
+

@@ -15,7 +15,7 @@ require "common.inc";
 $endpoint = 'external-theme';
 
 // POST variables.
-$post = [
+$post = (object) [
   'vcs_url' => $config->config->vcsUrl,
   'vcs_path' => $config->config->vcsTarget,
 ];
@@ -30,11 +30,11 @@ $user_pass = addslashes($config->config->username) . ":" . addslashes($config->c
 
 // Initialize CURL.
 $ch = curl_init();
-curl_setopt($ch, CURLOPT_POST, 1);
+curl_setopt($ch, CURLOPT_CUSTOMREQUEST, 'PUT');
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, TRUE);
 curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
 curl_setopt($ch, CURLOPT_USERPWD, $user_pass);
-curl_setopt($ch, CURLOPT_POSTFIELDS, http_build_query($post));
+curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode($post));
 
 // Loop through each of the sites configured in config.json and execute the
 // action on them through the API.
