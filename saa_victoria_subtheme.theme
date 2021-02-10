@@ -22,7 +22,7 @@ function saa_victoria_subtheme_preprocess_page(&$variables) {
  * Prepares variables for the paragraph - mainly used when editing the paragraph
  */
 //function saa_victoria_subtheme_preprocess_paragraph(&$variables) {
-//  dpm($variables);
+
 //}
 
 
