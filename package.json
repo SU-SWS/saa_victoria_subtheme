@@ -1,6 +1,6 @@
 {
   "name": "saa_victoria_subtheme",
-  "version": "8.1.7-dev.0",
+  "version": "8.1.7",
   "repository": "https://github.com/SU-SWS/saa_victoria_subtheme",
   "scripts": {
     "build": "webpack --mode=development --display-error-details",
