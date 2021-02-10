@@ -28,4 +28,7 @@ jobs:
       - run: npm run release:bump-patch
       - run: npm run release:changelog
       - run: npm run release:yaml
-      - run: npm run release -- patch
+      - 
+        run: npm run release -- patch
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
