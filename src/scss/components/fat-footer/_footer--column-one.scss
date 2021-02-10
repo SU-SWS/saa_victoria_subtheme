@@ -10,6 +10,10 @@
   .su-local-footer__address {
     @include modular-spacing('padding-right', 3);
 
+    .address {
+      margin-bottom: 0; // to create consistent spacing added around the section
+    }
+
     .organization {
       @apply font-bold;
     }

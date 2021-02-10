@@ -57,6 +57,7 @@ h6,
 h1,
 .su-type-a {
   @include type-a;
+  // Note that h1 is overridden below:
 }
 
 h2,
@@ -87,8 +88,7 @@ h6,
 // SAA specifics
 
 h1 {
-  @include saa-font--calluna-base;
-  @include modular-typography(4);
+  @include h1-font;
   margin: 0.67em 0;
 }
 

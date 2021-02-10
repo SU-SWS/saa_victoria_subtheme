@@ -1,0 +1,109 @@
+@charset "UTF-8";
+
+@mixin news-link-styles {
+  a {
+
+    &::after {
+      background-color: $saa-color-vivid-red;
+    }
+
+    &:focus,
+    &:hover {
+      @apply underline;
+
+      &::after {
+        background-color: $su-color-cardinal-red;
+      }
+    }
+  }
+}
+
+// News Vertical Cards
+.su-news-vertical-teaser {
+  @include news-link-styles;
+
+  &.su-card {
+    .su-card__contents {
+      .news-vertical-teaser__topics {
+        a {
+          @include cta-vivid-red;
+          @apply no-underline;
+
+          &:focus,
+          &:hover {
+            @apply underline;
+          }
+        }
+      }
+    }
+
+
+    .su-link {
+      &:not(.su-button):not(.su-button--secondary):not(.su-button--big)::after { //  unfortunately required to specifically override)
+        background-color: $su-color-black;
+
+        &:focus,
+        &:hover {
+          background-color: $su-color-cardinal-red;
+        }
+      }
+
+      &:focus,
+      &:hover {
+        color: $su-color-cardinal-red;
+      }
+    }
+  }
+}
+
+.su-news-external {
+  .su-news-list__item {
+    @include news-link-styles;
+  }
+}
+
+.su-news-list {
+  a {
+    @include cta-vivid-red;
+    @apply no-underline;
+
+    &:focus,
+    &:hover {
+      @apply underline;
+    }
+  }
+}
+
+.su-news-list__topics {
+  a {
+    @apply
+    no-underline
+    font-normal;
+
+    &:focus,
+    &:hover {
+      @apply underline;
+    }
+  }
+}
+
+// only visible to logged in editors
+.su-news-edit-article {
+  a {
+    @include saa-button--purple;
+    box-shadow: none;
+
+    &:focus,
+    &:hover {
+      box-shadow: none;
+    }
+  }
+}
+
+.stanford-news--cards {
+  & > .more-link {
+    a {
+      @include saa-button--purple;
+    }
+  }
+}
