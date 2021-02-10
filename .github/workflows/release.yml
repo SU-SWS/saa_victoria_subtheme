@@ -4,12 +4,10 @@ name: "Auto Release"
 # Trigger the workflow on merge of pull request or direct push,
 # but only for the main branch
 on:
-  # pull_request:
-  #   types: [ closed ]
-  push:
+  pull_request:
+    types: [ closed ]
     branches:
       - $default-branch
-      - ADAPT-1539
 
 jobs:
   releaseit:
@@ -32,3 +30,4 @@ jobs:
         run: npm run release -- patch
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - run: git push origin $default-branch
