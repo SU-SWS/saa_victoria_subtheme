@@ -4,6 +4,8 @@ name: "Auto Release"
 # Trigger the workflow on merge of pull request or direct push,
 # but only for the main branch
 on:
+  # pull_request:
+  #   types: [ closed ]
   push:
     branches:
       - $default-branch
@@ -21,7 +23,7 @@ jobs:
         with:
           node-version: 15.x
       - run: npm ci
-      - run: npm release:bump-patch
-      - run: npm release:changelog
-      - run: npm release:yaml
-      - run: npm release -- patch
+      - run: npm run release:bump-patch
+      - run: npm run release:changelog
+      - run: npm run release:yaml
+      - run: npm run release -- patch
