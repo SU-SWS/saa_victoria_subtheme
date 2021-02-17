@@ -27,8 +27,8 @@ card_style:
       description: Select the style for displaying this card.
       default_value: su-border
       options:
-        su-minimal: Minimal (no border)
-        su-border: Border and Drop Shadow
+        su-border-none: Minimal (no border)
+        su-border-regular: Border and Drop Shadow
 #first:
 #  id: first
 #  label: 'Card Paragraphs and all Rows'

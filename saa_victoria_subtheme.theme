@@ -22,9 +22,14 @@ function saa_victoria_subtheme_preprocess_page(&$variables) {
  * Prepares variables for the paragraph - mainly used when editing the paragraph
  */
 //function saa_victoria_subtheme_preprocess_paragraph(&$variables) {
-
+////  $variables['paragraph']->getAllBehaviorSettings();
+////  $variables['paragraph']->getBehaviorSetting('key', 'setting');
+//
+////  dpm ($variables);
+////  $variables['attributes']['class'][] = 'saa-banner--has-card';
+//
+//
 //}
-
 
 
 /**
@@ -32,6 +37,38 @@ function saa_victoria_subtheme_preprocess_page(&$variables) {
  */
 function saa_victoria_subtheme_preprocess_ds_entity_view(&$variables) {
   if (isset($variables['content']['#paragraph']) && $variables['content']['#paragraph']->bundle() == 'stanford_card') {
+
+    // set initially from settings
+    $variables['all_behavior_settings'][] = $variables['content']['#paragraph']->getAllBehaviorSettings();
+
+    // set default values if values are empty:
+    if($variables['all_behavior_settings'][0]['react_paragraphs:card_type'] == null) {
+      $variables['all_behavior_settings'][0]['react_paragraphs:card_type']['select'] = 'su-card--icon';
+      // testing:
+      $variables['all_behavior_settings_set'][0]['react_paragraphs:card_type']['select'] = 'su-card--icon';
+    }
+
+    if($variables['all_behavior_settings'][0]['react_paragraphs:card_style'] == null) {
+      $variables['all_behavior_settings'][0]['react_paragraphs:card_style']['select'] = 'su-border-none';
+    }
+
+    // prepare class list
+//    foreach ($variables['content']['#paragraph']['#unserializedBehaviorSettings'] as $key => $value) {
+    foreach ($variables['all_behavior_settings'][0] as $key => $value) {
+      if($value['select'] !== null) { // loop through select options
+
+        // any select field should have its value added to classes:
+        $variables['attributes']['class'][] = $value['select']; // adds it to a div 2 levels up from the card
+        $variables['attributes']['paragraph-class'][] = $value['select'];
+      }
+    }
+
+//    $variables['card_type'][] = $variables['content']['#paragraph']->getBehaviorSetting('react_paragraphs', 'card_type');
+//    entity:paragraph:stanford_card::behavior_settings
+//    dpm ($variables['content']['#paragraph']->getAllBehaviorSettings() );
+    dpm ($variables);
+
+
     $variables['content']['#fields']['card_image']['su_card_media'][0]['#stanford_media_image_style'] = 'full_responsive';
   }
   // if banner has an image, add a class
