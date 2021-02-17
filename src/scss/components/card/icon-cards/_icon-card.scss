@@ -5,8 +5,11 @@ $tag-width: 20px;
 $tag-width--mobile: 15px;
 $tag-height: 70px;
 
-.su-card {
-  &.su-card--icon {
+.su-card--icon {
+
+
+  .su-card {
+    //&.su-card--icon {  // temporary for testing until we fix where su-card--icon is being added
 
     // icon
     img {
@@ -33,9 +36,9 @@ $tag-height: 70px;
         width: $tag-width--mobile;
       }
 
-      @apply
-      block
-      absolute;  // top left corner inside the card
+      @apply block
+      absolute;
+      // top left corner inside the card
       background: $saa-color-electric-purple;
 
       &.tag-color--electric-purple::before {
@@ -56,8 +59,7 @@ $tag-height: 70px;
       @include grid-media-max('sm') {
         padding: $mobile-modular-spacing-3;
       }
-      @apply
-      text-left;
+      @apply text-left;
       margin: 0;
 
       & > :first-child {
@@ -83,6 +85,8 @@ $tag-height: 70px;
         margin-top: $mobile-modular-spacing-1;
       }
     }
+
+    //}
   }
 }
 
