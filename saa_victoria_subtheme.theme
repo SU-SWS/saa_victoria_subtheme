@@ -42,6 +42,9 @@ function saa_victoria_subtheme_preprocess_ds_entity_view(&$variables) {
     $variables['all_behavior_settings'][] = $variables['content']['#paragraph']->getAllBehaviorSettings();
 
     // set default values if values are empty:
+    if(sizeof($variables['all_behavior_settings'][0]) > 1) {
+      $variables['all_behavior_settings_test'][] = 'yes';
+    }
     if($variables['all_behavior_settings'][0]['react_paragraphs:card_type'] == null) {
       $variables['all_behavior_settings'][0]['react_paragraphs:card_type']['select'] = 'su-card--icon';
       // testing:

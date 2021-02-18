@@ -12,7 +12,7 @@ card_type:
       description: Select the style for displaying this card.
       default_value: su-card--icon
       options:
-        su-card--icon: Icon Card
+        su-card--icon--wrapper: Icon Card
         su-card--horizontal: Horizontal Card
         su-card--vertical: Vertical Card
 card_style:
