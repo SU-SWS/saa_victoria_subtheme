@@ -3,7 +3,7 @@ type: theme
 description: 'Stanford Alumni Association: Victoria Theme.'
 package: Stanford
 version: 8.x-1.7-dev
-core: 8.x
+core_version_requirement: '^8.8 || ^9'
 base theme: stanford_basic
 libraries:
   - saa_victoria_subtheme/allpages
