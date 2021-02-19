@@ -41,28 +41,21 @@ function saa_victoria_subtheme_preprocess_ds_entity_view(&$variables) {
     // set initially from settings
     $variables['all_behavior_settings'][] = $variables['content']['#paragraph']->getAllBehaviorSettings();
 
-    // set default values if values are empty:
-    if(sizeof($variables['all_behavior_settings'][0]) > 1) {
-      $variables['all_behavior_settings_test'][] = 'yes';
-    }
-    if($variables['all_behavior_settings'][0]['react_paragraphs:card_type'] == null) {
-      $variables['all_behavior_settings'][0]['react_paragraphs:card_type']['select'] = 'su-card--icon';
-      // testing:
-      $variables['all_behavior_settings_set'][0]['react_paragraphs:card_type']['select'] = 'su-card--icon';
-    }
+    // get card type - if null, will use the 3rd value
+    $variables['card_type'] = $variables['content']['paragraph']->getBehaviorSetting('react_paragraphs:card_type', 'card_type', 'su-card-wrapper--icon');
+    $variables['card_border_style'] = $variables['content']['paragraph']->getBehaviorSetting('react_paragraphs:card_type', 'card_border_style', 'su-card-wrapper--border-regular');
 
-    if($variables['all_behavior_settings'][0]['react_paragraphs:card_style'] == null) {
-      $variables['all_behavior_settings'][0]['react_paragraphs:card_style']['select'] = 'su-border-none';
-    }
 
     // prepare class list
 //    foreach ($variables['content']['#paragraph']['#unserializedBehaviorSettings'] as $key => $value) {
     foreach ($variables['all_behavior_settings'][0] as $key => $value) {
-      if($value['select'] !== null) { // loop through select options
+      if($value['select']) { // loop through select options
+        if($value['select'] !== null) { // loop through select options
 
-        // any select field should have its value added to classes:
-        $variables['attributes']['class'][] = $value['select']; // adds it to a div 2 levels up from the card
-        $variables['attributes']['paragraph-class'][] = $value['select'];
+          // any select field should have its value added to classes:
+          $variables['attributes']['class'][] = $value['select']; // adds it to a div 2 levels up from the card
+          $variables['attributes']['paragraph-class'][] = $value['select'];
+        }
       }
     }
 
@@ -84,6 +77,7 @@ function saa_victoria_subtheme_preprocess_ds_entity_view(&$variables) {
       // $variables['content']['#fields']['hero_image']['su_banner_image'][0]['#stanford_media_image_style'] = 'full_responsive';
 
       // check if there is a card
+      // check with mike the newer drupal-y way to check
       if(isset($variables['content']['#fields']['hero_super_headline']['su_banner_sup_header']['#object']) || isset($variables['content']['#fields']['hero_headline']['su_banner_header']['#object']) || isset($variables['content']['#fields']['hero_body']['su_banner_body']['#object']) ) {
         $variables['attributes']['class'][] = 'saa-banner--has-card';
       } else {

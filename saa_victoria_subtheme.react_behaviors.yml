@@ -1,34 +1,35 @@
 # Example react_behaviors plugin definitions.
 # Plugin property $defaults are defined in ReactBehaviorsPluginManager.
-card_type:
+card_type:  # part of the key after the :
   id: card_type
   label: 'Card Paragraphs Type'
   bundles:
     - paragraphs_type|stanford_card
   config:
-    select:
+    card_type:    # the setting
       type: select
       title: 'Card Type'
       description: Select the style for displaying this card.
       default_value: su-card--icon
       options:
-        su-card--icon--wrapper: Icon Card
-        su-card--horizontal: Horizontal Card
-        su-card--vertical: Vertical Card
-card_style:
-  id: card_style
-  label: 'Card Paragraph Style'
-  bundles:
-    - paragraphs_type|stanford_card
-  config:
-    select:
+        su-card-wrapper--icon: Icon Card
+        su-card-wrapper--horizontal: Horizontal Card
+        su-card-wrapper--vertical: Vertical Card
+    card_border_style:
       type: select
       title: 'Card Style'
       description: Select the style for displaying this card.
       default_value: su-border
       options:
-        su-border-none: Minimal (no border)
-        su-border-regular: Border and Drop Shadow
+        su-card-wrapper--border-none: Minimal (no border)
+        su-card-wrapper--border-regular: Border and Drop Shadow
+#card_style:
+#  id: card_style
+#  label: 'Card Paragraph Style'
+#  bundles:
+#    - paragraphs_type|stanford_card
+#  config:
+
 #first:
 #  id: first
 #  label: 'Card Paragraphs and all Rows'
@@ -56,7 +57,7 @@ card_style:
 #    textfield:
 #      type: textfield
 #      title: 'Text Field'
-#      description: 'Bar Foo Baz'
+#      description: 'Bar Foo Baz Only used for Icon cards etc. for example'
 #      default_value: 'This is my value'
 #    checkbox:
 #      type: checkbox
