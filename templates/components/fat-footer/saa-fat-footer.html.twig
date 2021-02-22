@@ -2,20 +2,20 @@
 {% import "@jumpstart_ui/macros/field-links-to-list.twig" as linklist %}
 {% import "@jumpstart_ui/macros/field-links-to-social-list.twig" as sociallist %}
 
-{%- set weblogin_text = weblogin_text|render|striptags('<drupal-render-placeholder>')|trim -%}
+{%- set weblogin_text = weblogin_text|render_clean -%}
 {%- if weblogin_text is empty -%}
   {%- set weblogin_url = '' -%}
 {%- endif -%}
-{%- set lockup_title = lockup_title|render|striptags('<drupal-render-placeholder>')|trim|convert_encoding('UTF-8', 'HTML-ENTITIES') -%}
-{%- set signup_form_method = signup_form_method|render|striptags('<drupal-render-placeholder>')|trim -%}
-{%- set signup_form_action = signup_form_action|render|striptags('<drupal-render-placeholder>')|trim|convert_encoding('UTF-8', 'HTML-ENTITIES') -%}
-{%- set signup_form_field_submit_value = signup_form_field_submit_value|render|striptags('<drupal-render-placeholder>')|trim -%}
+{%- set lockup_title = lockup_title|render_clean -%}
+{%- set signup_form_method = signup_form_method|render_clean -%}
+{%- set signup_form_action = signup_form_action|render_clean -%}
+{%- set signup_form_field_submit_value = signup_form_field_submit_value|render_clean -%}
 {%- set action_links = linklist.create_list(action_links) -%}
 {%- set social_links = sociallist.create_list(social_links) -%}
 {#{%- set primary_links = linklist.create_list(primary_links) -%}#}
 {#{%- set secondary_links = linklist.create_list(secondary_links) -%}#}
-{#{%- set primary_links_header = primary_links_header|render|striptags('<drupal-render-placeholder><a>')|trim -%}#}
-{#{%- set secondary_links_header = secondary_links_header|render|striptags('<drupal-render-placeholder><a>')|trim -%}#}
+{#{%- set primary_links_header = primary_links_header|render_clean -%}#}
+{#{%- set secondary_links_header = secondary_links_header|render_clean -%}#}
 
 {% if attributes is not empty %}
   {% set attributes = attributes.removeClass('su-local-footer') %}
