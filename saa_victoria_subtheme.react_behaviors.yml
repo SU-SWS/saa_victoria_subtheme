@@ -1,6 +1,6 @@
 # Example react_behaviors plugin definitions.
 # Plugin property $defaults are defined in ReactBehaviorsPluginManager.
-card_type:  # part of the key after the :
+card_variant_info:  # part of the key after the :
   id: card_type
   label: 'Card Paragraphs Type'
   bundles:
