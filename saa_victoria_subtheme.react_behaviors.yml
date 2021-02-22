@@ -17,7 +17,7 @@ card_variant_info:  # part of the key after the :
         su-card-wrapper--vertical: Vertical Card
     card_border_style:
       type: select
-      title: 'Card Style'
+      title: 'Card Border Style'
       description: Select the style for displaying this card.
       default_value: su-card-wrapper--border-regular
       options:
