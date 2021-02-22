@@ -42,28 +42,21 @@ function saa_victoria_subtheme_preprocess_ds_entity_view(&$variables) {
     $variables['all_behavior_settings'][] = $variables['content']['#paragraph']->getAllBehaviorSettings();
 
     // get card type - if null, will use the 3rd value
-    $variables['card_type'] = $variables['content']['paragraph']->getBehaviorSetting('react_paragraphs:card_type', 'card_type', 'su-card-wrapper--icon');
-    $variables['card_border_style'] = $variables['content']['paragraph']->getBehaviorSetting('react_paragraphs:card_type', 'card_border_style', 'su-card-wrapper--border-regular');
+//    $variables['card_type'] = $variables['content']['paragraph']->getBehaviorSetting('react_paragraphs:card_variant_info', 'card_type', 'su-card-wrapper--icon');
+//    $variables['card_type'] = $variables['content']['paragraph']->getBehaviorSetting('react_paragraphs:card_variant_info', 'card_type');
+//    $variables['attributes']['class'][] = $variables['content']['paragraph']->getBehaviorSetting('react_paragraphs:card_variant_info', 'card_type', 'su-card-wrapper--icon');
+//    $variables['card_border_style'] = $variables['content']['paragraph']->getBehaviorSetting('react_paragraphs:card_variant_info', 'card_border_style', 'su-card-wrapper--border-regular');
+//    $variables['attributes']['class'][] = $variables['content']['paragraph']->getBehaviorSetting('react_paragraphs:card_variant_info', 'card_border_style', 'su-card-wrapper--border-regular');
 
-
-    // prepare class list
-//    foreach ($variables['content']['#paragraph']['#unserializedBehaviorSettings'] as $key => $value) {
+    // prepare parent div class list
     foreach ($variables['all_behavior_settings'][0] as $key => $value) {
-      if($value['select']) { // loop through select options
-        if($value['select'] !== null) { // loop through select options
-
-          // any select field should have its value added to classes:
-          $variables['attributes']['class'][] = $value['select']; // adds it to a div 2 levels up from the card
-          $variables['attributes']['paragraph-class'][] = $value['select'];
+      if($key !== 'react') {
+        foreach($value as $variant_field => $variant_value) {
+          $variables['attributes']['class'][] = $variant_value; // adds it to a div 2 levels up from the card
         }
       }
     }
-
-//    $variables['card_type'][] = $variables['content']['#paragraph']->getBehaviorSetting('react_paragraphs', 'card_type');
-//    entity:paragraph:stanford_card::behavior_settings
-//    dpm ($variables['content']['#paragraph']->getAllBehaviorSettings() );
-    dpm ($variables);
-
+//    dpm ($variables);
 
     $variables['content']['#fields']['card_image']['su_card_media'][0]['#stanford_media_image_style'] = 'full_responsive';
   }
