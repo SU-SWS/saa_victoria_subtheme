@@ -22,9 +22,7 @@ function saa_victoria_subtheme_preprocess_page(&$variables) {
  * Prepares variables for the paragraph - mainly used when editing the paragraph
  */
 //function saa_victoria_subtheme_preprocess_paragraph(&$variables) {
-
 //}
-
 
 
 /**
@@ -32,6 +30,12 @@ function saa_victoria_subtheme_preprocess_page(&$variables) {
  */
 function saa_victoria_subtheme_preprocess_ds_entity_view(&$variables) {
   if (isset($variables['content']['#paragraph']) && $variables['content']['#paragraph']->bundle() == 'stanford_card') {
+
+    // set initially from settings
+    // get card variant info - if null, will use the 3rd value
+    $variables['attributes']['class'][] = $variables['content']['#paragraph']->getBehaviorSetting('react_paragraphs:card_variant_info', 'card_type', 'su-card-wrapper--icon');
+    $variables['attributes']['class'][] = $variables['content']['#paragraph']->getBehaviorSetting('react_paragraphs:card_variant_info', 'card_border_style', 'su-card-wrapper--border-regular');
+
     $variables['content']['#fields']['card_image']['su_card_media'][0]['#stanford_media_image_style'] = 'full_responsive';
   }
   // if banner has an image, add a class
@@ -44,6 +48,7 @@ function saa_victoria_subtheme_preprocess_ds_entity_view(&$variables) {
       // $variables['content']['#fields']['hero_image']['su_banner_image'][0]['#stanford_media_image_style'] = 'full_responsive';
 
       // check if there is a card
+      // check with mike the newer drupal-y way to check
       if(isset($variables['content']['#fields']['hero_super_headline']['su_banner_sup_header']['#object']) || isset($variables['content']['#fields']['hero_headline']['su_banner_header']['#object']) || isset($variables['content']['#fields']['hero_body']['su_banner_body']['#object']) ) {
         $variables['attributes']['class'][] = 'saa-banner--has-card';
       } else {

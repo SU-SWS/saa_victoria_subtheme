@@ -5,8 +5,10 @@ $tag-width: 20px;
 $tag-width--mobile: 15px;
 $tag-height: 70px;
 
-.su-card {
-  &.su-card--icon {
+.su-card-wrapper--icon {
+
+
+  .su-card {
 
     // icon
     img {
@@ -33,9 +35,9 @@ $tag-height: 70px;
         width: $tag-width--mobile;
       }
 
-      @apply
-      block
-      absolute;  // top left corner inside the card
+      @apply block
+      absolute;
+      // top left corner inside the card
       background: $saa-color-electric-purple;
 
       &.tag-color--electric-purple::before {
@@ -56,8 +58,7 @@ $tag-height: 70px;
       @include grid-media-max('sm') {
         padding: $mobile-modular-spacing-3;
       }
-      @apply
-      text-left;
+      @apply text-left;
       margin: 0;
 
       & > :first-child {
@@ -83,6 +84,7 @@ $tag-height: 70px;
         margin-top: $mobile-modular-spacing-1;
       }
     }
+
   }
 }
 
@@ -93,9 +95,11 @@ $tag-height: 70px;
     // 1 items, row 1
     .container-1-items {
       .paragraph-item:nth-of-type(1) {
-        .su-card {
-          &.su-card--icon::before {
-            background: $saa-color-dandelion;
+        .su-card-wrapper--icon {
+          .su-card {
+            &::before {
+              background: $saa-color-dandelion;
+            }
           }
         }
       }
@@ -104,17 +108,21 @@ $tag-height: 70px;
     // 2 items, row 1
     .container-2-items {
       .paragraph-item:nth-of-type(1) {
-        .su-card {
-          &.su-card--icon::before {
-            background: $saa-color-dandelion;
+        .su-card-wrapper--icon {
+          .su-card {
+            &::before {
+              background: $saa-color-dandelion;
+            }
           }
         }
       }
 
       .paragraph-item:nth-of-type(2) {
-        .su-card {
-          &.su-card--icon::before {
-            background: $saa-color-wintergreen;
+        .su-card-wrapper--icon {
+          .su-card {
+            &::before {
+              background: $saa-color-wintergreen;
+            }
           }
         }
       }
@@ -123,25 +131,31 @@ $tag-height: 70px;
     // 3 card row, 1 in 3
     .container-3-items {
       .paragraph-item:nth-of-type(1) {
-        .su-card {
-          &.su-card--icon::before {
-            background: $saa-color-dandelion;
+        .su-card-wrapper--icon {
+          .su-card {
+            &::before {
+              background: $saa-color-dandelion;
+            }
           }
         }
       }
 
       .paragraph-item:nth-of-type(2) {
-        .su-card {
-          &.su-card--icon::before {
-            background: $saa-color-wintergreen;
+        .su-card-wrapper--icon {
+          .su-card {
+            &::before {
+              background: $saa-color-wintergreen;
+            }
           }
         }
       }
 
       .paragraph-item:nth-of-type(3) {
-        .su-card {
-          &.su-card--icon::before {
-            background: $saa-color-electric-purple;
+        .su-card-wrapper--icon {
+          .su-card {
+            &::before {
+              background: $saa-color-electric-purple;
+            }
           }
         }
       }
@@ -154,9 +168,11 @@ $tag-height: 70px;
 
       // 1 item, row 2
       .paragraph-item:nth-of-type(1) {
-        .su-card {
-          &.su-card--icon::before {
-            background: $saa-color-wintergreen;
+        .su-card-wrapper--icon {
+          .su-card {
+            &::before {
+              background: $saa-color-wintergreen;
+            }
           }
         }
       }
@@ -165,17 +181,21 @@ $tag-height: 70px;
     // 2 items, row 2
     .container-2-items {
       .paragraph-item:nth-of-type(1) {
-        .su-card {
-          &.su-card--icon::before {
-            background: $saa-color-electric-purple;
+        .su-card-wrapper--icon {
+          .su-card {
+            &::before {
+              background: $saa-color-electric-purple;
+            }
           }
         }
       }
 
       .paragraph-item:nth-of-type(2) {
-        .su-card {
-          &.su-card--icon::before {
-            background: $saa-color-dandelion;
+        .su-card-wrapper--icon {
+          .su-card {
+            &::before {
+              background: $saa-color-dandelion;
+            }
           }
         }
       }
@@ -184,25 +204,31 @@ $tag-height: 70px;
     // 3 cards, row 2
     .container-3-items {
       .paragraph-item:nth-of-type(1)  {
-        .su-card {
-          &.su-card--icon::before {
-            background: $saa-color-wintergreen;
+        .su-card-wrapper--icon {
+          .su-card {
+            &::before {
+              background: $saa-color-wintergreen;
+            }
           }
         }
       }
 
       .paragraph-item:nth-of-type(2) {
-        .su-card {
-          &.su-card--icon::before {
-            background: $saa-color-electric-purple;
+        .su-card-wrapper--icon {
+          .su-card {
+            &::before {
+              background: $saa-color-electric-purple;
+            }
           }
         }
       }
 
       .paragraph-item:nth-of-type(3) {
-        .su-card {
-          &.su-card--icon::before {
-            background: $saa-color-dandelion;
+        .su-card-wrapper--icon {
+          .su-card {
+            &::before {
+              background: $saa-color-dandelion;
+            }
           }
         }
       }
@@ -215,9 +241,11 @@ $tag-height: 70px;
 
       // 1 item, row 3
       .paragraph-item:nth-of-type(1) {
-        .su-card {
-          &.su-card--icon::before {
-            background: $saa-color-electric-purple;
+        .su-card-wrapper--icon {
+          .su-card {
+            &::before {
+              background: $saa-color-electric-purple;
+            }
           }
         }
       }
@@ -226,17 +254,21 @@ $tag-height: 70px;
     // 2 items, row 3
     .container-2-items {
       .paragraph-item:nth-of-type(1) {
-        .su-card {
-          &.su-card--icon::before {
-            background: $saa-color-wintergreen;
+        .su-card-wrapper--icon {
+          .su-card {
+            &::before {
+              background: $saa-color-wintergreen;
+            }
           }
         }
       }
 
       .paragraph-item:nth-of-type(2) {
-        .su-card {
-          &.su-card--icon::before {
-            background: $saa-color-electric-purple;
+        .su-card-wrapper--icon {
+          .su-card {
+            &::before {
+              background: $saa-color-electric-purple;
+            }
           }
         }
       }
@@ -245,25 +277,31 @@ $tag-height: 70px;
     // 3 cards, row 3
     .container-3-items {
       .paragraph-item:nth-of-type(1) {
-        .su-card {
-          &.su-card--icon::before {
-            background: $saa-color-electric-purple;
+        .su-card-wrapper--icon {
+          .su-card {
+            &::before {
+              background: $saa-color-electric-purple;
+            }
           }
         }
       }
 
       .paragraph-item:nth-of-type(2) {
-        .su-card {
-          &.su-card--icon::before {
-            background: $saa-color-dandelion;
+        .su-card-wrapper--icon {
+          .su-card {
+            &::before {
+              background: $saa-color-dandelion;
+            }
           }
         }
       }
 
       .paragraph-item:nth-of-type(3) {
-        .su-card {
-          &.su-card--icon::before {
-            background: $saa-color-wintergreen;
+        .su-card-wrapper--icon {
+          .su-card {
+            &::before {
+              background: $saa-color-wintergreen;
+            }
           }
         }
       }
