@@ -10,7 +10,7 @@ card_variant_info:  # part of the key after the :
       type: select
       title: 'Card Type'
       description: Select the style for displaying this card.
-      default_value: su-card-wrapper--icon
+#      default_value: su-card-wrapper--icon
       options:
         su-card-wrapper--icon: Icon Card
         su-card-wrapper--horizontal: Horizontal Card
@@ -19,7 +19,7 @@ card_variant_info:  # part of the key after the :
       type: select
       title: 'Card Border Style'
       description: Select the style for displaying this card.
-      default_value: su-card-wrapper--border-regular
+#      default_value: su-card-wrapper--border-regular
       options:
         su-card-wrapper--border-none: Minimal (no border)
         su-card-wrapper--border-regular: Border and Drop Shadow
