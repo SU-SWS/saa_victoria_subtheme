@@ -1,18 +1,33 @@
-# .github/workflows/release.yml
-name: Release
+# Release A Version
+name: "Auto Release"
 
+# Trigger the workflow on merge of pull request or direct push,
+# but only for the main branch
 on:
   pull_request:
-    types: closed
+    types: [ closed ]
+    branches:
+      - $default-branch
 
 jobs:
-  build:
+  releaseit:
+    name: 'Release It'
     runs-on: ubuntu-latest
     steps:
-      - name: Tag
-        uses: K-Phoen/semver-release-action@master
+      - name: Checkout repository
+        uses: actions/checkout@v2
+      - name: Set Node Version
+        uses: actions/setup-node@v1
         with:
-          release_branch: master
-          tag_format: "%major%.%minor%.%patch%"
+          node-version: 15.x
+      - run: npm ci
+      - run: git config --global user.email "sws-developers@lists.stanford.edu"
+      - run: git config --global user.name "Stanford Web Services"
+      - run: npm run release:bump-patch
+      - run: npm run release:changelog
+      - run: npm run release:yaml
+      - 
+        run: npm run release -- patch
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - run: git push origin $default-branch
