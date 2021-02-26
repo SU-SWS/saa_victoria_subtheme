@@ -17,7 +17,6 @@
     "release": "release-it --ci",
     "release:dev": "release-it --ci --github.preRelease --preReleaseId=dev --npm.tag=dev",
     "release:manual": "release-it",
-    "after:bump": "npm run release:yaml"
   },
   "release-it": {
     "git": {
@@ -31,6 +30,9 @@
     },
     "npm": {
       "publish": false
+    },
+    "hooks": {
+      "after:bump": "npm run release:yaml"
     }
   },
   "devDependencies": {
