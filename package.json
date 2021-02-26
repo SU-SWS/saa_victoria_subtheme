@@ -16,7 +16,7 @@
     "release:yaml": "node ./dev/bump-yaml.js && git commit -am \"Updated Info.yml\"",
     "release": "release-it --ci",
     "release:dev": "release-it --ci --github.preRelease --preReleaseId=dev --npm.tag=dev",
-    "release:manual": "release-it",
+    "release:manual": "release-it"
   },
   "release-it": {
     "git": {
