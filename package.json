@@ -20,12 +20,13 @@
   },
   "release-it": {
     "git": {
-      "changelog": "auto-changelog --unreleased-only --stdout",
+      "changelog": "auto-changelog -p --tag-prefix='' --stdout",
+      "tagName": "${version}",
       "requireUpstream": false
     },
     "github": {
       "release": true,
-      "releaseNotes": "auto-changelog --unreleased-only --stdout"
+      "releaseNotes": "auto-changelog -p --tag-prefix='' --unreleased-only --stdout"
     },
     "npm": {
       "publish": false
