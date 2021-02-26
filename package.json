@@ -1,6 +1,6 @@
 {
   "name": "saa_victoria_subtheme",
-  "version": "8.1.15",
+  "version": "8.1.16",
   "repository": "https://github.com/SU-SWS/saa_victoria_subtheme",
   "scripts": {
     "build": "webpack --mode=development --display-error-details",
@@ -32,7 +32,10 @@
       "publish": false
     },
     "hooks": {
-      "after:bump": ["npm run release:yaml", "npm run release:changelog"]
+      "after:bump": [
+        "npm run release:yaml",
+        "npm run release:changelog"
+      ]
     }
   },
   "devDependencies": {
