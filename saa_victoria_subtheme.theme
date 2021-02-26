@@ -19,6 +19,15 @@ function saa_victoria_subtheme_preprocess_page(&$variables) {
 }
 
 /**
+ * Prepares variables for the paragraph - mainly used when editing the paragraph
+ */
+//function saa_victoria_subtheme_preprocess_paragraph(&$variables) {
+
+//}
+
+
+
+/**
  * Implements hook_preprocess_HOOK().
  */
 function saa_victoria_subtheme_preprocess_ds_entity_view(&$variables) {
