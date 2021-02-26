@@ -32,7 +32,7 @@
       "publish": false
     },
     "hooks": {
-      "after:bump": "npm run release:yaml"
+      "after:bump": ["npm run release:yaml", "npm run release:changelog"]
     }
   },
   "devDependencies": {
