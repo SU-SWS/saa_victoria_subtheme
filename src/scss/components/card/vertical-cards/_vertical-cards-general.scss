@@ -13,3 +13,18 @@
 //    }
 //  }
 //}
+
+.su-card-wrapper--vertical {
+  .su-card {
+    .su-card__contents {
+      & > span {
+        margin-bottom: 5px;
+      }
+      & > h2 {
+        padding-top: 0;
+      }
+    }
+
+  }
+
+}
