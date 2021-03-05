@@ -27,7 +27,6 @@ card_variant_info:  # part of the key after the :
       type: select
       title: 'Horizontal Card: Image Style'
       description: If this is a horizontal card, Select the image style for this card.
-      #      default_value: su-card-wrapper--border-regular
       options:
         su-card-wrapper--horizontal--small-square: Small Square (220px)
         su-card-wrapper--horizontal--small-circle: Small Circle (220px)
