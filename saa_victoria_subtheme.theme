@@ -36,8 +36,6 @@ function saa_victoria_subtheme_preprocess_ds_entity_view(&$variables) {
     $variables['attributes']['class'][] = $variables['content']['#paragraph']->getBehaviorSetting('react_paragraphs:card_variant_info', 'card_type', 'su-card-wrapper--icon');
     $variables['attributes']['class'][] = $variables['content']['#paragraph']->getBehaviorSetting('react_paragraphs:card_variant_info', 'card_border_style', 'su-card-wrapper--border-regular');
     $variables['attributes']['class'][] = $variables['content']['#paragraph']->getBehaviorSetting('react_paragraphs:card_variant_info', 'horizontal_card_image_style');
-    dpm($variables);
-
 
     $variables['content']['#fields']['card_image']['su_card_media'][0]['#stanford_media_image_style'] = 'full_responsive';
   }
