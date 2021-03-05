@@ -1,6 +1,6 @@
 @charset "UTF-8";
 
-.su-card-wrapper--border-none {
+.su-card-wrapper--border-none:not(.su-card-wrapper--icon) {
   .su-card {
     //box-shadow: none;
     //border: none;

@@ -5,6 +5,8 @@ $tag-width: 20px;
 $tag-width--mobile: 15px;
 $tag-height: 70px;
 
+// Note: we never allow minimal border-none styles with icon card, see src/scss/components/card/_minimal-border.scss
+
 .su-card-wrapper--icon {
   .su-card {
     // icon
@@ -80,14 +82,6 @@ $tag-height: 70px;
       @include grid-media-max('sm') {
         margin-top: $mobile-modular-spacing-1;
       }
-    }
-  }
-
-  // never allow minimal border-none styles with icon card
-  &.su-card-wrapper--border-none {
-    .su-card {
-      // enforce box shadow and border
-
     }
   }
 }
