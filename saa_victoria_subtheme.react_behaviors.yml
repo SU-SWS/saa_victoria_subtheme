@@ -23,6 +23,15 @@ card_variant_info:  # part of the key after the :
       options:
         su-card-wrapper--border-none: Minimal (no border)
         su-card-wrapper--border-regular: Border and Drop Shadow
+    horizontal_card_image_style:
+      type: select
+      title: 'Horizontal Card: Image Style'
+      description: If this is a horizontal card, Select the image style for this card.
+      #      default_value: su-card-wrapper--border-regular
+      options:
+        su-card-wrapper--horizontal--small-square: Small Square (220px)
+        su-card-wrapper--horizontal--small-circle: Small Circle (220px)
+        su-card-wrapper--horizontal--large-rectangle: Large Rectanglel (2:1 ratio)
 #card_style:
 #  id: card_style
 #  label: 'Card Paragraph Style'
