@@ -2,13 +2,11 @@
 
 .su-card-wrapper--border-none:not(.su-card-wrapper--icon) {
   .su-card {
-    //box-shadow: none;
-    //border: none;
     @apply
     border-none
     shadow-none;
 
-    su-card__contents {
+    .su-card__contents {
       @apply px-0;
     }
   }
