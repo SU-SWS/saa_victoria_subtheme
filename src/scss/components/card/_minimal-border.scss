@@ -1,0 +1,13 @@
+@charset "UTF-8";
+
+.su-card-wrapper--border-none:not(.su-card-wrapper--icon) {
+  .su-card {
+    @apply
+    border-none
+    shadow-none;
+
+    .su-card__contents {
+      @apply px-0;
+    }
+  }
+}
