@@ -9,6 +9,14 @@
       & > h2 {
         padding-top: 0;
       }
+
+      div:not(.su-card__button) {
+        // only target plain links, not button links
+        a.su-link {
+          @include modular-spacing('margin-top', 2);
+        }
+      }
+
     }
 
   }
