@@ -9,8 +9,15 @@
       & > h2 {
         padding-top: 0;
       }
+
+      .su-card__button {
+        @include modular-spacing('padding-top', 2);
+      }
+
+      // main link in card (not button style)
+      a.su-link.su-card__link {
+        @include modular-spacing('padding-top', 2);
+      }
     }
-
   }
-
 }
