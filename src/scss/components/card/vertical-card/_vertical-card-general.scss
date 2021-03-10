@@ -10,12 +10,23 @@
         padding-top: 0;
       }
 
-      div:not(.su-card__button) {
-        // only target plain links, not button links
-        a.su-link {
-          @include modular-spacing('margin-top', 2);
-        }
+      // set for button
+      .su-card__button {
+        @include modular-spacing('margin-top', 2);
       }
+
+      // main link in card
+      a.su-link.su-card__link {
+        @include modular-spacing('margin-top', 2);
+
+      }
+
+      //div:not(.su-card__button) {
+      //  // only target plain links, not button links
+      //  a.su-link {
+      //    @include modular-spacing('margin-top', 2);
+      //  }
+      //}
 
     }
 
