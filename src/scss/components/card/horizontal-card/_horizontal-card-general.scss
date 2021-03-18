@@ -2,11 +2,11 @@
 
 .su-card-wrapper--horizontal {
   .su-card {
-    display: flex;
-    & > .media {
-      display: none;
+    @apply flex;
+    & > .image {
+      @apply hidden;
       @include grid-media-min('sm') {
-        display: block;
+        @apply block;
       }
     }
     .su-card__contents {
