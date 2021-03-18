@@ -1,0 +1,21 @@
+@charset "UTF-8";
+
+.su-card-wrapper--horizontal {
+  &.su-horizontal-card-wrapper--small-circle {
+    .su-card {
+      & > .image {
+        //display: none;
+        @include grid-media-min('sm') {
+          //display: block;
+          max-width: 220px;
+          @include modular-spacing('margin', 2 2 2 1);
+        }
+      }
+      .su-card__contents {
+        @apply pt-0;
+      }
+    }
+
+  }
+
+}
