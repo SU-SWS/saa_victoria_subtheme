@@ -4,6 +4,8 @@
   &.su-horizontal-card-wrapper--small-circle {
     .su-card {
       & > .image {
+        @apply mt-0;
+
         @include grid-media-min('sm') {
           max-width: $card-circle--width;
           @include modular-spacing('margin', 0 1 2 1);
