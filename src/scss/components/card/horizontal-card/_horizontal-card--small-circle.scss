@@ -6,7 +6,7 @@
       & > .image {
         @include grid-media-min('sm') {
           max-width: $card-circle--width;
-          @include modular-spacing('margin', 0 2 2 1);
+          @include modular-spacing('margin', 0 1 2 1);
 
           img {
             border-radius: 50%;
