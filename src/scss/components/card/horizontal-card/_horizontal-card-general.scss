@@ -11,6 +11,10 @@
     }
     .su-card__contents {
       // placeholder
+      span {
+        @include saa-modular-typography-small;
+        margin-bottom: 5px;
+      }
     }
   }
 }
