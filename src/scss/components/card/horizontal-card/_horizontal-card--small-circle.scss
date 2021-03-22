@@ -19,6 +19,9 @@
           margin-top: 0;
           @apply mt-0;
         }
+        h2 {
+          @include modular-spacing('margin-bottom', -1);
+        }
       }
     }
 
