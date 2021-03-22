@@ -6,11 +6,19 @@
       & > .image {
         @include grid-media-min('sm') {
           max-width: $card-circle--width;
-          @include modular-spacing('margin', 2 2 2 1);
+          @include modular-spacing('margin', 0 2 2 1);
+
+          img {
+            border-radius: 50%;
+          }
         }
       }
       .su-card__contents {
         @apply pt-0;
+        & > :first-child {
+          margin-top: 0;
+          @apply mt-0;
+        }
       }
     }
 
