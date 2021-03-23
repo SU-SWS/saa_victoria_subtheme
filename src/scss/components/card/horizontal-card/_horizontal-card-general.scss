@@ -4,12 +4,12 @@
   .su-card {
     @apply flex;
     & > .image {
-      @apply
-      hidden
-      mt-0;
+      @apply hidden;
 
       @include grid-media-min('sm') {
-        @apply block;
+        @apply
+        block
+        mt-0;
       }
     }
     .su-card__contents {
