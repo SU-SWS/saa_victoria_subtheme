@@ -4,7 +4,10 @@
   .su-card {
     @apply flex;
     & > .image {
-      @apply hidden;
+      @apply
+      hidden
+      mt-0;
+
       @include grid-media-min('sm') {
         @apply block;
       }
@@ -19,6 +22,9 @@
         }
       }
 
+      & > :first-child {
+        @apply mt-0;
+      }
     }
   }
 }
