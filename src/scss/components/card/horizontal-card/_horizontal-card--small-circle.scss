@@ -20,6 +20,10 @@
         h2 {
           @include modular-spacing('margin-bottom', -1);
         }
+        .su-card__link, .su-card__button {
+          // @TODO: After we add a template around the main text paragraphs, before the link, redo this to be margin-bottom on that new wrapper
+          @include modular-spacing('margin-top', 3);
+        }
       }
     }
 
