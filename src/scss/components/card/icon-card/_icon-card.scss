@@ -63,6 +63,10 @@ $tag-height: 70px;
       & > :first-child {
         margin-top: 0;
       }
+
+      p {
+        line-height: 1.4em;
+      }
     }
 
     div + .su-card__contents {
