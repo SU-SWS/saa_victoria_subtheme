@@ -12,7 +12,7 @@ $tag-height: 70px;
     // icon
     img {
       margin-right: 0;
-      @include modular-spacing('margin', 3 null 2 4);
+      @include modular-spacing('margin', 2 null 2 4);
       @include grid-media-max('sm') {
         margin-top: $mobile-modular-spacing-2;
         margin-right: $mobile-modular-spacing-3;
@@ -53,7 +53,7 @@ $tag-height: 70px;
     }
 
     .su-card__contents {
-      @include modular-spacing('padding', 3 4 4 4);
+      @include modular-spacing('padding', 2 4 4 4);
       @include grid-media-max('sm') {
         padding: $mobile-modular-spacing-3;
       }
