@@ -14,7 +14,7 @@ $tag-height: 70px;
       margin-right: 0;
       @include modular-spacing('margin', 4 null 2 3);
       @include grid-media-max('sm') {
-        margin-top: $mobile-modular-spacing-2;
+        margin-top: $mobile-modular-spacing-3;
         margin-right: $mobile-modular-spacing-3;
         margin-left: $mobile-modular-spacing-3;
         margin-bottom: $mobile-modular-spacing-2;
