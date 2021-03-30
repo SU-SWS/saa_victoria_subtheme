@@ -15,7 +15,7 @@
 
       }
       .su-card__contents {
-        @apply pt-0;
+        //@apply pt-0;
 
         h2 {
           @include modular-spacing('margin-bottom', -1);

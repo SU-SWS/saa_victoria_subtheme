@@ -13,7 +13,8 @@
       }
     }
     .su-card__contents {
-      // placeholder
+      @apply pt-0;
+
       span {
         @include saa-modular-typography-small;
         margin-bottom: 5px;
