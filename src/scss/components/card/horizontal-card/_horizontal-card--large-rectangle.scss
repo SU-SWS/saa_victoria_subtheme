@@ -8,24 +8,27 @@
   //}
   //
   @include grid-media-min('lg') {
-    max-width: 44%;
+    max-width: 46%;
     //@include margin(0 3% null 0);
   }
 
   @include grid-media-min('xl') {
-    max-width: 47%;
+    max-width: 48%;
   }
 }
 
 .su-card-wrapper--horizontal {
   &.su-horizontal-card-wrapper--large-rectangle {
     .su-card {
+      @apply
+        flex
+        justify-between;
+
       & > .image {
         @include horizontal-card--half-width;
       }
       .su-card__contents {
         @include horizontal-card--half-width;
-        //@apply pt-0;
 
         h2 {
           @include modular-spacing('margin-bottom', -1);
@@ -34,6 +37,14 @@
       }
     }
 
-  }
+    &.su-horizontal-card-wrapper--image-right {
+      .su-card {
+        & > .image {
+          order: 2;
+        }
+      }
+    }
+
+    }
 
 }
