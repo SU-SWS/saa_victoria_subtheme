@@ -36,7 +36,7 @@ card_variant_info:  # part of the key after the :
       description: If this is a horizontal card, Select the image style for this card. (Currently only used for Large Rectangle Image Style.)
       options:
         su-horizontal-card-wrapper--image-left: Image on Left
-        su-horizontal-card-wrapper--image-right: Image on Left
+        su-horizontal-card-wrapper--image-right: Image on Right
 #card_style:
 #  id: card_style
 #  label: 'Card Paragraph Style'
