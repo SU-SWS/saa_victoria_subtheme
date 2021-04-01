@@ -75,7 +75,10 @@
   // when horizontal card has a border:
   &.su-card-wrapper--border-regular {
     .su-card {
-      @include modular-spacing('padding', 2 2 3 2);  // same for both circle or large rectangle image styles.
+      @include modular-spacing('padding', 2 2 3 2); // same for both circle or large rectangle image styles.
+      .su-card__contents {
+        @apply pb-0;
+      }
     }
   }
 }
