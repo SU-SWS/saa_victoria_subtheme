@@ -30,7 +30,7 @@ card_variant_info:  # part of the key after the :
       options:
 #        su-horizontal-card-wrapper--small-square: Small Square (220px)
         su-horizontal-card-wrapper--small-circle: Small Circle (220px)
-        su-horizontal-card-wrapper--large-rectangle: Large Rectanglel (2:1 ratio)
+        su-horizontal-card-wrapper--large-rectangle: Large Rectangle (2:1 ratio)
 #card_style:
 #  id: card_style
 #  label: 'Card Paragraph Style'
