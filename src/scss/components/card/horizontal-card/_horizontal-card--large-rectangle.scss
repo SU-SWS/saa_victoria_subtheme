@@ -20,15 +20,29 @@
 .su-card-wrapper--horizontal {
   &.su-horizontal-card-wrapper--large-rectangle {
     .su-card {
+
+      @include grid-media-max('md') {
+        @apply flex-wrap;
+      }
+
       @apply
         flex
         justify-between;
 
+
+
       & > .image {
         @include horizontal-card--half-width;
-      }
+          @include grid-media-max('md') {
+            width: 100%;
+          }
+        }
       .su-card__contents {
         @include horizontal-card--half-width;
+
+        @include grid-media-max('md') {
+          @include modular-spacing('padding-top', 3);
+        }
 
         h2 {
           @include modular-spacing('margin-bottom', -1);
@@ -42,9 +56,13 @@
         & > .image {
           order: 2;
         }
+
+        .su-card__contents {
+          @include grid-media-max('md') {
+            @include modular-spacing('padding-bottom', 3);
+          }
+        }
       }
     }
-
-    }
-
+  }
 }
