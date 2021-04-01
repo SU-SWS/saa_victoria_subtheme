@@ -2,14 +2,9 @@
 
 @mixin horizontal-card--half-width {
 
-  //@include grid-media-min('md') {
-  //  max-width: 44%;
-  //  //@include margin(0 3% null 0);
-  //}
-  //
+
   @include grid-media-min('lg') {
     max-width: 46%;
-    //@include margin(0 3% null 0);
   }
 
   @include grid-media-min('xl') {
@@ -41,7 +36,7 @@
         @include horizontal-card--half-width;
 
         @include grid-media-max('md') {
-          @include modular-spacing('padding-top', 2);
+          @include modular-spacing('padding-top', 1);
         }
 
         h2 {
@@ -59,7 +54,7 @@
 
         .su-card__contents {
           @include grid-media-max('md') {
-            @include modular-spacing('padding-bottom', 2);
+            @include modular-spacing('padding-bottom', 1);
           }
         }
       }
