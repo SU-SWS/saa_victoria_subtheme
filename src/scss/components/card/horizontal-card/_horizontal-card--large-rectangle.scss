@@ -28,8 +28,18 @@
 
       & > .image {
         @include horizontal-card--half-width;
+          @include grid-media-max('sm') {
+            @apply block; // do not hide for mobile
+          }
+
           @include grid-media-max('md') {
             width: 100%;
+          }
+
+          img {
+            @include grid-media-max('sm') {
+              @apply block; // do not hide for mobile
+            }
           }
         }
       .su-card__contents {
