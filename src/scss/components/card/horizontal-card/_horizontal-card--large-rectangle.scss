@@ -41,7 +41,7 @@
         @include horizontal-card--half-width;
 
         @include grid-media-max('md') {
-          @include modular-spacing('padding-top', 3);
+          @include modular-spacing('padding-top', 2);
         }
 
         h2 {
@@ -59,7 +59,7 @@
 
         .su-card__contents {
           @include grid-media-max('md') {
-            @include modular-spacing('padding-bottom', 3);
+            @include modular-spacing('padding-bottom', 2);
           }
         }
       }
