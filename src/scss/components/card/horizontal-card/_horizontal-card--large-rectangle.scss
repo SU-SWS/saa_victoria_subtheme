@@ -54,7 +54,7 @@
 
         .su-card__contents {
           @include grid-media-max('md') {
-            @include modular-spacing('padding-bottom', 1);
+            @include modular-spacing('padding', 3 null 1);
           }
         }
       }
