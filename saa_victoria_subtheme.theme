@@ -29,15 +29,19 @@ function saa_victoria_subtheme_preprocess_page(&$variables) {
  * Implements hook_preprocess_HOOK().
  */
 function saa_victoria_subtheme_preprocess_ds_entity_view(&$variables) {
+
   if (isset($variables['content']['#paragraph']) && $variables['content']['#paragraph']->bundle() == 'stanford_card') {
+    
+    // Check for media in a card then set classes.
+    if(isset($variables['content']['su_card_media']['#object']) ) {
+      // set initially from settings
+      // get card variant info - if null, will use the 3rd value
+      $variables['attributes']['class'][] = $variables['content']['#paragraph']->getBehaviorSetting('react_paragraphs:card_variant_info', 'card_type', 'su-card-wrapper--icon');
+      $variables['attributes']['class'][] = $variables['content']['#paragraph']->getBehaviorSetting('react_paragraphs:card_variant_info', 'card_border_style', 'su-card-wrapper--border-regular');
+      $variables['attributes']['class'][] = $variables['content']['#paragraph']->getBehaviorSetting('react_paragraphs:card_variant_info', 'horizontal_card_image_style');
 
-    // set initially from settings
-    // get card variant info - if null, will use the 3rd value
-    $variables['attributes']['class'][] = $variables['content']['#paragraph']->getBehaviorSetting('react_paragraphs:card_variant_info', 'card_type', 'su-card-wrapper--icon');
-    $variables['attributes']['class'][] = $variables['content']['#paragraph']->getBehaviorSetting('react_paragraphs:card_variant_info', 'card_border_style', 'su-card-wrapper--border-regular');
-    $variables['attributes']['class'][] = $variables['content']['#paragraph']->getBehaviorSetting('react_paragraphs:card_variant_info', 'horizontal_card_image_style');
-
-    $variables['content']['#fields']['card_image']['su_card_media'][0]['#stanford_media_image_style'] = 'full_responsive';
+      $variables['content']['#fields']['card_image']['su_card_media'][0]['#stanford_media_image_style'] = 'full_responsive';
+    }
   }
   // if banner has an image, add a class
   if (isset($variables['content']['#paragraph']) && $variables['content']['#paragraph']->bundle() == 'stanford_banner') {
