@@ -30,11 +30,15 @@
     &.su-card-wrapper--border-regular {
       .su-card {
         & > .image {
-          @apply pl-0;
+          @apply ml-0;
         }
 
         .su-card__contents {
           @apply px-0;
+        }
+
+        .su-card__button {
+          @apply mb-0;
         }
       }
 
