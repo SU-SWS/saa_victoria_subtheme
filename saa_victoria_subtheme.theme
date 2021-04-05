@@ -69,8 +69,6 @@ function saa_victoria_subtheme_preprocess_ds_entity_view(&$variables) {
         }
       }
 
-      dpm($variables);
-
     } // End media in card check
 
   } // End card check
