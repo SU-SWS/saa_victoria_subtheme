@@ -28,9 +28,15 @@ card_variant_info:  # part of the key after the :
       title: 'Horizontal Card: Image Style'
       description: If this is a horizontal card, Select the image style for this card.
       options:
-#        su-horizontal-card-wrapper--small-square: Small Square (220px)
         su-horizontal-card-wrapper--small-circle: Small Circle (220px)
         su-horizontal-card-wrapper--large-rectangle: Large Rectangle (2:1 ratio)
+    horizontal_card_image_position:
+      type: select
+      title: 'Horizontal Card: Image Position'
+      description: If this is a horizontal card, Select the image style for this card. (Currently only used for Large Rectangle Image Style.)
+      options:
+        su-horizontal-card-wrapper--image-left: Image on Left
+        su-horizontal-card-wrapper--image-right: Image on Right
 #card_style:
 #  id: card_style
 #  label: 'Card Paragraph Style'
