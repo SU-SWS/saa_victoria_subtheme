@@ -27,6 +27,19 @@
       }
     }
 
+    &.su-card-wrapper--border-regular {
+      .su-card {
+        & > .image {
+          @apply pl-0;
+        }
+
+        .su-card__contents {
+          @apply px-0;
+        }
+      }
+
+    }
+
   }
 
 }
