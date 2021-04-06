@@ -61,6 +61,7 @@
           @include grid-media-max('md') {
             @include modular-spacing('padding', 3 null 1);
           }
+          @apply pt-0;
         }
       }
     }
@@ -77,15 +78,6 @@
 
         @include grid-media-min('lg') {
           @apply p-0;
-        }
-      }
-    }
-
-    // borderd and image right
-    &.su-horizontal-card-wrapper--image-right {
-      .su-card {
-        .su-card__contents {
-          @apply pt-0;
         }
       }
     }
