@@ -59,12 +59,12 @@ function saa_victoria_subtheme_preprocess_ds_entity_view(&$variables) {
       if($variables['card_info']['card_type'] === 'su-card-wrapper--horizontal' )  {
 
         // Small circle image
-        if($variables['card_info']['card_type'] === 'su-horizontal-card-wrapper--small-circle' )  {
+        if($variables['card_info']['horizontal_card_image_style'] === 'su-horizontal-card-wrapper--small-circle' )  {
           $variables['content']['#fields']['card_image']['su_card_media'][0]['#stanford_media_image_style'] = 'responsive_1_1';
         }
 
         // Horizontal rectangle image
-        if($variables['card_info']['card_type'] === 'su-horizontal-card-wrapper--large-rectangle' )  {
+        if($variables['card_info']['horizontal_card_image_style'] === 'su-horizontal-card-wrapper--large-rectangle' )  {
           $variables['content']['#fields']['card_image']['su_card_media'][0]['#stanford_media_image_style'] = 'card_2_1';
         }
       }
