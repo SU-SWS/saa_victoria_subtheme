@@ -2,12 +2,7 @@
 
 @mixin horizontal-card--half-width {
 
-
   @include grid-media-min('lg') {
-    max-width: 46%;
-  }
-
-  @include grid-media-min('xl') {
     max-width: 48%;
   }
 }
@@ -77,7 +72,12 @@
     .su-card {
       @include modular-spacing('padding', 2 2 3 2); // same for both circle or large rectangle image styles.
       .su-card__contents {
-        @apply p-0;
+        @apply pb-0;
+
+        @include grid-media-min('lg') {
+          @apply p-0;
+        }
+
       }
     }
   }
