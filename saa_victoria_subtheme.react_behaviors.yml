@@ -29,7 +29,7 @@ card_variant_info:  # part of the key after the :
       description: If this is a horizontal card, Select the image style for this card.
       options:
         su-horizontal-card-wrapper--small-circle: Small Circle (220px)
-        su-horizontal-card-wrapper--large-rectangle: Large Rectanglel (2:1 ratio)
+        su-horizontal-card-wrapper--large-rectangle: Large Rectangle (2:1 ratio)
     horizontal_card_image_position:
       type: select
       title: 'Horizontal Card: Image Position'
