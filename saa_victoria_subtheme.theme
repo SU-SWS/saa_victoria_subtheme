@@ -68,6 +68,8 @@ function saa_victoria_subtheme_preprocess_ds_entity_view(&$variables) {
 
         // Set responsive image style for circle.
           $variables['content']['#fields']['card_image']['su_card_media'][0]['#stanford_media_image_style'] = 'responsive_1_1';
+          //instead of responsive image style, we want to set it to always use the image style with machine name "large_square"
+
         }
 
         // Horizontal rectangle image
