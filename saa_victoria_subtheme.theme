@@ -34,92 +34,99 @@ function saa_victoria_subtheme_preprocess_ds_entity_view(&$variables) {
   if (!isset($variables['content']['#paragraph'])){
     return;
   }
+
   $paragraph = $variables['content']['#paragraph'];
 
-  if ( $variables['content']['#paragraph']->bundle() == 'stanford_card') {
-    /** @var \Drupal\paragraphs\ParagraphInterface $paragraph */
+  // Process Cards
+  if ( $paragraph->bundle() == 'stanford_card') {
+    saa_victoria_preprocess_card($variables);
+  }
 
-    $imageCount = $paragraph->get('card_image')->count();
+  // Process Banners
+  if ( $paragraph->bundle() == 'stanford_banner') {
+    saa_victoria_preprocess_banner($variables);
+  }
+}
 
-    // Add border style class to card wrapper.
-    $variables['attributes']['class'][] = $paragraph->getBehaviorSetting('react_paragraphs:card_variant_info', 'card_border_style', 'su-card-wrapper--border-regular');
+function saa_victoria_preprocess_card(&$variables) {
+  $paragraph = $variables['content']['#paragraph'];
 
-    $card_info = [];
-    //$card_info['card_type'] = [];
+  /** @var \Drupal\paragraphs\ParagraphInterface $paragraph */
 
-    // Add card type class to card wrapper. 3rd variable provides the default card type.
-    $card_info['card_type'] = $paragraph->getBehaviorSetting('react_paragraphs:card_variant_info', 'card_type', 'su-card-wrapper--icon');
-    $variables['attributes']['class'][] = $card_info['card_type'];
+  $imageCount = $paragraph->get('card_image')->count();
 
-//    dpm($variables);
+  // Add border style class to card wrapper.
+  $variables['attributes']['class'][] = $paragraph->getBehaviorSetting('react_paragraphs:card_variant_info', 'card_border_style', 'su-card-wrapper--border-regular');
 
-    // Check for media in a card then set classes.
-    if($imageCount) {
+  $card_info = [];
 
-      // Icon card check
-      if($card_info['card_type'] == 'su-card-wrapper--icon' )  {
-        // Set responsive image style for icons.
-        $variables['content']['#fields']['card_image']['su_card_media'][0]['#stanford_media_image_style'] = 'full_responsive';
-      }
+  // Add card type class to card wrapper. 3rd variable provides the default card type.
+  $card_info['card_type'] = $paragraph->getBehaviorSetting('react_paragraphs:card_variant_info', 'card_type', 'su-card-wrapper--icon');
+  $variables['attributes']['class'][] = $card_info['card_type'];
 
-      // Vertical card check
-      else if($card_info['card_type'] === 'su-card-wrapper--vertical' )  {
+  // Check for media in a card then set classes.
+  if($imageCount) {
 
-       // Set responsive image style for rectangle.
-        $variables['content']['#fields']['card_image']['su_card_media'][0]['#stanford_media_image_style'] = 'card_2_1';
-      }
+    // Icon card check
+    if($card_info['card_type'] == 'su-card-wrapper--icon' )  {
+      // Set responsive image style for icons.
+      $variables['content']['#fields']['card_image']['su_card_media'][0]['#stanford_media_image_style'] = 'full_responsive';
+    }
 
-      // All horizontal
-      else if($card_info['card_type'] === 'su-card-wrapper--horizontal' )  {
+    // Vertical card check
+    else if($card_info['card_type'] === 'su-card-wrapper--vertical' )  {
 
-        $card_info['horizontal_card_image_style'] = $paragraph->getBehaviorSetting('react_paragraphs:card_variant_info', 'horizontal_card_image_style');
-        $variables['attributes']['class'][] = $card_info['horizontal_card_image_style'];
+      // Set responsive image style for rectangle.
+      $variables['content']['#fields']['card_image']['su_card_media'][0]['#stanford_media_image_style'] = 'card_2_1';
+    }
 
-        // Small circle image
-        if($card_info['horizontal_card_image_style'] === 'su-horizontal-card-wrapper--small-circle' )  {
+    // All horizontal
+    else if($card_info['card_type'] === 'su-card-wrapper--horizontal' )  {
+
+      $card_info['horizontal_card_image_style'] = $paragraph->getBehaviorSetting('react_paragraphs:card_variant_info', 'horizontal_card_image_style');
+      $variables['attributes']['class'][] = $card_info['horizontal_card_image_style'];
+
+      // Small circle image
+      if($card_info['horizontal_card_image_style'] === 'su-horizontal-card-wrapper--small-circle' )  {
 
         // Set responsive image style for circle.
-          $variables['content']['#fields']['card_image']['su_card_media'][0]['#stanford_media_image_style'] = 'responsive_1_1';
-//          $variables['content']['#fields']['card_image']['su_card_media'][0]['#stanford_media_image_style'] = 'large_square';
-
-        }
-
-        // Horizontal rectangle image
-        else if($card_info['horizontal_card_image_style'] === 'su-horizontal-card-wrapper--large-rectangle' )  {
-
-          // Add image position class to card wrapper.
-          $card_info['horizontal_card_image_position'] = $paragraph->getBehaviorSetting('react_paragraphs:card_variant_info', 'horizontal_card_image_position');
-          $variables['attributes']['class'][] = $card_info['horizontal_card_image_position'];
-
-          // Set responsive image style for rectangle.
-          $variables['content']['#fields']['card_image']['su_card_media'][0]['#stanford_media_image_style'] = 'card_2_1';
-        }
+        $variables['content']['#fields']['card_image']['su_card_media'][0]['#stanford_media_image_style'] = 'responsive_1_1';
       }
 
-    } // End media in card check
+      // Horizontal rectangle image
+      else if($card_info['horizontal_card_image_style'] === 'su-horizontal-card-wrapper--large-rectangle' )  {
 
-  } // End card check
+        // Add image position class to card wrapper.
+        $card_info['horizontal_card_image_position'] = $paragraph->getBehaviorSetting('react_paragraphs:card_variant_info', 'horizontal_card_image_position');
+        $variables['attributes']['class'][] = $card_info['horizontal_card_image_position'];
 
-  // If banner has an image, add a class
-  if ( $paragraph->bundle() == 'stanford_banner') {
-    if(isset($variables['content']['#fields']['hero_image']['su_banner_image']['#object']) ) {
-      $variables['attributes']['class'][] = 'saa-banner--has-image';
-
-      // Maybe in future change the media handling to be image style Medium Square (220x220) w machine name 'medium_square'
-      // Banners use 'full_responsive' mode already. this is a placeholder to use this line once a responsive 1:1 ratio style exists in our d8core
-      // $variables['content']['#fields']['hero_image']['su_banner_image'][0]['#stanford_media_image_style'] = 'full_responsive';
-
-      // Check if there is a card
-      // Check with mike the newer drupal-y way to check
-      if(isset($variables['content']['#fields']['hero_super_headline']['su_banner_sup_header']['#object']) || isset($variables['content']['#fields']['hero_headline']['su_banner_header']['#object']) || isset($variables['content']['#fields']['hero_body']['su_banner_body']['#object']) ) {
-        $variables['attributes']['class'][] = 'saa-banner--has-card';
-      } else {
-        $variables['attributes']['class'][] = 'saa-banner--no-card';
+        // Set responsive image style for rectangle.
+        $variables['content']['#fields']['card_image']['su_card_media'][0]['#stanford_media_image_style'] = 'card_2_1';
       }
-
-    } else {
-      $variables['attributes']['class'][] = 'saa-banner--no-image';
     }
+  } // End card check
+}
+
+function saa_victoria_preprocess_banner(&$variables) {
+
+// If banner has an image, add a class
+  if(isset($variables['content']['#fields']['hero_image']['su_banner_image']['#object']) ) {
+    $variables['attributes']['class'][] = 'saa-banner--has-image';
+
+    // Maybe in future change the media handling to be image style Medium Square (220x220) w machine name 'medium_square'
+    // Banners use 'full_responsive' mode already. this is a placeholder to use this line once a responsive 1:1 ratio style exists in our d8core
+    // $variables['content']['#fields']['hero_image']['su_banner_image'][0]['#stanford_media_image_style'] = 'full_responsive';
+
+    // Check if there is a card
+    // Check with mike the newer drupal-y way to check
+    if(isset($variables['content']['#fields']['hero_super_headline']['su_banner_sup_header']['#object']) || isset($variables['content']['#fields']['hero_headline']['su_banner_header']['#object']) || isset($variables['content']['#fields']['hero_body']['su_banner_body']['#object']) ) {
+      $variables['attributes']['class'][] = 'saa-banner--has-card';
+    } else {
+      $variables['attributes']['class'][] = 'saa-banner--no-card';
+    }
+
+  } else {
+    $variables['attributes']['class'][] = 'saa-banner--no-image';
   }
-  }
+
 }
