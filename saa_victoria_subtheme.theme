@@ -30,54 +30,66 @@ function saa_victoria_subtheme_preprocess_page(&$variables) {
  */
 function saa_victoria_subtheme_preprocess_ds_entity_view(&$variables) {
 
-  if (isset($variables['content']['#paragraph']) && $variables['content']['#paragraph']->bundle() == 'stanford_card') {
+  // if not running on a paragraph, exit out.
+  if (!isset($variables['content']['#paragraph'])){
+    return;
+  }
+  $paragraph = $variables['content']['#paragraph'];
+
+  if ( $variables['content']['#paragraph']->bundle() == 'stanford_card') {
+    /** @var \Drupal\paragraphs\ParagraphInterface $paragraph */
+
+    $imageCount = $paragraph->get('card_image')->count();
 
     // Add border style class to card wrapper.
-    $variables['attributes']['class'][] = $variables['content']['#paragraph']->getBehaviorSetting('react_paragraphs:card_variant_info', 'card_border_style', 'su-card-wrapper--border-regular');
+    $variables['attributes']['class'][] = $paragraph->getBehaviorSetting('react_paragraphs:card_variant_info', 'card_border_style', 'su-card-wrapper--border-regular');
 
-    $variables['card_info'] = [];
-    //$variables['card_info']['card_type'] = [];
+    $card_info = [];
+    //$card_info['card_type'] = [];
 
     // Add card type class to card wrapper. 3rd variable provides the default card type.
-    $variables['card_info']['card_type'] = $variables['content']['#paragraph']->getBehaviorSetting('react_paragraphs:card_variant_info', 'card_type', 'su-card-wrapper--icon');
-    $variables['attributes']['class'][] = $variables['card_info']['card_type'];
+    $card_info['card_type'] = $paragraph->getBehaviorSetting('react_paragraphs:card_variant_info', 'card_type', 'su-card-wrapper--icon');
+    $variables['attributes']['class'][] = $card_info['card_type'];
+
+//    dpm($variables);
 
     // Check for media in a card then set classes.
-    if(isset($variables['content']['su_card_media']['#object']) ) {
+    if($imageCount) {
 
       // Icon card check
-      if($variables['card_info']['card_type'] == 'su-card-wrapper--icon' )  {
+      if($card_info['card_type'] == 'su-card-wrapper--icon' )  {
+        // Set responsive image style for icons.
         $variables['content']['#fields']['card_image']['su_card_media'][0]['#stanford_media_image_style'] = 'full_responsive';
       }
 
       // Vertical card check
-      else if($variables['card_info']['card_type'] === 'su-card-wrapper--vertical' )  {
+      else if($card_info['card_type'] === 'su-card-wrapper--vertical' )  {
 
        // Set responsive image style for rectangle.
         $variables['content']['#fields']['card_image']['su_card_media'][0]['#stanford_media_image_style'] = 'card_2_1';
       }
 
       // All horizontal
-      else if($variables['card_info']['card_type'] === 'su-card-wrapper--horizontal' )  {
+      else if($card_info['card_type'] === 'su-card-wrapper--horizontal' )  {
 
-        $variables['card_info']['horizontal_card_image_style'] = $variables['content']['#paragraph']->getBehaviorSetting('react_paragraphs:card_variant_info', 'horizontal_card_image_style');
-        $variables['attributes']['class'][] = $variables['card_info']['horizontal_card_image_style'];
+        $card_info['horizontal_card_image_style'] = $paragraph->getBehaviorSetting('react_paragraphs:card_variant_info', 'horizontal_card_image_style');
+        $variables['attributes']['class'][] = $card_info['horizontal_card_image_style'];
 
         // Small circle image
-        if($variables['card_info']['horizontal_card_image_style'] === 'su-horizontal-card-wrapper--small-circle' )  {
+        if($card_info['horizontal_card_image_style'] === 'su-horizontal-card-wrapper--small-circle' )  {
 
         // Set responsive image style for circle.
           $variables['content']['#fields']['card_image']['su_card_media'][0]['#stanford_media_image_style'] = 'responsive_1_1';
-          //instead of responsive image style, we want to set it to always use the image style with machine name "large_square"
+//          $variables['content']['#fields']['card_image']['su_card_media'][0]['#stanford_media_image_style'] = 'large_square';
 
         }
 
         // Horizontal rectangle image
-        else if($variables['card_info']['horizontal_card_image_style'] === 'su-horizontal-card-wrapper--large-rectangle' )  {
+        else if($card_info['horizontal_card_image_style'] === 'su-horizontal-card-wrapper--large-rectangle' )  {
 
           // Add image position class to card wrapper.
-          $variables['card_info']['horizontal_card_image_position'] = $variables['content']['#paragraph']->getBehaviorSetting('react_paragraphs:card_variant_info', 'horizontal_card_image_position');
-          $variables['attributes']['class'][] = $variables['card_info']['horizontal_card_image_position'];
+          $card_info['horizontal_card_image_position'] = $paragraph->getBehaviorSetting('react_paragraphs:card_variant_info', 'horizontal_card_image_position');
+          $variables['attributes']['class'][] = $card_info['horizontal_card_image_position'];
 
           // Set responsive image style for rectangle.
           $variables['content']['#fields']['card_image']['su_card_media'][0]['#stanford_media_image_style'] = 'card_2_1';
@@ -89,7 +101,7 @@ function saa_victoria_subtheme_preprocess_ds_entity_view(&$variables) {
   } // End card check
 
   // If banner has an image, add a class
-  if (isset($variables['content']['#paragraph']) && $variables['content']['#paragraph']->bundle() == 'stanford_banner') {
+  if ( $paragraph->bundle() == 'stanford_banner') {
     if(isset($variables['content']['#fields']['hero_image']['su_banner_image']['#object']) ) {
       $variables['attributes']['class'][] = 'saa-banner--has-image';
 
@@ -108,5 +120,6 @@ function saa_victoria_subtheme_preprocess_ds_entity_view(&$variables) {
     } else {
       $variables['attributes']['class'][] = 'saa-banner--no-image';
     }
+  }
   }
 }
