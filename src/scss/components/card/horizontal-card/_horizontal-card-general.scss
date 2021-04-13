@@ -1,34 +1,36 @@
 @charset "UTF-8";
 
-.su-card-wrapper--horizontal {
-  .su-card {
-    @apply flex;
+.ptype-stanford-card {
+  .su-card-wrapper--horizontal {
+    .su-card {
+      @apply flex;
 
 
+      & > .image {
+        @apply hidden;
 
-
-    & > .image {
-      @apply hidden;
-
-      @include grid-media-min('sm') {
-        @apply
-        block
-        mt-0;
-      }
-    }
-    .su-card__contents {
-      @apply pt-0;
-
-      span {
-        @include saa-modular-typography-small;
-        margin-bottom: 5px;
-        &:empty {
-          @apply hidden;
+        @include grid-media-min('sm') {
+          @apply
+          block
+          mt-0;
         }
       }
 
-      & > :first-child {
-        @apply mt-0;
+      .su-card__contents {
+        @apply pt-0;
+
+        span {
+          @include saa-modular-typography-small;
+          margin-bottom: 5px;
+
+          &:empty {
+            @apply hidden;
+          }
+        }
+
+        & > :first-child {
+          @apply mt-0;
+        }
       }
     }
   }

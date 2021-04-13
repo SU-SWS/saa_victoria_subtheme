@@ -7,90 +7,92 @@ $tag-height: 70px;
 
 // Note: we never allow minimal border-none styles with icon card, see src/scss/components/card/_minimal-border.scss
 
-.su-card-wrapper--icon {
-  .su-card {
-    // icon
-    img {
-      margin-right: 0;
-      @include modular-spacing('margin', 4 null 1 4);
-      @include grid-media-max('sm') {
-        margin-top: $mobile-modular-spacing-3;
-        margin-right: $mobile-modular-spacing-3;
-        margin-left: $mobile-modular-spacing-3;
-        margin-bottom: $mobile-modular-spacing-2;
-      }
-      width: auto;
-      height: auto;
-      max-width: $icon-size;
-      max-height: $icon-size;
-    }
-
-    // colored corner tag
-    &::before {
-      content: "";
-      height: $tag-height;
-      width: $tag-width;
-      @include grid-media-max('sm') {
-        width: $tag-width--mobile;
+.ptype-stanford-card {
+  .su-card-wrapper--icon {
+    .su-card {
+      // icon
+      img {
+        margin-right: 0;
+        @include modular-spacing('margin', 4 null 1 4);
+        @include grid-media-max('sm') {
+          margin-top: $mobile-modular-spacing-3;
+          margin-right: $mobile-modular-spacing-3;
+          margin-left: $mobile-modular-spacing-3;
+          margin-bottom: $mobile-modular-spacing-2;
+        }
+        width: auto;
+        height: auto;
+        max-width: $icon-size;
+        max-height: $icon-size;
       }
 
-      @apply block
-      absolute;
-      // top left corner inside the card
-      background: $saa-color-electric-purple;
+      // colored corner tag
+      &::before {
+        content: "";
+        height: $tag-height;
+        width: $tag-width;
+        @include grid-media-max('sm') {
+          width: $tag-width--mobile;
+        }
 
-      &.tag-color--electric-purple::before {
+        @apply block
+        absolute;
+        // top left corner inside the card
         background: $saa-color-electric-purple;
+
+        &.tag-color--electric-purple::before {
+          background: $saa-color-electric-purple;
+        }
+
+        &.tag-color--wintergreen::before {
+          background: $saa-color-wintergreen;
+        }
+
+        &.tag-color--dandelion::before {
+          background: $saa-color-dandelion;
+        }
       }
 
-      &.tag-color--wintergreen::before {
-        background: $saa-color-wintergreen;
+      .su-card__contents {
+        @include modular-spacing('padding', 4);
+        @include grid-media-max('sm') {
+          padding: $mobile-modular-spacing-3;
+        }
+        @apply text-left;
+        margin: 0;
+
+        & > :first-child {
+          margin-top: 0;
+        }
+
+        p {
+          line-height: 1.4em;
+        }
       }
 
-      &.tag-color--dandelion::before {
-        background: $saa-color-dandelion;
-      }
-    }
-
-    .su-card__contents {
-      @include modular-spacing('padding', 4);
-      @include grid-media-max('sm') {
-        padding: $mobile-modular-spacing-3;
-      }
-      @apply text-left;
-      margin: 0;
-
-      & > :first-child {
-        margin-top: 0;
+      div + .su-card__contents {
+        padding-top: 0;
       }
 
-      p {
-        line-height: 1.4em;
+      .su-card__contents {
+        @include saa-font--proxima-nova-base;
+
+        & > h2 {
+          @include saa-font--calluna-base;
+        }
       }
-    }
 
-    div + .su-card__contents {
-      padding-top: 0;
-    }
-
-    .su-card__contents {
-      @include saa-font--proxima-nova-base;
-
-      & > h2 {
-        @include saa-font--calluna-base;
+      .su-button {
+        @include modular-spacing('margin', 1 null null);
+        @include grid-media-max('sm') {
+          margin-top: $mobile-modular-spacing-1;
+        }
       }
-    }
 
-    .su-button {
-      @include modular-spacing('margin', 1 null null);
-      @include grid-media-max('sm') {
-        margin-top: $mobile-modular-spacing-1;
-      }
-    }
-
-    span {
-      &:empty {
-        @apply hidden;
+      span {
+        &:empty {
+          @apply hidden;
+        }
       }
     }
   }
@@ -102,7 +104,7 @@ $tag-height: 70px;
 
     // 1 items, row 1
     .container-1-items {
-      .paragraph-item:nth-of-type(1) {
+      .paragraph-item.ptype-stanford-card:nth-of-type(1) {
         .su-card-wrapper--icon {
           .su-card {
             &::before {
@@ -115,7 +117,7 @@ $tag-height: 70px;
 
     // 2 items, row 1
     .container-2-items {
-      .paragraph-item:nth-of-type(1) {
+      .paragraph-item.ptype-stanford-card:nth-of-type(1) {
         .su-card-wrapper--icon {
           .su-card {
             &::before {
@@ -125,7 +127,7 @@ $tag-height: 70px;
         }
       }
 
-      .paragraph-item:nth-of-type(2) {
+      .paragraph-item.ptype-stanford-card:nth-of-type(2) {
         .su-card-wrapper--icon {
           .su-card {
             &::before {
@@ -138,7 +140,7 @@ $tag-height: 70px;
 
     // 3 card row, 1 in 3
     .container-3-items {
-      .paragraph-item:nth-of-type(1) {
+      .paragraph-item.ptype-stanford-card:nth-of-type(1) {
         .su-card-wrapper--icon {
           .su-card {
             &::before {
@@ -148,7 +150,7 @@ $tag-height: 70px;
         }
       }
 
-      .paragraph-item:nth-of-type(2) {
+      .paragraph-item.ptype-stanford-card:nth-of-type(2) {
         .su-card-wrapper--icon {
           .su-card {
             &::before {
@@ -158,7 +160,7 @@ $tag-height: 70px;
         }
       }
 
-      .paragraph-item:nth-of-type(3) {
+      .paragraph-item.ptype-stanford-card:nth-of-type(3) {
         .su-card-wrapper--icon {
           .su-card {
             &::before {
@@ -175,7 +177,7 @@ $tag-height: 70px;
     .container-1-items {
 
       // 1 item, row 2
-      .paragraph-item:nth-of-type(1) {
+      .paragraph-item.ptype-stanford-card:nth-of-type(1) {
         .su-card-wrapper--icon {
           .su-card {
             &::before {
@@ -188,7 +190,7 @@ $tag-height: 70px;
 
     // 2 items, row 2
     .container-2-items {
-      .paragraph-item:nth-of-type(1) {
+      .paragraph-item.ptype-stanford-card:nth-of-type(1) {
         .su-card-wrapper--icon {
           .su-card {
             &::before {
@@ -198,7 +200,7 @@ $tag-height: 70px;
         }
       }
 
-      .paragraph-item:nth-of-type(2) {
+      .paragraph-item.ptype-stanford-card:nth-of-type(2) {
         .su-card-wrapper--icon {
           .su-card {
             &::before {
@@ -211,7 +213,7 @@ $tag-height: 70px;
 
     // 3 cards, row 2
     .container-3-items {
-      .paragraph-item:nth-of-type(1)  {
+      .paragraph-item.ptype-stanford-card:nth-of-type(1)  {
         .su-card-wrapper--icon {
           .su-card {
             &::before {
@@ -221,7 +223,7 @@ $tag-height: 70px;
         }
       }
 
-      .paragraph-item:nth-of-type(2) {
+      .paragraph-item.ptype-stanford-card:nth-of-type(2) {
         .su-card-wrapper--icon {
           .su-card {
             &::before {
@@ -231,7 +233,7 @@ $tag-height: 70px;
         }
       }
 
-      .paragraph-item:nth-of-type(3) {
+      .paragraph-item.ptype-stanford-card:nth-of-type(3) {
         .su-card-wrapper--icon {
           .su-card {
             &::before {
@@ -248,7 +250,7 @@ $tag-height: 70px;
     .container-1-items {
 
       // 1 item, row 3
-      .paragraph-item:nth-of-type(1) {
+      .paragraph-item.ptype-stanford-card:nth-of-type(1) {
         .su-card-wrapper--icon {
           .su-card {
             &::before {
@@ -261,7 +263,7 @@ $tag-height: 70px;
 
     // 2 items, row 3
     .container-2-items {
-      .paragraph-item:nth-of-type(1) {
+      .paragraph-item.ptype-stanford-card:nth-of-type(1) {
         .su-card-wrapper--icon {
           .su-card {
             &::before {
@@ -271,7 +273,7 @@ $tag-height: 70px;
         }
       }
 
-      .paragraph-item:nth-of-type(2) {
+      .paragraph-item.ptype-stanford-card:nth-of-type(2) {
         .su-card-wrapper--icon {
           .su-card {
             &::before {
@@ -284,7 +286,7 @@ $tag-height: 70px;
 
     // 3 cards, row 3
     .container-3-items {
-      .paragraph-item:nth-of-type(1) {
+      .paragraph-item.ptype-stanford-card:nth-of-type(1) {
         .su-card-wrapper--icon {
           .su-card {
             &::before {
@@ -294,7 +296,7 @@ $tag-height: 70px;
         }
       }
 
-      .paragraph-item:nth-of-type(2) {
+      .paragraph-item.ptype-stanford-card:nth-of-type(2) {
         .su-card-wrapper--icon {
           .su-card {
             &::before {
@@ -304,7 +306,7 @@ $tag-height: 70px;
         }
       }
 
-      .paragraph-item:nth-of-type(3) {
+      .paragraph-item.ptype-stanford-card:nth-of-type(3) {
         .su-card-wrapper--icon {
           .su-card {
             &::before {
@@ -317,8 +319,3 @@ $tag-height: 70px;
 
   } // End of Rows C
 }
-
-
-
-
-
