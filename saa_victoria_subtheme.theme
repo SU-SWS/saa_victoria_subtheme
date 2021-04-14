@@ -21,9 +21,6 @@ function saa_victoria_subtheme_preprocess_page(&$variables) {
 /**
  * Prepares variables for the paragraph - mainly used when editing the paragraph
  */
-//function saa_victoria_subtheme_preprocess_paragraph(&$variables) {
-//}
-
 
 /**
  * Implements hook_preprocess_HOOK().
@@ -49,11 +46,8 @@ function saa_victoria_subtheme_preprocess_ds_entity_view(&$variables) {
 }
 
 function saa_victoria_preprocess_card(&$variables) {
+
   $paragraph = $variables['content']['#paragraph'];
-
-  /** @var \Drupal\paragraphs\ParagraphInterface $paragraph */
-
-  $imageCount = $paragraph->get('card_image')->count();
 
   // Add border style class to card wrapper.
   $variables['attributes']['class'][] = $paragraph->getBehaviorSetting('react_paragraphs:card_variant_info', 'card_border_style', 'su-card-wrapper--border-regular');
@@ -63,6 +57,8 @@ function saa_victoria_preprocess_card(&$variables) {
   // Add card type class to card wrapper. 3rd variable provides the default card type.
   $card_info['card_type'] = $paragraph->getBehaviorSetting('react_paragraphs:card_variant_info', 'card_type', 'su-card-wrapper--icon');
   $variables['attributes']['class'][] = $card_info['card_type'];
+
+  $imageCount = $paragraph->get('su_card_media')->count();
 
   // Check for media in a card then set classes.
   if($imageCount) {
@@ -113,14 +109,13 @@ function saa_victoria_preprocess_banner(&$variables) {
   if(isset($variables['content']['#fields']['hero_image']['su_banner_image']['#object']) ) {
     $variables['attributes']['class'][] = 'saa-banner--has-image';
 
-    // Maybe in future change the media handling to be image style Medium Square (220x220) w machine name 'medium_square'
-    // Banners use 'full_responsive' mode already. this is a placeholder to use this line once a responsive 1:1 ratio style exists in our d8core
+    // Banners use 'full_responsive' mode already. This is a placeholder to use this line once a responsive 1:1 ratio style exists in our d8core
     // $variables['content']['#fields']['hero_image']['su_banner_image'][0]['#stanford_media_image_style'] = 'full_responsive';
 
     // Check if there is a card
-    // Check with mike the newer drupal-y way to check
     if(isset($variables['content']['#fields']['hero_super_headline']['su_banner_sup_header']['#object']) || isset($variables['content']['#fields']['hero_headline']['su_banner_header']['#object']) || isset($variables['content']['#fields']['hero_body']['su_banner_body']['#object']) ) {
       $variables['attributes']['class'][] = 'saa-banner--has-card';
+
     } else {
       $variables['attributes']['class'][] = 'saa-banner--no-card';
     }
