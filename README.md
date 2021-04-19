@@ -1,5 +1,4 @@
 # saa_victoria_subtheme (https://github.com/SU-SWS/saa_victoria_subtheme)
-##### Version: 8.x-1.0-dev
 
 Changelog: [Changelog.txt](CHANGELOG.txt)
 

@@ -8,3 +8,4 @@ node_modules
 *.sql
 .idea/*
 dev/config.json
+*.cache
