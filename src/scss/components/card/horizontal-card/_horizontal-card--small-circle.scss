@@ -7,6 +7,7 @@
         & > .image {
           @include grid-media-min('sm') {
             max-width: $card-circle--width;
+            min-width: $card-circle--width;
             @include modular-spacing('margin', null 1 2 1);
 
             img {
