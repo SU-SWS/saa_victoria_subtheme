@@ -1,0 +1,26 @@
+@charset "UTF-8";
+
+.ptype-stanford-card {
+  .su-card-wrapper--vertical {
+    .su-card {
+      .su-card__contents {
+        & > span {
+          margin-bottom: 5px;
+        }
+
+        & > h2 {
+          padding-top: 0;
+        }
+
+        .su-card__button {
+          @include modular-spacing('padding-top', 2);
+        }
+
+        // main link in card (not button style)
+        a.su-link.su-card__link {
+          @include modular-spacing('padding-top', 2);
+        }
+      }
+    }
+  }
+}

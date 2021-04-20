@@ -12,7 +12,7 @@
 
     p {
       @include saa-modular-typography-small-heading;
-      line-height: 1.4em;
+      line-height: 1.7em; // note this is overridden for icon cards.
     }
   }
 }

@@ -1,0 +1,90 @@
+@charset "UTF-8";
+
+@mixin horizontal-card--half-width {
+
+  @include grid-media-min('lg') {
+    max-width: 48%;
+  }
+}
+
+.ptype-stanford-card {
+  .su-card-wrapper--horizontal {
+    &.su-horizontal-card-wrapper--large-rectangle {
+      .su-card {
+
+        @include grid-media-max('md') {
+          @apply flex-wrap;
+        }
+
+        @apply
+        flex
+        justify-between;
+
+
+        & > .image {
+          @include horizontal-card--half-width;
+          @include grid-media-max('sm') {
+            @apply block;
+            // do not hide for mobile
+          }
+
+          @include grid-media-max('md') {
+            width: 100%;
+          }
+
+          img {
+            @include grid-media-max('sm') {
+              @apply block;
+              // do not hide for mobile
+            }
+          }
+        }
+
+        .su-card__contents {
+          @include horizontal-card--half-width;
+
+          @include grid-media-max('md') {
+            @include modular-spacing('padding-top', 1);
+          }
+
+          h2 {
+            @include modular-spacing('margin-bottom', -1);
+          }
+
+        }
+      }
+
+      &.su-horizontal-card-wrapper--image-right {
+        .su-card {
+          & > .image {
+            order: 2;
+          }
+
+          .su-card__contents {
+            @include grid-media-max('md') {
+              @include modular-spacing('padding', null null 1);
+              @apply pt-0;
+            }
+          }
+        }
+      }
+    }
+
+
+    // when horizontal card has a border:
+    &.su-card-wrapper--border-regular {
+      .su-card {
+        @include modular-spacing('padding', 2 2 3 2); // same for both circle or large rectangle image styles.
+
+        .su-card__contents {
+          @apply pb-0;
+          @apply px-0;
+
+          @include grid-media-min('lg') {
+            @apply p-0;
+          }
+        }
+      }
+    }
+  }
+}
