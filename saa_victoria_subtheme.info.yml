@@ -2,7 +2,7 @@ name: Victoria
 type: theme
 description: "Stanford Alumni Association: Victoria Theme."
 package: Stanford
-version: 8.1.20-dev
+version: 8.1.19b
 core_version_requirement: ^8.8 || ^9
 base theme: stanford_basic
 libraries:
