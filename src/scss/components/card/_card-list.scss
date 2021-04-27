@@ -1,0 +1,32 @@
+@charset "UTF-8";
+
+.ptype-stanford-card {
+  .su-card-wrapper--simple-list {
+    .su-card {
+      p:not(:first-of-type) {
+        @include modular-spacing('margin-top', 0);
+        @include grid-media-max('sm') {
+          margin-top: $mobile-modular-spacing-0;
+        }
+        line-height: 125%;
+      }
+    }
+  }
+
+  .su-card-wrapper--bordered-list {
+    .su-card {
+      p:not(:first-of-type)  {
+        @include modular-spacing('padding', 0 null 1);
+        @include grid-media-max('sm') {
+          margin-top: $mobile-modular-spacing-0;
+          margin-bottom: $mobile-modular-spacing-1;
+        }
+        border-top: 1px solid $su-color-cool-grey;
+        line-height: 125%;
+        font-family: $saa-font--proxima-nova;
+        font-weight: normal;
+        margin-bottom: 0;
+      }
+    }
+  }
+}
