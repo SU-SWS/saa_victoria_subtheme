@@ -15,8 +15,12 @@
 
   .su-card-wrapper--bordered-list {
     .su-card {
+      .su-card__contents {
+        width: 100%;
+      }
+
       p:not(:first-of-type)  {
-        @include modular-spacing('padding', 0 null 1);
+        @include modular-spacing('padding', 1 null);
         @include grid-media-max('sm') {
           margin-top: $mobile-modular-spacing-0;
           margin-bottom: $mobile-modular-spacing-1;
