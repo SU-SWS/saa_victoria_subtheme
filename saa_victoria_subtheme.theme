@@ -52,6 +52,9 @@ function saa_victoria_preprocess_card(&$variables) {
   // Add border style class to card wrapper.
   $variables['attributes']['class'][] = $paragraph->getBehaviorSetting('react_paragraphs:card_variant_info', 'card_border_style', 'su-card-wrapper--border-regular');
 
+  // Add list style class to card wrapper.
+  $variables['attributes']['class'][] = $paragraph->getBehaviorSetting('react_paragraphs:card_variant_info', 'card_list_style', 'su-card-wrapper--no-list');
+
   $card_info = [];
 
   // Add card type class to card wrapper. 3rd variable provides the default card type.

@@ -23,6 +23,14 @@ card_variant_info:  # part of the key after the :
       options:
         su-card-wrapper--border-none: Minimal (no border)
         su-card-wrapper--border-regular: Border and Drop Shadow
+    card_list_style:
+      type: select
+      title: 'Card List Style'
+      description: 'Select the style for list format. First paragraph tag will appear regular and all following paragraphs will be styled as a list.'
+      options:
+        su-card-wrapper--no-style: No List Style
+        su-card-wrapper--simple-list: Simple List
+        su-card-wrapper--bordered-list: Bordered List
     horizontal_card_image_style:
       type: select
       title: 'Horizontal Card: Image Style'
