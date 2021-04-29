@@ -82,7 +82,7 @@ function saa_victoria_preprocess_card(&$variables) {
     // All horizontal
     else if($card_info['card_type'] === 'su-card-wrapper--horizontal' )  {
 
-      $card_info['horizontal_card_image_style'] = $paragraph->getBehaviorSetting('react_paragraphs:card_variant_info', 'horizontal_card_image_style');
+      $card_info['horizontal_card_image_style'] = $paragraph->getBehaviorSetting('react_paragraphs:card_variant_info', 'horizontal_card_image_style', 'su-horizontal-card-wrapper--large-rectangle');
       $variables['attributes']['class'][] = $card_info['horizontal_card_image_style'];
 
       // Small circle image
