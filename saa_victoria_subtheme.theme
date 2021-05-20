@@ -132,7 +132,7 @@ function saa_victoria_preprocess_banner(&$variables) {
  * Implements hook_theme_suggestions_HOOK_alter().
  */
 function saa_victoria_subtheme_theme_suggestions_block_alter(array &$suggestions, array $variables) {
-  if ($variables['elements']['#plugin_id'] == 'views_exposed_filter_block:search-results') {
+  if (!empty($variables['elements']['#id']) && $variables['elements']['#id'] == 'saa_victoria_subtheme_search') {
     $suggestions[] = 'block__stanford_basic_search';
   }
 }
