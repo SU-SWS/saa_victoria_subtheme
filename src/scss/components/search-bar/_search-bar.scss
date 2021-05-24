@@ -12,3 +12,9 @@
   background-size: 18px;
   top: 1.3rem;
 }
+
+.block-saa-victoria-subtheme-search-form {
+  .button {
+    @include saa-button--purple;
+  }
+}
