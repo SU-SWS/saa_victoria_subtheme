@@ -29,6 +29,12 @@
           text-center;
           background: $su-color-vivid-red-dark;
           color: $su-color-white;
+
+          .su-card__contents {
+            h2 {
+              @apply mt-0;
+            }
+          }
         }
 
         .su-card__contents {
