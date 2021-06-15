@@ -18,7 +18,7 @@ card_variant_info:  # part of the key after the :
     card_border_style:
       type: select
       title: 'Card Border Style'
-      description: Select the style for displaying this card.
+      description: Select the style for displaying this card. Do note all Icon Cards will always have drop shadow and border.
 #      default_value: su-card-wrapper--border-regular
       options:
         su-card-wrapper--border-none: Minimal (no border)
