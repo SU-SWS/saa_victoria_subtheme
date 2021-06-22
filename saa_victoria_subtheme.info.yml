@@ -2,13 +2,13 @@ name: Victoria
 type: theme
 description: "Stanford Alumni Association: Victoria Theme."
 package: Stanford
-version: 8.1.24
+version: 8.1.25-dev
 core_version_requirement: ^8.8 || ^9
 base theme: stanford_basic
 libraries:
   - saa_victoria_subtheme/allpages
   - saa_victoria_subtheme/fonts
-regions:
+regions:git st
   page_top: Page top
   header: Header
   search: Search
