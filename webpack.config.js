@@ -28,6 +28,7 @@ const distDir =     path.resolve(__dirname, "dist");
 const srcSass =     path.resolve(srcDir, 'scss');
 const distSass =    path.resolve(distDir, 'css');
 const srcJS =       path.resolve(srcDir, 'js');
+const srcReact =    path.resolve(srcDir, 'react');
 const distJS =      path.resolve(distDir, 'js');
 const srcAssets =   path.resolve(srcDir, 'assets');
 const distAssets =  path.resolve(distDir, 'assets');
@@ -50,7 +51,7 @@ var webpackConfig = {
   entry: {
     "saa-victoria":  path.resolve(srcSass, "config/index.scss"),
     "scripts":       path.resolve(srcJS,   "scripts.js"),
-
+    "hello-world":   path.resolve(srcReact, "hello-world.js"),
   },
   // Where put build?
   output: {
@@ -75,7 +76,10 @@ var webpackConfig = {
         test: /\.js$/,
         loader: 'babel-loader',
         query: {
-          presets: ['@babel/preset-env']
+          presets: [
+            '@babel/preset-env',
+            '@babel/preset-react'
+          ]
         }
       },
       // Apply Plugins to SCSS/SASS files.

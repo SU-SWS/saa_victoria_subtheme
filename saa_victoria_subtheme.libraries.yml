@@ -113,3 +113,8 @@ bootstrap:
   css:
     base:
       'https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css' : { type: external, minified: true }
+
+hello-world:
+  version: VERSION
+  js:
+    dist/js/hello-world.js: {}
