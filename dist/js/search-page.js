@@ -55512,6 +55512,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_hero_icon_solid__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-hero-icon/solid */ "./node_modules/react-hero-icon/solid.js");
 /* harmony import */ var react_hero_icon_solid__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react_hero_icon_solid__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _searchAutocomplete__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./searchAutocomplete */ "./src/react/components/searchAutocomplete.js");
+/* harmony import */ var _hooks_useEscape__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../hooks/useEscape */ "./src/react/hooks/useEscape.js");
+/* harmony import */ var _hooks_useOnClickOutside__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../hooks/useOnClickOutside */ "./src/react/hooks/useOnClickOutside.js");
 function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
 
 function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
@@ -55526,8 +55528,8 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
 
 
- //import UseEscape from "../../hooks/useEscape";
-//import UseOnClickOutside from "../../hooks/useOnClickOutside";
+
+
 
 var SearchField = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.forwardRef(function (_ref, ref) {
   var onSubmit = _ref.onSubmit,
@@ -55576,7 +55578,10 @@ var SearchField = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.forw
   };
 
   var clearHandler = function clearHandler(e) {
-    e.preventDefault();
+    if (e) {
+      e.preventDefault();
+    }
+
     setQuery("");
     setShowAutocomplete(false);
     setSelectedSuggestion(null);
@@ -55593,9 +55598,10 @@ var SearchField = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.forw
 
   Object(react__WEBPACK_IMPORTED_MODULE_0__["useEffect"])(function () {
     setQuery(defaultValue);
-  }, [defaultValue]); // UseOnClickOutside(inputWrapper, () => {
-  //   setShowAutocomplete(false);
-  // });
+  }, [defaultValue]);
+  Object(_hooks_useOnClickOutside__WEBPACK_IMPORTED_MODULE_4__["default"])(inputWrapper, function () {
+    setShowAutocomplete(false);
+  });
 
   var handleArrowKeys = function handleArrowKeys(e) {
     if (e.key === "ArrowDown") {
@@ -55605,13 +55611,13 @@ var SearchField = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.forw
     } else if (e.key === "Enter" && autocompleteSuggestions[selectedSuggestion]) {
       selectSuggestion(e, autocompleteSuggestions[selectedSuggestion].query);
     }
-  }; // UseEscape(() => {
-  //   if (clearOnEscape && document.activeElement === inputRef.current) {
-  //     clearHandler();
-  //   }
-  // });
+  };
 
-
+  Object(_hooks_useEscape__WEBPACK_IMPORTED_MODULE_3__["default"])(function () {
+    if (clearOnEscape && document.activeElement === inputRef.current) {
+      clearHandler();
+    }
+  });
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
     onSubmit: submitHandler
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -55718,6 +55724,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _searchPager__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./searchPager */ "./src/react/components/searchPager.js");
 /* harmony import */ var _searchFacet__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./searchFacet */ "./src/react/components/searchFacet.js");
 /* harmony import */ var _searchNoResults__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./searchNoResults */ "./src/react/components/searchNoResults.js");
+/* harmony import */ var _hooks_useEscape__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../hooks/useEscape */ "./src/react/hooks/useEscape.js");
+/* harmony import */ var _hooks_useOnClickOutside__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../hooks/useOnClickOutside */ "./src/react/hooks/useOnClickOutside.js");
 function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
 
 function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
@@ -55735,6 +55743,8 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
 function _iterableToArrayLimit(arr, i) { if (typeof Symbol === "undefined" || !(Symbol.iterator in Object(arr))) return; var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
 
 function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+
+
 
 
 
@@ -55816,7 +55826,11 @@ var SearchPage = function SearchPage() {
   var _useState17 = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(false),
       _useState18 = _slicedToArray(_useState17, 2),
       opened = _useState18[0],
-      setOpened = _useState18[1]; // Set up other settings variables.
+      setOpened = _useState18[1];
+
+  var isExpanded = function isExpanded(x) {
+    return x.getAttribute("aria-expanded") === "true";
+  }; // Set up other settings variables.
 
 
   var hitsPerPage = 16;
@@ -55828,7 +55842,18 @@ var SearchPage = function SearchPage() {
   var filterOpenRef = Object(react__WEBPACK_IMPORTED_MODULE_0__["useRef"])(null); // Initialize Algolia Client.
 
   var client = algoliasearch__WEBPACK_IMPORTED_MODULE_1___default()("IC2GX4TRIN", "ffb84e6d16a5754728b746e43ab3eadf");
-  var suggestionsIndex = client.initIndex("crawler_federated-search_suggestions"); // Update autocomplete suggestions when search input changes.
+  var suggestionsIndex = client.initIndex("crawler_federated-search_suggestions"); // Close filters menu when clicking outside.
+
+  Object(_hooks_useOnClickOutside__WEBPACK_IMPORTED_MODULE_11__["default"])(ref, function () {
+    return setOpened(false);
+  }); // Close filters menu if escape key is pressed and return focus to the menu button.
+
+  Object(_hooks_useEscape__WEBPACK_IMPORTED_MODULE_10__["default"])(function () {
+    if (filterOpenRef.current && isExpanded(filterOpenRef.current)) {
+      setOpened(false);
+      filterOpenRef.current.focus();
+    }
+  }); // Update autocomplete suggestions when search input changes.
 
   var updateAutocomplete = function updateAutocomplete(queryText) {
     suggestionsIndex.search(queryText, {
@@ -55959,7 +55984,6 @@ var SearchPage = function SearchPage() {
         facetFilters: fileTypeFilters
       }
     }]).then(function (queryResults) {
-      console.log('queryResults', queryResults);
       setResults(queryResults.results[0]);
       setSiteNameValues(queryResults.results[1].facets.siteName);
       setFileTypeValues(queryResults.results[2].facets.fileType);
@@ -56313,6 +56337,77 @@ var SearchResults = function SearchResults(_ref) {
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (SearchResults);
+
+/***/ }),
+
+/***/ "./src/react/hooks/useEscape.js":
+/*!**************************************!*\
+  !*** ./src/react/hooks/useEscape.js ***!
+  \**************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* eslint-disable no-undef */
+
+
+var UseEscape = function UseEscape(onEscape) {
+  Object(react__WEBPACK_IMPORTED_MODULE_0__["useEffect"])(function () {
+    var handleEsc = function handleEsc(event) {
+      if (event.keyCode === 27) onEscape();
+    };
+
+    window.addEventListener("keydown", handleEsc);
+    return function () {
+      window.removeEventListener("keydown", handleEsc);
+    };
+  }, [onEscape]);
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (UseEscape);
+
+/***/ }),
+
+/***/ "./src/react/hooks/useOnClickOutside.js":
+/*!**********************************************!*\
+  !*** ./src/react/hooks/useOnClickOutside.js ***!
+  \**********************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* eslint-disable no-undef */
+
+
+function UseOnClickOutside(ref, handler) {
+  Object(react__WEBPACK_IMPORTED_MODULE_0__["useEffect"])(function () {
+    var listener = function listener(event) {
+      // Do nothing if clicking ref's element or descendent elements
+      if (!ref.current || ref.current.contains(event.target)) {
+        return;
+      }
+
+      handler(event);
+    };
+
+    document.addEventListener("mousedown", listener);
+    document.addEventListener("touchstart", listener);
+    document.addEventListener("keyup", listener);
+    return function () {
+      document.removeEventListener("mousedown", listener);
+      document.removeEventListener("touchstart", listener);
+      document.addEventListener("keyup", listener);
+    };
+  }, [ref, handler]);
+}
+
+/* harmony default export */ __webpack_exports__["default"] = (UseOnClickOutside);
 
 /***/ }),
 

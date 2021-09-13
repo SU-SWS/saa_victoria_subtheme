@@ -13,6 +13,8 @@ import SearchResults from './searchResults'
 import SearchPager from './searchPager'
 import SearchFacet from './searchFacet'
 import SearchNoResults from './searchNoResults'
+import UseEscape from "../hooks/useEscape";
+import UseOnClickOutside from "../hooks/useOnClickOutside";
 
 const SearchPage = () => {
   // Set up query param variables
@@ -34,6 +36,7 @@ const SearchPage = () => {
   });
   const [showEmptyMessage, setShowEmptyMessage] = useState(false);
   const [opened, setOpened] = useState(false);
+  const isExpanded = (x) => x.getAttribute("aria-expanded") === "true";
 
   // Set up other settings variables.
   const hitsPerPage = 16;
@@ -54,6 +57,17 @@ const SearchPage = () => {
   const suggestionsIndex = client.initIndex(
     "crawler_federated-search_suggestions"
   );
+
+  // Close filters menu when clicking outside.
+  UseOnClickOutside(ref, () => setOpened(false));
+
+  // Close filters menu if escape key is pressed and return focus to the menu button.
+  UseEscape(() => {
+    if (filterOpenRef.current && isExpanded(filterOpenRef.current)) {
+      setOpened(false);
+      filterOpenRef.current.focus();
+    }
+  });
 
   // Update autocomplete suggestions when search input changes.
   const updateAutocomplete = (queryText) => {
@@ -191,7 +205,6 @@ const SearchPage = () => {
         },
       ])
       .then((queryResults) => {
-        console.log('queryResults', queryResults)
         setResults(queryResults.results[0]);
         setSiteNameValues(queryResults.results[1].facets.siteName);
         setFileTypeValues(queryResults.results[2].facets.fileType);
