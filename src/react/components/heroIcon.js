@@ -1,5 +1,4 @@
 import React from "react";
-import { SrOnlyText } from "decanter-react";
 import { dcnb } from "cnbuilder";
 import { VideoCameraIcon, MicrophoneIcon } from "@heroicons/react/outline";
 import {
@@ -81,7 +80,7 @@ const HeroIcon = ({ iconType, srText, isAnimate, className, ...props }) => {
         className={dcnb(heroIconStyle, className)}
         {...props}
       />
-      {srText && <SrOnlyText srText={srText} />}
+      {srText && <span className="sr-only">{srText}</span>}
     </>
   );
 };

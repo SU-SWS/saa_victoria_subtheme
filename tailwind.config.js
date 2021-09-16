@@ -44,6 +44,9 @@ module.exports = {
         '800': '#373637', // coming soon dark gray
         '900': '#2e2d29', // su-color-black
       },
+      fog: {
+        light: '#f4f4f4',
+      },
       cardinal_red: '#8c1515', // su-color-cardinal-red
       dark_red: '#820000',  // su-color-dark-red
       bright_red: '#b1040e',  // su-color-bright-red

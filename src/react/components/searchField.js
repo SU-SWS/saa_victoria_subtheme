@@ -96,7 +96,7 @@ const SearchField = React.forwardRef(
               className={`flex w-full items-center relative ${wrapperClasses}`}
               ref={inputWrapper}
             >
-              <label className="flex-grow max-w-full">
+              <label className="flex-grow max-w-full margin-top-0">
                 <span className="sr-only">Search</span>
                 <input
                   type="text"
@@ -135,7 +135,7 @@ const SearchField = React.forwardRef(
             </div>
             <button type="submit" className={submitBtnClasses}>
               <Search
-                className="text-white w-20 h-20"
+                className="text-white w-8 h-8"
                 aria-hidden="true"
               />
               <span className="sr-only">Search</span>

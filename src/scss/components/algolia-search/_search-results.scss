@@ -1,0 +1,12 @@
+.algoliia-search-results__image-wrapper {
+  width: 15rem;
+  height: 10rem;
+  @include modular-spacing('margin-left', 1);
+  @include modular-spacing('margin-top', 0);
+
+  @include grid-media-min('md') {
+    width: 22.5rem;
+    height: 15rem;
+  }
+}
+

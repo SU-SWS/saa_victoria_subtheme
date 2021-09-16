@@ -220,11 +220,11 @@ const SearchPage = () => {
 
   const wrapperClasses = `flex-grow w-auto border-0 border-b border-solid border-black-60`;
 
-  const clearBtnClasses = `flex items-center bg-transparent hocus:bg-transparent text-black-70 hocus:text-black hocus:underline text-m0 font-semibold border-none p-0 rs-mr-1 mt-03em`;
+  const clearBtnClasses = `flex items-center bg-transparent focus:bg-transparent hover:bg-transparent text-gray-600 hover:text-black focus:text-black hover:underline focus:underline text-m0 font-semibold border-none p-0 rs-mr-1 mt-03em`;
 
-  const inputClasses = `border-0 text-m2 w-full flex-1 rs-px-1 py-10 outline-none focus:ring-0 focus:ring-transparent`;
+  const inputClasses = `border-0 text-m2 w-full flex-1 rs-px-1 py-10 outline-none focus:ring-0 focus:ring-transparent focus:shadow-none`;
 
-  const submitBtnClasses = `flex items-center justify-center w-40 min-w-[4rem] h-40 md:children:w-20 md:children:h-20 rounded-full transition-colors bg-digital-red-light hocus:bg-cardinal-red-xdark ml-10`;
+  const submitBtnClasses = `flex items-center justify-center w-16 p-0 h-16 rounded-full transition-colors bg-digital-red-light hocus:bg-cardinal-red-xdark ml-4`;
 
   const autocompleteLinkClasses = `cursor-pointer font-regular inline-block w-full text-white no-underline px-15 py-10 rounded-full hover:bg-digital-red hover:text-white`;
 
@@ -241,7 +241,7 @@ const SearchPage = () => {
           facetValues={siteNameValues}
           selectedOptions={selectedFacets.siteName}
           onChange={(values) => updateSiteFacet(values)}
-          className={!!selectedFacets.siteName.length && "su-mb-[16px]"}
+          className={!!selectedFacets.siteName.length && "mb-8"}
           exclude={["YouTube", "SoundCloud", "Apple Podcasts"]}
         />
       )}
@@ -252,8 +252,8 @@ const SearchPage = () => {
           facetValues={fileTypeValues}
           selectedOptions={selectedFacets.fileType}
           onChange={(values) => updateFileTypeFacet(values)}
-          optionClasses="su-capitalize"
-          className="su-mb-[16px]"
+          optionClasses="capitalize"
+          className="mb-8"
           exclude={["html", "pdf"]}
         />
       )}
@@ -262,27 +262,22 @@ const SearchPage = () => {
 
   return (
     <div>
-      <Container
-          element="section"
-          width="full"
-          className="px-15 py-45 md:py-70 xl:py-108 text-center bg-foggy-light flex-wrap"
+      <section
+          className="w-full py-32 md:py-70 xl:py-108 text-center bg-fog-light flex-wrap"
         >
         <Heading level={1} font="serif" weight="bold" className="mb-0">
-          Search
+          Search for...
         </Heading>
-      </Container>
-      <Container
-        element="section"
-        width="site"
-        className="py-45 max-w-full w-full md:py-80"
-      >
-        <Grid gap xs={12} className="z-10 relative basefont-19">
-          <GridCell
+      </section>
+      <section className="flex-12-of-12 py-45 w-full md:py-28 centered-container">
+        <div className="grid grid-gap grid-cols-12 relative bassefont-19">
+          <div
             xs={12}
             lg={results.nbHits > 0 ? 6 : 8}
-            className={
-              results.nbHits > 0 ? "lg:col-start-4" : "lg:col-start-3"
-            }
+            className={`
+              col-span-12 lg:col-span-6 lg:col-start-4
+              ${results.nbHits > 0 ? "lg:col-start-4" : "lg:col-start-3"}
+            `}
           >
             <SearchField
               onInput={(queryText) => updateAutocomplete(queryText)}
@@ -299,15 +294,13 @@ const SearchPage = () => {
               autocompleteContainerClasses={autocompleteContainerClasses}
               clearOnEscape
             />
-          </GridCell>
-        </Grid>
-        <Grid xs={12} className="filters rs-mt-7 lg:grid-gap">
+          </div>
+        </div>
+        <div className="grid grid-cols-12 lg:grid-gap mt-40">
             {results.nbHits > 0 && (
               <React.Fragment>
-                <GridCell
-                  xs={12}
-                  lg={3}
-                  className={`lg:hidden relative mb-[4rem] ${
+                <div
+                  className={`col-span-12 lg:col-span-3 lg:hidden relative mb-8 ${
                     opened ? "shadow-xl" : ""
                   }`}
                 >
@@ -375,26 +368,19 @@ const SearchPage = () => {
                       </div>
                     )}
                   </div>
-                </GridCell>
+                </div>
 
-                <GridCell
-                  xs={12}
-                  lg={3}
-                  className="mb-[4rem] hidden lg:flex"
-                >
+                <div className="col-span-12 lg:col-span-3 mb-8 hidden lg:flex">
                   <h2 className="sr-only">Filter Search Results</h2>
                   <div>{facets}</div>
-                </GridCell>
+                </div>
               </React.Fragment>
             )}
-            <GridCell
-              xs={12}
-              lg={results.nbHits > 0 ? 9 : 8}
-              xxl={8}
-              className={
-                results.nbHits > 0 ? "" : "lg:col-start-3 2xl:col-start-3"
-              }
-            >
+            <div
+              className={`
+                "col-span-12 lg:col-span-9 2xl:col-span-8"
+                ${results.nbHits > 0 ? "" : "lg:col-start-3 2xl:col-start-3"}
+            `}>
               {results.nbHits > 0 && (
                 <>
                   <SearchResults results={results} />
@@ -417,9 +403,9 @@ const SearchPage = () => {
                   additionalContent={noResultsAdditionalContent}
                 />
               )}
-            </GridCell>
-        </Grid>
-      </Container>
+            </div>
+        </div>
+      </section>
     </div>
   )
 }

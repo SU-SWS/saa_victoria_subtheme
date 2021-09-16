@@ -9,19 +9,19 @@ const SearchResults = ({ results }) => {
   }
 
   return (
-    <div id="search-results">
+    <div id="search-results" className="su-sans">
       <div className="text-21 lg:mb-[4rem]">
         <span className="font-semibold">{results.nbHits}</span> results:
       </div>
       {results.hits.map((result) => (
         <div
           key={result.objectID}
-          className="px-0 rs-py-2 md:rs-px-2 border-b border-black-40"
+          className="px-0 py-16 md:px-16 border-b border-black-40"
         >
           <div className="flex flex-wrap md:flex-nowrap">
             <div className="md:flex-1 w-full">
-              <div className="text-16 mb-10">{result.domain}</div>
-              <Heading level={3} size={1} font="serif">
+              <div className="mb-4">{result.domain}</div>
+              <h3 className="mb-6 su-serif font-bold">
                 <a
                   className="text-digital-red-light group transition-colors hocus:underline"
                   href={result.url}
@@ -62,7 +62,7 @@ const SearchResults = ({ results }) => {
                     }
                   />
                 </a>
-              </Heading>
+              </h3>
               {/* eslint-disable-next-line no-underscore-dangle */}
               {result._snippetResult.body.value && (
                 <p
@@ -76,7 +76,7 @@ const SearchResults = ({ results }) => {
               )}
             </div>
             {result.image && (
-              <div className="rs-mt-0 w-[15rem] h-[10rem] md:w-[22.5rem] md:h-[15rem] md:ml-30">
+              <div className="algoliia-search-results__image-wrapper md:ml-30">
                 <img
                   className="block object-cover object-center h-full w-full"
                   src={result.image}

@@ -1,0 +1,22 @@
+.algolia-search--facet-checkbox {
+  border: 1px solid $su-color-black-40;
+  border-radius: 3px;
+  height: 15px;
+  width: 15px;
+
+  &:checked {
+    color: $su-color-digital-red-light;
+    background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23fff' viewBox='0 0 16 16'%3E%3Cpath d='M12.207 4.793a1 1 0 0 1 0 1.414l-5 5a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L6.5 9.086l4.293-4.293a1 1 0 0 1 1.414 0z'/%3E%3C/svg%3E");
+    background-color: currentColor;
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    border-color: transparent;
+  }
+  
+  // Unset conflicting styles from base.css
+  clip-path: none;
+  -webkit-clip-path: none;
+  position: relative;
+  appearance: none;
+}
