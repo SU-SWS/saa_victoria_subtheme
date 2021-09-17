@@ -1,0 +1,22 @@
+.algolia-search--pager-link {
+  color: $su-color-digital-red-light;
+  font-family: 'Source Sans Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 2.6rem;
+  padding: 0 1.1rem;
+  
+  &:hover,
+  &.active {
+    border-color: $su-color-cardinal-red;
+    color: $su-color-cardinal-red;
+  }
+}
+
+.algolia-search--pager-next,
+.algolia-search--pager-prev {
+  font-family: 'Source Sans Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 2rem;
+
+  &:hover {
+    border-color: $su-color-cardinal-red;
+  }
+}

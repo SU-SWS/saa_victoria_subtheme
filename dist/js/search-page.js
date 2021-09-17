@@ -55468,19 +55468,19 @@ var SearchFacet = function SearchFacet(_ref) {
   }
 
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "".concat(className || "algolia-search--facet-wrapper rs-mb-1 lg:rs-mb-3 rs-pb-3 lg:pb-0 border-b lg:border-0 border-black-20")
+    className: "".concat(className || "algolia-search--facet-wrapper mb-8 lg:mb-16 rs-pb-3 lg:pb-0 border-b lg:border-0 border-black-20")
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", {
     className: "algolia-search--facet-group-heading font-semibold"
   }, label), preparedFacetValues.map(function (option, index) {
     return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
       key: option.name,
-      className: "algolia-search--facet-label flex items-center cursor-pointer text-19 hover:text-digital-red-xlight ".concat(index ? "mt-8" : "")
+      className: "algolia-search--facet-label flex items-center cursor-pointer text-19 hover:text-digital-red-xlight mt-8"
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
       type: "checkbox",
       value: option.name,
       name: attribute,
       defaultChecked: selectedOptions.includes(option.name),
-      className: "algolia-search--facet-checkbox peer form-checkbox text-digital-red-light mr-4 w-[1.5rem] h-[1.5rem] cursor-pointer rounded border-black-40 hocus:border-none hocus:ring hocus:ring-digital-red-light hocus:ring-offset-0",
+      className: "algolia-search--facet-checkbox mr-4 cursor-pointer",
       onChange: function onChange(e) {
         return handleCheckboxChange(e);
       }
@@ -56159,7 +56159,7 @@ var SearchPager = function SearchPager(_ref) {
   }
 
   var linkClasses = "text-digital-red-light hover:border-b-4";
-  var activeLinkClasses = "text-cardinal-red border-b-4 cursor-default pointer-events-none";
+  var activeLinkClasses = "active border-b-4 cursor-default pointer-events-none";
   var desktopPagerLinks = Object(_utilities_buildPager__WEBPACK_IMPORTED_MODULE_1__["buildPager"])(nbPages, maxLinks, activePage);
   var mobilePagerLinks = Object(_utilities_buildPager__WEBPACK_IMPORTED_MODULE_1__["buildMobilePager"])(nbPages, activePage);
 
@@ -56175,13 +56175,13 @@ var SearchPager = function SearchPager(_ref) {
       "aria-label": "Search results pagination",
       className: className
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-      className: "flex mt-36 mb-44 justify-center md:space-x-36"
+      className: "flex my-40 justify-center md:space-x-36"
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
-      className: "list-none flex space-x-10 md:space-x-15 p-0 font-serif text-[26px] font-bold"
+      className: "list-none flex items-baseline space-x-10 md:space-x-15 p-0 font-serif font-bold"
     }, activePage > 0 && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
       className: "mb-0"
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-      className: "".concat(linkClasses, " text-20 no-underline font-regular self-center mr-9 md:mr-11"),
+      className: "".concat(linkClasses, " algolia-search--pager-prev text-20 no-underline font-normal self-center mr-9 md:mr-11"),
       href: "?page=".concat(activePage - 1),
       onClick: function onClick(e) {
         return linkHandler(e, activePage - 1);
@@ -56197,7 +56197,7 @@ var SearchPager = function SearchPager(_ref) {
         className: "mb-0",
         key: "search-pager-link-".concat(i)
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-        className: "px-9 md:px-11 no-underline\n                      ".concat(activePage === i ? activeLinkClasses : linkClasses, "\n                    "),
+        className: "algolia-search--pager-link px-9 md:px-11 no-underline\n                      ".concat(activePage === i ? activeLinkClasses : linkClasses, "\n                    "),
         href: "?page=".concat(i),
         onClick: function onClick(e) {
           return linkHandler(e, i);
@@ -56208,7 +56208,7 @@ var SearchPager = function SearchPager(_ref) {
     }), activePage < nbPages - 1 && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
       className: "mb-0"
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-      className: "".concat(linkClasses, " text-20 no-underline font-regular self-center ml-9 md:ml-11"),
+      className: "".concat(linkClasses, " algolia-search--pager-next text-20 no-underline font-normal self-center ml-9 md:ml-11"),
       href: "?page=".concat(activePage + 1),
       onClick: function onClick(e) {
         return linkHandler(e, activePage + 1);
@@ -56217,10 +56217,10 @@ var SearchPager = function SearchPager(_ref) {
   };
 
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Pager, {
-    className: "hidden md:block",
+    className: "algolia-search--pager hidden md:block",
     pagerLinks: desktopPagerLinks
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Pager, {
-    className: "md:hidden",
+    className: "algolia-search--pager md:hidden",
     pagerLinks: mobilePagerLinks
   }));
 };

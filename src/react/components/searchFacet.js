@@ -43,7 +43,7 @@ const SearchFacet = ({
     <div
       className={`${
         className ||
-        "algolia-search--facet-wrapper rs-mb-1 lg:rs-mb-3 rs-pb-3 lg:pb-0 border-b lg:border-0 border-black-20"
+        "algolia-search--facet-wrapper mb-8 lg:mb-16 rs-pb-3 lg:pb-0 border-b lg:border-0 border-black-20"
       }`}
     >
       <h3 className="algolia-search--facet-group-heading font-semibold">
@@ -53,16 +53,14 @@ const SearchFacet = ({
       {preparedFacetValues.map((option, index) => (
         <label
           key={option.name}
-          className={`algolia-search--facet-label flex items-center cursor-pointer text-19 hover:text-digital-red-xlight ${
-            index ? "mt-8" : ""
-          }`}
+          className={`algolia-search--facet-label flex items-center cursor-pointer text-19 hover:text-digital-red-xlight mt-8`}
         >
           <input
             type="checkbox"
             value={option.name}
             name={attribute}
             defaultChecked={selectedOptions.includes(option.name)}
-            className="algolia-search--facet-checkbox peer form-checkbox text-digital-red-light mr-4 w-[1.5rem] h-[1.5rem] cursor-pointer rounded border-black-40 hocus:border-none hocus:ring hocus:ring-digital-red-light hocus:ring-offset-0"
+            className="algolia-search--facet-checkbox mr-4 cursor-pointer"
             onChange={(e) => handleCheckboxChange(e)}
           />
           <span

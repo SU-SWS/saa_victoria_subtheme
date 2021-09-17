@@ -1,8 +1,25 @@
+.algolia-search--facet-group-heading {
+  font-size: 2.1rem;
+  font-family: 'Source Sans Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+.algolia-search--facet-label {
+  &:hover {
+    color: $su-color-digital-red-light;
+    text-decoration: underline;
+  }
+}
 .algolia-search--facet-checkbox {
   border: 1px solid $su-color-black-40;
   border-radius: 3px;
   height: 15px;
   width: 15px;
+  
+  &:hover,
+  &:focus {
+    box-shadow: 0 0 0 3px $su-color-digital-red-light;
+    border-width: 0;
+  }
 
   &:checked {
     color: $su-color-digital-red-light;

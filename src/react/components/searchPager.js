@@ -8,7 +8,7 @@ const SearchPager = ({ activePage, nbPages, maxLinks, selectPage }) => {
 
   const linkClasses = "text-digital-red-light hover:border-b-4";
   const activeLinkClasses =
-    "text-cardinal-red border-b-4 cursor-default pointer-events-none";
+    "active border-b-4 cursor-default pointer-events-none";
 
   const desktopPagerLinks = buildPager(nbPages, maxLinks, activePage);
   const mobilePagerLinks = buildMobilePager(nbPages, activePage);
@@ -20,12 +20,12 @@ const SearchPager = ({ activePage, nbPages, maxLinks, selectPage }) => {
 
   const Pager = ({ pagerLinks, className }) => (
     <nav aria-label="Search results pagination" className={className}>
-      <div className="flex mt-36 mb-44 justify-center md:space-x-36">
-        <ul className="list-none flex space-x-10 md:space-x-15 p-0 font-serif text-[26px] font-bold">
+      <div className="flex my-40 justify-center md:space-x-36">
+        <ul className="list-none flex items-baseline space-x-10 md:space-x-15 p-0 font-serif font-bold">
           {activePage > 0 && (
             <li className="mb-0">
               <a
-                className={`${linkClasses} text-20 no-underline font-regular self-center mr-9 md:mr-11`}
+                className={`${linkClasses} algolia-search--pager-prev text-20 no-underline font-normal self-center mr-9 md:mr-11`}
                 href={`?page=${activePage - 1}`}
                 onClick={(e) => linkHandler(e, activePage - 1)}
               >
@@ -40,7 +40,7 @@ const SearchPager = ({ activePage, nbPages, maxLinks, selectPage }) => {
             return (
               <li className="mb-0" key={`search-pager-link-${i}`}>
                 <a
-                  className={`px-9 md:px-11 no-underline
+                  className={`algolia-search--pager-link px-9 md:px-11 no-underline
                       ${activePage === i ? activeLinkClasses : linkClasses}
                     `}
                   href={`?page=${i}`}
@@ -58,7 +58,7 @@ const SearchPager = ({ activePage, nbPages, maxLinks, selectPage }) => {
           {activePage < nbPages - 1 && (
             <li className="mb-0">
               <a
-                className={`${linkClasses} text-20 no-underline font-regular self-center ml-9 md:ml-11`}
+                className={`${linkClasses} algolia-search--pager-next text-20 no-underline font-normal self-center ml-9 md:ml-11`}
                 href={`?page=${activePage + 1}`}
                 onClick={(e) => linkHandler(e, activePage + 1)}
               >
@@ -73,8 +73,8 @@ const SearchPager = ({ activePage, nbPages, maxLinks, selectPage }) => {
 
   return (
     <div>
-      <Pager className="hidden md:block" pagerLinks={desktopPagerLinks} />
-      <Pager className="md:hidden" pagerLinks={mobilePagerLinks} />
+      <Pager className="algolia-search--pager hidden md:block" pagerLinks={desktopPagerLinks} />
+      <Pager className="algolia-search--pager md:hidden" pagerLinks={mobilePagerLinks} />
     </div>
   );
 };
