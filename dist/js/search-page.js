@@ -55468,7 +55468,7 @@ var SearchFacet = function SearchFacet(_ref) {
   }
 
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "".concat(className || "algolia-search--facet-wrapper mb-8 lg:mb-16 rs-pb-3 lg:pb-0 border-b lg:border-0 border-black-20")
+    className: "".concat(className || "algolia-search--facet-wrapper mb-8 lg:mb-16 pb-12 lg:pb-0 border-b lg:border-0 border-black-20")
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", {
     className: "algolia-search--facet-group-heading font-semibold"
   }, label), preparedFacetValues.map(function (option, index) {
@@ -55621,10 +55621,10 @@ var SearchField = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.forw
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
     className: ""
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "flex w-full items-center relative ".concat(wrapperClasses),
+    className: "algolia-search--search-field-wrapper flex w-full items-center relative ".concat(wrapperClasses),
     ref: inputWrapper
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
-    className: "flex-grow max-w-full margin-top-0"
+    className: "flex-grow max-w-full mt-0"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
     className: "sr-only"
   }, "Search"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
@@ -55634,14 +55634,14 @@ var SearchField = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.forw
     "aria-expanded": showAutocomplete ? "true" : "false",
     onChange: inputHandler,
     onKeyDown: handleArrowKeys,
-    className: inputClasses,
+    className: "algolia-search--search-input ".concat(inputClasses),
     placeholder: placeholder || "",
     value: query,
     ref: inputRef
   })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
     type: "button",
     onClick: clearHandler,
-    className: clearBtnClasses
+    className: "algolia-search--clear-btn ".concat(clearBtnClasses)
   }, "Clear", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_hero_icon_solid__WEBPACK_IMPORTED_MODULE_1__["X"], {
     className: "inline-block ml-3 h-[1.1em] w-[1.1em]",
     "aria-hidden": "true"
@@ -55656,9 +55656,9 @@ var SearchField = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.forw
     autocompleteLinkFocusClasses: autocompleteLinkFocusClasses
   })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
     type: "submit",
-    className: submitBtnClasses
+    className: "algolia-search--search-btn ".concat(submitBtnClasses)
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_hero_icon_solid__WEBPACK_IMPORTED_MODULE_1__["Search"], {
-    className: "text-white w-8 h-8",
+    className: "text-white w-8 h-8 absolute",
     "aria-hidden": "true"
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
     className: "sr-only"
@@ -55990,10 +55990,10 @@ var SearchPage = function SearchPage() {
   Object(react__WEBPACK_IMPORTED_MODULE_0__["useEffect"])(function () {
     updateSearchResults(); // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [query, page, selectedFacets]);
-  var wrapperClasses = "flex-grow w-auto border-0 border-b border-solid border-black-60";
-  var clearBtnClasses = "flex items-center bg-transparent focus:bg-transparent hover:bg-transparent text-gray-600 hover:text-black focus:text-black hover:underline focus:underline text-m0 font-semibold border-none p-0 rs-mr-1 mt-03em";
+  var wrapperClasses = "flex-grow w-auto border-0 border-b border-solid";
+  var clearBtnClasses = "flex items-center bg-transparent focus:bg-transparent hover:bg-transparent focus:text-black hover:underline focus:underline text-m0 font-semibold border-none p-0 mr-12 mt-2";
   var inputClasses = "border-0 text-m2 w-full flex-1 rs-px-1 py-10 outline-none focus:ring-0 focus:ring-transparent focus:shadow-none";
-  var submitBtnClasses = "flex items-center justify-center w-16 p-0 h-16 rounded-full transition-colors bg-digital-red-light hocus:bg-cardinal-red-xdark ml-4";
+  var submitBtnClasses = "flex items-center justify-center w-16 h-16 rounded-full transition-colors bg-digital-red-light hocus:bg-cardinal-red-xdark ml-4";
   var autocompleteLinkClasses = "cursor-pointer font-regular inline-block w-full text-white no-underline px-15 py-10 rounded-full hover:bg-digital-red hover:text-white";
   var autocompleteLinkFocusClasses = "bg-digital-red";
   var autocompleteContainerClasses = "absolute top-[100%] bg-cardinal-red-xxdark p-10 shadow-md w-full border border-digital-red-light rounded-b-[0.5rem]";
@@ -56020,14 +56020,11 @@ var SearchPage = function SearchPage() {
     exclude: ["html", "pdf"]
   }));
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("section", {
-    className: "w-full py-32 md:py-70 xl:py-108 text-center bg-fog-light flex-wrap"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(decanter_react__WEBPACK_IMPORTED_MODULE_4__["Heading"], {
-    level: 1,
-    font: "serif",
-    weight: "bold",
-    className: "mb-0"
+    className: "aloglia-search--title-banner w-full py-32 md:py-70 xl:py-108 text-center flex-wrap"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", {
+    className: "font-bold mb-0 mt-0"
   }, "Search for...")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("section", {
-    className: "flex-12-of-12 py-45 w-full md:py-28 centered-container"
+    className: "algolia-search--main flex-12-of-12 w-full centered-container"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "grid grid-gap grid-cols-12 relative bassefont-19"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -56082,30 +56079,16 @@ var SearchPage = function SearchPage() {
   }))), opened && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "absolute top-[100%] left-0 w-full z-10 bg-white shadow-2xl border border-solid border-black-10"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "rs-p-0"
+    className: "p-6"
   }, facets), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "flex justify-end rs-px-0 rs-pt-0 rs-pb-2 bg-foggy-light border-t border-black-20"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(decanter_react__WEBPACK_IMPORTED_MODULE_4__["Button"], {
-    text: "Clear all",
-    variant: "unset",
+    className: "algolia-search--mobile-filter-actions flex justify-end p-6 border-t border-black-20"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
     onClick: function onClick() {
       return clearFilters();
     },
-    className: {
-      "text-16": false,
-      "md:text-20": false,
-      "text-digital-red-light text-18 hocus:text-cardinal-red hocus:shadow-none": true
-    }
-  }, "Clear all"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(decanter_react__WEBPACK_IMPORTED_MODULE_4__["Button"], {
-    animate: "right",
-    icon: "more",
-    variant: "solid",
-    size: "default",
-    className: {
-      "text-16": false,
-      "md:text-20": false,
-      "text-18 hocus:bg-cardinal-red-xdark hocus:border-cardinal-red-xdark": true
-    },
+    className: "algolia-search--filter-clear-btn"
+  }, "Clear all"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+    className: "algolia-search--filter-apply-btn",
     onClick: function onClick() {
       return setOpened(false);
     }
@@ -56114,7 +56097,7 @@ var SearchPage = function SearchPage() {
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", {
     className: "sr-only"
   }, "Filter Search Results"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, facets))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "\n                \"col-span-12 lg:col-span-9 2xl:col-span-8\"\n                ".concat(results.nbHits > 0 ? "" : "lg:col-start-3 2xl:col-start-3", "\n            ")
+    className: "\n                col-span-12 lg:col-span-9 2xl:col-span-8\n                ".concat(results.nbHits > 0 ? "" : "lg:col-start-3 2xl:col-start-3", "\n            ")
   }, results.nbHits > 0 && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_searchResults__WEBPACK_IMPORTED_MODULE_6__["default"], {
     results: results
   })), results.nbHits > hitsPerPage && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_searchPager__WEBPACK_IMPORTED_MODULE_7__["default"], {

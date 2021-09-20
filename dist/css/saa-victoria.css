@@ -127108,6 +127108,66 @@ ol.list--uppercase-i {
   border-color: transparent;
 }
 
+.algolia-search--search-field-wrapper {
+  border-color: #767674;
+}
+
+.algolia-search--search-btn {
+  background: #e50808;
+}
+
+.algolia-search--search-btn:hover {
+  background: #8c1515;
+}
+
+.algolia-search--clear-btn {
+  color: #6d6c69;
+}
+
+.algolia-search--clear-btn:hover {
+  color: #2e2d29;
+}
+
+.aloglia-search--title-banner {
+  background: #f4f4f4;
+  padding: 10.8rem 1.5rem;
+}
+
+.aloglia-search--title-banner h1 {
+  font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 6.4rem;
+}
+
+.algolia-search--main {
+  padding: 8rem 0;
+}
+
+.algolia-search--filter-clear-btn {
+  color: #e50808;
+  font-size: 1.8rem;
+  padding: 1rem 2.6rem;
+}
+
+.algolia-search--filter-clear-btn:hover {
+  color: #8c1515;
+  background: none;
+}
+
+.algolia-search--filter-apply-btn {
+  background: #e50808;
+  color: #ffffff;
+  font-size: 1.8rem;
+  padding: 1rem 2.6rem;
+}
+
+.algolia-search--filter-apply-btn:hover {
+  background: #8c1515;
+}
+
+.algolia-search--mobile-filter-actions {
+  background: #f4f4f4;
+}
+
 .algolia-search--pager-link {
   color: #e50808;
   font-family: 'Source Sans Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif;

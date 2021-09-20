@@ -93,10 +93,10 @@ const SearchField = React.forwardRef(
           <div className="flex items-center">
             <span className="" />
             <div
-              className={`flex w-full items-center relative ${wrapperClasses}`}
+              className={`algolia-search--search-field-wrapper flex w-full items-center relative ${wrapperClasses}`}
               ref={inputWrapper}
             >
-              <label className="flex-grow max-w-full margin-top-0">
+              <label className="flex-grow max-w-full mt-0">
                 <span className="sr-only">Search</span>
                 <input
                   type="text"
@@ -105,7 +105,7 @@ const SearchField = React.forwardRef(
                   aria-expanded={showAutocomplete ? "true" : "false"}
                   onChange={inputHandler}
                   onKeyDown={handleArrowKeys}
-                  className={inputClasses}
+                  className={`algolia-search--search-input ${inputClasses}`}
                   placeholder={placeholder || ""}
                   value={query}
                   ref={inputRef}
@@ -114,7 +114,7 @@ const SearchField = React.forwardRef(
               <button
                 type="button"
                 onClick={clearHandler}
-                className={clearBtnClasses}
+                className={`algolia-search--clear-btn ${clearBtnClasses}`}
               >
                 Clear
                 <X
@@ -133,9 +133,9 @@ const SearchField = React.forwardRef(
                 autocompleteLinkFocusClasses={autocompleteLinkFocusClasses}
               />
             </div>
-            <button type="submit" className={submitBtnClasses}>
+            <button type="submit" className={`algolia-search--search-btn ${submitBtnClasses}`}>
               <Search
-                className="text-white w-8 h-8"
+                className="text-white w-8 h-8 absolute"
                 aria-hidden="true"
               />
               <span className="sr-only">Search</span>

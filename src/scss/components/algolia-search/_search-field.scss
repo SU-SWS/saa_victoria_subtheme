@@ -1,0 +1,19 @@
+.algolia-search--search-field-wrapper {
+  border-color: $su-color-black-60;
+}
+
+.algolia-search--search-btn {
+  background: $su-color-digital-red-light;
+
+  &:hover {
+    background: $su-color-cardinal-red;
+  }
+}
+
+.algolia-search--clear-btn {
+  color: $su-color-black-70;
+
+  &:hover {
+    color: $su-color-black;
+  }
+}

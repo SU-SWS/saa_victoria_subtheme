@@ -218,13 +218,13 @@ const SearchPage = () => {
   }, [query, page, selectedFacets]);
 
 
-  const wrapperClasses = `flex-grow w-auto border-0 border-b border-solid border-black-60`;
+  const wrapperClasses = `flex-grow w-auto border-0 border-b border-solid`;
 
-  const clearBtnClasses = `flex items-center bg-transparent focus:bg-transparent hover:bg-transparent text-gray-600 hover:text-black focus:text-black hover:underline focus:underline text-m0 font-semibold border-none p-0 rs-mr-1 mt-03em`;
+  const clearBtnClasses = `flex items-center bg-transparent focus:bg-transparent hover:bg-transparent focus:text-black hover:underline focus:underline text-m0 font-semibold border-none p-0 mr-12 mt-2`;
 
   const inputClasses = `border-0 text-m2 w-full flex-1 rs-px-1 py-10 outline-none focus:ring-0 focus:ring-transparent focus:shadow-none`;
 
-  const submitBtnClasses = `flex items-center justify-center w-16 p-0 h-16 rounded-full transition-colors bg-digital-red-light hocus:bg-cardinal-red-xdark ml-4`;
+  const submitBtnClasses = `flex items-center justify-center w-16 h-16 rounded-full transition-colors bg-digital-red-light hocus:bg-cardinal-red-xdark ml-4`;
 
   const autocompleteLinkClasses = `cursor-pointer font-regular inline-block w-full text-white no-underline px-15 py-10 rounded-full hover:bg-digital-red hover:text-white`;
 
@@ -263,13 +263,13 @@ const SearchPage = () => {
   return (
     <div>
       <section
-          className="w-full py-32 md:py-70 xl:py-108 text-center bg-fog-light flex-wrap"
+          className="aloglia-search--title-banner w-full py-32 md:py-70 xl:py-108 text-center flex-wrap"
         >
-        <Heading level={1} font="serif" weight="bold" className="mb-0">
+        <h1 className="font-bold mb-0 mt-0">
           Search for...
-        </Heading>
+        </h1>
       </section>
-      <section className="flex-12-of-12 py-45 w-full md:py-28 centered-container">
+      <section className="algolia-search--main flex-12-of-12 w-full centered-container">
         <div className="grid grid-gap grid-cols-12 relative bassefont-19">
           <div
             xs={12}
@@ -334,36 +334,22 @@ const SearchPage = () => {
 
                     {opened && (
                       <div className="absolute top-[100%] left-0 w-full z-10 bg-white shadow-2xl border border-solid border-black-10">
-                        <div className="rs-p-0">{facets}</div>
+                        <div className="p-6">{facets}</div>
 
-                        <div className="flex justify-end rs-px-0 rs-pt-0 rs-pb-2 bg-foggy-light border-t border-black-20">
-                          <Button
-                            text="Clear all"
-                            variant="unset"
+                        <div className="algolia-search--mobile-filter-actions flex justify-end p-6 border-t border-black-20">
+                          <button
                             onClick={() => clearFilters()}
-                            className={{
-                              "text-16": false,
-                              "md:text-20": false,
-                              "text-digital-red-light text-18 hocus:text-cardinal-red hocus:shadow-none": true,
-                            }}
+                            className={`algolia-search--filter-clear-btn`}
                           >
                             Clear all
-                          </Button>
+                          </button>
 
-                          <Button
-                            animate="right"
-                            icon="more"
-                            variant="solid"
-                            size="default"
-                            className={{
-                              "text-16": false,
-                              "md:text-20": false,
-                              "text-18 hocus:bg-cardinal-red-xdark hocus:border-cardinal-red-xdark": true,
-                            }}
+                          <button
+                            className={`algolia-search--filter-apply-btn`}
                             onClick={() => setOpened(false)}
                           >
                             View Results
-                          </Button>
+                          </button>
                         </div>
                       </div>
                     )}
@@ -378,7 +364,7 @@ const SearchPage = () => {
             )}
             <div
               className={`
-                "col-span-12 lg:col-span-9 2xl:col-span-8"
+                col-span-12 lg:col-span-9 2xl:col-span-8
                 ${results.nbHits > 0 ? "" : "lg:col-start-3 2xl:col-start-3"}
             `}>
               {results.nbHits > 0 && (

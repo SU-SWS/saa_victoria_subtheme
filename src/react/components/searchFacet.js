@@ -43,7 +43,7 @@ const SearchFacet = ({
     <div
       className={`${
         className ||
-        "algolia-search--facet-wrapper mb-8 lg:mb-16 rs-pb-3 lg:pb-0 border-b lg:border-0 border-black-20"
+        "algolia-search--facet-wrapper mb-8 lg:mb-16 pb-12 lg:pb-0 border-b lg:border-0 border-black-20"
       }`}
     >
       <h3 className="algolia-search--facet-group-heading font-semibold">

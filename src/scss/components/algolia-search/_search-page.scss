@@ -1,0 +1,39 @@
+.aloglia-search--title-banner {
+  background: $su-color-foggy-light;
+  padding: 10.8rem 1.5rem;
+
+  h1 {
+    font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 6.4rem;
+  }
+}
+
+.algolia-search--main {
+  padding: 8rem 0;
+}
+
+.algolia-search--filter-clear-btn {
+  color: $su-color-digital-red-light;
+  font-size: 1.8rem;
+  padding: 1rem 2.6rem;
+
+  &:hover {
+    color: $su-color-cardinal-red;
+    background: none;
+  }
+}
+
+.algolia-search--filter-apply-btn {
+  background: $su-color-digital-red-light;
+  color: $su-color-white;
+  font-size: 1.8rem;
+  padding: 1rem 2.6rem;
+
+  &:hover {
+    background: $su-color-cardinal-red;
+  }
+}
+
+.algolia-search--mobile-filter-actions {
+  background: $su-color-foggy-light;
+}
