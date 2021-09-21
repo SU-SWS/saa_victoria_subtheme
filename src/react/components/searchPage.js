@@ -7,7 +7,7 @@ import {
   ArrayParam,
 } from "use-query-params";
 import Icon from "react-hero-icon";
-import { Container, Heading, Button, Grid, GridCell } from "decanter-react";
+import { ArrowSmRightIcon } from "@heroicons/react/outline";
 import SearchField from './searchField'
 import SearchResults from './searchResults'
 import SearchPager from './searchPager'
@@ -224,13 +224,13 @@ const SearchPage = () => {
 
   const inputClasses = `border-0 text-m2 w-full flex-1 rs-px-1 py-10 outline-none focus:ring-0 focus:ring-transparent focus:shadow-none`;
 
-  const submitBtnClasses = `flex items-center justify-center w-16 h-16 rounded-full transition-colors bg-digital-red-light hocus:bg-cardinal-red-xdark ml-4`;
+  const submitBtnClasses = `flex items-center justify-center w-16 h-16 rounded-full transition-colors ml-4`;
 
-  const autocompleteLinkClasses = `cursor-pointer font-regular inline-block w-full text-white no-underline px-15 py-10 rounded-full hover:bg-digital-red hover:text-white`;
+  const autocompleteLinkClasses = `cursor-pointer font-regular inline-block w-full no-underline px-6 py-4 rounded-full`;
 
-  const autocompleteLinkFocusClasses = `bg-digital-red`;
+  const autocompleteLinkFocusClasses = ``;
 
-  const autocompleteContainerClasses = `absolute top-[100%] bg-cardinal-red-xxdark p-10 shadow-md w-full border border-digital-red-light rounded-b-[0.5rem]`;
+  const autocompleteContainerClasses = `absolute p-4 shadow-md w-full border`;
 
   const facets = results.facets && (
     <React.Fragment>
@@ -296,22 +296,22 @@ const SearchPage = () => {
             />
           </div>
         </div>
-        <div className="grid grid-cols-12 lg:grid-gap mt-40">
+        <div className="grid grid-cols-12 lg:grid-gap mt-20 lg:mt-40">
             {results.nbHits > 0 && (
               <React.Fragment>
                 <div
-                  className={`col-span-12 lg:col-span-3 lg:hidden relative mb-8 ${
+                  className={`col-span-12 lg:col-span-3 lg:hidden relative mb-16 ${
                     opened ? "shadow-xl" : ""
                   }`}
                 >
                   <div ref={ref}>
                     <button
                       type="button"
-                      className={`group flex w-full justify-between border px-[20px] text-21 font-semibold items-center transition-colors
+                      className={`algolia-search--filter-btn group flex w-full justify-between border px-8 py-6 text-21 font-semibold items-center transition-colors
                         ${
                           opened
-                            ? "border-digital-red text-white bg-digital-red"
-                            : "border-black-30 text-digital-red-light hocus:bg-digital-red hocus:border-digital-red hocus:text-white hocus:shadow-lg"
+                            ? "opened"
+                            : "collapsed"
                         }`}
                       aria-expanded={opened}
                       ref={filterOpenRef}
@@ -321,9 +321,9 @@ const SearchPage = () => {
                         {opened ? "Filters" : " Filter results"}
                       </span>
                       {opened ? (
-                        <span className="ml-02em font-regular flex items-center text-18 group-hocus:underline">
+                        <span className="algolia-search--filter-close-btn ml-02em font-regular flex items-center text-18 group-hocus:underline">
                           Close
-                          <Icon icon="x" className="w-14 ml-6" />
+                          <Icon icon="x" className="w-14 ml-2" />
                         </span>
                       ) : (
                         <span className="flex items-center mt-0 text-digital-red-light group-hocus:text-white hocus:shadow-none">
@@ -336,7 +336,7 @@ const SearchPage = () => {
                       <div className="absolute top-[100%] left-0 w-full z-10 bg-white shadow-2xl border border-solid border-black-10">
                         <div className="p-6">{facets}</div>
 
-                        <div className="algolia-search--mobile-filter-actions flex justify-end p-6 border-t border-black-20">
+                        <div className="algolia-search--mobile-filter-actions flex justify-end p-6 pb-12 border-t border-black-20">
                           <button
                             onClick={() => clearFilters()}
                             className={`algolia-search--filter-clear-btn`}
@@ -349,6 +349,7 @@ const SearchPage = () => {
                             onClick={() => setOpened(false)}
                           >
                             View Results
+                            <ArrowSmRightIcon className="inline-block w-8 ml-2 mb-1" />
                           </button>
                         </div>
                       </div>

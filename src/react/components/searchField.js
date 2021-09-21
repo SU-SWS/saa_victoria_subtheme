@@ -70,8 +70,10 @@ const SearchField = React.forwardRef(
 
     const handleArrowKeys = (e) => {
       if (e.key === "ArrowDown") {
+        e.preventDefault();
         setSelectedSuggestion(selectedSuggestion + 1);
       } else if (e.key === "ArrowUp") {
+        e.preventDefault();
         setSelectedSuggestion(selectedSuggestion - 1);
       } else if (
         e.key === "Enter" &&

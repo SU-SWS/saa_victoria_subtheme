@@ -12,22 +12,22 @@ const searchAutocomplete = ({
   autocompleteLinkFocusClasses,
 }) => (
   <div
-    className={`${autocompleteContainerClasses}
+    className={`algolia-search--autocomplete-container ${autocompleteContainerClasses}
     ${showAutocomplete && autocompleteSuggestions.length ? "" : "hidden"}`}
   >
     {Array.isArray(autocompleteSuggestions) && (
-      <ul className="list-unstyled" role="listbox">
+      <ul className="list-unstyled pl-0" role="listbox">
         {autocompleteSuggestions.map((suggestion, index) => (
           // eslint-disable-next-line jsx-a11y/click-events-have-key-events
           <li
             key={`autocomplete-item-${suggestion.objectID}`}
             role="option"
             tabIndex={showAutocomplete ? 0 : -1}
-            className={`mb-0
+            className={`algolia-search--autocomplete-item mb-0
                         ${autocompleteLinkClasses}
                         ${
                           index === selectedSuggestion
-                            ? autocompleteLinkFocusClasses
+                            ? "focused"
                             : ""
                         }
                       `}

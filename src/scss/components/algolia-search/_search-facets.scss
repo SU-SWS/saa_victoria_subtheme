@@ -1,9 +1,11 @@
 .algolia-search--facet-group-heading {
   font-size: 2.1rem;
-  font-family: 'Source Sans Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: $su-font-sans;
 }
 
 .algolia-search--facet-label {
+  font-family: $su-font-sans;
+
   &:hover {
     color: $su-color-digital-red-light;
     text-decoration: underline;

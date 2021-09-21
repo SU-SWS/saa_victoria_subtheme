@@ -1,4 +1,4 @@
-.algoliia-search-results__image-wrapper {
+.algolia-search-results__image-wrapper {
   width: 15rem;
   height: 10rem;
   @include modular-spacing('margin-left', 1);
@@ -10,3 +10,18 @@
   }
 }
 
+.algolia-search--result-item  {
+  border-color: $su-color-black-40;
+}
+
+.algolia-search--result-title {
+  font-size: 2.6rem;
+}
+
+.algolia-search--result-domain {
+  font-size: 1.6rem;
+}
+
+.algolia-search--results-count {
+  font-size: 2.1rem;
+}

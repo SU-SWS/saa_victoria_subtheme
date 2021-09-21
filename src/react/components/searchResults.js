@@ -10,18 +10,18 @@ const SearchResults = ({ results }) => {
 
   return (
     <div id="search-results" className="su-sans">
-      <div className="text-21 lg:mb-[4rem]">
+      <div className="algolia-search--results-count lg:mb-16">
         <span className="font-semibold">{results.nbHits}</span> results:
       </div>
       {results.hits.map((result) => (
         <div
           key={result.objectID}
-          className="px-0 py-16 md:px-16 border-b border-black-40"
+          className="algolia-search--result-item px-0 py-16 md:px-16 border-b"
         >
           <div className="flex flex-wrap md:flex-nowrap">
             <div className="md:flex-1 w-full">
-              <div className="mb-4">{result.domain}</div>
-              <h3 className="mb-6 su-serif font-bold">
+              <div className="algolia-search--result-domain mb-4">{result.domain}</div>
+              <h3 className="algolia-search--result-title mb-6 su-serif font-bold">
                 <a
                   className="text-digital-red-light group transition-colors hocus:underline"
                   href={result.url}
@@ -76,7 +76,7 @@ const SearchResults = ({ results }) => {
               )}
             </div>
             {result.image && (
-              <div className="algoliia-search-results__image-wrapper md:ml-30">
+              <div className="algolia-search-results__image-wrapper md:ml-30">
                 <img
                   className="block object-cover object-center h-full w-full"
                   src={result.image}

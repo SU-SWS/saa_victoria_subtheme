@@ -1,0 +1,16 @@
+.algolia-search--autocomplete-container {
+  top: 100%;
+  background: $su-color-cardinal-red-dark;
+  border: 1px solid $su-color-digital-red-light;
+  z-index: 10;
+}
+
+.algolia-search--autocomplete-item {
+  color: $su-color-white;
+
+  &:hover,
+  &:focus,
+  &.focused {
+    background: $su-color-digital-red;
+  }
+}

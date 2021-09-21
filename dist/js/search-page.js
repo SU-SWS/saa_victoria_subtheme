@@ -55369,9 +55369,9 @@ var searchAutocomplete = function searchAutocomplete(_ref) {
       autocompleteLinkClasses = _ref.autocompleteLinkClasses,
       autocompleteLinkFocusClasses = _ref.autocompleteLinkFocusClasses;
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "".concat(autocompleteContainerClasses, "\n    ").concat(showAutocomplete && autocompleteSuggestions.length ? "" : "hidden")
+    className: "algolia-search--autocomplete-container ".concat(autocompleteContainerClasses, "\n    ").concat(showAutocomplete && autocompleteSuggestions.length ? "" : "hidden")
   }, Array.isArray(autocompleteSuggestions) && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
-    className: "list-unstyled",
+    className: "list-unstyled pl-0",
     role: "listbox"
   }, autocompleteSuggestions.map(function (suggestion, index) {
     return (
@@ -55381,7 +55381,7 @@ var searchAutocomplete = function searchAutocomplete(_ref) {
         key: "autocomplete-item-".concat(suggestion.objectID),
         role: "option",
         tabIndex: showAutocomplete ? 0 : -1,
-        className: "mb-0\n                        ".concat(autocompleteLinkClasses, "\n                        ").concat(index === selectedSuggestion ? autocompleteLinkFocusClasses : "", "\n                      "),
+        className: "algolia-search--autocomplete-item mb-0\n                        ".concat(autocompleteLinkClasses, "\n                        ").concat(index === selectedSuggestion ? "focused" : "", "\n                      "),
         onClick: function onClick(e) {
           return onSelect(e, suggestion.query);
         },
@@ -55601,8 +55601,10 @@ var SearchField = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.forw
 
   var handleArrowKeys = function handleArrowKeys(e) {
     if (e.key === "ArrowDown") {
+      e.preventDefault();
       setSelectedSuggestion(selectedSuggestion + 1);
     } else if (e.key === "ArrowUp") {
+      e.preventDefault();
       setSelectedSuggestion(selectedSuggestion - 1);
     } else if (e.key === "Enter" && autocompleteSuggestions[selectedSuggestion]) {
       selectSuggestion(e, autocompleteSuggestions[selectedSuggestion].query);
@@ -55714,7 +55716,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var use_query_params__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! use-query-params */ "./node_modules/use-query-params/esm/index.js");
 /* harmony import */ var react_hero_icon__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-hero-icon */ "./node_modules/react-hero-icon/build/icon.js");
 /* harmony import */ var react_hero_icon__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(react_hero_icon__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var decanter_react__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! decanter-react */ "./node_modules/decanter-react/dist/decanter-react.module.js");
+/* harmony import */ var _heroicons_react_outline__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @heroicons/react/outline */ "./node_modules/@heroicons/react/outline/esm/index.js");
 /* harmony import */ var _searchField__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./searchField */ "./src/react/components/searchField.js");
 /* harmony import */ var _searchResults__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./searchResults */ "./src/react/components/searchResults.js");
 /* harmony import */ var _searchPager__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./searchPager */ "./src/react/components/searchPager.js");
@@ -55993,10 +55995,10 @@ var SearchPage = function SearchPage() {
   var wrapperClasses = "flex-grow w-auto border-0 border-b border-solid";
   var clearBtnClasses = "flex items-center bg-transparent focus:bg-transparent hover:bg-transparent focus:text-black hover:underline focus:underline text-m0 font-semibold border-none p-0 mr-12 mt-2";
   var inputClasses = "border-0 text-m2 w-full flex-1 rs-px-1 py-10 outline-none focus:ring-0 focus:ring-transparent focus:shadow-none";
-  var submitBtnClasses = "flex items-center justify-center w-16 h-16 rounded-full transition-colors bg-digital-red-light hocus:bg-cardinal-red-xdark ml-4";
-  var autocompleteLinkClasses = "cursor-pointer font-regular inline-block w-full text-white no-underline px-15 py-10 rounded-full hover:bg-digital-red hover:text-white";
-  var autocompleteLinkFocusClasses = "bg-digital-red";
-  var autocompleteContainerClasses = "absolute top-[100%] bg-cardinal-red-xxdark p-10 shadow-md w-full border border-digital-red-light rounded-b-[0.5rem]";
+  var submitBtnClasses = "flex items-center justify-center w-16 h-16 rounded-full transition-colors ml-4";
+  var autocompleteLinkClasses = "cursor-pointer font-regular inline-block w-full no-underline px-6 py-4 rounded-full";
+  var autocompleteLinkFocusClasses = "";
+  var autocompleteContainerClasses = "absolute p-4 shadow-md w-full border";
   var facets = results.facets && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, siteNameValues && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_searchFacet__WEBPACK_IMPORTED_MODULE_8__["default"], {
     label: "Sites",
     attribute: "siteName",
@@ -56052,14 +56054,14 @@ var SearchPage = function SearchPage() {
     autocompleteContainerClasses: autocompleteContainerClasses,
     clearOnEscape: true
   }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "grid grid-cols-12 lg:grid-gap mt-40"
+    className: "grid grid-cols-12 lg:grid-gap mt-20 lg:mt-40"
   }, results.nbHits > 0 && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "col-span-12 lg:col-span-3 lg:hidden relative mb-8 ".concat(opened ? "shadow-xl" : "")
+    className: "col-span-12 lg:col-span-3 lg:hidden relative mb-16 ".concat(opened ? "shadow-xl" : "")
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     ref: ref
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
     type: "button",
-    className: "group flex w-full justify-between border px-[20px] text-21 font-semibold items-center transition-colors\n                        ".concat(opened ? "border-digital-red text-white bg-digital-red" : "border-black-30 text-digital-red-light hocus:bg-digital-red hocus:border-digital-red hocus:text-white hocus:shadow-lg"),
+    className: "algolia-search--filter-btn group flex w-full justify-between border px-8 py-6 text-21 font-semibold items-center transition-colors\n                        ".concat(opened ? "opened" : "collapsed"),
     "aria-expanded": opened,
     ref: filterOpenRef,
     onClick: function onClick() {
@@ -56068,10 +56070,10 @@ var SearchPage = function SearchPage() {
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
     className: "py-[14px] flex"
   }, opened ? "Filters" : " Filter results"), opened ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
-    className: "ml-02em font-regular flex items-center text-18 group-hocus:underline"
+    className: "algolia-search--filter-close-btn ml-02em font-regular flex items-center text-18 group-hocus:underline"
   }, "Close", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_hero_icon__WEBPACK_IMPORTED_MODULE_3___default.a, {
     icon: "x",
-    className: "w-14 ml-6"
+    className: "w-14 ml-2"
   })) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
     className: "flex items-center mt-0 text-digital-red-light group-hocus:text-white hocus:shadow-none"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_hero_icon__WEBPACK_IMPORTED_MODULE_3___default.a, {
@@ -56081,7 +56083,7 @@ var SearchPage = function SearchPage() {
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "p-6"
   }, facets), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "algolia-search--mobile-filter-actions flex justify-end p-6 border-t border-black-20"
+    className: "algolia-search--mobile-filter-actions flex justify-end p-6 pb-12 border-t border-black-20"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
     onClick: function onClick() {
       return clearFilters();
@@ -56092,7 +56094,9 @@ var SearchPage = function SearchPage() {
     onClick: function onClick() {
       return setOpened(false);
     }
-  }, "View Results"))))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+  }, "View Results", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_heroicons_react_outline__WEBPACK_IMPORTED_MODULE_4__["ArrowSmRightIcon"], {
+    className: "inline-block w-8 ml-2 mb-1"
+  })))))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "col-span-12 lg:col-span-3 mb-8 hidden lg:flex"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", {
     className: "sr-only"
@@ -56158,7 +56162,7 @@ var SearchPager = function SearchPager(_ref) {
       "aria-label": "Search results pagination",
       className: className
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-      className: "flex my-40 justify-center md:space-x-36"
+      className: "flex my-20 lg:my-40 justify-center md:space-x-36"
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
       className: "list-none flex items-baseline space-x-10 md:space-x-15 p-0 font-serif font-bold"
     }, activePage > 0 && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
@@ -56243,21 +56247,21 @@ var SearchResults = function SearchResults(_ref) {
     id: "search-results",
     className: "su-sans"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "text-21 lg:mb-[4rem]"
+    className: "algolia-search--results-count lg:mb-16"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
     className: "font-semibold"
   }, results.nbHits), " results:"), results.hits.map(function (result) {
     return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
       key: result.objectID,
-      className: "px-0 py-16 md:px-16 border-b border-black-40"
+      className: "algolia-search--result-item px-0 py-16 md:px-16 border-b"
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
       className: "flex flex-wrap md:flex-nowrap"
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
       className: "md:flex-1 w-full"
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-      className: "mb-4"
+      className: "algolia-search--result-domain mb-4"
     }, result.domain), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", {
-      className: "mb-6 su-serif font-bold"
+      className: "algolia-search--result-title mb-6 su-serif font-bold"
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
       className: "text-digital-red-light group transition-colors hocus:underline",
       href: result.url
@@ -56290,7 +56294,7 @@ var SearchResults = function SearchResults(_ref) {
         __html: sanitize_html__WEBPACK_IMPORTED_MODULE_1___default()(result._snippetResult.body.value)
       }
     })), result.image && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-      className: "algoliia-search-results__image-wrapper md:ml-30"
+      className: "algolia-search-results__image-wrapper md:ml-30"
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
       className: "block object-cover object-center h-full w-full",
       src: result.image,

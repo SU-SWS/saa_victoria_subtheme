@@ -1,15 +1,27 @@
 .aloglia-search--title-banner {
   background: $su-color-foggy-light;
-  padding: 10.8rem 1.5rem;
+  padding: 4.5rem 1.5rem;
+
+  @include grid-media-min('lg') {
+    padding: 10.8rem 1.5rem;
+  }
 
   h1 {
-    font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
-    font-size: 6.4rem;
+    font-family: $su-font-serif;
+    font-size: 4.6rem;
+
+    @include grid-media-min('lg') {
+      font-size: 6.4rem;
+    }
   }
 }
 
 .algolia-search--main {
-  padding: 8rem 0;
+  padding: 4.5rem 0;
+
+  @include grid-media-min('lg') {
+    padding: 8rem 0;
+  }
 }
 
 .algolia-search--filter-clear-btn {
@@ -23,14 +35,49 @@
   }
 }
 
+.algolia-search--filter-btn {
+  background: $su-color-white;
+  border: 1px solid $su-color-black-30;
+  color: $su-color-digital-red-light;
+  font-size: 2.1rem;
+
+  &.opened,
+  &:hover,
+  &:focus {
+    background: $su-color-digital-red-light;
+    border-color: $su-color-digital-red;
+    color: $su-color-white;
+    text-decoration: none;
+  }
+}
+
+.algolia-search--filter-close-btn {
+  font-size: 1.8rem;
+  font-weight: 400;
+
+  &:hover,
+  &:active {
+    text-decoration: underline;
+  }
+}
+
 .algolia-search--filter-apply-btn {
   background: $su-color-digital-red-light;
   color: $su-color-white;
   font-size: 1.8rem;
   padding: 1rem 2.6rem;
 
-  &:hover {
+  &:hover,
+  &:active {
     background: $su-color-cardinal-red;
+  }
+  svg {
+    transition: all;
+    transition-duration: 0.25s;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  &:hover svg {
+    transform: translateX(0.2em);
   }
 }
 

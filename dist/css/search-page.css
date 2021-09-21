@@ -127071,7 +127071,11 @@ ol.list--uppercase-i {
 
 .algolia-search--facet-group-heading {
   font-size: 2.1rem;
-  font-family: 'Source Sans Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: "Source Sans Pro", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+}
+
+.algolia-search--facet-label {
+  font-family: "Source Sans Pro", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
 }
 
 .algolia-search--facet-label:hover {
@@ -127122,6 +127126,7 @@ ol.list--uppercase-i {
 
 .algolia-search--clear-btn {
   color: #6d6c69;
+  font-size: 1.6rem;
 }
 
 .algolia-search--clear-btn:hover {
@@ -127130,16 +127135,34 @@ ol.list--uppercase-i {
 
 .aloglia-search--title-banner {
   background: #f4f4f4;
-  padding: 10.8rem 1.5rem;
+  padding: 4.5rem 1.5rem;
+}
+
+@media (min-width: 992px) {
+  .aloglia-search--title-banner {
+    padding: 10.8rem 1.5rem;
+  }
 }
 
 .aloglia-search--title-banner h1 {
-  font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 6.4rem;
+  font-family: "Source Serif Pro", "Georgia", "Times", "Times New Roman", serif;
+  font-size: 4.6rem;
+}
+
+@media (min-width: 992px) {
+  .aloglia-search--title-banner h1 {
+    font-size: 6.4rem;
+  }
 }
 
 .algolia-search--main {
-  padding: 8rem 0;
+  padding: 4.5rem 0;
+}
+
+@media (min-width: 992px) {
+  .algolia-search--main {
+    padding: 8rem 0;
+  }
 }
 
 .algolia-search--filter-clear-btn {
@@ -127153,6 +127176,29 @@ ol.list--uppercase-i {
   background: none;
 }
 
+.algolia-search--filter-btn {
+  background: #ffffff;
+  border: 1px solid #c0c0bf;
+  color: #e50808;
+  font-size: 2.1rem;
+}
+
+.algolia-search--filter-btn.opened, .algolia-search--filter-btn:hover, .algolia-search--filter-btn:focus {
+  background: #e50808;
+  border-color: #b1040e;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.algolia-search--filter-close-btn {
+  font-size: 1.8rem;
+  font-weight: 400;
+}
+
+.algolia-search--filter-close-btn:hover, .algolia-search--filter-close-btn:active {
+  text-decoration: underline;
+}
+
 .algolia-search--filter-apply-btn {
   background: #e50808;
   color: #ffffff;
@@ -127160,8 +127206,22 @@ ol.list--uppercase-i {
   padding: 1rem 2.6rem;
 }
 
-.algolia-search--filter-apply-btn:hover {
+.algolia-search--filter-apply-btn:hover, .algolia-search--filter-apply-btn:active {
   background: #8c1515;
+}
+
+.algolia-search--filter-apply-btn svg {
+  -webkit-transition: all;
+  transition: all;
+  -webkit-transition-duration: 0.25s;
+          transition-duration: 0.25s;
+  -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+          transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.algolia-search--filter-apply-btn:hover svg {
+  -webkit-transform: translateX(0.2em);
+          transform: translateX(0.2em);
 }
 
 .algolia-search--mobile-filter-actions {
@@ -127170,7 +127230,7 @@ ol.list--uppercase-i {
 
 .algolia-search--pager-link {
   color: #e50808;
-  font-family: 'Source Sans Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: "Source Sans Pro", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
   font-size: 2.6rem;
   padding: 0 1.1rem;
 }
@@ -127182,7 +127242,7 @@ ol.list--uppercase-i {
 
 .algolia-search--pager-next,
 .algolia-search--pager-prev {
-  font-family: 'Source Sans Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: "Source Sans Pro", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
   font-size: 2rem;
 }
 
@@ -127191,52 +127251,83 @@ ol.list--uppercase-i {
   border-color: #8c1515;
 }
 
-.algoliia-search-results__image-wrapper {
+.algolia-search-results__image-wrapper {
   width: 15rem;
   height: 10rem;
 }
 
 @media only screen and (min-width: 0) {
-  .algoliia-search-results__image-wrapper {
+  .algolia-search-results__image-wrapper {
     margin-left: 2.31rem;
   }
 }
 
 @media only screen and (min-width: 768px) {
-  .algoliia-search-results__image-wrapper {
+  .algolia-search-results__image-wrapper {
     margin-left: 2.6rem;
   }
 }
 
 @media only screen and (min-width: 1500px) {
-  .algoliia-search-results__image-wrapper {
+  .algolia-search-results__image-wrapper {
     margin-left: 2.74rem;
   }
 }
 
 @media only screen and (min-width: 0) {
-  .algoliia-search-results__image-wrapper {
+  .algolia-search-results__image-wrapper {
     margin-top: 1.6rem;
   }
 }
 
 @media only screen and (min-width: 768px) {
-  .algoliia-search-results__image-wrapper {
+  .algolia-search-results__image-wrapper {
     margin-top: 1.8rem;
   }
 }
 
 @media only screen and (min-width: 1500px) {
-  .algoliia-search-results__image-wrapper {
+  .algolia-search-results__image-wrapper {
     margin-top: 1.9rem;
   }
 }
 
 @media (min-width: 768px) {
-  .algoliia-search-results__image-wrapper {
+  .algolia-search-results__image-wrapper {
     width: 22.5rem;
     height: 15rem;
   }
+}
+
+.algolia-search--result-item {
+  border-color: #ababa9;
+}
+
+.algolia-search--result-title {
+  font-size: 2.6rem;
+}
+
+.algolia-search--result-domain {
+  font-size: 1.6rem;
+}
+
+.algolia-search--results-count {
+  font-size: 2.1rem;
+}
+
+.algolia-search--autocomplete-container {
+  top: 100%;
+  background: #820000;
+  border: 1px solid #e50808;
+  z-index: 10;
+}
+
+.algolia-search--autocomplete-item {
+  color: #ffffff;
+}
+
+.algolia-search--autocomplete-item:hover, .algolia-search--autocomplete-item:focus, .algolia-search--autocomplete-item.focused {
+  background: #b1040e;
 }
 
 #back-to-top,

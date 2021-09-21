@@ -20,7 +20,7 @@ const SearchPager = ({ activePage, nbPages, maxLinks, selectPage }) => {
 
   const Pager = ({ pagerLinks, className }) => (
     <nav aria-label="Search results pagination" className={className}>
-      <div className="flex my-40 justify-center md:space-x-36">
+      <div className="flex my-20 lg:my-40 justify-center md:space-x-36">
         <ul className="list-none flex items-baseline space-x-10 md:space-x-15 p-0 font-serif font-bold">
           {activePage > 0 && (
             <li className="mb-0">
