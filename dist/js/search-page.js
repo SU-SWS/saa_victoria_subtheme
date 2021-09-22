@@ -55279,55 +55279,55 @@ var HeroIcon = function HeroIcon(_ref) {
   var heroIconMap = {
     video: {
       heroicon: _heroicons_react_outline__WEBPACK_IMPORTED_MODULE_2__["VideoCameraIcon"],
-      baseStyle: "w-8 mt-[-0.2em]",
-      animate: "group-hocus:translate-x-02em"
+      baseStyle: "w-8 -mt-2",
+      animate: ""
     },
     play: {
       heroicon: _heroicons_react_solid__WEBPACK_IMPORTED_MODULE_3__["PlayIcon"],
       baseStyle: "w-8 ml-7 -mt-3",
-      animate: "group-hocus:translate-x-02em"
+      animate: ""
     },
     podcast: {
       heroicon: _heroicons_react_outline__WEBPACK_IMPORTED_MODULE_2__["MicrophoneIcon"],
-      baseStyle: "w-8 mt-[-0.25em]",
-      animate: "group-hocus:translate-x-02em"
+      baseStyle: "w-8 -mt-2",
+      animate: ""
     },
     external: {
       heroicon: _heroicons_react_solid__WEBPACK_IMPORTED_MODULE_3__["ArrowRightIcon"],
-      baseStyle: "w-8 ml-02em -rotate-45 group-hocus:-rotate-45",
-      animate: "group-hocus:translate-x-01em group-hocus:-translate-y-01em"
+      baseStyle: "w-8 ml-02em -rotate-45 group-hover:-rotate-45 group-focus:-rotate-45",
+      animate: ""
     },
     "arrow-right": {
       heroicon: _heroicons_react_solid__WEBPACK_IMPORTED_MODULE_3__["ArrowRightIcon"],
-      baseStyle: "w-8 ml-03em -mt-02em",
-      animate: "group-hocus:translate-x-02em"
+      baseStyle: "w-8 ml-03em -mt-2",
+      animate: ""
     },
     download: {
       heroicon: _heroicons_react_solid__WEBPACK_IMPORTED_MODULE_3__["DownloadIcon"],
       baseStyle: "w-8 ml-4 -mt-3",
-      animate: "group-hocus:translate-y-02em"
+      animate: ""
     },
     email: {
       heroicon: _heroicons_react_solid__WEBPACK_IMPORTED_MODULE_3__["MailIcon"],
       baseStyle: "w-8 ml-7 -mt-2",
-      animate: "group-hocus:translate-x-02em"
+      animate: ""
     },
     "chevron-down": {
       heroicon: _heroicons_react_solid__WEBPACK_IMPORTED_MODULE_3__["ChevronDownIcon"],
       baseStyle: "w-[1.1em] ml-4 -mt-3",
-      animate: "group-hocus:translate-y-02em"
+      animate: ""
     },
     "chevron-right": {
       heroicon: _heroicons_react_solid__WEBPACK_IMPORTED_MODULE_3__["ChevronRightIcon"],
       baseStyle: "w-1em ml-02em -mt-4",
-      animate: "group-hocus:translate-x-02em"
+      animate: ""
     }
   };
   var Icon = heroIconMap[iconType].heroicon;
   var animateStyle = "";
 
   if (isAnimate) {
-    animateStyle = Object(cnbuilder__WEBPACK_IMPORTED_MODULE_1__["dcnb"])("transform-gpu", heroIconMap[iconType].animate);
+    animateStyle = Object(cnbuilder__WEBPACK_IMPORTED_MODULE_1__["dcnb"])("transform", heroIconMap[iconType].animate);
   }
 
   var heroIconStyle = Object(cnbuilder__WEBPACK_IMPORTED_MODULE_1__["dcnb"])("transition", heroIconMap[iconType].baseStyle, animateStyle);
@@ -55994,7 +55994,7 @@ var SearchPage = function SearchPage() {
   }, [query, page, selectedFacets]);
   var wrapperClasses = "flex-grow w-auto border-0 border-b border-solid";
   var clearBtnClasses = "flex items-center bg-transparent focus:bg-transparent hover:bg-transparent focus:text-black hover:underline focus:underline text-m0 font-semibold border-none p-0 mr-12 mt-2";
-  var inputClasses = "border-0 text-m2 w-full flex-1 rs-px-1 py-10 outline-none focus:ring-0 focus:ring-transparent focus:shadow-none";
+  var inputClasses = "border-0 w-full flex-1 rs-px-1 py-10 outline-none focus:ring-0 focus:ring-transparent focus:shadow-none";
   var submitBtnClasses = "flex items-center justify-center w-16 h-16 rounded-full transition-colors ml-4";
   var autocompleteLinkClasses = "cursor-pointer font-regular inline-block w-full no-underline px-6 py-4 rounded-full";
   var autocompleteLinkFocusClasses = "";
@@ -56263,15 +56263,15 @@ var SearchResults = function SearchResults(_ref) {
     }, result.domain), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", {
       className: "algolia-search--result-title mb-6 su-serif font-bold"
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-      className: "text-digital-red-light group transition-colors hocus:underline",
+      className: "transition-colors hover:underline focus:underline",
       href: result.url
     }, result.fileType === "video" && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_heroIcon__WEBPACK_IMPORTED_MODULE_3__["default"], {
       iconType: "video",
-      className: "inline-block mr-02em",
+      className: "inline-block mr-2",
       srText: "Video: "
     }), result.fileType === "audio" && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_heroIcon__WEBPACK_IMPORTED_MODULE_3__["default"], {
       iconType: "podcast",
-      className: "inline-block ml-01em",
+      className: "inline-block -ml-1",
       srText: "Podcast: "
     }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
       // eslint-disable-next-line react/no-danger
@@ -56282,10 +56282,10 @@ var SearchResults = function SearchResults(_ref) {
         })
       }
     }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_heroIcon__WEBPACK_IMPORTED_MODULE_3__["default"], {
-      iconType: result.domain.match(/^alumni.stanford.edu/) ? "arrow-right" : "external",
-      className: "inline-block group-hocus:text-cardinal-red",
+      iconType: result.domain == window.location.hostname ? "arrow-right" : "external",
+      className: "inline-block\n                     ".concat(result.domain == window.location.hostname ? 'right-arrow' : 'external-arrow', "\n                    "),
       isAnimate: true,
-      srText: result.domain.match(/^alumni.stanford.edu/) ? "" : " (external link)"
+      srText: result.domain == window.location.hostname ? "" : " (external link)"
     }))), result._snippetResult.body.value && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
       className: "card-paragraph leading-snug mb-0" // eslint-disable-next-line react/no-danger
       ,

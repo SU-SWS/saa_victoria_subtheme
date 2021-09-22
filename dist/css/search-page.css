@@ -127133,6 +127133,10 @@ ol.list--uppercase-i {
   color: #2e2d29;
 }
 
+.algolia-search--search-input {
+  font-size: 1.56em;
+}
+
 .aloglia-search--title-banner {
   background: #f4f4f4;
   padding: 4.5rem 1.5rem;
@@ -127307,6 +127311,16 @@ ol.list--uppercase-i {
   font-size: 2.6rem;
 }
 
+.algolia-search--result-title:hover .right-arrow {
+  -webkit-transform: translateX(0.2em);
+          transform: translateX(0.2em);
+}
+
+.algolia-search--result-title:hover .external-arrow {
+  -webkit-transform: translateX(0.1em) translateY(-0.1em) rotate(-45deg);
+          transform: translateX(0.1em) translateY(-0.1em) rotate(-45deg);
+}
+
 .algolia-search--result-domain {
   font-size: 1.6rem;
 }
@@ -127317,7 +127331,7 @@ ol.list--uppercase-i {
 
 .algolia-search--autocomplete-container {
   top: 100%;
-  background: #820000;
+  background: #541107;
   border: 1px solid #e50808;
   z-index: 10;
 }

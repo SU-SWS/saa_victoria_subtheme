@@ -222,7 +222,7 @@ const SearchPage = () => {
 
   const clearBtnClasses = `flex items-center bg-transparent focus:bg-transparent hover:bg-transparent focus:text-black hover:underline focus:underline text-m0 font-semibold border-none p-0 mr-12 mt-2`;
 
-  const inputClasses = `border-0 text-m2 w-full flex-1 rs-px-1 py-10 outline-none focus:ring-0 focus:ring-transparent focus:shadow-none`;
+  const inputClasses = `border-0 w-full flex-1 rs-px-1 py-10 outline-none focus:ring-0 focus:ring-transparent focus:shadow-none`;
 
   const submitBtnClasses = `flex items-center justify-center w-16 h-16 rounded-full transition-colors ml-4`;
 

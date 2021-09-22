@@ -23,20 +23,20 @@ const SearchResults = ({ results }) => {
               <div className="algolia-search--result-domain mb-4">{result.domain}</div>
               <h3 className="algolia-search--result-title mb-6 su-serif font-bold">
                 <a
-                  className="text-digital-red-light group transition-colors hocus:underline"
+                  className="transition-colors hover:underline focus:underline"
                   href={result.url}
                 >
                   {result.fileType === "video" && (
                     <HeroIcon
                       iconType="video"
-                      className="inline-block mr-02em"
+                      className="inline-block mr-2"
                       srText="Video: "
                     />
                   )}
                   {result.fileType === "audio" && (
                     <HeroIcon
                       iconType="podcast"
-                      className="inline-block ml-01em"
+                      className="inline-block -ml-1"
                       srText="Podcast: "
                     />
                   )}
@@ -49,14 +49,19 @@ const SearchResults = ({ results }) => {
                   />
                   <HeroIcon
                     iconType={
-                      result.domain.match(/^alumni.stanford.edu/)
+                      result.domain == window.location.hostname
                         ? "arrow-right"
                         : "external"
                     }
-                    className="inline-block group-hocus:text-cardinal-red"
+                    className={`inline-block
+                     ${result.domain == window.location.hostname
+                        ? 'right-arrow'
+                        : 'external-arrow'
+                      }
+                    `}
                     isAnimate
                     srText={
-                      result.domain.match(/^alumni.stanford.edu/)
+                      result.domain == window.location.hostname
                         ? ""
                         : " (external link)"
                     }
