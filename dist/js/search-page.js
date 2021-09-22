@@ -55687,13 +55687,14 @@ __webpack_require__.r(__webpack_exports__);
 
 var SearchNoResults = function SearchNoResults(_ref) {
   var heading = _ref.heading,
-      body = _ref.body,
-      additionalContent = _ref.additionalContent;
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(decanter_react__WEBPACK_IMPORTED_MODULE_0__["Heading"], {
-    level: 2,
-    size: 3,
-    font: "serif"
-  }, heading), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", null, body), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", null, additionalContent));
+      body = _ref.body;
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+    className: "algolia-search--no-results"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("h2", {
+    className: "algolia-search--no-results-heading"
+  }, heading), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", {
+    className: "algolia-search--no-results-body"
+  }, body));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (SearchNoResults);
@@ -55832,9 +55833,8 @@ var SearchPage = function SearchPage() {
 
 
   var hitsPerPage = 16;
-  var noResultsHeading = "No results were found for \"[query]\"";
-  var noResultsBody = "No Results Body Placeholder";
-  var noResultsAdditionalContent = "No Results Additional Content Placeholder"; // Set up refs 
+  var noResultsHeading = "We’re sorry, we couldn’t find results for \"[query]\".";
+  var noResultsBody = "Try checking your spelling and/or using more generic search terms. You may also find what you’re looking for using the site navigation at the top of the page."; // Set up refs 
 
   var ref = Object(react__WEBPACK_IMPORTED_MODULE_0__["useRef"])(null);
   var filterOpenRef = Object(react__WEBPACK_IMPORTED_MODULE_0__["useRef"])(null); // Initialize Algolia Client.
@@ -56111,8 +56111,7 @@ var SearchPage = function SearchPage() {
     selectPage: updatePage
   }), !results.nbHits && query && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_searchNoResults__WEBPACK_IMPORTED_MODULE_9__["default"], {
     heading: noResultsHeading.replace("[query]", query),
-    body: noResultsBody,
-    additionalContent: noResultsAdditionalContent
+    body: noResultsBody
   })))));
 };
 

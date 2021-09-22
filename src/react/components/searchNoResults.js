@@ -1,15 +1,12 @@
 import { Heading } from "decanter-react";
 import React from "react";
 
-const SearchNoResults = ({ heading, body, additionalContent }) => (
-  <div>
-    <Heading level={2} size={3} font="serif">
+const SearchNoResults = ({ heading, body }) => (
+  <div className="algolia-search--no-results">
+    <h2 className="algolia-search--no-results-heading">
       {heading}
-    </Heading>
-    <p>{body}</p>
-    <div>
-      {additionalContent}
-    </div>
+    </h2>
+    <p className="algolia-search--no-results-body">{body}</p>
   </div>
 );
 

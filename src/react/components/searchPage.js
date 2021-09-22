@@ -40,9 +40,8 @@ const SearchPage = () => {
 
   // Set up other settings variables.
   const hitsPerPage = 16;
-  const noResultsHeading = "No results were found for \"[query]\"";
-  const noResultsBody = "No Results Body Placeholder";
-  const noResultsAdditionalContent = "No Results Additional Content Placeholder";
+  const noResultsHeading = "We’re sorry, we couldn’t find results for \"[query]\".";
+  const noResultsBody = "Try checking your spelling and/or using more generic search terms. You may also find what you’re looking for using the site navigation at the top of the page.";
 
   // Set up refs 
   const ref = useRef(null);
@@ -387,7 +386,6 @@ const SearchPage = () => {
                 <SearchNoResults
                   heading={noResultsHeading.replace("[query]", query)}
                   body={noResultsBody}
-                  additionalContent={noResultsAdditionalContent}
                 />
               )}
             </div>

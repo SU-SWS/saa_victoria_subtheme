@@ -127137,6 +127137,18 @@ ol.list--uppercase-i {
   font-size: 1.56em;
 }
 
+.algolia-search--no-results-heading {
+  font-family: "Source Serif Pro", "Georgia", "Times", "Times New Roman", serif;
+  font-size: 1.95em;
+  font-weight: 700;
+  margin-bottom: 2.2rem;
+}
+
+.algolia-search--no-results-body {
+  font-family: "Source Sans Pro", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+  font-size: 1.8rem;
+}
+
 .aloglia-search--title-banner {
   background: #f4f4f4;
   padding: 4.5rem 1.5rem;
@@ -127188,7 +127200,7 @@ ol.list--uppercase-i {
 }
 
 .algolia-search--filter-btn.opened, .algolia-search--filter-btn:hover, .algolia-search--filter-btn:focus {
-  background: #e50808;
+  background: #b1040e;
   border-color: #b1040e;
   color: #ffffff;
   text-decoration: none;
