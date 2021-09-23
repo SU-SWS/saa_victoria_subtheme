@@ -127149,6 +127149,33 @@ ol.list--uppercase-i {
   font-size: 1.8rem;
 }
 
+.algolia-search--no-results-suggestions-heading {
+  font-family: "Source Serif Pro", "Georgia", "Times", "Times New Roman", serif;
+  font-size: 1.56em;
+  font-weight: 700;
+}
+
+.algolia-search--no-results-suggestions-subheading {
+  font-family: "Source Sans Pro", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+  font-size: 1.25em;
+  font-weight: 600;
+}
+
+.algolia-search--no-results-link {
+  font-size: 1.9rem;
+  font-weight: 600;
+}
+
+@media (min-width: 992px) {
+  .algolia-search--no-results-link {
+    font-size: 2.1rem;
+  }
+}
+
+.algolia-search--no-results-link.su-link--external:after {
+  margin-top: 0.4em;
+}
+
 .aloglia-search--title-banner {
   background: #f4f4f4;
   padding: 4.5rem 1.5rem;

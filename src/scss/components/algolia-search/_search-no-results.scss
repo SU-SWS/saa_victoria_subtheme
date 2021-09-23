@@ -9,3 +9,27 @@
   font-family: $su-font-sans;
   font-size: 1.8rem;
 }
+
+.algolia-search--no-results-suggestions-heading {
+  font-family: $su-font-serif;
+  font-size: 1.56em;
+  font-weight: 700;
+}
+
+.algolia-search--no-results-suggestions-subheading {
+  font-family: $su-font-sans;
+  font-size: 1.25em;
+  font-weight: 600;
+}
+
+.algolia-search--no-results-link {
+  font-size: 1.9rem;
+  font-weight: 600;
+
+  @include grid-media-min('lg') {
+    font-size: 2.1rem;
+  }
+  &.su-link--external:after {
+    margin-top: 0.4em;
+  }
+}
