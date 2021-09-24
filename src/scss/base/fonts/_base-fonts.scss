@@ -1,7 +1,7 @@
 @charset "UTF-8";
 
 html {
-  @include saa-font--proxima-nova-base;
+  @include sans;
   font-size: $su-root-font-size;
 }
 
@@ -24,13 +24,13 @@ html {
 button,
 .su-multi-menu,
 .su-masthead .su-site-search__input {
-  @include saa-font--proxima-nova-base;
+  @include sans;
 }
 
 
 body {
   @include modular-typography-base;
-  @include saa-font--proxima-nova-base;
+  @include sans;
   color: $su-color-black;
 }
 
@@ -99,12 +99,12 @@ h5,
 su-font-splash,
 p.su-callout-text,
 .sa-font--calluna-black {
-  @include saa-font--calluna-base;
+  @include serif;
 }
 
 // check specifics
 .su-drop-cap::first-letter {
-  @include saa-font--calluna-base;
+  @include serif;
 }
 
 // what about su-font-splash and other text styles?
@@ -113,5 +113,5 @@ p.su-callout-text,
 
 // overridding decanter and base specific source sans declaration
 .su-card .su-card__contents {
-  @include saa-font--proxima-nova-base;
+  @include sans;
 }
