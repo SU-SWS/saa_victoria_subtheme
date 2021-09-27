@@ -77,10 +77,10 @@ $tag-height: 70px;
       }
 
       .su-card__contents {
-        @include saa-font--proxima-nova-base;
+        @include sans;
 
         & > h2 {
-          @include saa-font--calluna-base;
+          @include serif;
         }
       }
 

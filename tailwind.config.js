@@ -17,8 +17,8 @@ module.exports = {
       xl: '0px 19px 38px rgba(0, 0, 0, 0.25), 0px 5px 12px rgba(0, 0, 0, 0.18)',
     },
     fontFamily: {
-      display: ['Calluna', 'serif'],
-      body: ['Proxima Nova', 'sans-serif'],
+      display: ['Source Serif Pro', 'serif'],
+      body: ['Source Sans Pro', 'sans-serif'],
     },
     screens: {
       tablet: '768px',
