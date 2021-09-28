@@ -118364,7 +118364,7 @@ video {
 /* SAA Specific colors, Stanford/Decanter colors are not defined here */
 
 html {
-  font-family: proxima-nova, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Source Sans Pro", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
   font-size: 62.5%;
 }
 
@@ -118383,11 +118383,11 @@ html {
 button,
 .su-multi-menu,
 .su-masthead .su-site-search__input {
-  font-family: proxima-nova, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Source Sans Pro", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
 }
 
 body {
-  font-family: proxima-nova, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Source Sans Pro", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
   color: #2e2d29;
 }
 
@@ -118512,10 +118512,7 @@ h6,
 }
 
 h1 {
-  font-family: Calluna, Georgia, "Times New Roman", serif;
-  font-weight: 900;
-  line-height: 119.41%;
-  letter-spacing: 0.5px;
+  font-family: "Source Serif Pro", "Georgia", "Times", "Times New Roman", serif;
   font-size: 2.44140625em;
   margin: 0.67em 0;
 }
@@ -118527,21 +118524,15 @@ h5,
 su-font-splash,
 p.su-callout-text,
 .sa-font--calluna-black {
-  font-family: Calluna, Georgia, "Times New Roman", serif;
-  font-weight: 900;
-  line-height: 119.41%;
-  letter-spacing: 0.5px;
+  font-family: "Source Serif Pro", "Georgia", "Times", "Times New Roman", serif;
 }
 
 .su-drop-cap::first-letter {
-  font-family: Calluna, Georgia, "Times New Roman", serif;
-  font-weight: 900;
-  line-height: 119.41%;
-  letter-spacing: 0.5px;
+  font-family: "Source Serif Pro", "Georgia", "Times", "Times New Roman", serif;
 }
 
 .su-card .su-card__contents {
-  font-family: proxima-nova, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Source Sans Pro", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
 }
 
 .su-wysiwyg-text h2 a,
@@ -122607,10 +122598,7 @@ ol.list--uppercase-i {
 }
 
 .su-lockup {
-  font-family: Calluna, Georgia, "Times New Roman", serif;
-  font-weight: 900;
-  line-height: 119.41%;
-  letter-spacing: 0.5px;
+  font-family: "Source Serif Pro", "Georgia", "Times", "Times New Roman", serif;
   letter-spacing: normal;
   font-size: 44px;
 }
@@ -124286,10 +124274,7 @@ ol.list--uppercase-i {
 .section-event-list--title .jumpstart-ui-page-heading .heading-h1,
 .section-event-series-list--header .jumpstart-ui-page-heading .heading-h1,
 .section-events-past--header .jumpstart-ui-page-heading .heading-h1 {
-  font-family: Calluna, Georgia, "Times New Roman", serif;
-  font-weight: 900;
-  line-height: 119.41%;
-  letter-spacing: 0.5px;
+  font-family: "Source Serif Pro", "Georgia", "Times", "Times New Roman", serif;
   font-size: 2.44140625em;
 }
 
@@ -126573,14 +126558,11 @@ ol.list--uppercase-i {
 }
 
 .ptype-stanford-card .su-card-wrapper--icon .su-card .su-card__contents {
-  font-family: proxima-nova, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Source Sans Pro", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
 }
 
 .ptype-stanford-card .su-card-wrapper--icon .su-card .su-card__contents > h2 {
-  font-family: Calluna, Georgia, "Times New Roman", serif;
-  font-weight: 900;
-  line-height: 119.41%;
-  letter-spacing: 0.5px;
+  font-family: "Source Serif Pro", "Georgia", "Times", "Times New Roman", serif;
 }
 
 @media only screen and (min-width: 0) {
@@ -127036,7 +127018,7 @@ ol.list--uppercase-i {
 .ptype-stanford-card .su-card-wrapper--bordered-list .su-card p:not(:first-of-type) {
   border-top: 1px solid #53565a;
   line-height: 125%;
-  font-family: proxima-nova, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Source Sans Pro", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
   font-weight: normal;
   margin-bottom: 0;
 }
