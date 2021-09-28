@@ -17,6 +17,10 @@
   &:hover {
     color: $su-color-black;
   }
+
+  @include grid-media-min('lg') {
+    font-size: 1.9rem;
+  }
 }
 
 .algolia-search--search-input {

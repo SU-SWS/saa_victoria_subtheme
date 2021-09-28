@@ -8,8 +8,8 @@ const columns = [
       {title: 'Reunion 2021', url: 'https://reunion.stanford.edu/'},
       {title: 'Programs & Resources for Students', url: 'https://students.alumni.stanford.edu/'},
       {title: 'Request your official Stanford transcript', url: 'https://registrar.stanford.edu/students/transcripts/transcripts-alumni'},
-      {title: 'Stanford Alumni Email', url: 'https://alumni-preview.stanford.edu/perks/email/'},
-      {title: 'Alumni Membership', url: 'https://alumni-preview.stanford.edu/membership/'},
+      {title: 'Stanford Alumni Email', url: 'https://alumni.stanford.edu/perks/email/'},
+      {title: 'Alumni Membership', url: 'https://alumni.stanford.edu/membership/'},
     ]
   },
   {
@@ -17,7 +17,7 @@ const columns = [
     links: [
       {title: 'SAA Customer Service', url: 'https://alumni.stanford.edu/goto/snowcs'},
       {title: 'Stanford University Contact Information', url: 'https://www.stanford.edu/contact/'},
-      {title: 'SAA Departments', url: 'https://alumni-preview.stanford.edu/about/departments/'},
+      {title: 'SAA Departments', url: 'https://alumni.stanford.edu/about/departments/'},
     ]
   }
 ]

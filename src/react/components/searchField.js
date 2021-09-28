@@ -70,11 +70,20 @@ const SearchField = React.forwardRef(
 
     const handleArrowKeys = (e) => {
       if (e.key === "ArrowDown") {
-        e.preventDefault();
-        setSelectedSuggestion(selectedSuggestion + 1);
+        if (
+          selectedSuggestion === null || 
+          selectedSuggestion === autocompleteSuggestions.length - 1
+        ) {
+          setSelectedSuggestion(0);
+        } else {
+          setSelectedSuggestion(selectedSuggestion + 1);
+        }
       } else if (e.key === "ArrowUp") {
-        e.preventDefault();
-        setSelectedSuggestion(selectedSuggestion - 1);
+        if (selectedSuggestion === 0) {
+          setSelectedSuggestion(autocompleteSuggestions.length - 1);
+        } else {
+          setSelectedSuggestion(selectedSuggestion - 1);
+        }
       } else if (
         e.key === "Enter" &&
         autocompleteSuggestions[selectedSuggestion]
@@ -93,7 +102,6 @@ const SearchField = React.forwardRef(
       <div>
         <form onSubmit={submitHandler}>
           <div className="flex items-center">
-            <span className="" />
             <div
               className={`algolia-search--search-field-wrapper flex w-full items-center relative ${wrapperClasses}`}
               ref={inputWrapper}
@@ -105,6 +113,12 @@ const SearchField = React.forwardRef(
                   role="combobox"
                   aria-controls="search-autocomplete-listbox"
                   aria-expanded={showAutocomplete ? "true" : "false"}
+                  aria-activedescendant={
+                    selectedSuggestion !== null
+                    ? `search-autocomplete-listbox-${selectedSuggestion}`
+                    : ""
+                  }
+                  aria-haspopup="listbox"
                   onChange={inputHandler}
                   onKeyDown={handleArrowKeys}
                   className={`algolia-search--search-input ${inputClasses}`}
@@ -120,7 +134,7 @@ const SearchField = React.forwardRef(
               >
                 Clear
                 <X
-                  className="inline-block ml-3 h-[1.1em] w-[1.1em]"
+                  className="inline-block ml-3 h-8 w-8"
                   aria-hidden="true"
                 />
               </button>

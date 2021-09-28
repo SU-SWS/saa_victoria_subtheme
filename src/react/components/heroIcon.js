@@ -49,12 +49,12 @@ const HeroIcon = ({ iconType, srText, isAnimate, className, ...props }) => {
     },
     "chevron-down": {
       heroicon: ChevronDownIcon,
-      baseStyle: "w-[1.1em] ml-4 -mt-3",
+      baseStyle: "w-4 ml-4 -mt-3",
       animate: "",
     },
     "chevron-right": {
       heroicon: ChevronRightIcon,
-      baseStyle: "w-1em ml-02em -mt-4",
+      baseStyle: "w-4 ml-1 -mt-4",
       animate: "",
     },
   };

@@ -55314,12 +55314,12 @@ var HeroIcon = function HeroIcon(_ref) {
     },
     "chevron-down": {
       heroicon: _heroicons_react_solid__WEBPACK_IMPORTED_MODULE_3__["ChevronDownIcon"],
-      baseStyle: "w-[1.1em] ml-4 -mt-3",
+      baseStyle: "w-4 ml-4 -mt-3",
       animate: ""
     },
     "chevron-right": {
       heroicon: _heroicons_react_solid__WEBPACK_IMPORTED_MODULE_3__["ChevronRightIcon"],
-      baseStyle: "w-1em ml-02em -mt-4",
+      baseStyle: "w-4 ml-1 -mt-4",
       animate: ""
     }
   };
@@ -55372,7 +55372,8 @@ var searchAutocomplete = function searchAutocomplete(_ref) {
     className: "algolia-search--autocomplete-container ".concat(autocompleteContainerClasses, "\n    ").concat(showAutocomplete && autocompleteSuggestions.length ? "" : "hidden")
   }, Array.isArray(autocompleteSuggestions) && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
     className: "list-unstyled pl-0",
-    role: "listbox"
+    role: "listbox",
+    id: "search-autocomplete-listbox"
   }, autocompleteSuggestions.map(function (suggestion, index) {
     return (
       /*#__PURE__*/
@@ -55380,7 +55381,7 @@ var searchAutocomplete = function searchAutocomplete(_ref) {
       react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
         key: "autocomplete-item-".concat(suggestion.objectID),
         role: "option",
-        tabIndex: showAutocomplete ? 0 : -1,
+        tabIndex: index === selectedSuggestion ? 0 : -1,
         className: "algolia-search--autocomplete-item mb-0\n                        ".concat(autocompleteLinkClasses, "\n                        ").concat(index === selectedSuggestion ? "focused" : "", "\n                      "),
         onClick: function onClick(e) {
           return onSelect(e, suggestion.query);
@@ -55395,7 +55396,7 @@ var searchAutocomplete = function searchAutocomplete(_ref) {
           return setSelectedSuggestion(index);
         },
         "aria-selected": selectedSuggestion === index ? "true" : "false",
-        id: "search-autocomplete-listbox"
+        id: "search-autocomplete-listbox-".concat(index)
       }, // eslint-disable-next-line no-underscore-dangle
       suggestion._highlightResult && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
         // eslint-disable-next-line react/no-danger
@@ -55601,11 +55602,17 @@ var SearchField = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.forw
 
   var handleArrowKeys = function handleArrowKeys(e) {
     if (e.key === "ArrowDown") {
-      e.preventDefault();
-      setSelectedSuggestion(selectedSuggestion + 1);
+      if (selectedSuggestion === null || selectedSuggestion === autocompleteSuggestions.length - 1) {
+        setSelectedSuggestion(0);
+      } else {
+        setSelectedSuggestion(selectedSuggestion + 1);
+      }
     } else if (e.key === "ArrowUp") {
-      e.preventDefault();
-      setSelectedSuggestion(selectedSuggestion - 1);
+      if (selectedSuggestion === 0) {
+        setSelectedSuggestion(autocompleteSuggestions.length - 1);
+      } else {
+        setSelectedSuggestion(selectedSuggestion - 1);
+      }
     } else if (e.key === "Enter" && autocompleteSuggestions[selectedSuggestion]) {
       selectSuggestion(e, autocompleteSuggestions[selectedSuggestion].query);
     }
@@ -55620,9 +55627,7 @@ var SearchField = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.forw
     onSubmit: submitHandler
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "flex items-center"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
-    className: ""
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "algolia-search--search-field-wrapper flex w-full items-center relative ".concat(wrapperClasses),
     ref: inputWrapper
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
@@ -55634,6 +55639,8 @@ var SearchField = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.forw
     role: "combobox",
     "aria-controls": "search-autocomplete-listbox",
     "aria-expanded": showAutocomplete ? "true" : "false",
+    "aria-activedescendant": selectedSuggestion !== null ? "search-autocomplete-listbox-".concat(selectedSuggestion) : "",
+    "aria-haspopup": "listbox",
     onChange: inputHandler,
     onKeyDown: handleArrowKeys,
     className: "algolia-search--search-input ".concat(inputClasses),
@@ -55645,7 +55652,7 @@ var SearchField = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.forw
     onClick: clearHandler,
     className: "algolia-search--clear-btn ".concat(clearBtnClasses)
   }, "Clear", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_hero_icon_solid__WEBPACK_IMPORTED_MODULE_1__["X"], {
-    className: "inline-block ml-3 h-[1.1em] w-[1.1em]",
+    className: "inline-block ml-3 h-8 w-8",
     "aria-hidden": "true"
   })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_searchAutocomplete__WEBPACK_IMPORTED_MODULE_2__["default"], {
     autocompleteSuggestions: autocompleteSuggestions,
@@ -55697,10 +55704,10 @@ var columns = [{
     url: 'https://registrar.stanford.edu/students/transcripts/transcripts-alumni'
   }, {
     title: 'Stanford Alumni Email',
-    url: 'https://alumni-preview.stanford.edu/perks/email/'
+    url: 'https://alumni.stanford.edu/perks/email/'
   }, {
     title: 'Alumni Membership',
-    url: 'https://alumni-preview.stanford.edu/membership/'
+    url: 'https://alumni.stanford.edu/membership/'
   }]
 }, {
   heading: 'Contact Information',
@@ -55712,7 +55719,7 @@ var columns = [{
     url: 'https://www.stanford.edu/contact/'
   }, {
     title: 'SAA Departments',
-    url: 'https://alumni-preview.stanford.edu/about/departments/'
+    url: 'https://alumni.stanford.edu/about/departments/'
   }]
 }];
 var listClasses = "algolia-search--no-results-list list-none pl-0 children:leading-none";
@@ -56121,7 +56128,7 @@ var SearchPage = function SearchPage() {
       return setOpened(!opened);
     }
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
-    className: "py-[14px] flex"
+    className: "py-6 flex"
   }, opened ? "Filters" : " Filter results"), opened ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
     className: "algolia-search--filter-close-btn ml-02em font-regular flex items-center text-18 group-hocus:underline"
   }, "Close", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_hero_icon__WEBPACK_IMPORTED_MODULE_3___default.a, {
@@ -56132,7 +56139,7 @@ var SearchPage = function SearchPage() {
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_hero_icon__WEBPACK_IMPORTED_MODULE_3___default.a, {
     icon: "chevron-down"
   }))), opened && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "absolute top-[100%] left-0 w-full z-10 bg-white shadow-2xl border border-solid border-black-10"
+    className: "absolute left-0 w-full z-10 bg-white shadow-2xl border border-solid border-black-10"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "p-6"
   }, facets), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {

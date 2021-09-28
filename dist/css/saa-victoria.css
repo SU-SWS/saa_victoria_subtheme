@@ -127133,6 +127133,12 @@ ol.list--uppercase-i {
   color: #2e2d29;
 }
 
+@media (min-width: 992px) {
+  .algolia-search--clear-btn {
+    font-size: 1.9rem;
+  }
+}
+
 .algolia-search--search-input {
   font-size: 1.56em;
 }

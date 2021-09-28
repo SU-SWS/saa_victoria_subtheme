@@ -316,7 +316,7 @@ const SearchPage = () => {
                       ref={filterOpenRef}
                       onClick={() => setOpened(!opened)}
                     >
-                      <span className="py-[14px] flex">
+                      <span className="py-6 flex">
                         {opened ? "Filters" : " Filter results"}
                       </span>
                       {opened ? (
@@ -332,7 +332,7 @@ const SearchPage = () => {
                     </button>
 
                     {opened && (
-                      <div className="absolute top-[100%] left-0 w-full z-10 bg-white shadow-2xl border border-solid border-black-10">
+                      <div className="absolute left-0 w-full z-10 bg-white shadow-2xl border border-solid border-black-10">
                         <div className="p-6">{facets}</div>
 
                         <div className="algolia-search--mobile-filter-actions flex justify-end p-6 pb-12 border-t border-black-20">
