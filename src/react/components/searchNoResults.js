@@ -36,15 +36,15 @@ const SearchNoResults = ({ heading, body }) => (
       <h3 className="algolia-search--no-results-suggestions-heading mt-40 mb-12 md:mb-20">Consider Browsing by Category:</h3>
       <div className="w-full grid">
         <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-2 gap-y-16 md:gap-x-8 xl:gap-x-12 justify-items-start grid-gap items-start">
-          {columns.map((column) => (
-            <div>
+          {columns.map((column, colIndex) => (
+            <div key={`no-results-column-${`no-results-col-${colIndex}`}`}>
               <h4 className="algolia-search--no-results-suggestions-subheading mb-16">
                 {column.heading}
               </h4>
-              <ul class={listClasses}>
-                {column.links.map((item) => (
-                  <li className={listItemClasses}>
-                    <a href={item.url} class={linkClasses}>
+              <ul className={listClasses}>
+                {column.links.map((item, linkIndex) => (
+                  <li className={listItemClasses} key={`no-results-suggestion-${colIndex}-${linkIndex}`}>
+                    <a href={item.url} className={linkClasses}>
                       {item.title}
                     </a>
                   </li>

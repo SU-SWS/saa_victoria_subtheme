@@ -55352,7 +55352,7 @@ var HeroIcon = function HeroIcon(_ref) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* WEBPACK VAR INJECTION */(function(Buffer) {/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var sanitize_html__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! sanitize-html */ "./node_modules/sanitize-html/index.js");
 /* harmony import */ var sanitize_html__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(sanitize_html__WEBPACK_IMPORTED_MODULE_1__);
@@ -55379,7 +55379,7 @@ var searchAutocomplete = function searchAutocomplete(_ref) {
       /*#__PURE__*/
       // eslint-disable-next-line jsx-a11y/click-events-have-key-events
       react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
-        key: "autocomplete-item-".concat(suggestion.objectID),
+        key: "autocomplete-item-".concat(new Buffer(suggestion.objectID).toString('base64')),
         role: "option",
         tabIndex: index === selectedSuggestion ? 0 : -1,
         className: "algolia-search--autocomplete-item mb-0\n                        ".concat(autocompleteLinkClasses, "\n                        ").concat(index === selectedSuggestion ? "focused" : "", "\n                      "),
@@ -55410,6 +55410,7 @@ var searchAutocomplete = function searchAutocomplete(_ref) {
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (searchAutocomplete);
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../../../node_modules/node-libs-browser/node_modules/buffer/index.js */ "./node_modules/node-libs-browser/node_modules/buffer/index.js").Buffer))
 
 /***/ }),
 
@@ -55741,17 +55742,20 @@ var SearchNoResults = function SearchNoResults(_ref) {
     className: "w-full grid"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
     className: "grid grid-cols-1 md:grid-cols-2 xl:grid-cols-2 gap-y-16 md:gap-x-8 xl:gap-x-12 justify-items-start grid-gap items-start"
-  }, columns.map(function (column) {
-    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("h4", {
+  }, columns.map(function (column, colIndex) {
+    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+      key: "no-results-column-".concat("no-results-col-".concat(colIndex))
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("h4", {
       className: "algolia-search--no-results-suggestions-subheading mb-16"
     }, column.heading), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("ul", {
-      class: listClasses
-    }, column.links.map(function (item) {
+      className: listClasses
+    }, column.links.map(function (item, linkIndex) {
       return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("li", {
-        className: listItemClasses
+        className: listItemClasses,
+        key: "no-results-suggestion-".concat(colIndex, "-").concat(linkIndex)
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("a", {
         href: item.url,
-        class: linkClasses
+        className: linkClasses
       }, item.title));
     })));
   })))));
@@ -56191,6 +56195,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _utilities_buildPager__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../utilities/buildPager */ "./src/react/utilities/buildPager.js");
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
 
 
 
@@ -56232,17 +56238,18 @@ var SearchPager = function SearchPager(_ref) {
       onClick: function onClick(e) {
         return linkHandler(e, activePage - 1);
       }
-    }, "Previous")), pagerLinks.map(function (i) {
+    }, "Previous")), pagerLinks.map(function (i, index) {
       if (i === "...") {
         return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
-          className: "mb-0 px-9 md:px-11"
+          className: "mb-0 px-9 md:px-11",
+          key: "pager-link-".concat(index)
         }, "...");
       }
 
-      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", _defineProperty({
         className: "mb-0",
         key: "search-pager-link-".concat(i)
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+      }, "key", "pager-link-".concat(index)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
         className: "algolia-search--pager-link px-9 md:px-11 no-underline\n                      ".concat(activePage === i ? activeLinkClasses : linkClasses, "\n                    "),
         href: "?page=".concat(i),
         onClick: function onClick(e) {

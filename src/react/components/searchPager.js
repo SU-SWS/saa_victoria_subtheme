@@ -33,12 +33,12 @@ const SearchPager = ({ activePage, nbPages, maxLinks, selectPage }) => {
               </a>
             </li>
           )}
-          {pagerLinks.map((i) => {
+          {pagerLinks.map((i, index) => {
             if (i === "...") {
-              return <li className="mb-0 px-9 md:px-11">...</li>;
+              return <li className="mb-0 px-9 md:px-11" key={`pager-link-${index}`}>...</li>;
             }
             return (
-              <li className="mb-0" key={`search-pager-link-${i}`}>
+              <li className="mb-0" key={`search-pager-link-${i}`} key={`pager-link-${index}`}>
                 <a
                   className={`algolia-search--pager-link px-9 md:px-11 no-underline
                       ${activePage === i ? activeLinkClasses : linkClasses}

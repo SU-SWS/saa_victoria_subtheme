@@ -20,7 +20,7 @@ const searchAutocomplete = ({
         {autocompleteSuggestions.map((suggestion, index) => (
           // eslint-disable-next-line jsx-a11y/click-events-have-key-events
           <li
-            key={`autocomplete-item-${suggestion.objectID}`}
+            key={`autocomplete-item-${new Buffer(suggestion.objectID).toString('base64')}`}
             role="option"
             tabIndex={index === selectedSuggestion ? 0 : -1}
             className={`algolia-search--autocomplete-item mb-0
