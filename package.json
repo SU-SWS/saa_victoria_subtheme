@@ -86,7 +86,6 @@
     "@heroicons/react": "^1.0.4",
     "algoliasearch": "^4.10.5",
     "cnbuilder": "^2.7.1",
-    "decanter-react": "^1.1.0",
     "postcss": "^8.3.8",
     "postcss-import": "^14.0.2",
     "react": "^17.0.2",

@@ -1,5 +1,4 @@
 import React from "react";
-import { Heading } from "decanter-react";
 
 const SearchFacet = ({
   label,

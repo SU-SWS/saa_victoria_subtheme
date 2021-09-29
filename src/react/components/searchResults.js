@@ -1,6 +1,5 @@
 import React from "react";
 import sanitize from "sanitize-html";
-import { Heading } from "decanter-react";
 import HeroIcon from './heroIcon'
 
 const SearchResults = ({ results }) => {
