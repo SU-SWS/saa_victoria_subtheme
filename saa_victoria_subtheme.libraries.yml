@@ -118,3 +118,8 @@ search-page:
   version: VERSION
   js:
     dist/js/search-page.js: {}
+
+search-header:
+  version: VERSION
+  js:
+    dist/js/search-header.js: {}

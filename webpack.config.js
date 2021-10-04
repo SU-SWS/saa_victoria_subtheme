@@ -52,6 +52,7 @@ var webpackConfig = {
     "saa-victoria":  path.resolve(srcSass, "config/index.scss"),
     "scripts":       path.resolve(srcJS,   "scripts.js"),
     "search-page":   path.resolve(srcReact, "search-page.js"),
+    "search-header": path.resolve(srcReact, 'search-header.js'),
   },
   // Where put build?
   output: {
