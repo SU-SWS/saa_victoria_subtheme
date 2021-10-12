@@ -14,7 +14,8 @@
 .stanford-event-types {
   @include list-page--block-menu; // common mixin for News and events navigation
 
-  .event-types__collapsable-menu {
+  .event-types__collapsable-menu,
+  .topics__collapsable-menu {
     &::before {
       color: $saa-color-vivid-red;
     }
