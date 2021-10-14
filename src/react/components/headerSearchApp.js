@@ -1,7 +1,8 @@
 import React, { useState, useEffect, createRef } from "react"
-import algoliasearch from "algoliasearch";
+import sanitize from "sanitize-html";
 import SearchAutocomplete from "./searchAutocomplete";
 import UseOnClickOutside from "../hooks/useOnClickOutside";
+import client from "../utilities/algoliaClient";
 
 const HeaderSearchApp = () => {
   const [query, setQuery] = useState("");
@@ -12,12 +13,6 @@ const HeaderSearchApp = () => {
   const autocompleteLinkClasses = `cursor-pointer inline-block w-full no-underline px-6 py-4 rounded-full`;
   const autocompleteLinkFocusClasses = ``;
   const autocompleteContainerClasses = `absolute p-4 shadow-md w-full border`;
-
-  // Initialize Algolia Client.
-  const client = algoliasearch(
-    "IC2GX4TRIN",
-    "ffb84e6d16a5754728b746e43ab3eadf"
-  );
 
   const suggestionsIndex = client.initIndex(
     "crawler_federated-search_suggestions"
@@ -86,7 +81,7 @@ const HeaderSearchApp = () => {
   }
 
   const redirectWithQuery = (query) => {
-    const url = `${window.location.origin}/search?q=${query}`
+    const url = `${window.location.origin}/search?q=${sanitize(query)}`
     window.location.href = url
   }
 

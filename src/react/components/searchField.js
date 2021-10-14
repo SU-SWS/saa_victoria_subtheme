@@ -1,5 +1,5 @@
 import React, { useState, createRef, useEffect } from "react";
-import { X, Search } from "react-hero-icon/solid";
+import { XIcon, SearchIcon } from "@heroicons/react/solid";
 import SearchAutocomplete from "./searchAutocomplete";
 import UseEscape from "../hooks/useEscape";
 import UseOnClickOutside from "../hooks/useOnClickOutside";
@@ -133,7 +133,7 @@ const SearchField = React.forwardRef(
                 className={`algolia-search--clear-btn ${clearBtnClasses}`}
               >
                 Clear
-                <X
+                <XIcon
                   className="inline-block ml-3 h-8 w-8"
                   aria-hidden="true"
                 />
@@ -150,7 +150,7 @@ const SearchField = React.forwardRef(
               />
             </div>
             <button type="submit" className={`algolia-search--search-btn ${submitBtnClasses}`}>
-              <Search
+              <SearchIcon
                 className="text-white w-8 h-8 absolute"
                 aria-hidden="true"
               />

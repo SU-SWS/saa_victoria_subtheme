@@ -1,13 +1,13 @@
 import React, { useState, useEffect, useRef } from "react"
-import algoliasearch from "algoliasearch";
 import {
   useQueryParam,
   NumberParam,
   StringParam,
   ArrayParam,
 } from "use-query-params";
-import Icon from "react-hero-icon";
+import { XIcon, ChevronDownIcon } from "@heroicons/react/solid";
 import { ArrowSmRightIcon } from "@heroicons/react/outline";
+import sanitize from 'sanitize-html';
 import SearchField from './searchField'
 import SearchResults from './searchResults'
 import SearchPager from './searchPager'
@@ -15,8 +15,10 @@ import SearchFacet from './searchFacet'
 import SearchNoResults from './searchNoResults'
 import UseEscape from "../hooks/useEscape";
 import UseOnClickOutside from "../hooks/useOnClickOutside";
+import client from '../utilities/algoliaClient';
 
 const SearchPage = () => {
+  const sanitizer = sanitize();
   // Set up query param variables
   const [queryParam, setQueryParam] = useQueryParam("q", StringParam);
   const [pageParam, setPageParam] = useQueryParam("page", NumberParam);
@@ -46,12 +48,6 @@ const SearchPage = () => {
   // Set up refs 
   const ref = useRef(null);
   const filterOpenRef = useRef(null);
-
-  // Initialize Algolia Client.
-  const client = algoliasearch(
-    "IC2GX4TRIN",
-    "ffb84e6d16a5754728b746e43ab3eadf"
-  );
 
   const suggestionsIndex = client.initIndex(
     "crawler_federated-search_suggestions"
@@ -90,7 +86,7 @@ const SearchPage = () => {
     } else {
       setShowEmptyMessage(false);
       setPageParam(undefined);
-      setQueryParam(queryText || undefined);
+      setQueryParam(sanitize(queryText) || undefined);
       setPage(0);
       setQuery(queryText);
     }
@@ -322,11 +318,11 @@ const SearchPage = () => {
                       {opened ? (
                         <span className="algolia-search--filter-close-btn ml-02em font-regular flex items-center text-18 group-hocus:underline">
                           Close
-                          <Icon icon="x" className="w-14 ml-2" />
+                          <XIcon className="w-14 ml-2" />
                         </span>
                       ) : (
                         <span className="flex items-center mt-0 text-digital-red-light group-hocus:text-white hocus:shadow-none">
-                          <Icon icon="chevron-down" />
+                          <ChevronDownIcon className="w-14 h-14" />
                         </span>
                       )}
                     </button>
@@ -384,7 +380,7 @@ const SearchPage = () => {
 
               {!results.nbHits && query && (
                 <SearchNoResults
-                  heading={noResultsHeading.replace("[query]", query)}
+                  heading={noResultsHeading.replace("[query]", sanitize(query))}
                   body={noResultsBody}
                 />
               )}

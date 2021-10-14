@@ -24750,10 +24750,11 @@ module.exports = g;
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var algoliasearch__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! algoliasearch */ "./node_modules/algoliasearch/dist/algoliasearch.umd.js");
-/* harmony import */ var algoliasearch__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(algoliasearch__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var sanitize_html__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! sanitize-html */ "./node_modules/sanitize-html/index.js");
+/* harmony import */ var sanitize_html__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(sanitize_html__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _searchAutocomplete__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./searchAutocomplete */ "./src/react/components/searchAutocomplete.js");
 /* harmony import */ var _hooks_useOnClickOutside__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../hooks/useOnClickOutside */ "./src/react/hooks/useOnClickOutside.js");
+/* harmony import */ var _utilities_algoliaClient__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../utilities/algoliaClient */ "./src/react/utilities/algoliaClient.js");
 function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
 
 function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
@@ -24765,6 +24766,7 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
 function _iterableToArrayLimit(arr, i) { if (typeof Symbol === "undefined" || !(Symbol.iterator in Object(arr))) return; var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
 
 function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+
 
 
 
@@ -24795,10 +24797,8 @@ var HeaderSearchApp = function HeaderSearchApp() {
   var inputWrapper = /*#__PURE__*/Object(react__WEBPACK_IMPORTED_MODULE_0__["createRef"])();
   var autocompleteLinkClasses = "cursor-pointer inline-block w-full no-underline px-6 py-4 rounded-full";
   var autocompleteLinkFocusClasses = "";
-  var autocompleteContainerClasses = "absolute p-4 shadow-md w-full border"; // Initialize Algolia Client.
-
-  var client = algoliasearch__WEBPACK_IMPORTED_MODULE_1___default()("IC2GX4TRIN", "ffb84e6d16a5754728b746e43ab3eadf");
-  var suggestionsIndex = client.initIndex("crawler_federated-search_suggestions");
+  var autocompleteContainerClasses = "absolute p-4 shadow-md w-full border";
+  var suggestionsIndex = _utilities_algoliaClient__WEBPACK_IMPORTED_MODULE_4__["default"].initIndex("crawler_federated-search_suggestions");
   Object(react__WEBPACK_IMPORTED_MODULE_0__["useEffect"])(function () {
     updateAutocomplete();
   }, [query]);
@@ -24854,7 +24854,7 @@ var HeaderSearchApp = function HeaderSearchApp() {
   };
 
   var redirectWithQuery = function redirectWithQuery(query) {
-    var url = "".concat(window.location.origin, "/search?q=").concat(query);
+    var url = "".concat(window.location.origin, "/search?q=").concat(sanitize_html__WEBPACK_IMPORTED_MODULE_1___default()(query));
     window.location.href = url;
   };
 
@@ -25037,6 +25037,22 @@ __webpack_require__.r(__webpack_exports__);
 
 
 react_dom__WEBPACK_IMPORTED_MODULE_1___default.a.render( /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_headerSearchApp__WEBPACK_IMPORTED_MODULE_2__["default"], null)), document.getElementById("algolia-search-header"));
+
+/***/ }),
+
+/***/ "./src/react/utilities/algoliaClient.js":
+/*!**********************************************!*\
+  !*** ./src/react/utilities/algoliaClient.js ***!
+  \**********************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+var algoliasearch = __webpack_require__(/*! algoliasearch */ "./node_modules/algoliasearch/dist/algoliasearch.umd.js"); // Initialize Algolia Client.
+
+
+/* harmony default export */ __webpack_exports__["default"] = (algoliasearch("IC2GX4TRIN", "ffb84e6d16a5754728b746e43ab3eadf"));
 
 /***/ }),
 

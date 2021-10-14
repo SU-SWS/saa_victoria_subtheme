@@ -1,4 +1,3 @@
-import HeroIcon from "./heroIcon";
 import React from "react";
 
 const columns = [
