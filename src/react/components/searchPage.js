@@ -302,7 +302,7 @@ const SearchPage = () => {
                   <div ref={ref}>
                     <button
                       type="button"
-                      className={`algolia-search--filter-btn group flex w-full justify-between border px-8 py-6 text-21 font-semibold items-center transition-colors
+                      className={`algolia-search--filter-btn group flex w-full justify-between border px-8 py-0 text-21 font-semibold items-center transition-colors
                         ${
                           opened
                             ? "opened"
@@ -341,7 +341,11 @@ const SearchPage = () => {
 
                           <button
                             className={`algolia-search--filter-apply-btn`}
-                            onClick={() => setOpened(false)}
+                            onClick={() => {
+                              setOpened(false);
+                              document.getElementById("search-results").scrollIntoView();
+                              document.getElementById("number-search-results").focus();
+                            }}
                           >
                             View Results
                             <ArrowSmRightIcon className="inline-block w-8 ml-2 mb-1" />

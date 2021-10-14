@@ -24862,7 +24862,6 @@ var HeaderSearchApp = function HeaderSearchApp() {
     action: "/search",
     method: "get",
     acceptCharset: "UTF-8",
-    _lpchecked: "1",
     onSubmit: submitForm
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
     className: "su-site-search__sr-label",

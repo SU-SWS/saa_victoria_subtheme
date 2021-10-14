@@ -9,12 +9,18 @@ const SearchResults = ({ results }) => {
 
   return (
     <div id="search-results" className="su-sans">
-      <div className="algolia-search--results-count lg:mb-16">
+      <div 
+        className="algolia-search--results-count lg:mb-16"
+        aria-live="polite"
+        aria-atomic="true"
+        tabIndex={0}
+        id="number-search-results"
+      >
         <span className="font-semibold">{results.nbHits}</span> results:
       </div>
       {results.hits.map((result) => (
         <div
-          key={result.objectID}
+        key={`autocomplete-item-${new Buffer(result.objectID).toString('base64')}`}
           className="algolia-search--result-item px-0 py-16 md:px-16 border-b"
         >
           <div className="flex flex-wrap md:flex-nowrap">
@@ -52,7 +58,7 @@ const SearchResults = ({ results }) => {
                         ? "arrow-right"
                         : "external"
                     }
-                    className={`inline-block
+                    className={`inline-block ml-2
                      ${result.domain == window.location.hostname
                         ? 'right-arrow'
                         : 'external-arrow'

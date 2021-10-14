@@ -48262,7 +48262,7 @@ var SearchPage = function SearchPage() {
     ref: ref
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
     type: "button",
-    className: "algolia-search--filter-btn group flex w-full justify-between border px-8 py-6 text-21 font-semibold items-center transition-colors\n                        ".concat(opened ? "opened" : "collapsed"),
+    className: "algolia-search--filter-btn group flex w-full justify-between border px-8 py-0 text-21 font-semibold items-center transition-colors\n                        ".concat(opened ? "opened" : "collapsed"),
     "aria-expanded": opened,
     ref: filterOpenRef,
     onClick: function onClick() {
@@ -48292,7 +48292,9 @@ var SearchPage = function SearchPage() {
   }, "Clear all"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
     className: "algolia-search--filter-apply-btn",
     onClick: function onClick() {
-      return setOpened(false);
+      setOpened(false);
+      document.getElementById("search-results").scrollIntoView();
+      document.getElementById("number-search-results").focus();
     }
   }, "View Results", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_heroicons_react_outline__WEBPACK_IMPORTED_MODULE_3__["ArrowSmRightIcon"], {
     className: "inline-block w-8 ml-2 mb-1"
@@ -48427,7 +48429,7 @@ var SearchPager = function SearchPager(_ref) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* WEBPACK VAR INJECTION */(function(Buffer) {/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var sanitize_html__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! sanitize-html */ "./node_modules/sanitize-html/index.js");
 /* harmony import */ var sanitize_html__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(sanitize_html__WEBPACK_IMPORTED_MODULE_1__);
@@ -48447,12 +48449,16 @@ var SearchResults = function SearchResults(_ref) {
     id: "search-results",
     className: "su-sans"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "algolia-search--results-count lg:mb-16"
+    className: "algolia-search--results-count lg:mb-16",
+    "aria-live": "polite",
+    "aria-atomic": "true",
+    tabIndex: 0,
+    id: "number-search-results"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
     className: "font-semibold"
   }, results.nbHits), " results:"), results.hits.map(function (result) {
     return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-      key: result.objectID,
+      key: "autocomplete-item-".concat(new Buffer(result.objectID).toString('base64')),
       className: "algolia-search--result-item px-0 py-16 md:px-16 border-b"
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
       className: "flex flex-wrap md:flex-nowrap"
@@ -48483,7 +48489,7 @@ var SearchResults = function SearchResults(_ref) {
       }
     }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_heroIcon__WEBPACK_IMPORTED_MODULE_2__["default"], {
       iconType: result.domain == window.location.hostname ? "arrow-right" : "external",
-      className: "inline-block\n                     ".concat(result.domain == window.location.hostname ? 'right-arrow' : 'external-arrow', "\n                    "),
+      className: "inline-block ml-2\n                     ".concat(result.domain == window.location.hostname ? 'right-arrow' : 'external-arrow', "\n                    "),
       isAnimate: true,
       srText: result.domain == window.location.hostname ? "" : " (external link)"
     }))), result._snippetResult.body.value && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
@@ -48505,6 +48511,7 @@ var SearchResults = function SearchResults(_ref) {
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (SearchResults);
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../../../node_modules/node-libs-browser/node_modules/buffer/index.js */ "./node_modules/node-libs-browser/node_modules/buffer/index.js").Buffer))
 
 /***/ }),
 
