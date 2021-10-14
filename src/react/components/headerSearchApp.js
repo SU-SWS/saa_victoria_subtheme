@@ -3,6 +3,7 @@ import sanitize from "sanitize-html";
 import SearchAutocomplete from "./searchAutocomplete";
 import UseOnClickOutside from "../hooks/useOnClickOutside";
 import client from "../utilities/algoliaClient";
+import UseEscape from "../hooks/useEscape";
 
 const HeaderSearchApp = () => {
   const [query, setQuery] = useState("");
@@ -10,6 +11,7 @@ const HeaderSearchApp = () => {
   const [showAutocomplete, setShowAutocomplete] = useState(false);
   const [selectedSuggestion, setSelectedSuggestion] = useState(null);
   const inputWrapper = createRef();
+  const searchInput = createRef();
   const autocompleteLinkClasses = `cursor-pointer inline-block w-full no-underline px-6 py-4 rounded-full`;
   const autocompleteLinkFocusClasses = ``;
   const autocompleteContainerClasses = `absolute p-4 shadow-md w-full border`;
@@ -21,6 +23,13 @@ const HeaderSearchApp = () => {
   useEffect(() => {
     updateAutocomplete();
   }, [query]);
+
+  // Close filters menu if escape key is pressed and return focus to the menu button.
+  UseEscape(() => {
+    if (document.activeElement === searchInput.current) {
+      setShowAutocomplete(false);
+    }
+  });
 
   const onInput = (e) => {
     e.preventDefault();
@@ -108,6 +117,7 @@ const HeaderSearchApp = () => {
           }
           aria-haspopup="listbox"
           autocomplete="off"
+          ref={searchInput}
         />
         <SearchAutocomplete
           autocompleteSuggestions={suggestions}

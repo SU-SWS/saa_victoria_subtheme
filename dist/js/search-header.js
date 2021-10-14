@@ -24755,6 +24755,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _searchAutocomplete__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./searchAutocomplete */ "./src/react/components/searchAutocomplete.js");
 /* harmony import */ var _hooks_useOnClickOutside__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../hooks/useOnClickOutside */ "./src/react/hooks/useOnClickOutside.js");
 /* harmony import */ var _utilities_algoliaClient__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../utilities/algoliaClient */ "./src/react/utilities/algoliaClient.js");
+/* harmony import */ var _hooks_useEscape__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../hooks/useEscape */ "./src/react/hooks/useEscape.js");
 function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
 
 function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
@@ -24766,6 +24767,7 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
 function _iterableToArrayLimit(arr, i) { if (typeof Symbol === "undefined" || !(Symbol.iterator in Object(arr))) return; var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
 
 function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+
 
 
 
@@ -24795,13 +24797,20 @@ var HeaderSearchApp = function HeaderSearchApp() {
       setSelectedSuggestion = _useState8[1];
 
   var inputWrapper = /*#__PURE__*/Object(react__WEBPACK_IMPORTED_MODULE_0__["createRef"])();
+  var searchInput = /*#__PURE__*/Object(react__WEBPACK_IMPORTED_MODULE_0__["createRef"])();
   var autocompleteLinkClasses = "cursor-pointer inline-block w-full no-underline px-6 py-4 rounded-full";
   var autocompleteLinkFocusClasses = "";
   var autocompleteContainerClasses = "absolute p-4 shadow-md w-full border";
   var suggestionsIndex = _utilities_algoliaClient__WEBPACK_IMPORTED_MODULE_4__["default"].initIndex("crawler_federated-search_suggestions");
   Object(react__WEBPACK_IMPORTED_MODULE_0__["useEffect"])(function () {
     updateAutocomplete();
-  }, [query]);
+  }, [query]); // Close filters menu if escape key is pressed and return focus to the menu button.
+
+  Object(_hooks_useEscape__WEBPACK_IMPORTED_MODULE_5__["default"])(function () {
+    if (document.activeElement === searchInput.current) {
+      setShowAutocomplete(false);
+    }
+  });
 
   var onInput = function onInput(e) {
     e.preventDefault();
@@ -24882,7 +24891,8 @@ var HeaderSearchApp = function HeaderSearchApp() {
     "aria-expanded": showAutocomplete ? "true" : "false",
     "aria-activedescendant": selectedSuggestion !== null ? "search-autocomplete-listbox-".concat(selectedSuggestion) : "",
     "aria-haspopup": "listbox",
-    autocomplete: "off"
+    autocomplete: "off",
+    ref: searchInput
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_searchAutocomplete__WEBPACK_IMPORTED_MODULE_2__["default"], {
     autocompleteSuggestions: suggestions,
     showAutocomplete: showAutocomplete,
@@ -24972,6 +24982,37 @@ var searchAutocomplete = function searchAutocomplete(_ref) {
 
 /* harmony default export */ __webpack_exports__["default"] = (searchAutocomplete);
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../../../node_modules/node-libs-browser/node_modules/buffer/index.js */ "./node_modules/node-libs-browser/node_modules/buffer/index.js").Buffer))
+
+/***/ }),
+
+/***/ "./src/react/hooks/useEscape.js":
+/*!**************************************!*\
+  !*** ./src/react/hooks/useEscape.js ***!
+  \**************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* eslint-disable no-undef */
+
+
+var UseEscape = function UseEscape(onEscape) {
+  Object(react__WEBPACK_IMPORTED_MODULE_0__["useEffect"])(function () {
+    var handleEsc = function handleEsc(event) {
+      if (event.keyCode === 27) onEscape();
+    };
+
+    window.addEventListener("keydown", handleEsc);
+    return function () {
+      window.removeEventListener("keydown", handleEsc);
+    };
+  }, [onEscape]);
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (UseEscape);
 
 /***/ }),
 
