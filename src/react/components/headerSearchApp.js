@@ -116,7 +116,7 @@ const HeaderSearchApp = () => {
             : ""
           }
           aria-haspopup="listbox"
-          autocomplete="off"
+          autoComplete="off"
           ref={searchInput}
         />
         <SearchAutocomplete

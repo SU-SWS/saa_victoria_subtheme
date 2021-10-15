@@ -24891,7 +24891,7 @@ var HeaderSearchApp = function HeaderSearchApp() {
     "aria-expanded": showAutocomplete ? "true" : "false",
     "aria-activedescendant": selectedSuggestion !== null ? "search-autocomplete-listbox-".concat(selectedSuggestion) : "",
     "aria-haspopup": "listbox",
-    autocomplete: "off",
+    autoComplete: "off",
     ref: searchInput
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_searchAutocomplete__WEBPACK_IMPORTED_MODULE_2__["default"], {
     autocompleteSuggestions: suggestions,
@@ -25076,7 +25076,14 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-react_dom__WEBPACK_IMPORTED_MODULE_1___default.a.render( /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_headerSearchApp__WEBPACK_IMPORTED_MODULE_2__["default"], null)), document.getElementById("algolia-search-header"));
+react_dom__WEBPACK_IMPORTED_MODULE_1___default.a.render( /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_headerSearchApp__WEBPACK_IMPORTED_MODULE_2__["default"], null)), document.getElementById("algolia-search-header")); // The mobile search element is prepended with javascript, so we need to wait for it first.
+
+var waitForMobileSearch = setInterval(function () {
+  if (document.getElementById("block-stanford-basic-search-mobile")) {
+    react_dom__WEBPACK_IMPORTED_MODULE_1___default.a.render( /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_headerSearchApp__WEBPACK_IMPORTED_MODULE_2__["default"], null)), document.getElementById("block-stanford-basic-search-mobile"));
+    clearInterval(waitForMobileSearch);
+  }
+}, 250);
 
 /***/ }),
 

@@ -47711,6 +47711,7 @@ var SearchField = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.forw
   var inputHandler = function inputHandler(e) {
     setQuery(e.target.value);
     onInput(e.target.value);
+    setSelectedSuggestion(null);
     setShowAutocomplete(true);
   };
 

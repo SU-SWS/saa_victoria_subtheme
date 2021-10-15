@@ -39,6 +39,7 @@ const SearchField = React.forwardRef(
     const inputHandler = (e) => {
       setQuery(e.target.value);
       onInput(e.target.value);
+      setSelectedSuggestion(null);
       setShowAutocomplete(true);
     };
 
