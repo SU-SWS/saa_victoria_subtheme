@@ -24876,7 +24876,8 @@ var HeaderSearchApp = function HeaderSearchApp() {
     className: "su-site-search__sr-label",
     htmlFor: "key"
   }, "Search this site"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    ref: inputWrapper
+    ref: inputWrapper,
+    className: "relative"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
     type: "text",
     id: "key",

@@ -97,7 +97,7 @@ const HeaderSearchApp = () => {
   return (
     <form action="/search" method="get" acceptCharset="UTF-8" onSubmit={submitForm}>
       <label className="su-site-search__sr-label" htmlFor="key">Search this site</label>
-      <div ref={inputWrapper}>
+      <div ref={inputWrapper} className="relative">
         <input 
           type="text" 
           id="key" 
