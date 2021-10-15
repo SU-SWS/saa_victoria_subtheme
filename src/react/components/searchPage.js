@@ -265,7 +265,7 @@ const SearchPage = () => {
         </h1>
       </section>
       <section className="algolia-search--main flex-12-of-12 w-full centered-container">
-        <div className="grid gap-x-20 grid-cols-12 relative bassefont-19">
+        <div className="grid grid-cols-12 relative bassefont-19">
           <div
             xs={12}
             lg={results.nbHits > 0 ? 6 : 8}
@@ -291,7 +291,7 @@ const SearchPage = () => {
             />
           </div>
         </div>
-        <div className="grid grid-cols-12 lg:gap-x-20 mt-20 lg:mt-40">
+        <div className="filters grid grid-cols-12 lg:gap-x-20 mt-20 lg:mt-40">
             {results.nbHits > 0 && (
               <React.Fragment>
                 <div
@@ -318,7 +318,7 @@ const SearchPage = () => {
                       {opened ? (
                         <span className="algolia-search--filter-close-btn ml-02em font-regular flex items-center text-18 group-hocus:underline">
                           Close
-                          <XIcon className="w-14 ml-2" />
+                          <XIcon className="w-10 ml-2" />
                         </span>
                       ) : (
                         <span className="flex items-center mt-0 text-digital-red-light group-hocus:text-white hocus:shadow-none">

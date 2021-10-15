@@ -29,16 +29,18 @@
   font-size: 1.8rem;
   padding: 1rem 2.6rem;
 
-  &:hover {
-    color: $su-color-cardinal-red;
+  &:hover,
+  &:focus {
     background: none;
+    box-shadow: none;
+    color: $su-color-cardinal-red;
   }
 }
 
 .algolia-search--filter-btn {
   background: $su-color-white;
   border: 1px solid $su-color-black-30;
-  color: $su-color-digital-red;
+  color: $su-color-digital-red-light;
   font-size: 2.1rem;
 
   &.opened,
@@ -68,7 +70,8 @@
   padding: 1rem 2.6rem;
 
   &:hover,
-  &:active {
+  &:active,
+  &:focus {
     background: $su-color-cardinal-red;
   }
   svg {

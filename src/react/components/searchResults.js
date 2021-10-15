@@ -86,7 +86,7 @@ const SearchResults = ({ results }) => {
               )}
             </div>
             {result.image && (
-              <div className="algolia-search-results__image-wrapper md:ml-30">
+              <div className="algolia-search-results__image-wrapper md:ml-12">
                 <img
                   className="block object-cover object-center h-full w-full"
                   src={result.image}

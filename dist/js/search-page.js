@@ -48230,7 +48230,7 @@ var SearchPage = function SearchPage() {
   }, "Search for...")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("section", {
     className: "algolia-search--main flex-12-of-12 w-full centered-container"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "grid gap-x-20 grid-cols-12 relative bassefont-19"
+    className: "grid grid-cols-12 relative bassefont-19"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     xs: 12,
     lg: results.nbHits > 0 ? 6 : 8,
@@ -48256,7 +48256,7 @@ var SearchPage = function SearchPage() {
     autocompleteContainerClasses: autocompleteContainerClasses,
     clearOnEscape: true
   }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "grid grid-cols-12 lg:gap-x-20 mt-20 lg:mt-40"
+    className: "filters grid grid-cols-12 lg:gap-x-20 mt-20 lg:mt-40"
   }, results.nbHits > 0 && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "col-span-12 lg:col-span-3 lg:hidden relative mb-16 ".concat(opened ? "shadow-xl" : "")
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -48274,7 +48274,7 @@ var SearchPage = function SearchPage() {
   }, opened ? "Filters" : " Filter results"), opened ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
     className: "algolia-search--filter-close-btn ml-02em font-regular flex items-center text-18 group-hocus:underline"
   }, "Close", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_heroicons_react_solid__WEBPACK_IMPORTED_MODULE_2__["XIcon"], {
-    className: "w-14 ml-2"
+    className: "w-10 ml-2"
   })) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
     className: "flex items-center mt-0 text-digital-red-light group-hocus:text-white hocus:shadow-none"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_heroicons_react_solid__WEBPACK_IMPORTED_MODULE_2__["ChevronDownIcon"], {
@@ -48501,7 +48501,7 @@ var SearchResults = function SearchResults(_ref) {
         __html: sanitize_html__WEBPACK_IMPORTED_MODULE_1___default()(result._snippetResult.body.value)
       }
     })), result.image && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-      className: "algolia-search-results__image-wrapper md:ml-30"
+      className: "algolia-search-results__image-wrapper md:ml-12"
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
       className: "block object-cover object-center h-full w-full",
       src: result.image,
