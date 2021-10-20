@@ -291,7 +291,7 @@ const SearchPage = () => {
             />
           </div>
         </div>
-        <div className="filters grid grid-cols-12 lg:gap-x-20 mt-20 lg:mt-40">
+        <div className="filters centered-container grid grid-cols-12 lg:gap-x-20 mt-20 lg:mt-40">
             {results.nbHits > 0 && (
               <React.Fragment>
                 <div

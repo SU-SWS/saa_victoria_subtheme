@@ -48256,7 +48256,7 @@ var SearchPage = function SearchPage() {
     autocompleteContainerClasses: autocompleteContainerClasses,
     clearOnEscape: true
   }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "filters grid grid-cols-12 lg:gap-x-20 mt-20 lg:mt-40"
+    className: "filters centered-container grid grid-cols-12 lg:gap-x-20 mt-20 lg:mt-40"
   }, results.nbHits > 0 && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "col-span-12 lg:col-span-3 lg:hidden relative mb-16 ".concat(opened ? "shadow-xl" : "")
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
