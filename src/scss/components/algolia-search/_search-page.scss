@@ -17,10 +17,18 @@
 }
 
 .algolia-search--main {
-  padding: 4.5rem 0;
+  padding: 4.5rem 3rem;
+
+  @include grid-media-min('md') {
+    padding: 8rem 5rem;
+  }
 
   @include grid-media-min('lg') {
-    padding: 8rem 0;
+    padding: 8rem 8rem;
+  }
+
+  @include grid-media-min('xl') {
+    padding: 8rem 10rem;
   }
 }
 
@@ -64,7 +72,7 @@
 }
 
 .algolia-search--filter-apply-btn {
-  background: $su-color-digital-red-light;
+  background: $su-color-digital-red;
   color: $su-color-white;
   font-size: 1.8rem;
   padding: 1rem 2.6rem;

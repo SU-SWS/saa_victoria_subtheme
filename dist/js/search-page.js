@@ -48195,7 +48195,7 @@ var SearchPage = function SearchPage() {
     updateSearchResults(); // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [query, page, selectedFacets]);
   var wrapperClasses = "flex-grow w-auto border-0 border-b border-solid";
-  var clearBtnClasses = "flex items-center bg-transparent focus:bg-transparent hover:bg-transparent focus:text-black hover:underline focus:underline text-m0 font-semibold border-none p-0 mr-12 mt-2";
+  var clearBtnClasses = "flex items-center bg-transparent focus:bg-transparent hover:bg-transparent focus:text-black hover:underline focus:underline text-m0 font-semibold border-none p-0 mr-8 md:mr-10 mt-2";
   var inputClasses = "border-0 w-full flex-1 rs-px-1 py-10 outline-none focus:ring-0 focus:ring-transparent focus:shadow-none";
   var submitBtnClasses = "flex items-center justify-center w-16 h-16 rounded-full transition-colors ml-4";
   var autocompleteLinkClasses = "cursor-pointer font-regular inline-block w-full no-underline px-6 py-4 rounded-full";
@@ -48228,7 +48228,7 @@ var SearchPage = function SearchPage() {
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", {
     className: "font-bold mb-0 mt-0"
   }, "Search for...")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("section", {
-    className: "algolia-search--main flex-12-of-12 w-full centered-container"
+    className: "algolia-search--main flex-12-of-12 w-full"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "grid grid-cols-12 relative bassefont-19"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
