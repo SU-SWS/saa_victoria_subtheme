@@ -265,7 +265,7 @@ const SearchPage = () => {
         </h1>
       </section>
       <section className="algolia-search--main flex-12-of-12 w-full">
-        <div className="grid grid-cols-12 relative bassefont-19">
+        <div className="grid grid-cols-12 relative lg:gap-x-20 centered-container">
           <div
             xs={12}
             lg={results.nbHits > 0 ? 6 : 8}
