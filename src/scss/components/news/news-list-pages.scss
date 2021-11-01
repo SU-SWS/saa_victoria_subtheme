@@ -3,7 +3,8 @@
 .news-topics {
   @include list-page--block-menu; // common mixin for News and events navigation
 
-  .news-topics__collapsable-menu {
+  .news-topics__collapsable-menu,
+  .topics__collapsable-menu {
     &::before {
       color: $saa-color-vivid-red;
     }

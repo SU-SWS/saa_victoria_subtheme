@@ -48230,7 +48230,7 @@ var SearchPage = function SearchPage() {
   }, "Search for...")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("section", {
     className: "algolia-search--main flex-12-of-12 w-full"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "grid grid-cols-12 relative bassefont-19"
+    className: "grid grid-cols-12 relative lg:gap-x-20 centered-container"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     xs: 12,
     lg: results.nbHits > 0 ? 6 : 8,
