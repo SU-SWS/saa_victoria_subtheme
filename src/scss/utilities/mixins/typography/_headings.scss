@@ -1,6 +1,6 @@
 @charset "UTF-8";
 
 @mixin h1-font {
-  @include saa-font--calluna-base;
+  @include saa-font--proxima-nova-base;
   @include modular-typography(4);
 }
