@@ -104,7 +104,7 @@ p.su-callout-text,
 
 // check specifics
 .su-drop-cap::first-letter {
-  @include serif;
+  @include sans;
 }
 
 // what about su-font-splash and other text styles?
