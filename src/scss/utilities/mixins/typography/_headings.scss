@@ -1,6 +1,6 @@
 @charset "UTF-8";
 
 @mixin h1-font {
-  @include sans;
+  @include serif;
   @include modular-typography(4);
 }
