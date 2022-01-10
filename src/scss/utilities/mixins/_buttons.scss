@@ -17,49 +17,9 @@
   }
 }
 
-@mixin saa-button--purple-icons {
-  &,
-  &.su-link--action,
-  &.su-link--external,
-  &.su-link--download,
-  &.su-link--video,
-  &.su-link--jump,
-  &.su-link--top,
-  &.su-link--internal { // needed specificity to override new module updates
-    &::after {
-      background-color: $saa-color-electric-purple;
-    }
-
-    &:hover,
-    &:focus {
-      &::after {
-        background-color: $su-color-white;
-      }
-
-      & svg.mailto {
-        fill: $su-color-white;
-      }
-    }
-
-    & svg.mailto {
-      fill: $saa-color-electric-purple;
-    }
-  }
-}
-
-@mixin saa-button--hover-and-focus {
-  &:hover,
-  &:focus {
-    @include saa-button--hover;
-  }
-
-  &:focus {
-    @include saa-button--focus;
-  }
-}
-
 @mixin saa-button--hover {
-  background: $saa-color-electric-purple-dark;
+  background: $su-color-black;
+  border-color: $su-color-black;
   color: $su-color-white;
   text-decoration: underline;
   cursor: pointer;
@@ -76,18 +36,23 @@
 // white or ghost buttons
 @mixin saa-button--secondary {
   @include saa-button--hover-and-focus;
-  @include saa-button--purple-icons;
+  @include saa-button--white-icons;
   @include mailto-links-with-cta;
   box-shadow: none;
   background: $su-color-white;
-  color: $saa-color-electric-purple;
-  border: 1px solid $saa-color-electric-purple;
+  color: $su-color-digital-red;
+  border: 1px solid $su-color-digital-red;
   text-decoration: none;
+
+  &::after {
+    background-color: $su-color-digital-red;
+  }
 
   // most hover and focus is handled in mixin referenced above
   &:hover,
   &:focus {
     box-shadow: none;
+    background-color: $su-color-black;
   }
 }
 
@@ -96,7 +61,6 @@
   @include saa-button--hover-and-focus;
   @include saa-button--white-icons;
   @include mailto-links-with-cta;
-  background: $saa-color-electric-purple;
   color: $su-color-white;
 
   &::after {
@@ -108,25 +72,15 @@
   @include saa-button--secondary;
   @include mailto-links-with-cta;
   border: 1px solid $su-color-white;
-
-  &:hover,
-  &:focus {
-    border: 1px solid $saa-color-electric-purple-dark;
-  }
 }
 
-// purple buttons
-@mixin saa-button--purple--only {
+@mixin saa-button--red {
   @include saa-button--hover-and-focus;
   @include saa-button--white-icons;
   @include mailto-links-with-cta;
-  background: $saa-color-electric-purple;
-  color: $su-color-white;
   padding: 10px 30px;
-}
-
-@mixin saa-button--purple {
-  @include saa-button--purple--only;
+  background: $su-color-digital-red;
+  color: $su-color-white;
 
   &.su-button--secondary {
     @include saa-button--secondary;
@@ -134,5 +88,16 @@
 
   &.su-button--big {
     @include saa-button--big;
+  }
+}
+
+@mixin saa-button--hover-and-focus {
+  &:hover,
+  &:focus {
+    @include saa-button--hover;
+  }
+
+  &:focus {
+    @include saa-button--focus;
   }
 }

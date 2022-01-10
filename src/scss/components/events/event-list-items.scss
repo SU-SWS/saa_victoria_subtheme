@@ -49,7 +49,7 @@
 // only visible to logged in editors
 .views-field-su-event-edit {
   a {
-    @include saa-button--purple;
+    @include saa-button--red;
     box-shadow: none;
 
     &:focus,

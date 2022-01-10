@@ -90,7 +90,7 @@
 // only visible to logged in editors
 .su-news-edit-article {
   a {
-    @include saa-button--purple;
+    @include saa-button--red;
     box-shadow: none;
 
     &:focus,
@@ -103,7 +103,7 @@
 .stanford-news--cards {
   & > .more-link {
     a {
-      @include saa-button--purple;
+      @include saa-button--red;
     }
   }
 }

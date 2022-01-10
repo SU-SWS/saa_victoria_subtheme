@@ -47,7 +47,7 @@
   // footer buttons
   .su-local-footer__header {
     .su-link--internal {
-      @include saa-button--purple;
+      @include saa-button--red;
       @apply
       rounded-none
       shadow-none;
@@ -66,7 +66,7 @@
   // special button in footer
   .su-local-footer__columns {
     input[type="submit"] {
-      @include saa-button--purple;
+      @include saa-button--red;
       margin-top: 14px;
     }
   }
