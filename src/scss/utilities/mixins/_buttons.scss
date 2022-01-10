@@ -17,36 +17,6 @@
   }
 }
 
-@mixin saa-button--purple-icons {
-  &,
-  &.su-link--action,
-  &.su-link--external,
-  &.su-link--download,
-  &.su-link--video,
-  &.su-link--jump,
-  &.su-link--top,
-  &.su-link--internal { // needed specificity to override new module updates
-    &::after {
-      background-color: $saa-color-electric-purple;
-    }
-
-    &:hover,
-    &:focus {
-      &::after {
-        background-color: $su-color-white;
-      }
-
-      & svg.mailto {
-        fill: $su-color-white;
-      }
-    }
-
-    & svg.mailto {
-      fill: $saa-color-electric-purple;
-    }
-  }
-}
-
 @mixin saa-button--hover {
   background: $su-color-black;
   border-color: $su-color-black;
@@ -103,29 +73,6 @@
   @include mailto-links-with-cta;
   border: 1px solid $su-color-white;
 }
-
-// purple buttons
-@mixin saa-button--purple--only {
-  @include saa-button--hover-and-focus;
-  @include saa-button--white-icons;
-  @include mailto-links-with-cta;
-  background: $saa-color-electric-purple;
-  color: $su-color-white;
-  padding: 10px 30px;
-}
-
-@mixin saa-button--purple {
-  @include saa-button--purple--only;
-
-  &.su-button--secondary {
-    @include saa-button--secondary;
-  }
-
-  &.su-button--big {
-    @include saa-button--big;
-  }
-}
-
 
 @mixin saa-button--red {
   @include saa-button--hover-and-focus;
