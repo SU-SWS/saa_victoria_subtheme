@@ -98,7 +98,7 @@
           .su-button,
           .su-button--big,
           .su-button--secondary {
-            @include saa-button--red;
+            @include saa-button--secondary;
           }
 
           .su-button--big {
