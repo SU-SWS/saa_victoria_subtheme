@@ -4,13 +4,7 @@
 // default button style for this theme
 #back-to-top,
 .su-button {
-  @include saa-button--purple;
-
-  // needs specific override because external link module is taking precedence
-  &.su-link--external {
-    @apply no-underline;
-    @include saa-button--hover-and-focus; // reset underline on hover/focus etc.
-  }
+  @include saa-button--red;
 }
 
 .su-button--big {
@@ -24,7 +18,7 @@ a.su-button--secondary, // needed to override module styles
 
 .su-link {
   &.su-button {
-    @include saa-button--purple;
+    @include saa-button--red;
   }
 }
 
