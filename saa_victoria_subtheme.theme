@@ -8,7 +8,7 @@
  * Prepares variables for the html.html.twig template.
  */
 function saa_victoria_subtheme_preprocess_html(&$variables) {
-  $variables['stanford_basic_path'] = drupal_get_path('theme', 'stanford_basic');
+  $variables['stanford_basic_path'] =  \Drupal::service('extension.list.theme')->getPath('stanford_basic');
 }
 
 /**
@@ -26,7 +26,6 @@ function saa_victoria_subtheme_preprocess_page(&$variables) {
  * Implements hook_preprocess_HOOK().
  */
 function saa_victoria_subtheme_preprocess_ds_entity_view(&$variables) {
-
   // if not running on a paragraph, exit out.
   if (!isset($variables['content']['#paragraph'])) {
     return;
@@ -46,7 +45,6 @@ function saa_victoria_subtheme_preprocess_ds_entity_view(&$variables) {
 }
 
 function saa_victoria_preprocess_card(&$variables) {
-
   $paragraph = $variables['content']['#paragraph'];
 
   // Add border style class to card wrapper.
@@ -77,7 +75,6 @@ function saa_victoria_preprocess_card(&$variables) {
   // Vertical card check
 
   if ($card_info['card_type'] == 'su-card-wrapper--vertical') {
-
     // Set responsive image style for rectangle.
     $variables['content']['#fields']['card_image']['su_card_media'][0]['#stanford_media_image_style'] = 'card_2_1';
     return;
@@ -100,7 +97,6 @@ function saa_victoria_preprocess_card(&$variables) {
 
   // Horizontal rectangle image
   if ($card_info['horizontal_card_image_style'] === 'su-horizontal-card-wrapper--large-rectangle') {
-
     // Add image position class to card wrapper.
     $card_info['horizontal_card_image_position'] = $paragraph->getBehaviorSetting('react_paragraphs:card_variant_info', 'horizontal_card_image_position');
     $variables['attributes']['class'][] = $card_info['horizontal_card_image_position'];
@@ -112,7 +108,6 @@ function saa_victoria_preprocess_card(&$variables) {
 }
 
 function saa_victoria_preprocess_banner(&$variables) {
-
   // If banner has an image, add a class
   if (isset($variables['content']['#fields']['hero_image']['su_banner_image']['#object'])) {
     $variables['attributes']['class'][] = 'saa-banner--has-image';
@@ -123,12 +118,10 @@ function saa_victoria_preprocess_banner(&$variables) {
     // Check if there is a card
     if (isset($variables['content']['#fields']['hero_super_headline']['su_banner_sup_header']['#object']) || isset($variables['content']['#fields']['hero_headline']['su_banner_header']['#object']) || isset($variables['content']['#fields']['hero_body']['su_banner_body']['#object'])) {
       $variables['attributes']['class'][] = 'saa-banner--has-card';
-
     }
     else {
       $variables['attributes']['class'][] = 'saa-banner--no-card';
     }
-
   }
   else {
     $variables['attributes']['class'][] = 'saa-banner--no-image';
