@@ -7,6 +7,7 @@ $tag-height: 70px;
 
 // Note: we never allow minimal border-none styles with icon card, see src/scss/components/card/_minimal-border.scss
 
+.paragraph--type--stanford-card,
 .ptype-stanford-card {
   .su-card-wrapper--icon {
     .su-card {
