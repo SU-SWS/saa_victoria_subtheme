@@ -1,4 +1,4 @@
-# ARCHIVE This theme is no loger in use. It was retired on 10/23/23/
+# ARCHIVE This theme is no loger in use. It was retired on 10/23/23
 # saa_victoria_subtheme (https://github.com/SU-SWS/saa_victoria_subtheme)
 
 Changelog: [Changelog.txt](CHANGELOG.txt)
